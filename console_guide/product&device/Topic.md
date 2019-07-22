@@ -10,53 +10,55 @@ Topic是跟随着产品一起定义的，在定义Topic时，路径中会使用`
 
 
 
-<br>
 关于Topic的一些限制：   
 
 - Topic不可以跨越产品进行发布或者订阅；
 - Topic命名以正斜线`/`做层级处理，`${ProductSN}`为抽象层级，表示`产品序列号`；`${DeviceSN}`为抽象层级，表示`设备序列号`；`$broadcast`为抽象层级，表示某个产品下的所有`设备序列号`；
-- 自定义Topic的命名只能包含字母，数字，`_`，`#`，`/`，`:`，`@`，`+`，`-`且`#`只能放在结尾，长度限制64位，剩余部分最多支持5层，不应出现两个连续的正斜线`//`；（这里需要修改）
+- 自定义Topic的命名以`/`分割，每层可包含字母、数字、`-`、`_`、`@`、`:`、`+`、`#`，长度限制64，最多支持5层。`+`和`#`仅用于订阅权限Topic，`#`只能放在结尾；
 - Topic的权限可以设置为发布、订阅、同时支持发布和订阅；
 - Topic用于规则引擎筛选时，支持MQTT默认的通配符`+`，`#`，参考[Topic通配符]()；
 
 注：文档中`${variable}`代表一个变量，`$system`代表实际`$`为其组成部分。
 
+
+
 ## 系统Topic
 系统Topic是指系统预定义的有特殊用途的Topic，比如操作[设备影子]()、操作[物模型]()、操作设备状态、操作[固件升级]()，具体概念可以参考对应章节。
 
-系统Topic会在第一层级以`/$system`开始。（这里需要修改，property放到一起）
+系统Topic会在第一层级以`/$system`开始。
 
-Topic | 权限|描述
-|---|---|---
-| /$system/${ProductSN}/${DeviceSN}/shadow/upstream |发布|上行操作设备影子（更新、删除）
-|/$system/${ProductSN}/${DeviceSN}/shadow/downstream | 订阅| 设置期望值
-|/$system/${ProductSN}/${DeviceSN}/shadow/get|发布|获取设备影子
-|/$system/${ProductSN}/${DeviceSN}/shadow/get_reply|订阅|获取设备影子返回
-|/$system/${ProductSN}/${DeviceSN}/shadow/document|-|设备影子发生变化时将发送完整的设备影子文档(仅用于规则引擎)
-|/$system/${ProductSN}/${DeviceSN}/device/status|订阅|设备状态
-|/$system/${ProductSN}/${DeviceSN}/tmodel/template/get|发布|请求获取物模型功能定义JSON描述
-|/$system/${ProductSN}/${DeviceSN}/tmodel/template/get_reply | 订阅| 返回物模型功能定义JSON描述
-|/$system/${productSN}/${DeviceSN}/tmodel/property/post|发布|上报属性
-|/$system/${productSN}/${DeviceSN}/tmodel/property/post_reply|订阅|云平台对设备属性的响应
-|/$system/${productSN}/${DeviceSN}/tmodel/property/set|订阅|云平台设置属性
-|/$system/${productSN}/${DeviceSN}/tmodel/property/set_reply|发布|设备端对设置属性的响应
-|/$system/${productSN}/${DeviceSN}/tmodel/property/restore|发布|请求恢复属性
-|/$system/${productSN}/${DeviceSN}/tmodel/property/restore_reply|订阅|云平台返回需要恢复的属性值
-|/$system/${productSN}/${DeviceSN}/tmodel/property/document|不可发布订阅|云平台全量发送设备属性，用于属性变化时推送给规则引擎
-|/$system/${productSN}/${DeviceSN}/tmodel/event/post|发布|上报事件
-|/$system/${productSN}/${DeviceSN}/tmodel/event/post_reply|订阅|云平台对上报事件的响应
-|/$system/${productSN}/${DeviceSN}/tmodel/command|订阅|云平台下发命令
-|/$system/${productSN}/${DeviceSN}/tmodel/command_reply/${requestid}|发布|设备端对云平台下发命令的响应
-|/$system/${productSN}/${DeviceSN}/tmodel/property/desired/get|发布|获取期望属性
-|/$system/${productSN}/${DeviceSN}/tmodel/property/desired/get_reply|订阅|云平台返回期望属性
-|/$system/${productSN}/${DeviceSN}/tmodel/property/desired/delete|发布|删除期望属性
-|/$system/${productSN}/${DeviceSN}/tmodel/property/desired/delete_reply|订阅|云平台返回删除结果
-|/$system/${productSN}/${DeviceSN}/tmodel/property/document|-|设备的物模型属性发生变化时将发送完整的物模型属性文档(仅用于规则引擎)
-|/$system/${productSN}/${deviceSN}/ota/upstream|发布|设备上报固件版本升级状态
-|/$system/${productSN}/${deviceSN}/ota/downstream|订阅|云端下发固件升级消息
+|Topic| 权限|描述|
+|---|---|---|
+|/$system/${ProductSN}/${DeviceSN}/device/status|订阅|设备状态|
+|/$system/${ProductSN}/${DeviceSN}/shadow/upstream |发布|上行操作设备影子（更新、删除）|
+|/$system/${ProductSN}/${DeviceSN}/shadow/downstream | 订阅| 设置期望值|
+|/$system/${ProductSN}/${DeviceSN}/shadow/get|发布|获取设备影子|
+|/$system/${ProductSN}/${DeviceSN}/shadow/get_reply|订阅|获取设备影子返回|
+|/$system/${ProductSN}/${DeviceSN}/shadow/document|-|设备影子发生变化时将发送完整的设备影子文档(仅用于规则引擎)|
+|/$system/${ProductSN}/${DeviceSN}/tmodel/template/get|发布|请求获取物模型功能定义JSON描述|
+|/$system/${ProductSN}/${DeviceSN}/tmodel/template/get_reply | 订阅| 返回物模型功能定义JSON描述|
+|/$system/${productSN}/${DeviceSN}/tmodel/property/post|发布|上报属性|
+|/$system/${productSN}/${DeviceSN}/tmodel/property/post_reply|订阅|云平台对设备属性的响应|
+|/$system/${productSN}/${DeviceSN}/tmodel/property/set|订阅|云平台设置属性|
+|/$system/${productSN}/${DeviceSN}/tmodel/property/set_reply|发布|设备端对设置属性的响应|
+|/$system/${productSN}/${DeviceSN}/tmodel/property/restore|发布|请求恢复属性|
+|/$system/${productSN}/${DeviceSN}/tmodel/property/restore_reply|订阅|云平台返回需要恢复的属性值|
+|/$system/${productSN}/${DeviceSN}/tmodel/property/desired/get|发布|获取期望属性|
+|/$system/${productSN}/${DeviceSN}/tmodel/property/desired/get_reply|订阅|云平台返回期望属性|
+|/$system/${productSN}/${DeviceSN}/tmodel/property/desired/delete|发布|删除期望属性|
+|/$system/${productSN}/${DeviceSN}/tmodel/property/desired/delete_reply|订阅|云平台返回删除结果|
+|/$system/${productSN}/${DeviceSN}/tmodel/property/document|-|设备的物模型属性发生变化时将发送完整的物模型属性文档(仅用于规则引擎)|
+|/$system/${productSN}/${DeviceSN}/tmodel/event/post|发布|上报事件|
+|/$system/${productSN}/${DeviceSN}/tmodel/event/post_reply|订阅|云平台对上报事件的响应|
+|/$system/${productSN}/${DeviceSN}/tmodel/command|订阅|云平台下发命令|
+|/$system/${productSN}/${DeviceSN}/tmodel/command_reply/${requestid}|发布|设备端对云平台下发命令的响应|
+|/$system/${productSN}/${deviceSN}/ota/upstream|发布|设备上报固件版本升级状态|
+|/$system/${productSN}/${deviceSN}/ota/downstream|订阅|云端下发固件升级消息|
+
 
 
 ## 用户自定义Topic
+
 用户可以通过<Topic管理>添加自定义Topic，并指定这些Topic的发布或订阅权限。
 
 ### 操作步骤
@@ -66,12 +68,12 @@ Topic | 权限|描述
 4. 选中需要定义Topic的产品，进入产品详情页；
 5. 点击<Topic管理>标签，点击<添加Topic>，添加Topic；
 6. - 设置Topic类：
-     - 输入Topic的剩余层级内容，剩余部分只能包含字母，数字，`_`，`#`，`/`，`:`，`@`，`+`，`-`且`#`只能放在结尾，长度限制64位，最多支持5层，不应出现两个连续的正斜线`//`；
+     - 输入Topic的剩余层级内容，剩余部分以`/`分割，每层可包含字母、数字、`-`、`_`、`@`、`:`、`+`、`#`，长度限制64，最多支持5层。`+`和`#`仅用于订阅权限Topic，`#`只能放在结尾；
      - 选择Topic权限，发布或者订阅；
      - 输入描述，限制为0-100字符，无特殊符号限制；
      - 单击<确定>，创建成功；
    - 设置<接收广播Topic>
-     - 输入Topic的剩余层级内容，剩余部分只能包含字母，数字，`_`，`#`，`/`，`:`，`@`，`+`，`-`且`#`只能放在结尾，长度限制64位，最多支持5层，不应出现两个连续的正斜线`//`；
+     - 输入Topic的剩余层级内容，剩余部分以`/`分割，每层可包含字母、数字、`-`、`_`、`@`、`:`、`+`、`#`，长度限制64，最多支持5层。`#`只能放在结尾；
      - 输入描述，限制为0-100字符，无特殊符号限制；
      - 单击<确定>，创建成功；
 7. 自定义Topic添加完成后
@@ -86,7 +88,9 @@ Topic | 权限|描述
 ![Topic列表](../../images/Topic列表.png)
 
 
+
 ### Topic删除
+
 1. 接上述操作步骤，仍然在<Topic管理>标签；
 2. 点击<删除>，点击<确定>，删除成功；
 
@@ -98,7 +102,10 @@ Topic | 权限|描述
 
 ![删除Topic（需要修改）](../../images/删除Topic（需要修改）.png)
 
+
+
 ### 广播Topic
+
 广播Topic是指某个产品公用的Topic，只具有订阅权限，所有该产品下的设备均可以订阅该Topic。云应用可以通过API发送数据到该Topic，所有订阅了该Topic的设备都会收到该数据。
 
 广播Topic的格式为`/${ProductSN}/$broadcast/xxxxx`
@@ -108,7 +115,7 @@ Topic | 权限|描述
 ## Topic通配符
 设备可以订阅含有通配符的Topic，规则引擎的消息筛选Topic设置中，可以使用通配符。
 
-|通配符 |	描述
-|---|---
-|# |	这个通配符必须出现在Topic的最后一个层级，代表本级及下级所有类目。例如， Topic /70ly1tvowt696r15/pcur1q7jm2lb57rk/upload/#中，/upload层级后使用通配符#，代表/download层级后的所有层级。该Topic可以代表/70ly1tvowt696r15/pcur1q7jm2lb57rk/upload/data和/70ly1tvowt696r15/pcur1q7jm2lb57rk/upload//error。
-|+ |	代表本级所有符合的。例如，Topic /70ly1tvowt696r15/+/upload中，代表产品下所有设备，可以代表/70ly1tvowt696r15/deviceA/upload和/70ly1tvowt696r15/deviceB/upload。
+|通配符 |	描述|
+|---|---|
+|# | 这个通配符必须出现在Topic的最后一个层级，代表本级及下级所有类目。<br>例如， Topic /70ly1tvowt696r15/pcur1q7jm2lb57rk/upload/#中，/upload层级后使用通配符#，代表/upload层级后的所有层级。该Topic可以代表/70ly1tvowt696r15/pcur1q7jm2lb57rk/upload/data和/70ly1tvowt696r15/pcur1q7jm2lb57rk/upload//error。 |
+|+ | 代表本级所有符合的。<br>例如，Topic /70ly1tvowt696r15/+/upload中，代表产品下所有设备，可以代表/70ly1tvowt696r15/deviceA/upload和/70ly1tvowt696r15/deviceB/upload。|
