@@ -21,7 +21,7 @@
 5. 测试此条规则是否生效；
 
 
-![转发到MongoDB](../../pic/转发到MongoDB.png)
+![转发到MongoDB](../../images/转发到MongoDB.png)
 
 
 ## 使用示例

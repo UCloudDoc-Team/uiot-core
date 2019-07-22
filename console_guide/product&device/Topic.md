@@ -81,9 +81,9 @@ Topic | 权限|描述
    - 产品发布状态：打开后表示产品为已发布状态，已发布产品无法修改Topic和物模型；
    - 可以对Topic权限或类型进行筛选；
 
-![添加Topic](../../pic/添加Topic.png)
+![添加Topic](../../images/添加Topic.png)
 
-![Topic列表](../../pic/Topic列表.png)
+![Topic列表](../../images/Topic列表.png)
 
 
 ### Topic删除
@@ -96,7 +96,7 @@ Topic | 权限|描述
 - 自定义Topic删除后，规则引擎的Topic需要自行删除，规则引擎不做Topic的有效性的校验；
 
 
-![删除Topic（需要修改）](../../pic/删除Topic（需要修改）.png)
+![删除Topic（需要修改）](../../images/删除Topic（需要修改）.png)
 
 ### 广播Topic
 广播Topic是指某个产品公用的Topic，只具有订阅权限，所有该产品下的设备均可以订阅该Topic。云应用可以通过API发送数据到该Topic，所有订阅了该Topic的设备都会收到该数据。

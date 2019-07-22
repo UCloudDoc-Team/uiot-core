@@ -43,11 +43,11 @@ DeviceSecret：6g7tjlekwf3sqqqj
     - 点击<Apply>，提交配置
     - 点击<Connect>，进行连接
    
-   ![连接成功](../pic/连接成功.png)
+   ![连接成功](../images/连接成功.png)
    
     -  输入TLS证书：
    
-   ![TLS证书](../pic/TLS证书.png)
+   ![TLS证书](../images/TLS证书.png)
 ## 通过设备影子
 
 设备影子的具体详情参考[设备影子]()，本例中设备影子的Topic为：
