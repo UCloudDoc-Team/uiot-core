@@ -29,6 +29,7 @@
     Password | 6g7tjlekwf3sqqqj<br>`规则：${DevSecret}`
    
    2）参考[设备连接]()，获取MQTT Broker连接域名和TLS CA证书：
+   
     Broker参数| 参数值
     ---|---
     Broker Address | mqtt-cn-sh2.ucloud.cn 
