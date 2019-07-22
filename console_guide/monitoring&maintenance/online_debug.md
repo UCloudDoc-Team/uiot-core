@@ -5,15 +5,21 @@
 
 设备调试是针对某个特定的真实设备进行调试，设备离线时无法进行设备调试。
 
+
+
 ## 操作步骤
+
 1. 选择需要调试的<产品名称>，选择需要调试的<设备序列号>;
 2. 选择属性、命令、事件；
 3. 设置属性或下发命令（异步）；
 4. 查看日志；
 
-<设备调试img src="https://ushare.ucloudadmin.com/download/attachments/14752641/%E6%97%A5%E5%BF%97%E7%AE%A1%E7%90%86.png?version=1&modificationDate=1557890767147&api=v2" width="900" />
+![设备调试](../../pic/设备调试.png)
+
+
 
 ## 属性设置
+
 属性设置功能：
 - 功能名称：物模型定义的属性；
 - 当前值：设备上报的属性值；
@@ -32,10 +38,12 @@
    - Payload：设置的数据JSON包；
    
 
-<属性设置img src="https://ushare.ucloudadmin.com/download/attachments/14752641/%E6%97%A5%E5%BF%97%E7%AE%A1%E7%90%86.png?version=1&modificationDate=1557890767147&api=v2" width="900" />   
+![属性上报](../../pic/属性上报.png)
+
 
 
 ## 命令下发
+
 下发控制命令，该调试采用异步调用：
 - 功能名称：物模型定义的命令；
 - 操作：点击<设置>按钮，会弹出功能设置对话框，指定输入参数；
@@ -53,10 +61,12 @@
    - Payload：设置的数据JSON包；
    
 
-<命令下发img src="https://ushare.ucloudadmin.com/download/attachments/14752641/%E6%97%A5%E5%BF%97%E7%AE%A1%E7%90%86.png?version=1&modificationDate=1557890767147&api=v2" width="900" />  
+![命令下发](../../pic/命令下发.png)
+
 
 
 ## 事件上报
+
 事件上报为只读，所以无法做调试，但是可以通过操作日志查看上报内容。
 
 操作日志：
@@ -70,4 +80,5 @@
    - Payload：设置的数据JSON包；
    
 
-<事件上报img src="https://ushare.ucloudadmin.com/download/attachments/14752641/%E6%97%A5%E5%BF%97%E7%AE%A1%E7%90%86.png?version=1&modificationDate=1557890767147&api=v2" width="900" />  
+![事件上报](../../pic/事件上报.png)
+
