@@ -15,7 +15,7 @@ Topic | 权限|描述
 |/$system/${productSN}/${deviceSN}/ota/downstream|订阅|设备接收应用服务下发的固件升级消息
 
 
-![框图](../pic/框图.jpg)
+![框图](../images/框图.jpg)
 
 ## 具体流程
 设备的升级流程如下所示：
