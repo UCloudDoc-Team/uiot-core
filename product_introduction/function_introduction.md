@@ -9,7 +9,7 @@ UCloud IoT通信云平台为海量智能设备上行上报数据、下行控制�
 提供广泛的设备接入能力，用户可以方便地通过设备端SDK(==这个地方提供一个链接==)接入到IoT通信云平台，并且可以按照SDK中的各示例代码，快速嵌入到自己的业务逻辑上实现云端连接的能力。 
 
 设备端SDK提供完善的设备接入方案：
-- 提供安全的基于MQTT Over TLS的[设备注册]()、[设备连接]()机制
+- 提供安全的基于MQTT Over TLS的[设备注册](../sdk_guide/authenticate_devices/what_is_authenticate_devices.md/#什么是设备注册)、[设备连接]()机制
 - 支持原生的Linux、RTOS的移植
 - 支持OTA升级功能
 - 支持设备影子功能
