@@ -17,12 +17,14 @@ SELECT temperature as t, deviceSN() as deviceSN FROM /70ly1tvowt696r15/+/upload 
 
 ## SELECT
 JSON数据类型支持以下类型：
+
 - 内置函数，支持函数参考[函数列表JSON]()，比如`deviceSN()`；
 - JSON属性表达式，比如`light.state`；
 - 星号`*`，表示所有内容；
 - 支持使用`AS`对筛选的字段定义别名，比如`temperature as t`；
 
 binary数据类型支持以下类型：
+
 - 部分内置函数，支持函数参考[函数列表binary]()，比如`deviceSN()`；
 - 星号`*`，表示所有内容；
 
@@ -60,11 +62,13 @@ binary数据类型仅支持自定义Topic，不支持系统Topic。
 
 ## WHERE
 JSON数据类型支持以下类型：
+
 - 内置函数，支持函数参考[函数列表-JSON]()，比如`deviceSN()`；
 - JSON属性表达式的条件语句，比如`light.state = 0`；
 - 留空，所有数据；
 
 binary数据类型支持以下类型：
+
 - 部分内置函数，支持函数参考[函数列表-binary]()，比如`deviceSN()`；
 - 内置函数的条件表达式；
 

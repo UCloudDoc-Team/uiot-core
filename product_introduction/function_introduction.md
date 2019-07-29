@@ -13,7 +13,7 @@ UCloud IoT通信云平台为海量设备上行上报数据、下行控制设备�
 
 设备端SDK提供完善的设备接入方案：
 
-- 提供安全的基于MQTT Over TLS的[设备注册](../sdk_guide/authenticate_devices/what_is_authenticate_devices.md/#什么是设备注册)、[设备连接]()机制
+- 提供安全的基于MQTT Over TLS的[设备注册](../sdk_guide/authenticate_devices/what_is_authenticate_devices.md/#什么是设备注册)、[设备连接](../sdk_guide/connecting_devices%20.md#%E8%AE%BE%E5%A4%87%E8%BF%9E%E6%8E%A5)机制
 - 支持原生的Linux、RTOS的移植
 - 支持OTA升级功能
 - 支持设备影子功能
@@ -26,6 +26,7 @@ UCloud IoT通信云平台为海量设备上行上报数据、下行控制设备�
 设备管理可以帮助用户了解自己的产品以及设备状态，实时了解设备的激活状态、在线状态。
 
 设备管理提供丰富的管理功能：
+
 - 产品及设备的添加删除、检索功能
 - 主题的管理，用户可以自定义主题，并可以轻松变更主题的读写权限
 - OTA版本及升级管理，了解设备的版本分布状况，按需升级设备
@@ -38,6 +39,7 @@ UCloud IoT通信云平台为海量设备上行上报数据、下行控制设备�
 规则引擎通过类SQL的语法帮助用户针对来自不同产品的Topic数据做筛选与处理。
 
 目前规则引擎支持以下流转方式：
+
 - 流转到云数据库UDB（MongoDB、MySQL），帮助用户实现关系或非关系型数据的持久化
 - 流转到Kafka消息队列UKafka，应对海量数据上传，实现消息生产者与消费者的解耦
 - 流转到时序数据库UTSDB中，存储海量时序数据，方便以后进行数据分析
