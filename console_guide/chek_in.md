@@ -4,9 +4,7 @@
 
 ## 注册UCLOUD账号
 
-参见文档 
-
-[账号注册](https://docs.ucloud.cn/account/register/register_flow)
+参见文档 [账号注册](https://docs.ucloud.cn/account/register/register_flow)
 
 ## 登录UIoT Core产品控制台
 
