@@ -15,7 +15,7 @@ MQTT协议（Message Queuing Telemetry Transport），叫做遥信消息队列�
 - 支持clean session；
 - 支持基于TCP创建连接；
 - 同一注册凭证（`产品序列号`，`设备序列号`，`设备密码`）同时只能有一个设备在线，其它会被踢下线；
-- 支持 TLSV1, TLSV1.1，TLSV1.2 版本的协议来建立安全连接，安全级别高；
+- 支持TLSV1.2 版本的协议来建立安全连接，安全级别高；
 - MQTT client不能跨Topic订阅或发布消息，只能在自己的所属Topic上订阅或发布消息；
 
 
