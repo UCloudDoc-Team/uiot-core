@@ -9,10 +9,11 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 ## 固件升级Topic
 固件升级的过程中涉及两个Topic：
 
-Topic | 权限|描述
-|---|---|---
-|/$system/${productSN}/${deviceSN}/ota/upstream|发布|设备上报固件版本及下载、升级状态
-|/$system/${productSN}/${deviceSN}/ota/downstream|订阅|设备接收应用服务下发的固件升级消息
+|Topic | 权限|描述|
+|---|---|---|
+|/$system/${productSN}/${deviceSN}/ota/upstream|发布|设备上报固件版本及下载、升级状态|
+|/$system/${productSN}/${deviceSN}/ota/downstream|订阅|设备接收应用服务下发的固件升级消息|
+
 
 
 ![框图](../images/框图.jpg)

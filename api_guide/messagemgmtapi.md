@@ -1,4 +1,4 @@
-{{indexmenu_n>1}}
+{{indexmenu_n>9}}
 
 
 # 消息通信
