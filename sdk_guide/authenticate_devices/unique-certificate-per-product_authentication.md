@@ -80,7 +80,7 @@
    	"RequestID": "100"
    }
    ```
-   云平台将`设备密码`通过步骤4订阅的Topic下发，举例收到的`设备密码`为`zlc3d21u5k8fq0d2`；
+   云平台将`设备密码`通过步骤5订阅的Topic下发，举例收到的`设备密码`为`zlc3d21u5k8fq0d2`；
    ```
    Subscribe /$system/${ProductSN}/${DeviceSN}/password_reply
    举例： /$system/70ly1tvowt696r15/112233445566/password_reply
