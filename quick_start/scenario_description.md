@@ -108,7 +108,7 @@
     	"MessageContent": "eyJ0ZW1wZXJhdHVyZSI6MTUsImh1bWlkaXR5Ijo0NX0=", //base64Encode({"temperature":15,"humidity":45})
     	"Qos": 1,
     	"ProjectId": "org-z44lmf12e",
-    	"PublicKey": "CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTK   Cmh7Bp5W1UH64D/O",
+    	"PublicKey": "CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O",
     	"Region": "cn-sh2",
     	"Signature": "f1e6b4e35df41b42232e059f6020c7fd51b2889e"
     }
