@@ -112,6 +112,7 @@ Topic | 权限|描述
    ```
    ② 使用云端API进行调用，参考[UpdateUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi.md#UpdateUIoTCoreDeviceShadow)，下发需要发给设备端的期望值。  
    UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_guidehelp.md#关于API接入)，其他参数参考[UpdateUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi.md#UpdateUIoTCoreDeviceShadow)
+   
    ```
    POST  HTTP/1.1
    Host: api.ucloud.cn
@@ -128,14 +129,14 @@ Topic | 权限|描述
    	"Region": "cn-sh2",
    	"Signature": "kwe6b4r35dc41b432s2d059f602047fd51c2881z"
    }
-   ```
-
+```
    
 
-   ![设置期望](../images/设置期望.png)
-
+   
+![设置期望](../images/设置期望.png)
    
 
+   
 3. 在MQTT.fx操作界面可以看到下发消息；
 
    ![设备影子下发消息](../images/设备影子下发消息.png)
@@ -182,8 +183,8 @@ Topic | 权限|描述
 
    
 
-2. 使用云端API进行调用，参考[PublishUIoTCoreMQTTMessage](../api_guide/messagemgmtapi.md#PublishUIoTCoreMQTTMessage)发送下行消息。
-    UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_guidehelp.md#关于API接入)，其他参数参考[PublishUIoTCoreMQTTMessage](../api_guide/messagemgmtapi.md#PublishUIoTCoreMQTTMessage)
+2. 使用云端API进行调用，参考[PublishUIoTCoreMQTTMessage](../api_guide/messagemgmtapi.md)发送下行消息。
+    UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_guidehelp.md#关于API接入)，其他参数参考[PublishUIoTCoreMQTTMessage](../api_guide/messagemgmtapi.md)
 
     ```
     POST  HTTP/1.1
