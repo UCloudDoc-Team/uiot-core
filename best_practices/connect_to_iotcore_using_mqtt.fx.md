@@ -11,7 +11,7 @@
 
 
 ## 前提条件
-1. 参考[创建产品](../console_guide/product_device/create_products#创建产品)、[创建设备](../console_guide/product_device/create_devcies#创建设备)，获取产品序列号、设备序列号、设备密钥：
+1. 参考[创建产品](../console_guide/product_device/create_products.md#创建产品)、[创建设备](../console_guide/product_device/create_devcies.md)，获取产品序列号、设备序列号、设备密钥：
     ```
     ProductSN：qn4hvcjiyqt2069t
     DeviceSN：4ythk4cav6ph4310
@@ -98,7 +98,7 @@ Topic | 权限|描述
 ### 下行测试（设置期望值）
 
 1. 在MQTT.fx操作界面，点击<Subscribe>，输入Topic：`/$system/qn4hvcjiyqt2069t/4ythk4cav6ph4310/shadow/downstream`；
-   
+  
 
     ![订阅消息](../images/订阅消息.png)
 
@@ -176,7 +176,7 @@ Topic | 权限|描述
 
 ### 下行测试
 1. 在MQTT.fx操作界面，点击<Subscribe>，输入Topic：`/qn4hvcjiyqt2069t/4ythk4cav6ph4310/downlink`；
-   
+  
 
     ![下行订阅](../images/下行订阅.png)
 
