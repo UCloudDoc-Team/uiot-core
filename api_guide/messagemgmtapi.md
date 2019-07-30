@@ -10,8 +10,8 @@
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
-|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
+|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|No|
 |ProductSN|string|产品序列号|**Yes**|
 |TopicFullName|string|接收消息的Topic|**Yes**|
 |MessageContent|string|要发送的消息主体。您需要将消息原文转换成二进制数据，并进行Base64编码，从而生成消息主体。|**Yes**|
@@ -57,8 +57,8 @@ https://api.ucloud.cn/?Action=PublishUIoTCoreMQTTMessage
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
-|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
+|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口]((https://docs.ucloud.cn/api/summary/get_project_list)|No|
 |ProductSN|string|产品序列号|**Yes**|
 |TopicFullName|string|要接收广播消息的Topic全称。|**Yes**|
 |MessageContent|string|要发送的消息主体。您需要将消息原文转换成二进制数据，并进行Base64编码，从而生成消息主体。|**Yes**|

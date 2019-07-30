@@ -12,9 +12,9 @@
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
-|Zone|string|可用区。参见 [可用区列表](../summary/regionlist.html)|**Yes**|
-|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
+|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Zone|string|可用区。参见 [可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|No|
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
 
@@ -60,8 +60,8 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceProperty
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
-|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
+|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|No|
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
 |Offset|int|列表起始位置偏移量，默认为0|No|
@@ -128,8 +128,8 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceCommandList
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
-|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
+|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|No|
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
 |Offset|int|列表起始位置偏移量，默认为0|No|
@@ -192,9 +192,9 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceEventList
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
-|Zone|string|可用区。参见 [可用区列表](../summary/regionlist.html)|**Yes**|
-|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
+|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Zone|string|可用区。参见 [可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|No|
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
 |Property|string|属性列表，为base64之后的json字符串，json串的格式为{"PropertyIdentifier":PropertyValue}|**Yes**|
@@ -237,8 +237,8 @@ https://api.ucloud.cn/?Action=SetUIoTCoreDeviceProperty
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
-|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
+|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|No|
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
 |Identifier|string|标识符|**Yes**|
@@ -287,9 +287,9 @@ https://api.ucloud.cn/?Action=SendUIoTCoreDeviceCommand
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
-|Zone|string|可用区。参见 [可用区列表](../summary/regionlist.html)|**Yes**|
-|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Zone|string|可用区。参见 [可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|**Yes**|
 |ProductSN|string|产品序列号|**Yes**|
 
 
