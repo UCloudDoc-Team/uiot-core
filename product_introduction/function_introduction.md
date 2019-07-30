@@ -9,19 +9,11 @@ UCloud IoT通信云平台为海量设备上行上报数据、下行控制设备�
 
 ## 设备接入
 
-[设备端SDK](../device_develop_guide/c_sdk_example/csdkquickstart\#c-sdk-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8)
-
-[设备端SDK](../device_develop_guide/c_sdk_example/csdkquickstart\#C-SDK 快速入门)
-
-[设备端SDK](../device_develop_guide/c_sdk_example/csdkquickstart#C-SDK 快速入门)
-
-[设备端SDK](../device_develop_guide/c_sdk_example/csdkquickstart)
-
-提供广泛的设备接入能力，用户可以方便地通过[设备端SDK](../device_develop_guide/c_sdk_example/csdkquickstart\#c-sdk-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8)接入到IoT通信云平台，并且可以按照SDK中的示例代码，快速嵌入到自己的业务逻辑上实现连接云端的能力。 
+提供广泛的设备接入能力，用户可以方便地通过[设备端SDK](../device_develop_guide/c_sdk_example/csdkquickstart.md)接入到IoT通信云平台，并且可以按照SDK中的示例代码，快速嵌入到自己的业务逻辑上实现连接云端的能力。 
 
 设备端SDK提供完善的设备接入方案：
 
-- 提供安全的基于MQTT Over TLS的[设备注册](../device_develop_guide/authenticate_devices/what_is_authenticate_devices\#什么是设备注册)、[设备连接](../device_develop_guide/connecting_devices\#%E8%AE%BE%E5%A4%87%E8%BF%9E%E6%8E%A5)机制
+- 提供安全的基于MQTT Over TLS的[设备注册](../device_develop_guide/authenticate_devices/what_is_authenticate_devices.md)、[设备连接](../device_develop_guide/connecting_devices)机制
 - 支持原生的Linux、RTOS的移植
 - 支持OTA升级功能
 - 支持设备影子功能
