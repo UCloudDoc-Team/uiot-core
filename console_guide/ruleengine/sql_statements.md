@@ -44,13 +44,13 @@ SELECT deviceSN(),* FROM /70ly1tvowt696r15/+/upload
 则结果为
 ```
 {
-	"deviceSN()": "00:14:32:e1:72:f1",
-	"temperature": 25,
-	"humidity":65
-	
+  "deviceSN()": "00:14:32:e1:72:f1",
+  "temperature": 25,
+  "humidity":65
+  
 }
 ```
-在定义规则引擎的执行动作存储到结构化存储时，则使用**${deviceSN()}**和**${temperature}**、`${humidity}`配置字段值。
+在定义规则引擎的执行动作存储到结构化存储时，则使用**${deviceSN()}**和**${temperature}**、**${humidity}**配置字段值。
 
 
 ## FROM
@@ -74,6 +74,8 @@ JSON数据类型支持以下类型：
 - JSON属性表达式的条件语句，比如**light.state = 0**；
 - 留空，所有数据；
 
+
+
 binary数据类型支持以下类型：
 
 - 部分内置函数，支持函数参考[函数列表-binary](#函数列表)，比如**deviceSN()**；
@@ -82,30 +84,30 @@ binary数据类型支持以下类型：
 ### WHERE 条件语法
 Where表示条件，支持以下语法：
 
-- 比较运算符
-  - \>   大于
-  - <    小于
-  - \>=  大于等于
-  - <=   小于等于
-  - =    等于
-  - <>   不等于
+*   比较运算符
+    -   \>   大于
+    -   <    小于
+    -   \>=  大于等于
+    -   \<=   小于等于
+    -   =    等于
+    -   <>   不等于
   
-- 逻辑运算符
-  - and  与
-  - or   或
+*   逻辑运算符
+    -   and  与
+    -   or   或
   
-- 括号运算符 ()
-- 算术运算符
-  - \+
-  - \-
-  - \*
-  - /
-  - %
-- [函数调用](函数列表)
-- JSON属性表达式
-- CASE 语句
-- IN
-- LIKE
+*   括号运算符 ()
+*   算术运算符
+    -   \+
+    -   \-
+    -   \*
+    -   /
+    -   %
+*   [函数调用](函数列表)
+*   JSON属性表达式
+*   CASE 语句
+*   IN
+*   LIKE
 
 
 ## 类型转换
@@ -121,7 +123,7 @@ SQL表达式可以使用函数来优化我们的SQL语句，使得消息筛选�
 |---|---|---|---|
 |abs(number)	|返回绝对值。|√|×|
 |asin(number)	|返回number值的反正弦。|√|×|
-|concat(string1, string2)	|字符串连接  <br>示例：concat(field,’a’)。|√|√|
+|concat(string1, string2)	|字符串连接  示例：concat(field,’a’)。|√|√|
 |cos(number)	|返回number值的余弦。|√|×|
 |cosh(number)	|返回number值的双曲余弦（hyperbolic cosine）。|√|×|
 |deviceSN()	    |返回当前设备序列号。|√|√|
@@ -130,10 +132,10 @@ SQL表达式可以使用函数来优化我们的SQL语句，使得消息筛选�
 |floor(number)	|返回一个最接近它的整数，它的值小于或等于这个浮点数。|√|×|
 |lower(string)	|返回小写字符串。|√|√|
 |rand()	|返回[0~1)之间随机数。|√|√|
-|replace(source, substring, replacement)|对某个目标列值进行替换。<br>示例：replace(field,’a’,’1’)。|√|√|
+|replace(source, substring, replacement)|对某个目标列值进行替换。示例：replace(field,’a’,’1’)。|√|√|
 |sin(n)	    |返回n值的正弦。|√|×|
 |sinh(n)	|返回n值的双曲正弦（hyperbolic sine）。|√|×|
 |tan(n)	    |返回n值的正切。|√|×|
 |tanh(n)	|返回n值的双曲正切（hyperbolic tangent）。|√|×|
-|topic(number)	 |返回Topic分段信息。<br>如，有一个Topic： /abcdef/ghi。使用函数 topic()，则 返回 "/abcdef/ghi"； 使用 topic(1)，则 返回 "abcdef" ； 使用 topic(2) ，则返回 "ghi"。|√|√|
+|topic(number)	 |返回Topic分段信息。如，有一个Topic： /abcdef/ghi。使用函数 topic()，则 返回 "/abcdef/ghi"； 使用 topic(1)，则 返回 "abcdef" ； 使用 topic(2) ，则返回 "ghi"。|√|√|
 |upper(string)	|返回大写字符。|√|√|

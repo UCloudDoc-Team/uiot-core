@@ -43,6 +43,7 @@
 设备可以主动获取平台上缓存的当前设备影子文档。
 
 1. 设备发送任意内容到获取设备影子Topic
+
 ```
     Publish Topic /$system/${ProductSN}/${DeviceSN}/shadow/get
     
@@ -50,8 +51,10 @@
     	"Method": "get"
     }
 ```
+
 2. 设备订阅返回设备影子文档Topic，返回的是一个设备影子全量值，包括设备属性、期望值、版本号。
-    ```
+
+```
     Subscribe Topic /$system/${ProductSN}/${DeviceSN}/shadow/get_reply
     
     {
@@ -66,7 +69,7 @@
     	"Timestamp": 1562904212,
     	"Version": 0
     }
-    ```
+```
 
 
 
@@ -74,7 +77,7 @@
 
 1. 参考[设备端获取设备影子文档](#设备端获取设备影子文档)获取设备影子版本号，使用**update**方法，上报属性值。只有上报版本号和平台设备影子版本号一致才能更新，否则会出现版本冲突。
 
-    ```
+```
     Publish Topic：/$system/${ProductSN}/${DeviceSN}/shadow/upstream
     
     {
@@ -87,10 +90,11 @@
     	},
     	"Version": 0
     }
-    ```
+```
 
 2. 平台会返回更新成功，同时版本号会增1。
-    ```
+
+```
     Subscribe Topic: /$system/${ProductSN}/${DeviceSN}/shadow/downstream
     
     {
@@ -101,9 +105,11 @@
     	"Version": 1,
     	"Timestamp": 1562909435
     }
-    ```
+```
+
 3. 平台端设备影子更新为：
-    ```
+
+```
     {
     	"State": {
     		"Reported": {
@@ -126,11 +132,11 @@
     	"Timestamp": 1562909435,
     	"Version": 2
     }
-    ```
+```
 
 4. 设备需要维护好该版本号，否则会发生版本冲突。发生冲突时，平台返回全量设备影子**control**信息，**Retcode**为**100026**表示版本冲突，设备需要根据当前情况对其中内容做调整，设备端需要重新对齐版本号**Version**。
 
-    ```
+```
     Subscribe Topic: /$system/${ProductSN}/${DeviceSN}/shadow/downstream
     
     {
@@ -159,7 +165,7 @@
     	"Version": 1,
     	"Timestamp": 1562909688
     }
-    ```
+```
     |参数|说明|
     |---|---|
     |Method|表示对设备影子的操作类型，包括update更新/control控制/ reply回复|
@@ -185,7 +191,8 @@
 只有上报数据版本号和平台设备影子版本号一致才能删除，否则会出现版本冲突。
 
 - 删除某一属性
-    ```
+
+```
     Publish Topic：/$system/${ProductSN}/${DeviceSN}/shadow/upstream"
     
     {
@@ -197,10 +204,11 @@
     	},
     	"version": 1
     }
-    ```
+```
 
 - 删除全部属性
-    ```
+
+```
     Publish Topic：/$system/${ProductSN}/${DeviceSN}/shadow/upstream"
     
     {
@@ -210,10 +218,11 @@
     	},
     	"version": 1
     }
-    ```
+```
 
 2. 平台会返回删除成功，同时版本号会增1。
-    ```
+
+```
     Subscribe Topic: /$system/${ProductSN}/${DeviceSN}/shadow/downstream
     
     {
@@ -224,10 +233,11 @@
     	"Version": 2,
     	"Timestamp": 1562911255
     }
-    ```
+```
 
 3. 平台端设备影子更新为：
-    ```
+
+```
     {
     	"State": {
     		"Reported": {
@@ -246,7 +256,7 @@
     	"Timestamp": 1562911400,
     	"Version": 2
     }
-    ```
+```
 
 4. 设备需要维护好该版本号，否则会发生版本冲突。发生冲突时，平台返回全量设备影子**control**信息，**Retcode**为**100026**表示版本冲突，设备需要根据当前情况对其中内容做调整，设备端需要重新对齐版本号**Version**。
 
@@ -256,7 +266,8 @@
 
 当设备发送的**update**请求中的**Version**为特殊值**-1**，设备影子会将影子文档版本更新为**0**，同时清空（如有）**Desired**中的值。清空设备影子版本，不影响设备属性的正常上报。
 1. 上报属性，并使用**Version**为**-1**。
-    ```
+
+```
     Publish Topic：/$system/${ProductSN}/${DeviceSN}/shadow/upstream
     
     {
@@ -269,10 +280,11 @@
     	},
     	"Version": -1
     }
-    ```
+```
 
 2. 平台会返回重置成功，同时版本号重置为0。
-    ```
+
+```
     Subscribe Topic: /$system/${ProductSN}/${DeviceSN}/shadow/downstream
     
     {
@@ -283,10 +295,11 @@
     	"Version": 0,
     	"Timestamp": 1562912657
     }
-    ```
+```
 
 3. 平台端设备影子更新为：
-    ```
+
+```
     {
     	"State": {
     		"Reported": {
@@ -309,7 +322,7 @@
     	"Timestamp": 1562912800,
     	"Version": 0
     }
-    ```
+```
 
 
 
@@ -323,7 +336,8 @@
 
 1. 应用服务端通过[UpdateUIoTCoreDeviceShadow](../../api_guide/deviceshadowmgmtapi)，下发需要发给设备端的期望值。  
 UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../../api_guide/api_guidehelp)，其他参数参考[UpdateUIoTCoreDeviceShadow](../../api_guide/deviceshadowmgmtapi)
-    ```
+
+```
     POST  HTTP/1.1
     Host: api.ucloud.cn
     Content-Type: application/json
@@ -339,10 +353,11 @@ UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数�
     	"Region": "cn-sh2",
     	"Signature": "dwe6b4e35df41b42232e059f6020r7fd51b2889e"
     }
-    ```
+```
 
 2. 平台更新设备影子并添加**Desired**键值，版本号加1，并通过**/$system/${ProductSN}/${DeviceSN}/shadow/downstream**下发给设备，假如设备在线的话会立即收到，如果设备不在线需要设备上线后主动获取一次设备影子文档，参考[设备端获取设备影子文档](#设备端获取设备影子文档)。
-    ```
+
+```
     Subscribe Topic: /$system/${ProductSN}/${DeviceSN}/shadow/downstream
     
     {
@@ -365,9 +380,11 @@ UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数�
     	"Version": 2,
     	"Timestamp": 1562917504
     }
-    ```
+```
+
 3. 平台端设备影子更新为：
-    ```
+
+```
     {
     	"State": {
     		"Reported": {
@@ -396,11 +413,12 @@ UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数�
     	"Timestamp": 1562917600,
     	"Version": 2
     }
-    ```
+```
 
 3. 在线设备收到带有期望值的**control**消息之后，将自身状态值设为期望值（本例中的温度一般是控制恒温加热器）。
 4. 设备端状态修改后，需要将设备影子的**Desired**键置空。
-    ```
+
+```
     Publish Topic：/$system/${ProductSN}/${DeviceSN}/shadow/upstream"
     
     {
@@ -410,9 +428,11 @@ UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数�
     	},
     	"Version": 2
     }
-    ```
+```
+
 5. 平台会更新设备影子文档，清除设备影子**State**和**Metadata**中的**Desired**字段，将Reported中的该字段设置成**Desired**的值（如果Desired置空的同时，Reported该属性为另外的值，则记录上报的Reported值），同时版本号增1，此时设备影子文档更新为
-    ```
+
+```
     {
     	"State": {
     		"Reported": {
@@ -435,9 +455,11 @@ UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数�
     	"Timestamp": 1562919600,
     	"Version": 3
     }
-    ```
+```
+
 5. 平台会下发置空成功消息给设备
-    ```
+
+```
     {
     	"Method": "reply",
     	"Payload": {
@@ -446,7 +468,7 @@ UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数�
     	"Version": 3,
     	"Timestamp": 1562919549
     }
-    ```
+```
 
 
 
@@ -454,6 +476,7 @@ UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数�
 
 应用程序直接通过[GetUIoTCoreDeviceShadow](../../api_guide/deviceshadowmgmtapi)可以获取设备影子状态。  
 UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../../api_guide/api_guidehelp)，其他参数参考[GetUIoTCoreDeviceShadow](../../api_guide/deviceshadowmgmtapi)
+
 ```
 POST  HTTP/1.1
 Host: api.ucloud.cn
@@ -477,6 +500,7 @@ Body:
 
 应用程序直接通过[EnableUIoTCoreDeviceShadow](../../api_guide/deviceshadowmgmtapi)和[DisableUIoTCoreDeviceShadow](../../api_guide/deviceshadowmgmtapi)可以开启/关闭设备影子状态。  
 UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../../api_guide/api_guidehelp)，其他参数参考[EnableUIoTCoreDeviceShadow](../../api_guide/deviceshadowmgmtapi)和[DisableUIoTCoreDeviceShadow](../../api_guide/deviceshadowmgmtapi)。
+
 ```
 POST  HTTP/1.1
 Host: api.ucloud.cn
