@@ -71,7 +71,7 @@
 
 ### 设备端更新设备影子状态
 
-1. 参考[设备端获取设备影子文档]()获取设备影子版本号，使用**update**方法，上报属性值。只有上报版本号和平台设备影子版本号一致才能更新，否则会出现版本冲突。
+1. 参考[设备端获取设备影子文档](#设备端获取设备影子文档)获取设备影子版本号，使用**update**方法，上报属性值。只有上报版本号和平台设备影子版本号一致才能更新，否则会出现版本冲突。
 
     ```
     Publish Topic：/$system/${ProductSN}/${DeviceSN}/shadow/upstream
@@ -180,7 +180,7 @@
 
 ### 设备端删除设备影子属性
 
-1.  参考[设备端获取设备影子文档]()获取设备影子版本号，使用**delete**方法，删除属性。
+1.  参考[设备端获取设备影子文档](#设备端获取设备影子文档)获取设备影子版本号，使用**delete**方法，删除属性。
 只有上报数据版本号和平台设备影子版本号一致才能删除，否则会出现版本冲突。
 
 - 删除某一属性
@@ -320,8 +320,8 @@
 
 ### 应用程序更新设备影子期望值
 
-1. 应用服务端通过[UpdateUIoTCoreDeviceShadow]()，下发需要发给设备端的期望值。  
-UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入]()，其他参数参考[UpdateUIoTCoreDeviceShadow]()
+1. 应用服务端通过[UpdateUIoTCoreDeviceShadow](../../api_guide/deviceshadowmgmtapi)，下发需要发给设备端的期望值。  
+UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../../api_guide/api_guidehelp)，其他参数参考[UpdateUIoTCoreDeviceShadow](../../api_guide/deviceshadowmgmtapi)
     ```
     POST  HTTP/1.1
     Host: api.ucloud.cn
@@ -340,7 +340,7 @@ UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数�
     }
     ```
 
-2. 平台更新设备影子并添加**Desired**键值，版本号加1，并通过**/$system/${ProductSN}/${DeviceSN}/shadow/downstream**下发给设备，假如设备在线的话会立即收到，如果设备不在线需要设备上线后主动获取一次设备影子文档，参考[设备端获取设备影子文档]()。
+2. 平台更新设备影子并添加**Desired**键值，版本号加1，并通过**/$system/${ProductSN}/${DeviceSN}/shadow/downstream**下发给设备，假如设备在线的话会立即收到，如果设备不在线需要设备上线后主动获取一次设备影子文档，参考[设备端获取设备影子文档](#设备端获取设备影子文档)。
     ```
     Subscribe Topic: /$system/${ProductSN}/${DeviceSN}/shadow/downstream
     
@@ -451,8 +451,8 @@ UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数�
 
 ### 应用程序获取设备影子状态
 
-应用程序直接通过[GetUIoTCoreDeviceShadow]()可以获取设备影子状态。  
-UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入]()，其他参数参考[GetUIoTCoreDeviceShadow]()
+应用程序直接通过[GetUIoTCoreDeviceShadow](../../api_guide/deviceshadowmgmtapi)可以获取设备影子状态。  
+UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../../api_guide/api_guidehelp)，其他参数参考[GetUIoTCoreDeviceShadow](../../api_guide/deviceshadowmgmtapi)
 ```
 POST  HTTP/1.1
 Host: api.ucloud.cn
@@ -474,8 +474,8 @@ Body:
 
 ### 应用程序开启/关闭设备影子
 
-应用程序直接通过[EnableUIoTCoreDeviceShadow]()和[DisableUIoTCoreDeviceShadow]()可以开启/关闭设备影子状态。  
-UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入]()，其他参数参考[EnableUIoTCoreDeviceShadow]()和[DisableUIoTCoreDeviceShadow]()。
+应用程序直接通过[EnableUIoTCoreDeviceShadow](../../api_guide/deviceshadowmgmtapi)和[DisableUIoTCoreDeviceShadow](../../api_guide/deviceshadowmgmtapi)可以开启/关闭设备影子状态。  
+UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../../api_guide/api_guidehelp)，其他参数参考[EnableUIoTCoreDeviceShadow](../../api_guide/deviceshadowmgmtapi)和[DisableUIoTCoreDeviceShadow](../../api_guide/deviceshadowmgmtapi)。
 ```
 POST  HTTP/1.1
 Host: api.ucloud.cn
