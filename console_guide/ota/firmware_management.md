@@ -1,6 +1,6 @@
 {{indexmenu_n>2}}
 
-# 固件与升级
+# 固件管理
 
 ## 操作步骤
 1. [注册](https://passport.ucloud.cn/#register)UCloud云服务，如已注册请直接第2步；
