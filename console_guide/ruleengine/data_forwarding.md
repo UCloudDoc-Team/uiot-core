@@ -17,8 +17,9 @@
 	1\. 基本信息：规则的名称以及规则的描述和数据类型；
 
 	2\. 消息筛选：编辑类似SQL语句，筛选出Topic、Topic字段；
+	
+	3\. 执行动作：添加动作，将消息筛选出来的数据流转到其他产品到相应的目的地，比如UHost、MySQL、MongoDB、TSDB、KafkaMQ、SMS、M2M等；
    
-       3\. 执行动作：添加动作，将消息筛选出来的数据流转到其他产品到相应的目的地，比如UHost、MySQL、MongoDB、TSDB、KafkaMQ、SMS、M2M等；
    
 
 2. 消息筛选：
@@ -29,8 +30,9 @@
 
 
 	2\. 字段：字段支持内置函数、JSON表达式、星号"*"，参考[SQL表达式特性](sql_statements)；
+	
+	3\. 条件：支持比较运算符、逻辑运算符、括号运算符、算数运算符、函数调用、JSON表达式、CASE语句、IN、LIKE操作；具体参考[SQL表达式特性](sql_statements);
    
-        3\. 条件：支持比较运算符、逻辑运算符、括号运算符、算数运算符、函数调用、JSON表达式、CASE语句、IN、LIKE操作；具体参考[SQL表达式特性](sql_statements);
 
  
 
