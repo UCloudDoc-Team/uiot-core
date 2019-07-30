@@ -2,12 +2,12 @@
 
 # 设备连接
 
-# 基于MQTT协议建立连接
+## 基于MQTT协议建立连接
 MQTT协议（Message Queuing Telemetry Transport），叫做遥信消息队列传输。MQTT是一个基于TCP的发布订阅协议，对于有限的内存设备和网络带宽很低的网络不可靠的通信MQTT是比较理想的选择，非常适合物联网通信。
 
 
 
-## MQTT连接注意事项
+### MQTT连接注意事项
 
 - 支持最高协议版本MQTT3.1，不支持MQTT5.0；
 - 不支持will、retain 消息；
@@ -20,7 +20,7 @@ MQTT协议（Message Queuing Telemetry Transport），叫做遥信消息队列�
 
 
 
-## 具体流程：
+### 具体流程：
 
 MQTT连接需要先了解[设备注册]()中提到的静态注册和动态注册，获取 **ClientID**，**UserName**，**Password**。
 1. MQTT必须是用TLS加密传输，需要[下载根证书]()；
@@ -37,7 +37,7 @@ MQTT连接需要先了解[设备注册]()中提到的静态注册和动态注册
 
 
 
-## 消息上行及下行
+### 消息上行及下行
 
 设备连接成功后即可订阅或发布消息，物联网平台支持
 - 自定义Topic，参考[用户自定义Topic]()；
