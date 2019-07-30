@@ -13,7 +13,7 @@ UCloud IoT通信云平台为海量设备上行上报数据、下行控制设备�
 
 设备端SDK提供完善的设备接入方案：
 
-- 提供安全的基于MQTT Over TLS的[设备注册](../device_develop_guide/authenticate_devices/what_is_authenticate_devices.md/#什么是设备注册)、[设备连接](../device_develop_guide/connecting_devices%20.md#%E8%AE%BE%E5%A4%87%E8%BF%9E%E6%8E%A5)机制
+- 提供安全的基于MQTT Over TLS的[设备注册](../device_develop_guide/authenticate_devices/what_is_authenticate_devices#什么是设备注册)、[设备连接](../device_develop_guide/connecting_devices#%E8%AE%BE%E5%A4%87%E8%BF%9E%E6%8E%A5)机制
 - 支持原生的Linux、RTOS的移植
 - 支持OTA升级功能
 - 支持设备影子功能
