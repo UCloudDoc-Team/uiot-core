@@ -6,8 +6,8 @@ SQL表达式可以很灵活的筛选出想要的消息内容并发往不同的�
 ```
 例如某个产品70ly1tvowt696r15下的某个设备上报的数据格式为：
 {
-	"temperature": 25,
-	"humidity": 65
+  "temperature": 25,
+  "humidity": 65
 }
 
 假定温度大于30，湿度小于50时的数据需要流转到其他服务做保存或处理，可以编写如下的SQL语句：
@@ -19,14 +19,21 @@ SELECT temperature as t, deviceSN() as deviceSN FROM /70ly1tvowt696r15/+/upload 
 JSON数据类型支持以下类型：
 
 - 内置函数，支持函数参考[函数列表JSON](#函数列表)，比如**deviceSN()**；
+
 - JSON属性表达式，比如**light.state**；
-- 星号"*"，表示所有内容；
+
+- 星号"\*"，表示所有内容；
+
 - 支持使用"AS"对筛选的字段定义别名，比如**temperature as t**；
+
+
+
 
 binary数据类型支持以下类型：
 
 - 部分内置函数，支持函数参考[函数列表binary](#函数列表)，比如**deviceSN()**；
-- 星号"*"，表示所有内容；
+
+- 星号"\*"，表示所有内容；
 
 
 注：SELECT出来的新的字段将会作为JSON的一个新的字段发送到目的地，比如采用上面的例子，数据格式为JSON，规则为：
