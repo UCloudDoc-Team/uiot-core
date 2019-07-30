@@ -41,14 +41,15 @@
 ### 设备端获取设备影子文档
 
 设备可以主动获取平台上缓存的当前设备影子文档。
+
 1. 设备发送任意内容到获取设备影子Topic
-    ```
+```
     Publish Topic /$system/${ProductSN}/${DeviceSN}/shadow/get
     
     {
     	"Method": "get"
     }
-    ```
+```
 2. 设备订阅返回设备影子文档Topic，返回的是一个设备影子全量值，包括设备属性、期望值、版本号。
     ```
     Subscribe Topic /$system/${ProductSN}/${DeviceSN}/shadow/get_reply

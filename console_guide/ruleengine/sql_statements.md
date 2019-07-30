@@ -110,7 +110,7 @@ SQL表达式可以使用函数来优化我们的SQL语句，使得消息筛选�
 
 函数可以在SELECT或者WHERE中使用。
 
-| 函数名|	函数说明|JSON |binary|
+| 函数名|函数说明|JSON |binary|
 |---|---|---|---|
 |abs(number)	|返回绝对值。|√|×|
 |asin(number)	|返回number值的反正弦。|√|×|
