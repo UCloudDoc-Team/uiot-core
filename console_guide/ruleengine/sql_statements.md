@@ -18,14 +18,14 @@ SELECT temperature as t, deviceSN() as deviceSN FROM /70ly1tvowt696r15/+/upload 
 ## SELECT
 JSON数据类型支持以下类型：
 
-- 内置函数，支持函数参考[函数列表JSON]()，比如**deviceSN()**；
+- 内置函数，支持函数参考[函数列表JSON](#函数列表)，比如**deviceSN()**；
 - JSON属性表达式，比如**light.state**；
 - 星号"*"，表示所有内容；
 - 支持使用"AS"对筛选的字段定义别名，比如**temperature as t**；
 
 binary数据类型支持以下类型：
 
-- 部分内置函数，支持函数参考[函数列表binary]()，比如**deviceSN()**；
+- 部分内置函数，支持函数参考[函数列表binary](#函数列表)，比如**deviceSN()**；
 - 星号"*"，表示所有内容；
 
 
@@ -47,7 +47,7 @@ SELECT deviceSN(),* FROM /70ly1tvowt696r15/+/upload
 
 
 ## FROM
-From值需要筛选的Topic，支持通配符，参考[Topic管理]()。
+From值需要筛选的Topic，支持通配符，参考[Topic管理](../console_guide/product_device/topic)。
 
 binary数据类型仅支持自定义Topic，不支持系统Topic。
 
@@ -55,10 +55,10 @@ binary数据类型仅支持自定义Topic，不支持系统Topic。
 在规则引擎中，通配符可以匹配一类Topic做数据转发的设置。
 
 
-|通配符 |	描述
+|通配符 |描述
 |---|---
-|# |	**这个通配符必须出现在Topic的最后一个层级，代表本级及下级所有类目。**<br>例如， Topic /70ly1tvowt696r15/pcur1q7jm2lb57rk/upload/#中，/upload层级后使用通配符#，代表/download层级后的所有层级。该Topic可以代表/70ly1tvowt696r15/pcur1q7jm2lb57rk/upload/data和/70ly1tvowt696r15/pcur1q7jm2lb57rk/upload//error。
-|+ |	**代表本级所有符合的。**<br>例如，Topic /70ly1tvowt696r15/+/upload中，代表产品下所有设备，可以代表/70ly1tvowt696r15/deviceA/upload和/70ly1tvowt696r15/deviceB/upload。
+|# |	**这个通配符必须出现在Topic的最后一个层级，代表本级及下级所有类目。**例如， Topic /70ly1tvowt696r15/pcur1q7jm2lb57rk/upload/#中，/upload层级后使用通配符#，代表/download层级后的所有层级。该Topic可以代表/70ly1tvowt696r15/pcur1q7jm2lb57rk/upload/data和/70ly1tvowt696r15/pcur1q7jm2lb57rk/upload/error。
+|+ |**代表本级所有符合的。**例如，Topic /70ly1tvowt696r15/+/upload中，代表产品下所有设备，可以代表/70ly1tvowt696r15/deviceA/upload和/70ly1tvowt696r15/deviceB/upload。
 
 ## WHERE
 JSON数据类型支持以下类型：
