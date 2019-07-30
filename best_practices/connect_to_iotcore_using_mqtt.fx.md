@@ -98,7 +98,7 @@ Topic | 权限|描述
 ### 下行测试（设置期望值）
 
 1. 在MQTT.fx操作界面，点击<Subscribe>，输入Topic：`/$system/qn4hvcjiyqt2069t/4ythk4cav6ph4310/shadow/downstream`；
-  
+   
 
     ![订阅消息](../images/订阅消息.png)
 
@@ -176,7 +176,7 @@ Topic | 权限|描述
 
 ### 下行测试
 1. 在MQTT.fx操作界面，点击<Subscribe>，输入Topic：`/qn4hvcjiyqt2069t/4ythk4cav6ph4310/downlink`；
-  
+   
 
     ![下行订阅](../images/下行订阅.png)
 
