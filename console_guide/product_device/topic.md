@@ -5,12 +5,14 @@ Topic或主题是物联网平台的核心概念，也是一切消息流转的载
 Topic是跟随着产品一起定义的，在定义Topic时，路径中会使用**${DeviceSN}**标识具体设备，当该设备发布或订阅该Topic时，使用该设备的**设备序列号**来替换即可。
 
 比如：
+
 1. 定义某个产品的Topic为：**/70ly1tvowt696r15/${DeviceSN}/download**，具有订阅权限；
+
 2. 某个设备的**设备序列号**为**pcur1q7jm2lb57rk**，则该设备订阅时使用Topic：**/70ly1tvowt696r15/pcur1q7jm2lb57rk/download**；
 
 
 
-关于Topic的一些限制：   
+##### 关于Topic的一些限制：   
 
 - Topic不可以跨越产品进行发布或者订阅；
 - Topic命名以正斜线**/**做层级处理，**${ProductSN}**为抽象层级，表示**产品序列号**；**${DeviceSN}**为抽象层级，表示**设备序列号**；**$broadcast**是关键词，用于添加广播类型topic（只发给按需的订阅者）；
@@ -33,25 +35,25 @@ Topic是跟随着产品一起定义的，在定义Topic时，路径中会使用*
 |/$system/${ProductSN}/${DeviceSN}/shadow/upstream |发布|上行操作设备影子（更新、删除）|
 |/$system/${ProductSN}/${DeviceSN}/shadow/downstream | 订阅| 设置期望值|
 |/$system/${ProductSN}/${DeviceSN}/shadow/get|发布|获取设备影子|
-|/$system/${ProductSN}/${DeviceSN}/shadow/get_reply|订阅|获取设备影子返回|
+|/$system/${ProductSN}/${DeviceSN}/shadow/get\_reply|订阅|获取设备影子返回|
 |/$system/${ProductSN}/${DeviceSN}/shadow/document|-|设备影子发生变化时将发送完整的设备影子文档(仅用于规则引擎)|
 |/$system/${ProductSN}/${DeviceSN}/tmodel/template/get|发布|请求获取物模型功能定义JSON描述|
-|/$system/${ProductSN}/${DeviceSN}/tmodel/template/get_reply | 订阅| 返回物模型功能定义JSON描述|
+|/$system/${ProductSN}/${DeviceSN}/tmodel/template/get\_reply | 订阅| 返回物模型功能定义JSON描述|
 |/$system/${productSN}/${DeviceSN}/tmodel/property/post|发布|上报属性|
-|/$system/${productSN}/${DeviceSN}/tmodel/property/post_reply|订阅|云平台对设备属性的响应|
+|/$system/${productSN}/${DeviceSN}/tmodel/property/post\_reply|订阅|云平台对设备属性的响应|
 |/$system/${productSN}/${DeviceSN}/tmodel/property/set|订阅|云平台设置属性|
-|/$system/${productSN}/${DeviceSN}/tmodel/property/set_reply|发布|设备端对设置属性的响应|
+|/$system/${productSN}/${DeviceSN}/tmodel/property/set\_reply|发布|设备端对设置属性的响应|
 |/$system/${productSN}/${DeviceSN}/tmodel/property/restore|发布|请求恢复属性|
-|/$system/${productSN}/${DeviceSN}/tmodel/property/restore_reply|订阅|云平台返回需要恢复的属性值|
+|/$system/${productSN}/${DeviceSN}/tmodel/property/restore\_reply|订阅|云平台返回需要恢复的属性值|
 |/$system/${productSN}/${DeviceSN}/tmodel/property/desired/get|发布|获取期望属性|
-|/$system/${productSN}/${DeviceSN}/tmodel/property/desired/get_reply|订阅|云平台返回期望属性|
+|/$system/${productSN}/${DeviceSN}/tmodel/property/desired/get\_reply|订阅|云平台返回期望属性|
 |/$system/${productSN}/${DeviceSN}/tmodel/property/desired/delete|发布|删除期望属性|
 |/$system/${productSN}/${DeviceSN}/tmodel/property/desired/delete_reply|订阅|云平台返回删除结果|
 |/$system/${productSN}/${DeviceSN}/tmodel/property/document|-|设备的物模型属性发生变化时将发送完整的物模型属性文档(仅用于规则引擎)|
 |/$system/${productSN}/${DeviceSN}/tmodel/event/post|发布|上报事件|
-|/$system/${productSN}/${DeviceSN}/tmodel/event/post_reply|订阅|云平台对上报事件的响应|
+|/$system/${productSN}/${DeviceSN}/tmodel/event/post\_reply|订阅|云平台对上报事件的响应|
 |/$system/${productSN}/${DeviceSN}/tmodel/command|订阅|云平台下发命令|
-|/$system/${productSN}/${DeviceSN}/tmodel/command_reply/${requestid}|发布|设备端对云平台下发命令的响应|
+|/$system/${productSN}/${DeviceSN}/tmodel/command\_reply/${requestid}|发布|设备端对云平台下发命令的响应|
 |/$system/${productSN}/${deviceSN}/ota/upstream|发布|设备上报固件版本升级状态|
 |/$system/${productSN}/${deviceSN}/ota/downstream|订阅|云端下发固件升级消息|
 
@@ -62,21 +64,30 @@ Topic是跟随着产品一起定义的，在定义Topic时，路径中会使用*
 用户可以通过<Topic管理>添加自定义Topic，并指定这些Topic的发布或订阅权限。
 
 ### 操作步骤
+
 1. [注册](https://passport.ucloud.cn/#register)UCloud云服务，如已注册请直接第2步；
+
 2. 登录进入UCloud[物联网平台](https://console.ucloud.cn/iot)；
+
 3. 选择<产品和设备管理>标签；
+
 4. 选中需要定义Topic的产品，进入产品详情页；
+
 5. 点击<Topic管理>标签，点击<添加Topic>，添加Topic；
+
 6. - 设置Topic类：
-     - 输入Topic的剩余层级内容，剩余部分以"/"分割，每层可包含字母、数字、"-"、"_"、"@"、":"、"+"、"#"，长度限制64，最多支持5层。"+"和"#"仅用于订阅权限Topic，"#"只能放在结尾；
-     - 选择Topic权限，发布或者订阅；
-     - 输入描述，限制为0-100字符，无特殊符号限制；
-     - 单击<确定>，创建成功；
-   - 设置<接收广播Topic>
-     - 输入Topic的剩余层级内容，剩余部分以"/"分割，每层可包含字母、数字、"-"、"_"、"@"、":"、"+"、"#"，长度限制64，最多支持5层。"#"只能放在结尾；
-     - 输入描述，限制为0-100字符，无特殊符号限制；
-     - 单击<确定>，创建成功；
+
+	- 输入Topic的剩余层级内容，剩余部分以"/"分割，每层可包含字母、数字、"-"、"_"、"@"、":"、"+"、"#"，长度限制64，最多支持5层。"+"和"#"仅用于订阅权限Topic，"#"只能放在结尾；
+	- 选择Topic权限，发布或者订阅；
+	- 输入描述，限制为0-100字符，无特殊符号限制；
+	- 单击<确定>，创建成功；
+	设置<接收广播Topic>
+	- 输入Topic的剩余层级内容，剩余部分以"/"分割，每层可包含字母、数字、"-"、"_"、"@"、":"、"+"、"#"，长度限制64，最多支持5层。"#"只能放在结尾；
+	- 输入描述，限制为0-100字符，无特殊符号限制；
+	- 单击<确定>，创建成功；
+	
 7. 自定义Topic添加完成后
+
    - 修改：点击<修改>，修改Topic内容；
    - 删除：点击<删除>，删除该Topic，参考[Topic删除](#Topic删除)；
    - 批量删除：多选后，批量<删除>自定义Topic；
@@ -95,6 +106,7 @@ Topic是跟随着产品一起定义的，在定义Topic时，路径中会使用*
 2. 点击<删除>，点击<确定>，删除成功；
 
 自定义Topic删除注意事项：
+
 - 删除具有发布权限的Topic，平台将不再接收该Topic的数据；
 - 删除具有订阅权限的Topic，设备将无法订阅该Topic，已经订阅的设备将不再能收到数据；
 - 自定义Topic删除后，规则引擎的Topic需要自行删除，规则引擎不做Topic的有效性的校验；
