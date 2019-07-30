@@ -11,7 +11,13 @@
 
 
 ## 前提条件
-1. 参考[创建产品](../console_guide/product_device/create_products.md)、[创建设备](../console_guide/product_device/create_devcies.md)，获取产品序列号、设备序列号、设备密钥：
+1. 参考[创建产品](../console_guide/product_device/create_products.md)、
+2. [创建设备](../console_guide/product_device/create_devcies)，
+3. [创建设备](../console_guide/product_device/create_devcies.md\#创建设备)
+4. [创建设备](../console_guide/product_device/create_devcies\#创建设备)
+5. [创建设备](../console_guide/product_device/create_devcies.md#创建设备)
+6. [创建设备](../console_guide/product_device/create_devcies#创建设备)
+7. 获取产品序列号、设备序列号、设备密钥：
     ```
     ProductSN：qn4hvcjiyqt2069t
     DeviceSN：4ythk4cav6ph4310
