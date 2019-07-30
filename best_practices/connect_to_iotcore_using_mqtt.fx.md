@@ -111,7 +111,7 @@ Topic | 权限|描述
    }
    ```
    ② 使用云端API进行调用，参考[UpdateUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi.md#UpdateUIoTCoreDeviceShadow)，下发需要发给设备端的期望值。  
-   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入]()，其他参数参考[../api_guide/deviceshadowmgmtapi.md#UpdateUIoTCoreDeviceShadow](UpdateUIoTCoreDeviceShadow)
+   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_guidehelp.md#关于API接入)，其他参数参考[UpdateUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi.md#UpdateUIoTCoreDeviceShadow)
    ```
    POST  HTTP/1.1
    Host: api.ucloud.cn
