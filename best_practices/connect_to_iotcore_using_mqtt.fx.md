@@ -11,7 +11,7 @@
 
 
 ## 前提条件
-1. 参考[创建产品](../console_guide/product_device/create_products.md#创建产品)、[创建设备](../console_guide/product_device/create_devcies.md#创建设备)，获取产品序列号、设备序列号、设备密钥：
+1. 参考[创建产品](../console_guide/product_device/create_products.md)、[创建设备](../console_guide/product_device/create_devcies.md)，获取产品序列号、设备序列号、设备密钥：
     ```
     ProductSN：qn4hvcjiyqt2069t
     DeviceSN：4ythk4cav6ph4310
@@ -129,6 +129,7 @@ Topic | 权限|描述
    	"Region": "cn-sh2",
    	"Signature": "kwe6b4r35dc41b432s2d059f602047fd51c2881z"
    }
+   ```
 ```
    
 
@@ -158,7 +159,7 @@ Topic | 权限|描述
 1. 在MQTT.fx操作界面，点击<Publish>，输入Topic：`/qn4hvcjiyqt2069t/4ythk4cav6ph4310/uplink`；
 
 2. 输入任意内容的Payload：
-   ```
+```
    {
      "payload":"uplink-test"
    }
@@ -186,7 +187,7 @@ Topic | 权限|描述
 2. 使用云端API进行调用，参考[PublishUIoTCoreMQTTMessage](../api_guide/messagemgmtapi.md)发送下行消息。
     UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_guidehelp.md#关于API接入)，其他参数参考[PublishUIoTCoreMQTTMessage](../api_guide/messagemgmtapi.md)
 
-    ```
+   ```
     POST  HTTP/1.1
     Host: api.ucloud.cn
     Content-Type: application/json
