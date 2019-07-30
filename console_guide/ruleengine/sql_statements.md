@@ -18,15 +18,15 @@ SELECT temperature as t, deviceSN() as deviceSN FROM /70ly1tvowt696r15/+/upload 
 ## SELECT
 JSON数据类型支持以下类型：
 
-- 内置函数，支持函数参考[函数列表JSON]()，比如`deviceSN()`；
-- JSON属性表达式，比如`light.state`；
-- 星号`*`，表示所有内容；
-- 支持使用`AS`对筛选的字段定义别名，比如`temperature as t`；
+- 内置函数，支持函数参考[函数列表JSON]()，比如**deviceSN()**；
+- JSON属性表达式，比如**light.state**；
+- 星号"*"，表示所有内容；
+- 支持使用"AS"对筛选的字段定义别名，比如**temperature as t**；
 
 binary数据类型支持以下类型：
 
-- 部分内置函数，支持函数参考[函数列表binary]()，比如`deviceSN()`；
-- 星号`*`，表示所有内容；
+- 部分内置函数，支持函数参考[函数列表binary]()，比如**deviceSN()**；
+- 星号"*"，表示所有内容；
 
 
 注：SELECT出来的新的字段将会作为JSON的一个新的字段发送到目的地，比如采用上面的例子，数据格式为JSON，规则为：
@@ -43,7 +43,7 @@ SELECT deviceSN(),* FROM /70ly1tvowt696r15/+/upload
 	
 }
 ```
-在定义规则引擎的执行动作存储到结构化存储时，则使用`${deviceSN()}`和`${temperature}`、`${humidity}`配置字段值。
+在定义规则引擎的执行动作存储到结构化存储时，则使用**${deviceSN()}**和**${temperature}**、`${humidity}`配置字段值。
 
 
 ## FROM
@@ -63,13 +63,13 @@ binary数据类型仅支持自定义Topic，不支持系统Topic。
 ## WHERE
 JSON数据类型支持以下类型：
 
-- 内置函数，支持函数参考[函数列表-JSON]()，比如`deviceSN()`；
-- JSON属性表达式的条件语句，比如`light.state = 0`；
+- 内置函数，支持函数参考[函数列表-JSON]()，比如**deviceSN()**；
+- JSON属性表达式的条件语句，比如**light.state = 0**；
 - 留空，所有数据；
 
 binary数据类型支持以下类型：
 
-- 部分内置函数，支持函数参考[函数列表-binary]()，比如`deviceSN()`；
+- 部分内置函数，支持函数参考[函数列表-binary]()，比如**deviceSN()**；
 - 内置函数的条件表达式；
 
 ### WHERE 条件语法
@@ -102,7 +102,7 @@ Where表示条件，支持以下语法：
 
 
 ## 类型转换
-字符串和数字进行比较等操作时的类型互转时，两种类型运算由低类型往高类型转。比如`int32`和`int64`比较时，转变为`int64`和`int64`比较；`int32`和`string`比较时，转变为`string`和`string`比较。
+字符串和数字进行比较等操作时的类型互转时，两种类型运算由低类型往高类型转。比如**int32**和**int64**比较时，转变为**int64**和**int64**比较；**int32**和**string**比较时，转变为**string**和**string**比较。
 
 
 ## 函数列表

@@ -11,7 +11,7 @@ UCloud物联网通信云平台同时支持命令的同步和异步，开发者�
 不管同步调用还是异步调用，都需要设备在线，否则云平台会直接返回设备不在线。
 
 ### 同步命令
-1. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand]()下发命令调用接口，`Method`参数设置为`sync-同步`；   
+1. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand]()下发命令调用接口，**Method**参数设置为**sync-同步**；   
    UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入]()，其他参数参考[SendUIoTCoreDeviceCommand]()。
    ```
    POST  HTTP/1.1
@@ -34,7 +34,7 @@ UCloud物联网通信云平台同时支持命令的同步和异步，开发者�
    }
    ```
    
-2. 调用成功后，云平台保持此HTTP请求，最大5秒超时，并向设备Topic`/$system/${productSN}/${DeviceSN}/tmodel/command`下发一条消息，消息格式为：；
+2. 调用成功后，云平台保持此HTTP请求，最大5秒超时，并向设备Topic**/$system/${productSN}/${DeviceSN}/tmodel/command**下发一条消息，消息格式为：；
    ```
    {
    	"RequestID": "432542341234",
@@ -49,7 +49,7 @@ UCloud物联网通信云平台同时支持命令的同步和异步，开发者�
    - Identifier：调用命令的唯一标识符；
    - Input：输入参数的键值对集合；   
 
-3. 设备端执行相应的命令操作，并在调用API指定的超时时间内进行响应，向Topic `/$system/${productSN}/${DeviceSN}/tmodel/command_reply/${requestid}` 上报一条消息，消息格式为：
+3. 设备端执行相应的命令操作，并在调用API指定的超时时间内进行响应，向Topic **/$system/${productSN}/${DeviceSN}/tmodel/command_reply/${requestid}** 上报一条消息，消息格式为：
    ```
    {
    	"RetCode": 0,
@@ -90,7 +90,7 @@ UCloud物联网通信云平台同时支持命令的同步和异步，开发者�
    注：应用程序下发的输入参数以及设备端上报的输出参数需要和平台定义的输入和输出Identifier一致，同时取值范围也会做检查，否则会报错，或者为空。
 
 ### 异步命令
-1. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand]()下发命令调用接口，`Method`参数设置为`async-异步`。   
+1. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand]()下发命令调用接口，**Method**参数设置为**async-异步**。   
    UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入]()，其他参数参考[SendUIoTCoreDeviceCommand]()。
    ```
    POST  HTTP/1.1
@@ -121,7 +121,7 @@ UCloud物联网通信云平台同时支持命令的同步和异步，开发者�
    	"Output": {}
    }
    ```
-   同时，云平台向设备Topic`/$system/${productSN}/${DeviceSN}/tmodel/command`下发一条消息，消息格式为：；
+   同时，云平台向设备Topic**/$system/${productSN}/${DeviceSN}/tmodel/command**下发一条消息，消息格式为：；
    ```
    {
    	"RequestID": "335986033460625408",
@@ -136,8 +136,8 @@ UCloud物联网通信云平台同时支持命令的同步和异步，开发者�
    - Identifier：调用命令的唯一标识符；
    - Input：输入参数的键值对集合； 
    
-3. 设备可以选择即时响应，也可以延后响应，云平台可以将响应通过规则引擎Topic ` /$system/${productSN}/${DeviceSN}/tmodel/command_reply/+`流转到开发者应用服务。
-设备端执行相应的命令操作后向Topic `/$system/${productSN}/${DeviceSN}/tmodel/command_reply/${requestid}` 上报一条消息，消息格式为：
+3. 设备可以选择即时响应，也可以延后响应，云平台可以将响应通过规则引擎Topic ** /$system/${productSN}/${DeviceSN}/tmodel/command_reply/+**流转到开发者应用服务。
+设备端执行相应的命令操作后向Topic **/$system/${productSN}/${DeviceSN}/tmodel/command_reply/${requestid}** 上报一条消息，消息格式为：
    ```
    {
    	"RetCode": 0,

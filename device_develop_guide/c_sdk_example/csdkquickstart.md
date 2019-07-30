@@ -5,8 +5,8 @@
 
 ## 准备开发环境
 
-* 操作系统：`Ubuntu16.04`
-* 必备软件：`make`, `gcc`, `git`, `cmake`
+* 操作系统：**Ubuntu16.04**
+* 必备软件：**make**, **gcc**, **git**, **cmake**
 
 本SDK开发测试均在 64 位 Ubuntu16.04 进行，其他 Linux 版本尚未验证。为避免兼容性问题建议使用相同的编译及运行环境。Windows 环境下，建议使用 WSL(Ubuntu on Windows)。
 
@@ -22,7 +22,7 @@ sudo apt-get install -y build-essential make git gcc cmake
 
 ## 编译及运行
 
-C-SDK支持 `GNU Make` 及 `CMake` 构建。
+C-SDK支持 **GNU Make** 及 **CMake** 构建。
 
 ### GNU Make
 

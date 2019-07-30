@@ -14,7 +14,7 @@ MQTT协议（Message Queuing Telemetry Transport），叫做遥信消息队列�
 - 不支持QoS2；
 - 支持clean session；
 - 支持基于TCP创建连接；
-- 同一注册凭证（`产品序列号`，`设备序列号`，`设备密码`）同时只能有一个设备在线，其它会被踢下线；
+- 同一注册凭证（**产品序列号**，**设备序列号**，**设备密码**）同时只能有一个设备在线，其它会被踢下线；
 - 支持TLSV1.2 版本的协议来建立安全连接，安全级别高；
 - MQTT client不能跨Topic订阅或发布消息，只能在自己的所属Topic上订阅或发布消息；
 
@@ -22,7 +22,7 @@ MQTT协议（Message Queuing Telemetry Transport），叫做遥信消息队列�
 
 ## 具体流程：
 
-MQTT连接需要先了解[设备注册]()中提到的静态注册和动态注册，获取 `ClientID`，`UserName`，`Password`。
+MQTT连接需要先了解[设备注册]()中提到的静态注册和动态注册，获取 **ClientID**，**UserName**，**Password**。
 1. MQTT必须是用TLS加密传输，需要[下载根证书]()；
 2. 基于[C-SDK]()进行开发，其他语言可以参考[开源MQTT客户端](https://github.com/mqtt/mqtt.github.io/wiki/libraries?spm=a2c4g.11186623.2.11.793e78dcLHxgZy)进行开发，[MQTT协议](http://mqtt.org/?spm=a2c4g.11186623.2.12.577678dc5E6Qcl)详解可以参考[MQTT官网](http://mqtt.org/?spm=a2c4g.11186623.2.12.577678dc5E6Qcl)；
 3. MQTT连接

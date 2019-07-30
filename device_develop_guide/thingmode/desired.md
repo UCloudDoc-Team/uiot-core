@@ -4,7 +4,7 @@
 设备期望属性，是指对设备进行属性设置时如果设备不在线，云平台将缓存需要设置的值，待设备上线后再来获取期望属性；设备在线时执行正常的属性设置流程。
 
 ## 具体流程
-1. 设备不在线时，开发者应用程序通过[SetUIoTCoreDeviceProperty]()下发命令调用接口，`Desired`参数设置为`true`，云平台缓存设置值；   
+1. 设备不在线时，开发者应用程序通过[SetUIoTCoreDeviceProperty]()下发命令调用接口，**Desired**参数设置为**true**，云平台缓存设置值；   
    UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入]()，其他参数参考[SetUIoTCoreDeviceProperty]()。
    ```
    POST  HTTP/1.1
@@ -24,8 +24,8 @@
    	"Signature": "lue6b4e35df9e872232po59f6020r7fd51b28e56"
    }
    ```
-2. 设备在线时，会作为一条【设置属性】消息通过`/$system/${productSN}/${DeviceSN}/tmodel/property/set`下发给设备端，如果设备不在线，上线后可以请求获取期望属性值；  
-   设备上线后向Topic `/$system/${productSN}/${DeviceSN}/tmodel/property/desired/get`发布一条消息，消息格式为：
+2. 设备在线时，会作为一条【设置属性】消息通过**/$system/${productSN}/${DeviceSN}/tmodel/property/set**下发给设备端，如果设备不在线，上线后可以请求获取期望属性值；  
+   设备上线后向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/desired/get**发布一条消息，消息格式为：
    ```
    {
    	"RequestID": "100",
@@ -40,7 +40,7 @@
    - Require：需要获取的期望属性的标识符的集合；
    
 2. 下发期望属性值；
-   云平台向Topic `/$system/${productSN}/${DeviceSN}/tmodel/property/desired/get_reply`下发一条消息，消息格式为：
+   云平台向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/desired/get_reply**下发一条消息，消息格式为：
    ```
    {
    	"RetCode": 0,
@@ -61,7 +61,7 @@
    - Version：当前期望的version值，当删除期望值时该Version值需要一致。开发者应用程序每调用一次Version版本号加一次；
  
 3. 请求删除期望属性值
-   设备更新属性成功后，向Topic `/$system/${productSN}/${DeviceSN}/tmodel/property/desired/delete`发布一条消息，消息格式为：
+   设备更新属性成功后，向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/desired/delete**发布一条消息，消息格式为：
    ```
    {
    	"RequestID": "100",
@@ -76,10 +76,10 @@
    - RequestID：请求消息的ID号，为字符串型，根据RequestID确定一条请求以及响应的一一对应性；
    - Delete：需要删除的期望属性的标识符的集合；
    - propertyIdentifier1：需要删除的期望属性的标识符；
-   - Version：Version需要和当前云端的缓存Version一致，否则删除不生效，需要重新通过Topic `/$system/${productSN}/${DeviceSN}/tmodel/property/desired/get`获取最新的期望值更新，再删除。
+   - Version：Version需要和当前云端的缓存Version一致，否则删除不生效，需要重新通过Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/desired/get**获取最新的期望值更新，再删除。
 
 4. 响应删除成功
-   云平台向Topic `/$system/${productSN}/${DeviceSN}/tmodel/property/desired/delete_reply`下发一条消息，消息格式为：
+   云平台向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/desired/delete_reply**下发一条消息，消息格式为：
    ```
    {
    	"RequestID": "100",

@@ -27,7 +27,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 1. 设备上报版本号；
 
-    设备端向`/$system/${productSN}/${deviceSN}/ota/upstream`发布一条消息进行版本上报，消息格式如下：
+    设备端向**/$system/${productSN}/${deviceSN}/ota/upstream**发布一条消息进行版本上报，消息格式如下：
     ```
     {
         "method": "report_version",
@@ -43,7 +43,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 2. 用户在控制台[新增固件]()或调用接口[GetUIoTCoreUploadURL]()获取上传固件地址进行固件上传；
 3. 用户通过控制台发起[固件升级请求]()或调用接口[UpdateUIoTCoreDeviceFW-更新单个设备]()/[BatchUpdateUIoTCoreDeviceFW-批量升级设备]()；
 4. 云端下发固件升级消息给设备端
-    设备端会通过订阅的`/$system/${productSN}/${deviceSN}/ota/downstream`收到固件升级的消息，内容如下：
+    设备端会通过订阅的**/$system/${productSN}/${deviceSN}/ota/downstream**收到固件升级的消息，内容如下：
     ```
     {
         "method": "update_firmware",
@@ -62,7 +62,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
     - md5：固件的MD5值
     - size：固件大小，单位为字节
     
-5. 设备在收到固件升级的消息后，根据URL下载固件，通过`/$system/${productSN}/${deviceSN}/ota/upstream`上报下载进度，消息格式如下：
+5. 设备在收到固件升级的消息后，根据URL下载固件，通过**/$system/${productSN}/${deviceSN}/ota/upstream**上报下载进度，消息格式如下：
     ```
     {
         "method": "report_progress",
@@ -77,7 +77,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
     - state：状态为正在下载中
     - percent：当前下载进度，百分比
     
-6. 当设备下载完固件，通过`/$system/${productSN}/${deviceSN}/ota/upstream`上报升级进度，消息格式如下：
+6. 当设备下载完固件，通过**/$system/${productSN}/${deviceSN}/ota/upstream**上报升级进度，消息格式如下：
     ```
     {
         "method": "report_progress",
@@ -92,7 +92,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
     - state：状态为固件烧录中
     - percent：当前烧录进度，百分比
     
-7. 设备固件升级完成后，通过`/$system/${productSN}/${deviceSN}/ota/upstream`上报升级成功消息，消息格式如下：
+7. 设备固件升级完成后，通过**/$system/${productSN}/${deviceSN}/ota/upstream**上报升级成功消息，消息格式如下：
     ```
     {
         "method": "report_success",
@@ -105,7 +105,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
     - method：消息类型为report_success
     - version：当前固件版本，注意升级成功消息的version字段一定要与目标版本相符，否则云端会按升级失败处理
 
-8. 若升级失败，通过`/$system/${productSN}/${deviceSN}/ota/upstream`上报升级失败消息，消息格式如下：
+8. 若升级失败，通过**/$system/${productSN}/${deviceSN}/ota/upstream**上报升级失败消息，消息格式如下：
     ```
     {
         "method": "report_fail",

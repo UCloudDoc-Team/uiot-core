@@ -5,7 +5,7 @@
 
 ## 具体流程
 1. 请求获取物模型JSON文档；  
-   设备向Topic `/$system/${ProductSN}/${DeviceSN}/tmodel/template/get`发布一条消息，消息格式为：
+   设备向Topic **/$system/${ProductSN}/${DeviceSN}/tmodel/template/get**发布一条消息，消息格式为：
    ```
    {
      "RequestID": "100"
@@ -16,7 +16,7 @@
    - RequestID：请求消息的ID号，为字符串型，根据RequestID确定一条请求以及响应的一一对应性。
    
 2. 下发JSON文档；
-   云平台向Topic `/$system/${ProductSN}/${DeviceSN}/tmodel/template/get_reply`下发一条消息，消息格式为：
+   云平台向Topic **/$system/${ProductSN}/${DeviceSN}/tmodel/template/get_reply**下发一条消息，消息格式为：
    ```
    {
 	 "RetCode": 0,

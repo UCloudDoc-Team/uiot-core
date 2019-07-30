@@ -6,7 +6,7 @@
 设备端上报属性到云平台。
 ### 具体流程
 1. 上报属性值  
-   设备向Topic `/$system/${productSN}/${DeviceSN}/tmodel/property/post` 上报一条消息，消息格式为：
+   设备向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/post** 上报一条消息，消息格式为：
    ```
    {
 	"RequestID": "100",
@@ -30,7 +30,7 @@
    - Method：上报的方法；
    
 2. 云平台响应  
-   云平台响应，并向Topic `/$system/${productSN}/${DeviceSN}/tmodel/property/post_reply` 下发一条消息，消息格式为：
+   云平台响应，并向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/post_reply** 下发一条消息，消息格式为：
    ```
    {
 	  "RequestID": "100",
@@ -70,7 +70,7 @@
    	"Signature": "kee6b4e35df49872232e059f6020r7fd51b28poi"
    }
    ```
-   调用成功后，云平台向Topic `/$system/${productSN}/${DeviceSN}/tmodel/property/set` 下发一条消息给设备端，消息格式为：
+   调用成功后，云平台向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/set** 下发一条消息给设备端，消息格式为：
    ```
    {
    	"RequestID": "100",
@@ -85,7 +85,7 @@
    - Property：所有需要设置的属性键值对集合；
    
 2. 设备端响应  
-   设备端修改属性值，并响应云平台，向Topic `/$system/${productSN}/${DeviceSN}/tmodel/property/set_reply` 上报一条消息，消息格式为：
+   设备端修改属性值，并响应云平台，向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/set_reply** 上报一条消息，消息格式为：
    ```
    {
    	"RequestID": "100",
@@ -101,7 +101,7 @@
 
 ## 具体流程
 1. 请求获取恢复属性文档；  
-   设备向Topic `/$system/${productSN}/${DeviceSN}/tmodel/property/restore`发布一条消息，消息格式为：
+   设备向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/restore**发布一条消息，消息格式为：
    ```
    {
      "RequestID": "100"
@@ -112,7 +112,7 @@
    - RequestID：请求消息的ID号，为字符串型，根据RequestID确定一条请求以及响应的一一对应性。
    
 2. 云平台下发包含最后一次上报的属性值集合；
-   云平台向Topic `/$system/${productSN}/${DeviceSN}/tmodel/property/restore_reply`下发一条消息，消息格式为：
+   云平台向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/restore_reply**下发一条消息，消息格式为：
    ```
    {
    	"RetCode": 0,
@@ -135,5 +135,5 @@
    - Time：该属性最后一次上报的时间戳；
 
 ## 全量获取属性
-Topic `/$system/${productSN}/${DeviceSN}/tmodel/property/document`用于获取属性所有值，当属性值发生变化时，会向该Topic发送全量属性。该Topic专用于规则引擎做消息流转，不对设备端开发，即设备端不可以发布和订阅，具体参考[规则引擎]()进行设置。
+Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/document**用于获取属性所有值，当属性值发生变化时，会向该Topic发送全量属性。该Topic专用于规则引擎做消息流转，不对设备端开发，即设备端不可以发布和订阅，具体参考[规则引擎]()进行设置。
 
