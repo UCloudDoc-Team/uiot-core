@@ -40,7 +40,7 @@
    ```
    参数解释：
    - RequestID：返回消息的ID，对应请求消息ID；
-   - RetCode：返回码，具体参考[通用返回码]()；
+   - RetCode：返回码，具体参考[通用返回码](../api_guide/retcode)；
    - Message：返回消息体，成功为"success"，失败则返回具体失败原因；
 
 
@@ -50,8 +50,8 @@
 如果设备不在线需要对设备进行属性设置，可以参考[设备期望属性]()，设置属性期望值，从而方便设备上线后重新获取。
 ### 具体流程
 1. 设置属性值  
-   应用服务调用接口[SetUIoTCoreDeviceProperty]()设置属性。  
-   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入]()，其他参数参考[SetUIoTCoreDeviceProperty]()
+   应用服务调用接口[SetUIoTCoreDeviceProperty](../api_guide/tingmodemgmtapi)设置属性。  
+   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_list)，其他参数参考[SetUIoTCoreDeviceProperty](../api_guide/tingmodemgmtapi)
    ```
    POST  HTTP/1.1
    Host: api.ucloud.cn
@@ -94,7 +94,7 @@
    ```
    参数解释：
    - RequestID：返回消息的ID，对应请求消息ID；
-   - RetCode：返回码，具体参考[通用返回码]()；
+   - RetCode：返回码，具体参考[通用返回码](../api_guide/tingmodemgmtapi)；
 
 ## 恢复属性
 设备掉线后或者属性值丢失后，可以请求云端重新下发属性的最后一次保存的值。
@@ -127,7 +127,7 @@
    }
    ```
    参数解释：
-   - RetCode：返回码，具体参考[通用返回码]()；
+   - RetCode：返回码，具体参考[通用返回码](../api_guide/retcode)；
    - RequestID：返回消息的ID，对应请求消息ID；
    - LatestUpdateTime：最近一次属性修改的时间;
    - Property：所有属性集合，包含属性名、属性值、时间戳；
@@ -135,5 +135,5 @@
    - Time：该属性最后一次上报的时间戳；
 
 ## 全量获取属性
-Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/document**用于获取属性所有值，当属性值发生变化时，会向该Topic发送全量属性。该Topic专用于规则引擎做消息流转，不对设备端开发，即设备端不可以发布和订阅，具体参考[规则引擎]()进行设置。
+Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/document**用于获取属性所有值，当属性值发生变化时，会向该Topic发送全量属性。该Topic专用于规则引擎做消息流转，不对设备端开发，即设备端不可以发布和订阅，具体参考[规则引擎](../console_guide/ruleengine/data_forwarding)进行设置。
 
