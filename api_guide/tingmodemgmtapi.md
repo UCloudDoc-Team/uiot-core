@@ -26,7 +26,7 @@
 
 ### 请求示例
 
-```http
+```
 https://api.ucloud.cn/?Action=GetUIoTCoreDeviceProperty
 &Region=cn-sh2
 &ProductSN=sp23xte8iebb43pu
@@ -92,7 +92,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceProperty
 
 ### 请求示例
 
-```http
+```
 https://api.ucloud.cn/?Action=GetUIoTCoreDeviceCommandList
 &Region=cn-sh2
 &ProductSN=sp23xte8iebb43pu
@@ -169,7 +169,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceCommandList
 
 ### 请求示例
 
-```http
+```
 https://api.ucloud.cn/?Action=GetUIoTCoreDeviceEventList
 &Region=cn-sh2
 &ProductSN=sp23xte8iebb43pu
@@ -227,7 +227,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceEventList
 
 ### 请求示例
 
-```http
+```
 https://api.ucloud.cn/?Action=SetUIoTCoreDeviceProperty
 &Region=cn-sh2
 &ProductSN=sp23xte8iebb43pu
@@ -274,7 +274,7 @@ https://api.ucloud.cn/?Action=SetUIoTCoreDeviceProperty
 
 ### 请求示例
 
-```http
+```
 https://api.ucloud.cn/?Action=SendUIoTCoreDeviceCommand
 &Region=cn-sh2
 &ProductSN=sp23xte8iebb43pu
@@ -318,7 +318,7 @@ https://api.ucloud.cn/?Action=SendUIoTCoreDeviceCommand
 
 ### 请求示例
 
-```http
+```
 https://api.ucloud.cn/?Action=GetUIoTCoreTModelTemplate
 &Region=cn-sh2
 &ProductSN=sp23xte8iebb43pu

@@ -13,7 +13,7 @@
 1. 参考[创建产品](../console_guide/product_device/create_products\#创建产品)、[创建设备](../console_guide/product_device/create_devcies\#创建设备)获取产品序列号、设备序列号、设备密钥：
 
 ```
-ProductSN：qn4hvcjiyqt2069t
+ProductSN：ledubff3z85spjmu
 DeviceSN：4ythk4cav6ph4310
 DeviceSecret：6g7tjlekwf3sqqqj
 ```
@@ -24,8 +24,8 @@ DeviceSecret：6g7tjlekwf3sqqqj
 
 |MQTT认证参数|参数值|
 |---|---|
-|ClientID | qn4hvcjiyqt2069t.4ythk4cav6ph4310 `规则：${ProductSN}.${DeviceSN}`|
-|UserName | qn4hvcjiyqt2069t\|4ythk4cav6ph4310\|1 `规则：${ProductSN}\|${DeviceSN}\|${authmode}` `authmode: 1表示静态注册；2表示动态注册`|
+|ClientID | ledubff3z85spjmu.4ythk4cav6ph4310 `规则：${ProductSN}.${DeviceSN}`|
+|UserName | ledubff3z85spjmu\|4ythk4cav6ph4310\|1 `规则：${ProductSN}\|${DeviceSN}\|${authmode}` `authmode: 1表示静态注册；2表示动态注册`|
 |Password | 6g7tjlekwf3sqqqj `规则：${DevSecret}`|
 
 2）参考[设备连接](../device_develop_guide/connecting_devices\#设备连接)，获取MQTT Broker连接域名和TLS CA证书：
@@ -42,7 +42,7 @@ DeviceSecret：6g7tjlekwf3sqqqj
 
 - 输入Broker Address、Broker Port
 
-- 输入User Name、 Passwo
+- 输入User Name、 Password
 
 - 输入TLS证书
 
@@ -62,12 +62,12 @@ DeviceSecret：6g7tjlekwf3sqqqj
 
 |Topic | 权限|描述|
 |---|---|---|
-|/$system/qn4hvcjiyqt2069t/4ythk4cav6ph4310/shadow/upstream |发布|更新设备影子|
-|/$system/qn4hvcjiyqt2069t/4ythk4cav6ph4310/shadow/downstream | 订阅| 设置期望值|
+|/$system/ledubff3z85spjmu/h9onxtzw0aep7fsr/shadow/upstream |发布|更新设备影子|
+|/$system/ledubff3z85spjmu/h9onxtzw0aep7fsr/shadow/downstream | 订阅| 设置期望值|
 
 ### 上行测试（发送设备属性）
 
-1. 在MQTT.fx操作界面，点击<Publish>，输入Topic：**/$system/qn4hvcjiyqt2069t/4ythk4cav6ph4310/shadow/upstream**；
+1. 在MQTT.fx操作界面，点击<Publish>，输入Topic：**/$system/ledubff3z85spjmu/h9onxtzw0aep7fsr/shadow/upstream**；
 
 2. 根据[设备影子](../console_guide/device_shadow/operation_guide\#设备影子相关操作)文档输入Payload，上报属性**"color" : "red"**；
 
@@ -95,7 +95,7 @@ DeviceSecret：6g7tjlekwf3sqqqj
 
 ### 下行测试（设置期望值）
 
-1. 在MQTT.fx操作界面，点击<Subscribe>，输入Topic：**/$system/qn4hvcjiyqt2069t/4ythk4cav6ph4310/shadow/downstream**；
+1. 在MQTT.fx操作界面，点击<Subscribe>，输入Topic：**/$system/ledubff3z85spjmu/h9onxtzw0aep7fsr/shadow/downstream**；
 
 ![订阅消息](../images/订阅消息.png)
 
@@ -119,8 +119,8 @@ Content-Type: application/json
 Body:
 {
 	"Action": "UpdateUIoTCoreDeviceShadow",
-	"ProductSN": "qn4hvcjiyqt2069t",
-	"DeviceSN":"4ythk4cav6ph4310",
+	"ProductSN": "ledubff3z85spjmu",
+	"DeviceSN":"h9onxtzw0aep7fsr",
 	"Desired": "eyJjb2xvciI6ImdyZWVuIn0=", //base64Encode({"color":"green"})
 	"ShadowVersion": 1,
 	"ProjectId": "org-z44lmf12e",
@@ -142,12 +142,12 @@ Body:
 
 |Topic | 权限|描述|
 |---|---|---|
-|/qn4hvcjiyqt2069t/4ythk4cav6ph4310/uplink |发布|上行消息|
-|/qn4hvcjiyqt2069t/4ythk4cav6ph4310/downlink | 订阅| 下行消息|
+|/ledubff3z85spjmu/h9onxtzw0aep7fsr/uplink |发布|上行消息|
+|/ledubff3z85spjmu/h9onxtzw0aep7fsr/downlink | 订阅| 下行消息|
 
 ### 上行测试
 
-1. 在MQTT.fx操作界面，点击<Publish>，输入Topic：**/qn4hvcjiyqt2069t/4ythk4cav6ph4310/uplink**；
+1. 在MQTT.fx操作界面，点击<Publish>，输入Topic：**/ledubff3z85spjmu/h9onxtzw0aep7fsr/uplink**；
 
 2. 输入任意内容的Payload：
 
@@ -165,7 +165,7 @@ Body:
 
 ### 下行测试
 
-1. 在MQTT.fx操作界面，点击<Subscribe>，输入Topic：**/qn4hvcjiyqt2069t/4ythk4cav6ph4310/downlink**；
+1. 在MQTT.fx操作界面，点击<Subscribe>，输入Topic：**/ledubff3z85spjmu/h9onxtzw0aep7fsr/downlink**；
 
 ![下行订阅](../images/下行订阅.png)
 
@@ -180,9 +180,9 @@ Content-Type: application/json
 Body:
 {
 	"Action": "PublishUIoTCoreMQTTMessage",
-	"ProductSN": "qn4hvcjiyqt2069t",
+	"ProductSN": "ledubff3z85spjmu",
 	"MessageContent": "eyJwYXlsb2FkIjoiZG93bmxpbmstdGVzdCJ9", //base64Encode({"payload":"downlink-test"})
-	"TopicFullName": "/qn4hvcjiyqt2069t/4ythk4cav6ph4310/downlink",
+	"TopicFullName": "/ledubff3z85spjmu/h9onxtzw0aep7fsr/downlink",
 	"ProjectId": "org-z44lmf12e",
 	"PublicKey": "CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTK   Cmh7Bp5W1UH64D/O",
 	"Region": "cn-sh2",
