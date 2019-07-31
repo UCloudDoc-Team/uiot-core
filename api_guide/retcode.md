@@ -2,7 +2,7 @@
 
 # 返回码
 
-###错误码
+### 错误码
 | 错误码          | 中文                                                  | 英文                                                  |
 | -------------- | ---------------------------------------------------- | ---------------------------------------------------: |
 | 100000         | 创建产品失败                                           | Create product failed                                |
@@ -64,4 +64,3 @@
 | 100057         | 规则下的Action数量超过限制                                         |Action under rule over limitation             |
 | 100058         | 物模型属性未定义                                         |Thing model property not define             |
 | 100059         | 完成实名认证后可创建更多资源                                         |Create more resources after verifying identity             |
-
