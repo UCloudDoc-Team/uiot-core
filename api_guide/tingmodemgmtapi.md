@@ -259,9 +259,9 @@ https://api.ucloud.cn/?Action=SetUIoTCoreDeviceProperty
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
 |Identifier|string|标识符|**Yes**|
-|Input|string|base64后的json字符串，格式参考物模型模板。默认为空|No|
-|Method|string|sync或者async。默认为async|No|
-|Timeout|int|超时时间，单位为秒，只在method为sync时有效，最长不超过5秒。默认为5|No|
+|Input|string|base64后的json字符串，格式参考物模型模板。默认为空|**No**|
+|Method|string|sync或者async。默认为async|**No**|
+|Timeout|int|超时时间，单位为秒，只在method为sync时有效，最长不超过5秒。默认为5|**No**|
 
 ### 响应参数
 
