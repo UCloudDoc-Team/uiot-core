@@ -53,7 +53,7 @@
      >#define DEVICESECRET    ""
      >```
 
-   - 修改订阅的topic
+   - 修改需要订阅的topic
 
      >```
      >static int _register_subscribe_topics(void *client)
@@ -65,30 +65,49 @@
      >}
      >```
 
-   - 修改上行逻辑，逻辑会每隔5秒钟上报'温度、湿度'状态。
+   - 修改上报的消息内容。
 
-   >```
-   >static int _publish_msg(void *client)
-   >{
-   >  ...
-   >  char topic_content[MAX_SIZE_OF_TOPIC_CONTENT + 1] = {0};
-   >  while(1){
-   >    temperture = ...; //获取实时温度值
-   >    humidity = ...;   //获取实时湿度值
-   >    int size = HAL_Snprintf(topic_content, sizeof(topic_content), "{\"temperture\": \"%d\", \"humidity\": \"%d\"}", temperture, humidity);
-   >    if (size < 0 || size > sizeof(topic_content) - 1)
-   >    {
-   >	   HAL_Printf("payload content length not enough! content size:%d  buf size:%d", size, (int)sizeof(topic_content));
-   >	   return -3;
-   >    }
-   >    pub_params.payload = topic_content;
-   >    pub_params.payload_len = strlen(topic_content);
-   >    IOT_MQTT_Publish(client, topicName, &pub_params);
-   >    IOT_MQTT_Yield(client,5000);
-   >  }
-   >  return ret;
-   >}
-   >```
+     >```
+     >static int _publish_msg(void *client)
+     >{
+     >  ...
+     >  char topic_content[MAX_SIZE_OF_TOPIC_CONTENT + 1] = {0};
+     >  temperture = ...; //获取实时温度值
+     >  humidity = ...;   //获取实时湿度值
+     >  int size = HAL_Snprintf(topic_content, sizeof(topic_content), "{\"temperture\": \"%d\", \"humidity\": \"%d\"}", temperture, humidity);
+     >  if (size < 0 || size > sizeof(topic_content) - 1)
+     >  ...
+     >}
+     >```
+
+   - 修改上行逻辑，逻辑会每隔5秒钟上报'温度、湿度'状态。
+     >int main(int argc, char **argv) {
+     >  ...
+     >	//register subscribe topics here
+     >  rc = _register_subscribe_topics(client);
+     >  if (rc < 0) {
+     >    HAL_Printf("Client Subscribe Topic Failed: %d", rc);
+     >    return rc;
+     >  }
+     >  rc = IOT_MQTT_Yield(client, 200);
+     >  do {
+     >    // 等待订阅结果
+     >    if (sg_sub_packet_id > 0) {
+     >      HAL_Printf("subscribe topic success!");
+     >    }
+     >  }while (sg_sub_packet_id < 0);
+     >
+     >  //满足一定条件下，每隔5秒发送温度值和湿度值
+     >  while(condition){
+     >    rc = _publish_msg(client);
+     >    if (rc < 0) {
+     >      HAL_Printf("client publish topic failed :%d.", rc);
+     >    }
+     >    rc = IOT_MQTT_Yield(client, 5000);
+     >  }
+     >
+     >  rc = IOT_MQTT_Destroy(&client);    
+     >  return rc;
 
 	 注，实际开发中可以通过规则引擎将自定义Topic上发的数据流转到UHost/MQ/DB/TSDB等进行消费，详细参考[规则引擎]()。
 
