@@ -14,9 +14,9 @@ UCloud物联网通信云平台同时支持命令的同步和异步，开发者�
 
 ### 同步命令
 
-1. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand](../api_guide/api_list)下发命令调用接口，**Method**参数设置为**sync-同步**；   
+1\. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand](../api_guide/api_list)下发命令调用接口，**Method**参数设置为**sync-同步**；   
 
-   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/tingmodemgmtapi)，其他参数参考[SendUIoTCoreDeviceCommand](../api_guide/api_list)。
+UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/tingmodemgmtapi)，其他参数参考[SendUIoTCoreDeviceCommand](../api_guide/api_list)。
 
 ```
 POST  HTTP/1.1
@@ -39,7 +39,7 @@ Body:
 }
 ```
 
-2. 调用成功后，云平台保持此HTTP请求，最大5秒超时，并向设备Topic**/$system/${productSN}/${DeviceSN}/tmodel/command**下发一条消息，消息格式为：；
+2\. 调用成功后，云平台保持此HTTP请求，最大5秒超时，并向设备Topic**/$system/${productSN}/${DeviceSN}/tmodel/command**下发一条消息，消息格式为：；
 
 ```
 {
@@ -51,15 +51,15 @@ Body:
 }
 ```
 
-   参数解释：
+参数解释：
 
-   - RequestID：请求消息的ID号，为字符串型，根据RequestID确定一条请求以及响应的一一对应性；
+- RequestID：请求消息的ID号，为字符串型，根据RequestID确定一条请求以及响应的一一对应性；
 
-   - Identifier：调用命令的唯一标识符；
+- Identifier：调用命令的唯一标识符；
 
-   - Input：输入参数的键值对集合；   
+- Input：输入参数的键值对集合；   
 
-3. 设备端执行相应的命令操作，并在调用API指定的超时时间内进行响应，向Topic **/$system/${productSN}/${DeviceSN}/tmodel/command_reply/${requestid}** 上报一条消息，消息格式为：
+3\. 设备端执行相应的命令操作，并在调用API指定的超时时间内进行响应，向Topic **/$system/${productSN}/${DeviceSN}/tmodel/command_reply/${requestid}** 上报一条消息，消息格式为：
 
 ```
 {
@@ -72,16 +72,17 @@ Body:
 }
 ```
 
-   参数解释：
-   - RequestID：返回消息的ID，对应请求消息ID；
+参数解释：
 
-   - RetCode：返回码，具体参考[通用返回码]()；
+- RequestID：返回消息的ID，对应请求消息ID；
 
-   - Identifier：调用命令的唯一标识符；
+- RetCode：返回码，具体参考[通用返回码]()；
 
-   - Output：输出参数的键值对集合；云平台将响应作为Response返回给该HTTP请求，否则同步命令失败。
+- Identifier：调用命令的唯一标识符；
 
-4. 云平台会将设备上报的结果在保持的HTTP请求内返回给开发者应用程序，返回消息为：
+- Output：输出参数的键值对集合；云平台将响应作为Response返回给该HTTP请求，否则同步命令失败。
+
+4\. 云平台会将设备上报的结果在保持的HTTP请求内返回给开发者应用程序，返回消息为：
 
 ```
 {
@@ -94,7 +95,7 @@ Body:
 }
 ```
 
-   如果设备端未能在超时时间内上报结果，云平台会直接给应用程序返回超时消息：
+如果设备端未能在超时时间内上报结果，云平台会直接给应用程序返回超时消息：
 
 ```
 {
@@ -104,13 +105,13 @@ Body:
 }
 ```
 
-   注：应用程序下发的输入参数以及设备端上报的输出参数需要和平台定义的输入和输出Identifier一致，同时取值范围也会做检查，否则会报错，或者为空。
+注：应用程序下发的输入参数以及设备端上报的输出参数需要和平台定义的输入和输出Identifier一致，同时取值范围也会做检查，否则会报错，或者为空。
 
 ### 异步命令
 
-1. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand](../api_guide/api_list)下发命令调用接口，**Method**参数设置为**async-异步**。   
+1\. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand](../api_guide/api_list)下发命令调用接口，**Method**参数设置为**async-异步**。   
 
-   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_list)，其他参数参考[SendUIoTCoreDeviceCommand](../api_guide/api_list)。
+UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_list)，其他参数参考[SendUIoTCoreDeviceCommand](../api_guide/api_list)。
 
 ```
 POST  HTTP/1.1
@@ -133,7 +134,7 @@ Body:
 }
 ```
 
-2. 云平台即刻返回HTTP Response。
+2\. 云平台即刻返回HTTP Response。
 
 ```
 {
@@ -144,7 +145,7 @@ Body:
 }
 ```
 
-   同时，云平台向设备Topic**/$system/${productSN}/${DeviceSN}/tmodel/command**下发一条消息，消息格式为：；
+同时，云平台向设备Topic**/$system/${productSN}/${DeviceSN}/tmodel/command**下发一条消息，消息格式为：；
 
 ```
 {
@@ -156,15 +157,15 @@ Body:
 }
 ```
 
-   参数解释：
+参数解释：
 
-   - RequestID：请求消息的ID号，为字符串型，根据RequestID确定一条请求以及响应的一一对应性；
+- RequestID：请求消息的ID号，为字符串型，根据RequestID确定一条请求以及响应的一一对应性；
 
-   - Identifier：调用命令的唯一标识符；
+- Identifier：调用命令的唯一标识符；
 
-   - Input：输入参数的键值对集合； 
+- Input：输入参数的键值对集合； 
 
-3. 设备可以选择即时响应，也可以延后响应，云平台可以将响应通过规则引擎Topic ** /$system/${productSN}/${DeviceSN}/tmodel/command_reply/+**流转到开发者应用服务。
+3\. 设备可以选择即时响应，也可以延后响应，云平台可以将响应通过规则引擎Topic ** /$system/${productSN}/${DeviceSN}/tmodel/command_reply/+**流转到开发者应用服务。
 设备端执行相应的命令操作后向Topic **/$system/${productSN}/${DeviceSN}/tmodel/command_reply/${requestid}** 上报一条消息，消息格式为：
 
 ```
@@ -178,14 +179,14 @@ Body:
 }
 ```
 
-   参数解释：
+参数解释：
 
-   - RequestID：返回消息的ID，对应请求消息ID；
+- RequestID：返回消息的ID，对应请求消息ID；
 
-   - RetCode：返回码，具体参考[通用返回码](../api_guide/retcode)；
+- RetCode：返回码，具体参考[通用返回码](../api_guide/retcode)；
 
-   - Identifier：调用命令的唯一标识符；
+- Identifier：调用命令的唯一标识符；
 
-   - Output：输出参数的键值对集合；云平台将响应作为Response返回给该HTTP请求，否则同步命令失败。
+- Output：输出参数的键值对集合；云平台将响应作为Response返回给该HTTP请求，否则同步命令失败。
 
-   注：应用程序下发的输入参数以及设备端上报的输出参数需要和平台定义的输入和输出Identifier一致，同时取值范围也会做检查，否则会报错，或者为空。
+注：应用程序下发的输入参数以及设备端上报的输出参数需要和平台定义的输入和输出Identifier一致，同时取值范围也会做检查，否则会报错，或者为空。

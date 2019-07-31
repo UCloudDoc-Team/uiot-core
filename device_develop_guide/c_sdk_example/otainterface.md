@@ -308,9 +308,13 @@ int IOT_OTA_Ioctl(void *handle, IOT_OTA_CmdType type, void *buf, size_t buf_len)
 #### 说明
 
 * 如果 type==OTA_IOCTL_FETCHED_SIZE, 'buf' 需要传入 uint32_t 类型指针, 'buf_len' 需指定为 4
+
 * 如果 type==OTA_IOCTL_FILE_SIZE, 'buf' 需要传入 uint32_t 类型指针, 'buf_len' 需指定为 4
+
 * 如果 type==OTA_IOCTL_MD5SUM, 'buf' 需要传入 buffer, 'buf_len' 需指定为 33
+
 * 如果 type==OTA_IOCTL_VERSION, 'buf' 需要传入 buffer, 'buf_len' 需指定为 OTA_VERSION_LEN_MAX
+
 * 如果 type==OTA_IOCTL_CHECK_FIRMWARE, 'buf' 需要传入 uint32_t 类型指针, 'buf_len'需指定为 4 。返回：0, 固件MD5校验不通过, 固件无效; 1, 固件有效
 
 ### IOT_OTA_GetLastError

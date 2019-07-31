@@ -23,7 +23,7 @@
 |名称| 内容|
 |---|---|
 |接口名| [GetUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi) \- 获取设备影子。|
-|接口参数|**Region**：上海二区，地域ID为    [cn-sh2](https://docs.ucloud.cn/api/summary/regionlist)。 **ProductSN**：产品序列号为    **8pi2i730vxsala2a**，通过控制台查看。 **DeviceSN**：设备序列号为**ark1d4ug1evfb1jy**，通过控制台查看。|
+|接口参数|**Region**：上海二区，地域ID为    [cn\-sh2](https://docs.ucloud.cn/api/summary/regionlist)。 **ProductSN**：产品序列号为    **8pi2i730vxsala2a**，通过控制台查看。 **DeviceSN**：设备序列号为**ark1d4ug1evfb1jy**，通过控制台查看。|
 
 2. 获取公共参数，即每次请求都需要的参数
 
@@ -35,9 +35,10 @@
 |ProjectId|项目ID为 **org-z44lmf12e**，项目ID为 **org-z44lmf12e**，通过控制台首页查看。主账号为空时为默认项目，子账号为必填字段。|
 
 3. 获取用户签名  
-   用户签名需要接口参数和公共参数以及用户私钥参与一起完成。 
 
-   1） 接口参数+公共参数
+用户签名需要接口参数和公共参数以及用户私钥参与一起完成。 
+
+1） 接口参数+公共参数
 
 ```
 // 接口参数
@@ -49,7 +50,7 @@ Action:GetUIoTCoreDeviceShadow
 PublicKey:CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O
 ```
 
-   2）将上述参数按照参数名（上面参数中的**Region、ProjectId**等）进行升序排序
+2）将上述参数按照参数名（上面参数中的**Region、ProjectId**等）进行升序排序
 
 ```
 Action:GetUIoTCoreDeviceShadow
@@ -60,24 +61,24 @@ PublicKey:CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O
 Region:cn-sh2
 ```
 
-   3）将上述参数的**键值**依次相连构造字符串，并在尾部接上用户私钥
+3）将上述参数的**键值**依次相连构造字符串，并在尾部接上用户私钥
 
-   - 用户私钥通过 个人中心->API密钥获取为：**ztqlj0vtg6Por5d/etqpadpTZwscLRh5cIsFAHbwuvnMY4mAWI+GT5C2yzj/KiZf**
+- 用户私钥通过 个人中心->API密钥获取为：**ztqlj0vtg6Por5d/etqpadpTZwscLRh5cIsFAHbwuvnMY4mAWI+GT5C2yzj/KiZf**
 
-   - 拼接获得字符串为（键值依次相连+用户私钥）：
+- 拼接获得字符串为（键值依次相连+用户私钥）：
 
 ```  ActionGetUIoTCoreDeviceShadowDeviceSNark1d4ug1evfb1jyProductSN8pi2i730vxsala2aProjectIdorg-z44lmf12ePublicKeyCJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/ORegioncn-sh2ztqlj0vtg6Por5d/etqpadpTZwscLRh5cIsFAHbwuvnMY4mAWI+GT5C2yzj/KiZf
 ```
 
-   4）计算SHA1签名
+4）计算SHA1签名
 
-   将第3）步字符串进行SHA1签名，获取签名串为
+将第3）步字符串进行SHA1签名，获取签名串为
 
 ```
 Signature:f1e6b4e35df41b42232e059f6020c7fd51b2889e
 ```
 
-   5）至此所有请求需要的参数
+5）至此所有请求需要的参数
 
 ```
 Action:GetUIoTCoreDeviceShadow
@@ -91,38 +92,40 @@ Signature:f1e6b4e35df41b42232e059f6020c7fd51b2889e
 
 4. 请求接口获取响应
 
-   通过GET和POST都可以请求接口得到同样的响应结果，请求的BaseURL为[http://api.ucloud.cn/](http://api.ucloud.cn/)。
+过GET和POST都可以请求接口得到同样的响应结果，请求的BaseURL为[http://api.ucloud.cn/](http://api.ucloud.cn/)。
 
-   1）**通过GET方式** 
+）**通过GET方式** 
 
-   ① 当参数中存在特殊字符时需要进行编码，编码的规则为： 
+当参数中存在特殊字符时需要进行编码，编码的规则为： 
 
-      - 字符 A~Z、a~z、0~9不编码；
+- 字符 A~Z、a~z、0~9不编码；
 
-      - 字符“-”、“_”、“.”、“~”不编码；
+- 字符“-”、“_”、“.”、“~”不编码；
 
-      - 其它字符编码成 %XY 的格式，其中 XY 是字符对应 ASCII 码的 16    进制表示。比如：英文的双引号（”）对应的编码为 %22；
+- 其它字符编码成 %XY 的格式，其中 XY 是字符对应 ASCII 码的 16    进制表示。比如：英文的双引号（”）对应的编码为 %22；
 
-      - 对于扩展的 UTF-8 字符，编码成 %XY%ZA… 的格式；
+- 对于扩展的 UTF-8 字符，编码成 %XY%ZA… 的格式；
 
-      - 英文空格（ ）要编码成 %20，而不是加号（+）。
+- 英文空格（ ）要编码成 %20，而不是加号（+）。
 
-    根据上述的规则将
+根据上述的规则将
 
-```    PublicKey:CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O
+```    
+PublicKey:CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O
 ```
 
-    进行URL编码为
+进行URL编码为
 
-```    PublicKey:CJf%2BLfjjXPk70z%2FfsBlK9sHC%2BkBTTj7gr2g%2FC%2FR7YSi3EFTKCmh7Bp5W1UH64D%2FO
+```    
+PublicKey:CJf%2BLfjjXPk70z%2FfsBlK9sHC%2BkBTTj7gr2g%2FC%2FR7YSi3EFTKCmh7Bp5W1UH64D%2FO
 ```
 
-   ② 将请求参数转换成URL Params，拼接上Base URL进行GET请求：
+② 将请求参数转换成URL Params，拼接上Base URL进行GET请求：
 
 ```     http(s)://api.ucloud.cn/?Action=GetUIoTCoreDeviceShadow&DeviceSN=ark1d4ug1evfb1jy&ProductSN=8pi2i730vxsala2a&ProjectId=org-z44lmf12e&PublicKey=CJf%2BLfjjXPk70z%2FfsBlK9sHC%2BkBTTj7gr2g%2FC%2FR7YSi3EFTKCmh7Bp5W1UH64D%2FO& Region=cn-sh2&Signature=f1e6b4e35df41b42232e059f6020c7fd51b2889e
 ```
 
-   ③ 返回响应结果为：
+③ 返回响应结果为：
 
 ```
 {
@@ -143,9 +146,9 @@ Signature:f1e6b4e35df41b42232e059f6020c7fd51b2889e
 }
 ```
 
-   2）**通过POST方式** 
+2）**通过POST方式** 
 
-   ① POST通过JSON格式请求：
+① POST通过JSON格式请求：
 
 ```
 POST  HTTP/1.1
@@ -163,7 +166,7 @@ Body:
 }
 ```
 
-   ②返回响应结果为：
+②返回响应结果为：
 
 ```
 {

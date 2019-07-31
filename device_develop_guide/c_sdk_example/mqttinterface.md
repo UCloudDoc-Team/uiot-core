@@ -211,7 +211,7 @@ void IOT_MQTT_Destroy(void **pClient);
 
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
-| pClient | void ** | 输入 | 指向MQTT句柄的指针 |
+| pClient | void *\* | 输入 | 指向MQTT句柄的指针 |
 
 ## IOT_MQTT_Yield
 
@@ -225,7 +225,7 @@ int IOT_MQTT_Yield(void *pClient, uint32_t timeout_ms)
 
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
-| pClient | void ** | 输入 | 指向MQTT句柄的指针 |
+| pClient | void *\* | 输入 | 指向MQTT句柄的指针 |
 | timeout\_ms | uint32\_t | 输入 | 等待时间，单位是ms |
 | ret | int | 返回 | 成功返回SUCCESS, FAILURE表示失败 |
 

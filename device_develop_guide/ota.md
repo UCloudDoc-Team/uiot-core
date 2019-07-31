@@ -22,7 +22,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 1. 设备上报版本号；
 
-    设备端向**/$system/${productSN}/${deviceSN}/ota/upstream**发布一条消息进行版本上报，消息格式如下：
+设备端向**/$system/${productSN}/${deviceSN}/ota/upstream**发布一条消息进行版本上报，消息格式如下：
 
 ```
 {
@@ -33,11 +33,11 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 }
 ```
 
-	参数解释:
+参数解释:
 
-    - method：消息类型为report_version
+- method：消息类型为report_version
 
-    - version：上报的版本号
+- version：上报的版本号
 
 2. 用户在控制台[新增固件](../console_guide/ota/firmware_management\#新增固件)；
 
@@ -45,7 +45,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 4. 云端下发固件升级消息给设备端
 
-	设备端会通过订阅的**/$system/${productSN}/${deviceSN}/ota/downstream**收到固件升级的消息，内容如下：
+设备端会通过订阅的**/$system/${productSN}/${deviceSN}/ota/downstream**收到固件升级的消息，内容如下：
 
 ```
 {
@@ -58,17 +58,18 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
     }
 }
 ```
-    参数解释：
 
-    - method：消息类型为update_firmware
+参数解释：
 
-    - version：升级版本
+- method：消息类型为update_firmware
 
-    - url：下载固件的url
+- version：升级版本
 
-    - md5：固件的MD5值
+- url：下载固件的url
 
-    - size：固件大小，单位为字节
+- md5：固件的MD5值
+
+- size：固件大小，单位为字节
 
 5. 设备在收到固件升级的消息后，根据URL下载固件，通过**/$system/${productSN}/${deviceSN}/ota/upstream**上报下载进度，消息格式如下：
 
@@ -82,13 +83,13 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 }
 ```
 
-    参数解释：
+参数解释：
 
-    - method：消息类型为report_progress
+- method：消息类型为report_progress
 
-    - state：状态为正在下载中
+- state：状态为正在下载中
 
-    - percent：当前下载进度，百分比
+- percent：当前下载进度，百分比
 
 6. 当设备下载完固件，通过**/$system/${productSN}/${deviceSN}/ota/upstream**上报升级进度，消息格式如下：
 
@@ -102,13 +103,13 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 }
 ```
 
-    参数解释：
+参数解释：
 
-    - method：消息类型为report_progress
+- method：消息类型为report_progress
 
-    - state：状态为固件烧录中
+- state：状态为固件烧录中
 
-    - percent：当前烧录进度，百分比
+- percent：当前烧录进度，百分比
 
 7. 设备固件升级完成后，通过**/$system/${productSN}/${deviceSN}/ota/upstream**上报升级成功消息，消息格式如下：
 
@@ -121,10 +122,11 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 }
 ```
 
-    参数解释：
+参数解释：
 
-    - method：消息类型为report_success
-    - version：当前固件版本，注意升级成功消息的version字段一定要与目标版本相符，否则云端会按升级失败处理
+- method：消息类型为report_success
+
+- version：当前固件版本，注意升级成功消息的version字段一定要与目标版本相符，否则云端会按升级失败处理
 
 8. 若升级失败，通过**/$system/${productSN}/${deviceSN}/ota/upstream**上报升级失败消息，消息格式如下：
 
@@ -136,21 +138,22 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
     }
 }
 ```
-    参数解释：
 
-    - method：消息类型为report_fail
+参数解释：
 
-    - err_code：错误码，
+- method：消息类型为report_fail
 
-      - -1：URL无法访问；
+- err_code：错误码，
 
-      - -2：URL签名过期；
+   - -1：URL无法访问；
 
-      - -3：下载超时；
+   - -2：URL签名过期；
 
-      - -4: MD5不匹配；
+   - -3：下载超时；
 
-      - -5：固件烧录失败
+   - -4: MD5不匹配；
+
+   - -5：固件烧录失败
 
 **离线处理：**  
 设备离线时，不能接收服务端推送的升级消息。通过当设备再次上线后，主动请求固件更新消息。OTA服务端收到设备上线消息，验证该设备是否需要升级。如果需要升级，再次推送升级消息给设备， 否则，不推送消息。  
