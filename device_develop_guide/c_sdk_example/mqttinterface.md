@@ -2,25 +2,45 @@
 
 
 # MQTT协议说明
+
 目前物联网通信支持MQTT标准协议接入（兼容3.1.1版本协议），具体的协议请参考MQTT 3.1.1协议文档
 
 ## 和标准MQTT区别
+
 1. 支持 MQTT 的 PUB、SUB、PING、PONG、CONNECT、DISCONNECT、UNSUB 等报文。
+
 2. 支持 cleanSession。
+
 3. 不支持 will、retain msg。
+
 4. 不支持 QOS2。
 
 ## MQTT通道，安全等级
+
 支持TLS协议建立安全连接，保证通信内容安全性。
 
 # 设备身份认证
+
 设备身份认证分为动态认证和静态认证两种。
 
 # 动态认证
-动态认证即一型一密，首先需要确保打开CMakeLists文件中的ENABLE_FEATURE_AUTH_MODE_DYNAMIC编译开关，<br>
-提前在设备上烧写产品序列号，产品密钥，设备序列号，通过HAL层的接口获取设备信息，填入MQTT的初始连接参数中，<br>
-向云平台进行动态身份认证，动态认证成功后会从云平台获取DeviceSecret并通过HAL_SetDeviceSecret接口保存。<br>
-用户需要通过HAL_GetDeviceSecret接口获取到DeviceSecret填到MQTT连接参数中并重新进行静态认证。需要注意的<br>
+
+动态认证即一型一密，首先需要确保打开CMakeLists文件中的ENABLE_FEATURE_AUTH_MODE_DYNAMIC编译开关，
+
+
+
+提前在设备上烧写产品序列号，产品密钥，设备序列号，通过HAL层的接口获取设备信息，填入MQTT的初始连接参数中，
+
+
+
+向云平台进行动态身份认证，动态认证成功后会从云平台获取DeviceSecret并通过HAL_SetDeviceSecret接口保存。
+
+
+
+用户需要通过HAL_GetDeviceSecret接口获取到DeviceSecret填到MQTT连接参数中并重新进行静态认证。需要注意的
+
+
+
 是已经进行过静态认证的设备如果再进行动态认证会失败。
 
 ```
@@ -30,7 +50,9 @@ option(ENABLE_FEATURE_AUTH_MODE_DYNAMIC "是否打开设备动态注册" ON)
 
 ![](../../images/设备注册-1.png)
 
-## 代码示例 (samples\shadow\dynamic_auth_sample.c)
+## 代码示例 
+(samples\shadow\dynamic_auth_sample.c)
+
 产品序列号，产品密钥，设备序列号信息填入MQTT初始化信息，其他信息可以使用默认参数或者根据实际需求调整。
 event_handler.f_fp需要用户自己实现，用于处理云平台的MQTT响应消息。将控制台上的设备信息替换下列宏。
 
@@ -99,13 +121,19 @@ static int _setup_connect_init_params(MQTTInitParams* initParams)
 ```
 
 # 静态认证
+
 静态认证即一机一密，相比一型一密的安全性比较高，推荐使用，提前在设备上烧写产品序列号，设备序列号，设备密钥。<br>
 通过HAL层的接口获取设备信息，填入MQTT的初始连接参数中，向物联网平台进行身份认证。
 
 ![](../../images/设备注册-4.png)
 
-## 代码示例 (samples\shadow\mqtt_sample.c)
-产品序列号，设备序列号，设备密钥信息填入MQTT初始化信息，其他信息可以使用默认参数或者根据实际需求调整。<br>
+## 代码示例 
+(samples\shadow\mqtt_sample.c)
+
+产品序列号，设备序列号，设备密钥信息填入MQTT初始化信息，其他信息可以使用默认参数或者根据实际需求调整。
+
+
+
 将控制台上用户自己创建的产品设备信息替换以下宏。
 
 ![](../../images/设备注册-5.png)
@@ -198,8 +226,8 @@ int IOT_MQTT_Yield(void *pClient, uint32_t timeout_ms)
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | pClient | void ** | 输入 | 指向MQTT句柄的指针 |
-| timeout_ms | uint32_t | 输入 | 等待时间，单位是ms |
-| ret | int | 返回 | 成功返回SUCCESS,<br>FAILURE表示失败 |
+| timeout\_ms | uint32\_t | 输入 | 等待时间，单位是ms |
+| ret | int | 返回 | 成功返回SUCCESS, FAILURE表示失败 |
 
 ## IOT_MQTT_Publish
 
@@ -216,7 +244,7 @@ int IOT_MQTT_Publish(void *pClient, char *topicName, PublishParams *pParams);
 | pClient | void * | 输入 | MQTT句柄 |
 | topicName | char * | 输入 | 发送消息的topic名称 |
 | pParams | PublishParams * | 输入 | 发送消息的内容和相关参数 |
-| ret | int | 返回 | 发送成功返回packet_id,<br>FAILURE表示失败 |
+| ret | int | 返回 | 发送成功返回packet\_id, FAILURE表示失败 |
 
 ## IOT_MQTT_Subscribe
 
@@ -233,7 +261,7 @@ int IOT_MQTT_Subscribe(void *pClient, char *topicFilter, SubscribeParams *pParam
 | pClient| void * | 输入 | MQTT句柄 |
 | topicFilter | char * | 输入 | 主题过滤器 |
 | pParams | SubscribeParams * | 输入 | 订阅topic的服务质量,回调函数等参数 |
-| ret | int | 返回 | 订阅成功返回packet_id,<br>FAILURE表示失败 |
+| ret | int | 返回 | 订阅成功返回packet\_id, FAILURE表示失败 |
 
 ## IOT_MQTT_Unsubscribe
 
@@ -249,7 +277,7 @@ int HAL_MQTT_Unsubscribe(void *pClient, char *topicFilter);
 | --- | --- | --- | --- |
 | pClient| void * | 输入 | MQTT句柄 |
 | topicFilter | char * | 输入 | 主题过滤器 |
-| ret | int | 返回 | 订阅成功返回packet_id,<br>FAILURE表示失败 |
+| ret | int | 返回 | 订阅成功返回packet\_id, FAILURE表示失败 |
 
 ## IOT_MQTT_IsConnected
 
@@ -264,7 +292,7 @@ bool IOT_MQTT_IsConnected(void *pClient);
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | pClient| void * | 输入 | MQTT句柄 |
-| ret | bool | 返回 | true表示已连接,<br>false表示已断开 |
+| ret | bool | 返回 | true表示已连接, false表示已断开 |
 
 ## IOT_MQTT_Dynamic_Register
 
@@ -273,9 +301,10 @@ bool IOT_MQTT_IsConnected(void *pClient);
 ```
 int IOT_MQTT_Dynamic_Register(MQTTInitParams *pParams);
 ```
+
 ### 参数列表
 
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | pParams| MQTTInitParams * | 输入 | MQTT连接参数 |
-| ret | bool | 返回 | SUCCESS表示获取成功,<br>FAILURE表示获取失败 |
+| ret | bool | 返回 | SUCCESS表示获取成功 FAILURE表示获取失败 |

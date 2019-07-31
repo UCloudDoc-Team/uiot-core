@@ -1,6 +1,7 @@
 {{indexmenu_n>2}}
 
 # 设备影子相关操作
+
 对设备影子的操作包括：
 
 - 设备端获取设备影子文档；
@@ -178,22 +179,23 @@ Subscribe Topic /$system/${ProductSN}/${DeviceSN}/shadow/get_reply
       "Timestamp": 1562909688
     }
 ```
-    |参数|说明|
-    |---|---|
-    |Method|表示对设备影子的操作类型，包括update更新/control控制/ reply回复|
-    |Retcode|响应码，具体可以参考下面的响应码|
-    
-    |响应码|说明|
-    |---|---|
-    |0 |请求成功|
-    |230 |不正确的JSON格式|
-    |230 |消息体缺少 method 信息|
-    |230 |消息体缺少 state 字段|
-    |230 |消息体 version 不是数字|
-    |230 |消息体缺少 desired 字段|
-    |230 |消息体 method 是无效的方法|
-    |100026 |影子文档与消息体 version 版本冲突，顺便返回version的值|
-    |130 |设备影子服务端处理异常|
+
+|参数|说明|
+|---|---|
+|Method|表示对设备影子的操作类型，包括update更新/control控制/ reply回复|
+|Retcode|响应码，具体可以参考下面的响应码|
+
+|响应码|说明|
+|---|---|
+|0 |请求成功|
+|230 |不正确的JSON格式|
+|230 |消息体缺少 method 信息|
+|230 |消息体缺少 state 字段|
+|230 |消息体 version 不是数字|
+|230 |消息体缺少 desired 字段|
+|230 |消息体 method 是无效的方法|
+|100026 |影子文档与消息体 version 版本冲突，顺便返回version的值|
+|130 |设备影子服务端处理异常|
     
 
 
@@ -277,6 +279,7 @@ Subscribe Topic /$system/${ProductSN}/${DeviceSN}/shadow/get_reply
 ### 设备重置设备影子版本
 
 当设备发送的**update**请求中的**Version**为特殊值**-1**，设备影子会将影子文档版本更新为**0**，同时清空（如有）**Desired**中的值。清空设备影子版本，不影响设备属性的正常上报。
+
 1\. 上报属性，并使用**Version**为**-1**。
 
 ```
@@ -340,7 +343,7 @@ Subscribe Topic /$system/${ProductSN}/${DeviceSN}/shadow/get_reply
 
 ### 设备影子更新时转发到规则引擎
 
-设备影子更新时，平台将完整设备影子文档发到 **/$system/${ProductSN}/${DeviceSN}/shadow/document** ，通过规则引擎可流转到平台以外的云产品，比如UHost、UTSDB、UDB、UKafka等。该Topic仅用于规则引擎流转，设备端不能发布或订阅。
+设备影子更新时，平台将完整设备影子文档发到 **/$system/${ProductSN}/${DeviceSN}/shadow/document** ，通过规则引擎可流转到平台以外的云产品，比如UHost、UDB、UKafka等。该Topic仅用于规则引擎流转，设备端不能发布或订阅。
 
 
 
@@ -427,8 +430,9 @@ UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数�
     }
 ```
 
-3\. 在线设备收到带有期望值的**control**消息之后，将自身状态值设为期望值（本例中的温度一般是控制恒温加热器）。
-4\. 设备端状态修改后，需要将设备影子的**Desired**键置空。
+4\. 在线设备收到带有期望值的**control**消息之后，将自身状态值设为期望值（本例中的温度一般是控制恒温加热器）。
+
+5\. 设备端状态修改后，需要将设备影子的**Desired**键置空。
 
 ```
     Publish Topic：/$system/${ProductSN}/${DeviceSN}/shadow/upstream"
@@ -442,7 +446,7 @@ UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数�
     }
 ```
 
-5\. 平台会更新设备影子文档，清除设备影子**State**和**Metadata**中的**Desired**字段，将Reported中的该字段设置成**Desired**的值（如果Desired置空的同时，Reported该属性为另外的值，则记录上报的Reported值），同时版本号增1，此时设备影子文档更新为
+6\. 平台会更新设备影子文档，清除设备影子**State**和**Metadata**中的**Desired**字段，将Reported中的该字段设置成**Desired**的值（如果Desired置空的同时，Reported该属性为另外的值，则记录上报的Reported值），同时版本号增1，此时设备影子文档更新为
 
 ```
     {
@@ -469,7 +473,7 @@ UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数�
     }
 ```
 
-5\. 平台会下发置空成功消息给设备
+7\. 平台会下发置空成功消息给设备
 
 ```
     {

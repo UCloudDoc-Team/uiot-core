@@ -11,9 +11,9 @@
 ### 具体流程
 
 1. 上报属性值  
-   
+
    设备向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/post** 上报一条消息，消息格式为：
-   
+
 ```
 {
 "RequestID": "100",
@@ -29,19 +29,19 @@
 }
 }
 ```
-   
+
    参数解释：
-   
+
    - RequestID：请求消息的ID号，为字符串型，根据RequestID确定一条请求以及响应的一一对应性；
    - Property：所有需要上报的属性集合，包含属性名、属性值、时间戳；
    - Value：属性的值；
    - Time：上报时间戳，使用Unix时间戳；
    - Method：上报的方法；
-   
+
 2. 云平台响应  
-   
+
    云平台响应，并向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/post_reply** 下发一条消息，消息格式为：
-   
+
 ```
 {
   "RequestID": "100",
@@ -49,13 +49,12 @@
   "Message": "success"
 }
 ```
-   
+
    参数解释：
-   
+
    - RequestID：返回消息的ID，对应请求消息ID；
    - RetCode：返回码，具体参考[通用返回码](../api_guide/retcode)；
    - Message：返回消息体，成功为"success"，失败则返回具体失败原因；
-
 
 ## 属性设置
 
@@ -66,10 +65,10 @@
 ### 具体流程
 
 1. 设置属性值  
-   
+
    应用服务调用接口[SetUIoTCoreDeviceProperty](../api_guide/tingmodemgmtapi)设置属性。  
    UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_list)，其他参数参考[SetUIoTCoreDeviceProperty](../api_guide/tingmodemgmtapi)
-   
+
 ```
 POST  HTTP/1.1
 Host: api.ucloud.cn
@@ -88,9 +87,9 @@ Body:
 	"Signature": "kee6b4e35df49872232e059f6020r7fd51b28poi"
 }
 ```
-   
+
    调用成功后，云平台向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/set** 下发一条消息给设备端，消息格式为：
-   
+
 ```
 {
 	"RequestID": "100",
@@ -100,24 +99,24 @@ Body:
 	}
 }
 ```
-   
+
    参数解释：
    - RequestID：请求消息的ID号，为字符串型，根据RequestID确定一条请求以及响应的一一对应性；
    - Property：所有需要设置的属性键值对集合；
-   
+
 2. 设备端响应  
-   
+
    设备端修改属性值，并响应云平台，向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/set_reply** 上报一条消息，消息格式为：
-   
+
 ```
 {
 	"RequestID": "100",
 	"RetCode": 0
 }
 ```
-   
+
    参数解释：
-   
+
    - RequestID：返回消息的ID，对应请求消息ID；
    - RetCode：返回码，具体参考[通用返回码](../api_guide/tingmodemgmtapi)；
 
@@ -128,23 +127,23 @@ Body:
 ## 具体流程
 
 1. 请求获取恢复属性文档；  
-   
+
    设备向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/restore**发布一条消息，消息格式为：
-   
+
 ```
 {
   "RequestID": "100"
 } 
 ```
-   
+
    参数解释：
-   
+
    - RequestID：请求消息的ID号，为字符串型，根据RequestID确定一条请求以及响应的一一对应性。
-   
+
 2. 云平台下发包含最后一次上报的属性值集合；
-   
+
    云平台向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/restore_reply**下发一条消息，消息格式为：
-   
+
 ```
 {
 	"RetCode": 0,
@@ -158,9 +157,9 @@ Body:
 	}
 }
 ```
-   
+
    参数解释：
-   
+
    - RetCode：返回码，具体参考[通用返回码](../api_guide/retcode)；
    - RequestID：返回消息的ID，对应请求消息ID；
    - LatestUpdateTime：最近一次属性修改的时间;
@@ -171,4 +170,3 @@ Body:
 ## 全量获取属性
 
 Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/document**用于获取属性所有值，当属性值发生变化时，会向该Topic发送全量属性。该Topic专用于规则引擎做消息流转，不对设备端开发，即设备端不可以发布和订阅，具体参考[规则引擎](../console_guide/ruleengine/data_forwarding)进行设置。
-
