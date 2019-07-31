@@ -81,6 +81,8 @@
      >```
 
    - 修改上行逻辑，逻辑会每隔5秒钟上报'温度、湿度'状态。
+   
+     >'''
      >int main(int argc, char **argv) {
      >  ...
      >	//register subscribe topics here
@@ -108,7 +110,7 @@
      >
      >  rc = IOT_MQTT_Destroy(&client);    
      >  return rc;
-
+     >```
 	 注，实际开发中可以通过规则引擎将自定义Topic上发的数据流转到UHost/MQ/DB/TSDB等进行消费，详细参考[规则引擎]()。
 
 3. 编译生成可执行文件`mqtt-example`
