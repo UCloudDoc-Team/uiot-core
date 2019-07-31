@@ -42,7 +42,7 @@ UCloud 物联网通信云平台（UCloud IoT Core）为设备上云以及产业�
 
 **规则引擎**
 
-规则引擎可对Topic中的数据进行过滤处理，将处理后的数据发送到UCloud云产品中（如MySQL、MongoDB、TSDB、Kafka等），或将数据通过Http协议直接转发到业务服务器（UHost），也支持转发其他物联网设备（M2M）。
+规则引擎可对Topic中的数据进行过滤处理，将处理后的数据发送到UCloud云产品中（如MySQL、MongoDB、Kafka等），或将数据通过Http协议直接转发到业务服务器（UHost），也支持转发其他物联网设备（M2M）。
 
 **物模型**
 
