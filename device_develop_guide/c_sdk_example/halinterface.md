@@ -59,7 +59,7 @@ IoT_Error_t HAL_MutexTryLock(_IN_ void *mutex);
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | mutex | void * | 输入 | 互斥量指针 |
-| ret | IoT_Error_t | 返回 | 返回SUCCESS表示加锁成功， FAILURE表示失败 |
+| ret | IoT\_Error\_t | 返回 | 返回SUCCESS表示加锁成功， FAILURE表示失败 |
 
 ## HAL_MutexUnlock
 
@@ -87,7 +87,7 @@ void *HAL_Malloc(_IN_ uint32_t size);
 
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
-| size | uint32_t | 输入 | 申请的内存块大小 |
+| size | uint32\_t | 输入 | 申请的内存块大小 |
 | ret | void * | 返回 | 申请成功返回指向内存首地址的指针,  申请失败返回NULL |
 
 ## HAL_Free
@@ -152,7 +152,7 @@ int HAL_Vsnprintf(_OU_ char *str, _IN_ int len, _IN_ const char *fmt, _IN_ va_li
 | str | char *str | 输出 | 用于存放写入字符串的buffer |
 | len | int | 输入 | 允许写入的最大字符串长度 |
 | fmt | const char * | 输入 | 格式化字符串 |
-| ap | va_list | 输入 | 可变参数列表 |
+| ap | va\_list | 输入 | 可变参数列表 |
 | ret | int | 返回 | 成功写入的字符串长度 |
 
 ## HAL_UptimeMs
@@ -167,7 +167,7 @@ uint64_t HAL_UptimeMs(void);
 
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
-| ret | uint64_t | 返回 | 设备从上电到当前时刻所经过的毫秒数 |
+| ret | uint64\_t | 返回 | 设备从上电到当前时刻所经过的毫秒数 |
 
 ## HAL_SleepMs
 
@@ -181,7 +181,7 @@ void HAL_SleepMs(_IN_ uint32_t ms);
 
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
-| ms | uint32_t | 输入 | 休眠时长，单位ms |
+| ms | uint32\_t | 输入 | 休眠时长，单位ms |
 
 ## HAL_GetProductSN
 
@@ -196,7 +196,7 @@ IoT_Error_t HAL_GetProductSN(_OU_ char productSN[IOT_PRODUCT_SN_LEN + 1]);
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | productSN | char[] | 输出 | 存放产品序列号的字符串缓冲区 |
-| ret | IoT_Error_t | 返回 | 返回SUCCESS表示获取成功， FAILURE表示获取失败 |
+| ret | IoT\_Error\_t | 返回 | 返回SUCCESS表示获取成功， FAILURE表示获取失败 |
 
 ## HAL_GetProductSecret
 
@@ -211,7 +211,7 @@ IoT_Error_t HAL_GetProductSecret(_OU_ char productSecret[IOT_PRODUCT_SECRET_LEN 
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | productSecret | char[] | 输出 | 存放产品密钥的字符串缓冲区 |
-| ret | IoT_Error_t | 返回 | 返回SUCCESS表示获取成功， FAILURE表示获取失败 |
+| ret | IoT\_Error\_t | 返回 | 返回SUCCESS表示获取成功， FAILURE表示获取失败 |
 
 ## HAL_GetDeviceSN
 
@@ -226,7 +226,7 @@ IoT_Error_t HAL_GetDeviceSN(_OU_ char deviceSN[IOT_DEVICE_SN_LEN + 1]);
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | deviceSN | char[] | 输出 | 存放设备序列号的字符串缓冲区 |
-| ret | IoT_Error_t | 返回 | 返回SUCCESS表示获取成功， FAILURE表示获取失败 |
+| ret | IoT\_Error\_t | 返回 | 返回SUCCESS表示获取成功， FAILURE表示获取失败 |
 
 ## HAL_GetDeviceSecret
 
@@ -241,7 +241,7 @@ IoT_Error_t HAL_GetDeviceSecret(_OU_ char deviceSecret[IOT_DEVICE_SECRET_LEN + 1
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | deviceSecret | char[] | 输出 | 存放设备密钥的字符串缓冲区 |
-| ret | IoT_Error_t | 返回 | 返回SUCCESS表示获取成功， FAILURE表示获取失败 |
+| ret | IoT\_Error\_t | 返回 | 返回SUCCESS表示获取成功， FAILURE表示获取失败 |
 
 ## HAL_SetProductSN
 
@@ -256,7 +256,7 @@ IoT_Error_t HAL_SetProductSN(_IN_ const char *pProductSN);
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | pProductSN | const char * | 输入 | 指向产品序列号字符串的指针 |
-| ret | IoT_Error_t | 返回 | 返回SUCCESS表示设置成功， FAILURE表示设置失败 |
+| ret | IoT\_Error\_t | 返回 | 返回SUCCESS表示设置成功， FAILURE表示设置失败 |
 
 ## HAL_SetProductSecret
 
@@ -271,7 +271,7 @@ IoT_Error_t HAL_SetProductSecret(_IN_ const char *pProductSecret);
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | pProductSecret | const char * | 输入 | 指向产品密钥字符串的指针 |
-| ret | IoT_Error_t | 返回 | 返回SUCCESS表示设置成功， FAILURE表示设置失败 |
+| ret | IoT\_Error\_t | 返回 | 返回SUCCESS表示设置成功， FAILURE表示设置失败 |
 
 ## HAL_SetDeviceSN
 
@@ -286,7 +286,7 @@ IoT_Error_t HAL_SetDeviceSN(_IN_ const char *pDeviceSN);
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | pDeviceSN | const char * | 输入 | 指向设备序列号字符串的指针 |
-| ret | IoT_Error_t | 返回 | 返回SUCCESS表示设置成功， FAILURE表示设置失败 |
+| ret | IoT\_Error\_t | 返回 | 返回SUCCESS表示设置成功， FAILURE表示设置失败 |
 
 ## HAL_SetDeviceSecret
 
@@ -301,7 +301,7 @@ IoT_Error_t HAL_SetDeviceSecret(_IN_ const char *pDeviceSecret);
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | pDeviceSecret | const char * | 输入 | 指向设备密钥字符串的指针 |
-| ret | IoT_Error_t | 返回 | 返回SUCCESS表示设置成功， FAILURE表示设置失败 |
+| ret | IoT\_Error\_t | 返回 | 返回SUCCESS表示设置成功， FAILURE表示设置失败 |
 
 ## HAL_Timer_Expired
 
@@ -331,7 +331,7 @@ void HAL_Timer_Countdown_ms(_IN_ Timer *timer, _IN_ uint32_t timeout_ms);
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | timer | Timer * | 输入 | 定时器结构体 |
-| timeout_ms | uint32_t | 输入 | 超时时间, 单位: ms |
+| timeout\_ms | uint32\_t | 输入 | 超时时间, 单位: ms |
 
 ## HAL_Timer_Countdown
 
@@ -346,7 +346,7 @@ void HAL_Timer_Countdown(_IN_ Timer *timer, _IN_ uint32_t timeout);
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | timer | Timer * | 输入 | 定时器结构体 |
-| timeout | uint32_t | 输入 | 超时时间, 单位: s |
+| timeout | uint32\_t | 输入 | 超时时间, 单位: s |
 
 ## HAL_Timer_Remain_ms
 
@@ -361,7 +361,7 @@ uint32_t HAL_Timer_Remain_ms(_IN_ Timer *timer);
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | timer | Timer * | 输入 | 定时器结构体 |
-| ret | uint32_t | 返回 | 定时器剩余时间, 单位: ms |
+| ret | uint32\_t | 返回 | 定时器剩余时间, 单位: ms |
 
 ## HAL_Timer_Init
 
@@ -390,10 +390,10 @@ uintptr_t HAL_TLS_Connect(_IN_ const char *host, _IN_ uint16_t port, _IN_ const 
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | host | const char * | 输入 | 指定的TLS服务器网络地址 |
-| port | uint16_t | 输入 | 指定的TLS服务器端口 |
-| ca_crt | const char * | 输入 | 指向X.509证书的指针 |
-| ca_crt_len | size_t | 输入 | 证书字节长度 |
-| ret | uintptr_t | 返回 | 创建成功返回TLS连接句柄， 创建失败返回NULL |
+| port | uint16\_t | 输入 | 指定的TLS服务器端口 |
+| ca\_crt | const char * | 输入 | 指向X.509证书的指针 |
+| ca_crt\_len | size\_t | 输入 | 证书字节长度 |
+| ret | uintptr\_t | 返回 | 创建成功返回TLS连接句柄， 创建失败返回NULL |
 
 ## HAL_TLS_Disconnect
 
@@ -407,8 +407,8 @@ int32_t HAL_TLS_Disconnect(_IN_ uintptr_t handle);
 
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
-| handle | uintptr_t | 输入 | TLS连接句柄 |
-| ret | int32_t | 返回 | 成功返回SUCCESS， 失败返回FAILURE |
+| handle | uintptr\_t | 输入 | TLS连接句柄 |
+| ret | int32\_t | 返回 | 成功返回SUCCESS， 失败返回FAILURE |
 
 ## HAL_TLS_Write
 
@@ -422,11 +422,11 @@ int32_t HAL_TLS_Write(_IN_ uintptr_t handle, _IN_ unsigned char *buf, _IN_ size_
 
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
-| handle | uintptr_t | 输入 | TLS连接句柄 |
+| handle | uintptr\_t | 输入 | TLS连接句柄 |
 | buf | unsigned char * | 输入 | 指向数据发送缓冲区的指针 |
-| len | size_t | 输入 | 数据发送缓冲区的字节大小 |
-| timeout_ms | uint32_t | 输入 | 超时时间，单位: ms |
-| ret | int32_t | 返回 | <0: TLS写入错误  =0: TLS写超时, 且没有写入任何数据  >0: TLS成功写入的字节数 |
+| len | size\_t | 输入 | 数据发送缓冲区的字节大小 |
+| timeout_ms | uint32\_t | 输入 | 超时时间，单位: ms |
+| ret | int32\_t | 返回 | <0: TLS写入错误  =0: TLS写超时, 且没有写入任何数据  >0: TLS成功写入的字节数 |
 
 ## HAL_TLS_Read
 
@@ -440,11 +440,11 @@ int32_t HAL_TLS_Read(_IN_ uintptr_t handle, _OU_ unsigned char *buf, _IN_ size_t
 
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
-| handle | uintptr_t | 输入 | TLS连接句柄 |
+| handle | uintptr\_t | 输入 | TLS连接句柄 |
 | buf | unsigned char * | 输出 | 指向数据接收缓冲区的指针 |
-| len | size_t | 输入 | 数据接收缓冲区的字节大小 |
-| timeout_ms | uint32_t | 输入 | 超时时间，单位: ms |
-| ret | int32_t | 返回 | <0: TLS读取错误  =0: TLS读超时, 且没有读取任何数据  >0: TLS成功读取的字节数 |
+| len | size\_t | 输入 | 数据接收缓冲区的字节大小 |
+| timeout_ms | uint32\_t | 输入 | 超时时间，单位: ms |
+| ret | int32\_t | 返回 | <0: TLS读取错误  =0: TLS读超时, 且没有读取任何数据  >0: TLS成功读取的字节数 |
 
 ## HAL_TCP_Connect
 
@@ -459,8 +459,8 @@ uintptr_t HAL_TCP_Connect(_IN_ const char *host, _IN_ uint16_t port);
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | host | const char * | 输入 | 指定的TCP服务器网络地址 |
-| port | uint16_t | 输入 | 指定的TCP服务器端口 |
-| ret | uintptr_t | 返回 | 创建成功返回TCP连接句柄， 创建失败返回(uintptr_t)(-1) |
+| port | uint16\_t | 输入 | 指定的TCP服务器端口 |
+| ret | uintptr_t | 返回 | 创建成功返回TCP连接句柄， 创建失败返回(uintptr\_t)(-1) |
 
 ## HAL_TCP_Disconnect
 
@@ -474,8 +474,8 @@ int32_t HAL_TCP_Disconnect(_IN_ uintptr_t fd);
 
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
-| fd | uintptr_t | 输入 | TCP连接句柄 |
-| ret | int32_t | 返回 | 成功返回SUCCESS， 失败返回FAILURE |
+| fd | uintptr\_t | 输入 | TCP连接句柄 |
+| ret | int32\_t | 返回 | 成功返回SUCCESS， 失败返回FAILURE |
 
 ## HAL_TCP_Write
 
@@ -489,11 +489,11 @@ int32_t HAL_TCP_Write(_IN_ uintptr_t fd, _IN_ unsigned char *buf, _IN_ size_t le
 
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
-| fd | uintptr_t | 输入 | TCP连接句柄 |
+| fd | uintptr\_t | 输入 | TCP连接句柄 |
 | buf | unsigned char * | 输入 | 指向数据发送缓冲区的指针 |
-| len | size_t | 输入 | 数据发送缓冲区的字节大小 |
-| timeout_ms | uint32_t | 输入 | 超时时间，单位: ms |
-| ret | int32_t | 返回 | <0: TCP写入错误  =0: TCP写超时, 且没有写入任何数据  >0: TCP成功写入的字节数 |
+| len | size\_t | 输入 | 数据发送缓冲区的字节大小 |
+| timeout\_ms | uint32\_t | 输入 | 超时时间，单位: ms |
+| ret | int32\_t | 返回 | <0: TCP写入错误  =0: TCP写超时, 且没有写入任何数据  >0: TCP成功写入的字节数 |
 
 ## HAL_TCP_Read
 
@@ -507,8 +507,8 @@ int32_t HAL_TCP_Read(_IN_ uintptr_t fd, _OU_ unsigned char *buf, _IN_ size_t len
 
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
-| fd | uintptr_t | 输入 | TCP连接句柄 |
+| fd | uintptr\_t | 输入 | TCP连接句柄 |
 | buf | unsigned char * | 输出 | 指向数据接收缓冲区的指针 |
-| len | size_t | 输入 | 数据接收缓冲区的字节大小 |
-| timeout_ms | uint32_t | 输入 | 超时时间，单位: ms |
-| ret | int32_t | 返回 | <0: TCP读取错误  =0: TCP读超时, 且没有读取任何数据  >0: TCP成功读取的字节数 |
+| len | size\_t | 输入 | 数据接收缓冲区的字节大小 |
+| timeout\_ms | uint32\_t | 输入 | 超时时间，单位: ms |
+| ret | int32\_t | 返回 | <0: TCP读取错误  =0: TCP读超时, 且没有读取任何数据  >0: TCP成功读取的字节数 |

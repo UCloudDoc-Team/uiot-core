@@ -2,6 +2,7 @@
 
 
 # MQTT协议说明
+
 目前物联网通信支持MQTT标准协议接入（兼容3.1.1版本协议），具体的协议请参考MQTT 3.1.1协议文档
 
 ## 和标准MQTT区别
@@ -225,7 +226,7 @@ int IOT_MQTT_Yield(void *pClient, uint32_t timeout_ms)
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | pClient | void ** | 输入 | 指向MQTT句柄的指针 |
-| timeout_ms | uint32_t | 输入 | 等待时间，单位是ms |
+| timeout\_ms | uint32\_t | 输入 | 等待时间，单位是ms |
 | ret | int | 返回 | 成功返回SUCCESS, FAILURE表示失败 |
 
 ## IOT_MQTT_Publish
@@ -243,7 +244,7 @@ int IOT_MQTT_Publish(void *pClient, char *topicName, PublishParams *pParams);
 | pClient | void * | 输入 | MQTT句柄 |
 | topicName | char * | 输入 | 发送消息的topic名称 |
 | pParams | PublishParams * | 输入 | 发送消息的内容和相关参数 |
-| ret | int | 返回 | 发送成功返回packet_id, FAILURE表示失败 |
+| ret | int | 返回 | 发送成功返回packet\_id, FAILURE表示失败 |
 
 ## IOT_MQTT_Subscribe
 
@@ -260,7 +261,7 @@ int IOT_MQTT_Subscribe(void *pClient, char *topicFilter, SubscribeParams *pParam
 | pClient| void * | 输入 | MQTT句柄 |
 | topicFilter | char * | 输入 | 主题过滤器 |
 | pParams | SubscribeParams * | 输入 | 订阅topic的服务质量,回调函数等参数 |
-| ret | int | 返回 | 订阅成功返回packet_id, FAILURE表示失败 |
+| ret | int | 返回 | 订阅成功返回packet\_id, FAILURE表示失败 |
 
 ## IOT_MQTT_Unsubscribe
 
@@ -276,7 +277,7 @@ int HAL_MQTT_Unsubscribe(void *pClient, char *topicFilter);
 | --- | --- | --- | --- |
 | pClient| void * | 输入 | MQTT句柄 |
 | topicFilter | char * | 输入 | 主题过滤器 |
-| ret | int | 返回 | 订阅成功返回packet_id, FAILURE表示失败 |
+| ret | int | 返回 | 订阅成功返回packet\_id, FAILURE表示失败 |
 
 ## IOT_MQTT_IsConnected
 
