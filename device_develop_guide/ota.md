@@ -23,7 +23,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 设备端向 **/\$system/\${productSN}/\${deviceSN}/ota/upstream** 发布一条消息进行版本上报，消息格式如下：
 
-```json
+```
 {
     "Method": "report_version",
     "Payload":{
@@ -46,7 +46,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 设备端会通过订阅的 **/\$system/\${productSN}/\${deviceSN}/ota/downstream** 收到固件升级的消息，内容如下：
 
-```json
+```
 {
     "Method": "update_firmware",
     "Payload":{
@@ -72,7 +72,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 5. 设备在收到固件升级的消息后，根据URL下载固件，通过 **/\$system/\${productSN}/\${deviceSN}/ota/upstream** 上报下载进度，消息格式如下：
 
-```json
+```
 {
     "Method": "report_progress",
     "Payload":{
@@ -92,7 +92,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 6. 当设备下载完固件，通过 **/\$system/\${productSN}/\${deviceSN}/ota/upstream** 上报升级进度，消息格式如下：
 
-```json
+```
 {
     "Method": "report_progress",
     "Payload":{
@@ -112,7 +112,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 7. 设备固件升级完成后，通过 **/\$system/\${productSN}/\${deviceSN}/ota/upstream** 上报升级成功消息，消息格式如下：
 
-```json
+```
 {
     "Method": "report_success",
     "Payload":{
@@ -129,7 +129,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 8. 若升级失败，通过 **/\$system/\${productSN}/\${deviceSN}/ota/upstream** 上报升级失败消息，消息格式如下：
 
-```json
+```
 {
     "Method": "report_fail",
     "Payload":{
@@ -159,7 +159,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 请求固件更新消息格式：
 
-```json
+```
 {
     "Method": "request_firmware",
     "Payload":{
