@@ -195,9 +195,9 @@ void *IOT_Shadow_Construct(const char *product_sn, const char *device_sn, void *
 
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
-| product_sn | const char * | 输入 | 指向产品序列号的指针 |
-| device_sn | const char * | 输入 | 指向设备序列号的指针 |
-| ch_signal | void * | 输入 | MQTT的句柄 |
+| product\_sn | const char * | 输入 | 指向产品序列号的指针 |
+| device\_sn | const char * | 输入 | 指向设备序列号的指针 |
+| ch\_signal | void * | 输入 | MQTT的句柄 |
 | ret | void * | 返回 | 设备影子的句柄 |
 
 ## IOT_Shadow_Destroy
@@ -227,7 +227,7 @@ int IOT_Shadow_Yield(void *handle, uint32_t timeout_ms)
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | handle | void * | 输入 | 影子文档句柄 |
-| timeout_ms | uint32_t | 输入 | 等待时间，单位是ms |
+| timeout\_ms | uint32\_t | 输入 | 等待时间，单位是ms |
 | ret | int | 返回 | 成功返回SUCCESS, FAILURE表示失败 |
 
 ## IOT_Shadow_Register_Property
@@ -275,9 +275,9 @@ int IOT_Shadow_Get_Sync(void *handle, OnRequestCallback request_callback, uint32
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | handle | void * | 输入 | 影子文档句柄 |
-| request_callback | OnRequestCallback | 输入 | 请求的回调函数 |
-| timeout_sec | uint32_t | 输入 | 超时时间，单位为秒 |
-| user_context | RequestParams * | 输入 | 请求回调函数入参 |
+| request\_callback | OnRequestCallback | 输入 | 请求的回调函数 |
+| timeout\_sec | uint32\_t | 输入 | 超时时间，单位为秒 |
+| user\_context | RequestParams * | 输入 | 请求回调函数入参 |
 | ret | int | 返回 | 成功返回SUCCESS, FAILURE表示失败 |
 
 ## IOT_Shadow_Update
@@ -292,10 +292,10 @@ int IOT_Shadow_Update(void *handle, OnRequestCallback request_callback, uint32_t
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | handle | void * | 输入 | 影子文档句柄 |
-| request_callback | OnRequestCallback | 输入 | 请求的回调函数 |
-| timeout_sec | uint32_t | 输入 | 超时时间，单位为秒 |
-| user_context | RequestParams * | 输入 | 请求回调函数入参 |
-| property_count | int | 输入 | 变长入参的个数 |
+| request\_callback | OnRequestCallback | 输入 | 请求的回调函数 |
+| timeout\_sec | uint32\_t | 输入 | 超时时间，单位为秒 |
+| user\_context | RequestParams * | 输入 | 请求回调函数入参 |
+| property\_count | int | 输入 | 变长入参的个数 |
 | ... | DeviceProperty * | 输入 | 设备属性 |
 | ret | int | 返回 | 成功返回SUCCESS, FAILURE表示失败 |
 
@@ -312,10 +312,10 @@ int IOT_Shadow_Update_And_Reset_Version(void *handle, OnRequestCallback request_
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | handle | void * | 输入 | 影子文档句柄 |
-| request_callback | OnRequestCallback | 输入 | 请求回调函数 |
-| timeout_Sec | uint32_t | 输入 | 请求超时时间，单位为秒 |
-| user_context | void * | 输入 | 请求结果 |
-| property_count | int | 输入 | 变长入参的个数 |
+| request\_callback | OnRequestCallback | 输入 | 请求回调函数 |
+| timeout\_Sec | uint32\_t | 输入 | 请求超时时间，单位为秒 |
+| user\_context | void * | 输入 | 请求结果 |
+| property\_count | int | 输入 | 变长入参的个数 |
 | ... | DeviceProperty * | 输入 | 设备属性 |
 | ret | int | 返回 | 成功返回SUCCESS, FAILURE表示失败 |
 
@@ -332,10 +332,10 @@ int IOT_Shadow_Delete(void *handle, OnRequestCallback request_callback, uint32_t
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | handle | void * | 输入 | 影子文档句柄 |
-| request_callback | OnRequestCallback | 输入 | 请求回调函数 |
-| timeout_Sec | uint32_t | 输入 | 请求超时时间，单位为秒 |
-| user_context | void * | 输入 | 请求结果 |
-| property_count | int | 输入 | 变长入参的个数 |
+| request\_callback | OnRequestCallback | 输入 | 请求回调函数 |
+| timeout\_Sec | uint32\_t | 输入 | 请求超时时间，单位为秒 |
+| user\_context | void * | 输入 | 请求结果 |
+| property\_count | int | 输入 | 变长入参的个数 |
 | ... | DeviceProperty * | 输入 | 设备属性 |
 | ret | int | 返回 | 成功返回SUCCESS, FAILURE表示失败 |
 
@@ -351,9 +351,9 @@ int IOT_Shadow_Delete_All(void *handle, OnRequestCallback request_callback, uint
 ### 参数列表 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | handle | void * | 输入 | 影子文档句柄 |
-| request_callback | OnRequestCallback | 输入 | 请求的回调函数 |
-| timeout_sec | uint32_t | 输入 | 超时时间 |
-| user_context | RequestParams * | 输入 | 请求回调函数入参 |
+| request\_callback | OnRequestCallback | 输入 | 请求的回调函数 |
+| timeout\_sec | uint32\_t | 输入 | 超时时间 |
+| user\_context | RequestParams * | 输入 | 请求回调函数入参 |
 | ret | int | 返回 | 成功返回SUCCESS, FAILURE表示失败 |
 
 ## IOT_Shadow_Request_Add_Delta_Property

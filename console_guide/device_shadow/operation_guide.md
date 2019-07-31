@@ -343,7 +343,7 @@ Subscribe Topic /$system/${ProductSN}/${DeviceSN}/shadow/get_reply
 
 ### 设备影子更新时转发到规则引擎
 
-设备影子更新时，平台将完整设备影子文档发到 **/$system/${ProductSN}/${DeviceSN}/shadow/document** ，通过规则引擎可流转到平台以外的云产品，比如UHost、UTSDB、UDB、UKafka等。该Topic仅用于规则引擎流转，设备端不能发布或订阅。
+设备影子更新时，平台将完整设备影子文档发到 **/$system/${ProductSN}/${DeviceSN}/shadow/document** ，通过规则引擎可流转到平台以外的云产品，比如UHost、UDB、UKafka等。该Topic仅用于规则引擎流转，设备端不能发布或订阅。
 
 
 

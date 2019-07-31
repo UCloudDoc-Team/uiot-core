@@ -19,7 +19,7 @@ sudo apt-get install -y build-essential make git gcc cmake
 
 ## 获取 C-SDK
 
-* [GitHub](https://git.ucloudadmin.com/uiot/c-sdk)
+* [GitHub](https://github.com/ucloud/ucloud-iot-device-sdk-c)
 
 ## 编译及运行
 

@@ -5,6 +5,13 @@
 ### 错误码
 | 错误码          | 中文                                                  | 英文                                                  |
 | -------------- | ---------------------------------------------------- | --------------------------------------------------- |
+| 0              | 请求成功                                              | Success                                |
+| 120            | 日期格式错误，请重新选择日期                              | Date format error, please reselect the date          |
+| 130            | 服务目前不可用，我们正在努力恢复中，请稍后重试            | Service is temporarily unavailable, we are working hard to restore it, please retry later |
+| 160            | 缺少关键参数Action，请提供完整的参数                                           | Key parameter Action is missing, please provide the complete parameters |
+| 161            | Action 不存在                                           | Action not found                                     |
+| 171            | 签名错误                                           | Signature error                                |
+| 230            | 参数错误，请重新输入                                           | Parameter error, please reenter                                |
 | 100000         | 创建产品失败                                           | Create product failed                                |
 | 100001         | 产品名称已存在                                          | Product name exists                                  |
 | 100002         | 产品名称不存在                                          | Product name does not exists                         |
