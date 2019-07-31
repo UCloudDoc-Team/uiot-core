@@ -53,6 +53,6 @@
 
 - RequestID：返回消息的ID，对应请求消息ID；
 
-- RetCode：返回码，具体参考[通用返回码](../api_guide/retcode)；
+- RetCode：返回码，具体参考[返回码](../../api_guide/retcode)；
 
 - Message：返回消息体，成功为"success"，失败则返回具体失败原因；

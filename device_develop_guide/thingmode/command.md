@@ -14,9 +14,9 @@ UCloud物联网通信云平台同时支持命令的同步和异步，开发者�
 
 ### 同步命令
 
-1\. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand](../api_guide/api_list)下发命令调用接口，**Method**参数设置为**sync-同步**；   
+1\. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand](../../api_guide/api_list)下发命令调用接口，**Method**参数设置为**sync-同步**；   
 
-UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/tingmodemgmtapi)，其他参数参考[SendUIoTCoreDeviceCommand](../api_guide/api_list)。
+UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../../api_guide/tingmodemgmtapi)，其他参数参考[SendUIoTCoreDeviceCommand](../../api_guide/api_list)。
 
 ```
 POST  HTTP/1.1
@@ -76,7 +76,7 @@ Body:
 
 - RequestID：返回消息的ID，对应请求消息ID；
 
-- RetCode：返回码，具体参考[通用返回码]()；
+- RetCode：返回码，具体参考[返回码](../../api_guide/retcode)；
 
 - Identifier：调用命令的唯一标识符；
 
@@ -109,9 +109,9 @@ Body:
 
 ### 异步命令
 
-1\. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand](../api_guide/api_list)下发命令调用接口，**Method**参数设置为**async-异步**。   
+1\. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand](../../api_guide/api_list)下发命令调用接口，**Method**参数设置为**async-异步**。   
 
-UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_list)，其他参数参考[SendUIoTCoreDeviceCommand](../api_guide/api_list)。
+UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../../api_guide/api_list)，其他参数参考[SendUIoTCoreDeviceCommand](../../api_guide/api_list)。
 
 ```
 POST  HTTP/1.1
@@ -166,6 +166,7 @@ Body:
 - Input：输入参数的键值对集合； 
 
 3\. 设备可以选择即时响应，也可以延后响应，云平台可以将响应通过规则引擎Topic ** /$system/${productSN}/${DeviceSN}/tmodel/command_reply/+**流转到开发者应用服务。
+
 设备端执行相应的命令操作后向Topic **/$system/${productSN}/${DeviceSN}/tmodel/command_reply/${requestid}** 上报一条消息，消息格式为：
 
 ```
@@ -183,7 +184,7 @@ Body:
 
 - RequestID：返回消息的ID，对应请求消息ID；
 
-- RetCode：返回码，具体参考[通用返回码](../api_guide/retcode)；
+- RetCode：返回码，具体参考[返回码](../../api_guide/retcode)；
 
 - Identifier：调用命令的唯一标识符；
 

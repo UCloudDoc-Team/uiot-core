@@ -6,7 +6,7 @@
 
 ## 操作步骤：
 
-1\. 参考云平台操作指南，[创建产品](../../console_guide/product_device/create_products)，[动态注册](../../console_guide/product_device/create_products#产品详情)，打开<动态注册>开关；
+1\. 参考云平台操作指南，[创建产品](../../console_guide/product_device/create_products)，动态注册，打开<[动态注册](../../console_guide/product_device/create_products#产品详情)>开关；
 
 2\. 准备工作：
 
@@ -67,7 +67,7 @@
 |MQTT认证三要素| 生成规则|
 |---|---|
 |ClientID | ${ProductSN}.${DeviceSN} 举例：70ly1tvowt696r15.112233445566|
-|UserName | ```${ProductSN}|${DeviceSN}|${authmode}```  ```70ly1tvowt696r15|112233445566|2``` authmode: 1 表示静态注册；2表示动态注册|
+|UserName | ```${ProductSN}|${DeviceSN}|${authmode}```  ```举例：70ly1tvowt696r15|112233445566|2``` authmode: 1 表示静态注册；2表示动态注册|
 |Password | ${ProdSecret}  举例：sqx0cltqba402z7z|
 
 5\. 预认证成功后，订阅Topic **/$system/${ProductSN}/${DeviceSN}/password_reply**，举例：**/$system/70ly1tvowt696r15/112233445566/password_reply**；

@@ -2,8 +2,8 @@
 
 # 物模型定义
 
-物模型在[控制台操作指南](../console_guide/thingmode/thingmode_guide)已经做了详细名词解释，物模型从属性、命令、事件三个维度对设备进行抽象。
-本章将会详细介绍设备端基于物模型的开发，以及设备端、物联网通信云平台、应用服务之间的交互流程，分别参考[获取物模型定义JSON文档](/../device_develop_guide/thingmode/get_json)，[设备属性](../device_develop_guide/thingmode/property)，[设备事件](../device_develop_guide/thingmode/event)，[设备命令](../device_develop_guide/thingmode/command)，[设备期望属性](../device_develop_guide/thingmode/desired)。
+物模型在[控制台操作指南](../../console_guide/thingmode/thingmode_guide)已经做了详细名词解释，物模型从属性、命令、事件三个维度对设备进行抽象。
+本章将会详细介绍设备端基于物模型的开发，以及设备端、物联网通信云平台、应用服务之间的交互流程，分别参考[获取物模型定义JSON文档](get_json)，[设备属性](property)，[设备事件](event)，[设备命令](command)，[设备期望属性](desired)。
 
 ## 物模型涉及的所有Topic
 
