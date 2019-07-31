@@ -110,6 +110,7 @@
      >
      >  rc = IOT_MQTT_Destroy(&client);    
      >  return rc;
+     >}
      >```
 	 注，实际开发中可以通过规则引擎将自定义Topic上发的数据流转到UHost/MQ/DB/TSDB等进行消费，详细参考[规则引擎]()。
 
