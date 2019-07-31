@@ -8,9 +8,9 @@
 
 本节通过一个具体的示例（获取设备影子）介绍如何实现API调用。用户可将其中的参数换成自己的实际参数进行测试。
 
-0. 概述   
+1\. 概述   
 
-   接口的调用使用HTTP GET或POST调用都可以得到相同的结果。调用的参数包括接口的参数+公共参数+参数签名三部分。
+接口的调用使用HTTP GET或POST调用都可以得到相同的结果。调用的参数包括接口的参数+公共参数+参数签名三部分。
 
    - 接口参数：某个具体接口需要的参数；
 
@@ -18,23 +18,26 @@
 
    - 签名：通过私钥签名，方便网关鉴权。
 
-1. 查看接口文档获取接口名及参数   
+2\. 查看接口文档获取接口名及参数   
+
+
 
 |名称| 内容|
-|---|---|
+|--|--|
 |接口名| [GetUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi) \- 获取设备影子。|
-|接口参数|**Region**：上海二区，地域ID为    [cn\-sh2](https://docs.ucloud.cn/api/summary/regionlist)。 **ProductSN**：产品序列号为    **8pi2i730vxsala2a**，通过控制台查看。 **DeviceSN**：设备序列号为**ark1d4ug1evfb1jy**，通过控制台查看。|
+|接口参数|**Region**：上海二区，地域ID为    [cn-sh2](https://docs.ucloud.cn/api/summary/regionlist)。 **ProductSN**：产品序列号为    **8pi2i730vxsala2a**，通过控制台查看。 **DeviceSN**：设备序列号为**ark1d4ug1evfb1jy**，通过控制台查看。|
 
-2. 获取公共参数，即每次请求都需要的参数
+
+3\. 获取公共参数，即每次请求都需要的参数
 
 |名称|内容|
-|---|---|
+|--|--|
 |Action|API名称，此例为 **GetUIoTCoreDeviceShadow**。|
 |PublicKey|用户公钥为**CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O**，通过个人中心->API密钥获取。|
 |Signature|用户签名将在第3步介绍。|
 |ProjectId|项目ID为 **org-z44lmf12e**，项目ID为 **org-z44lmf12e**，通过控制台首页查看。主账号为空时为默认项目，子账号为必填字段。|
 
-3. 获取用户签名  
+4\. 获取用户签名  
 
 用户签名需要接口参数和公共参数以及用户私钥参与一起完成。 
 
@@ -90,7 +93,7 @@ Region:cn-sh2
 Signature:f1e6b4e35df41b42232e059f6020c7fd51b2889e
 ```
 
-4. 请求接口获取响应
+5\. 请求接口获取响应
 
 过GET和POST都可以请求接口得到同样的响应结果，请求的BaseURL为[http://api.ucloud.cn/](http://api.ucloud.cn/)。
 
