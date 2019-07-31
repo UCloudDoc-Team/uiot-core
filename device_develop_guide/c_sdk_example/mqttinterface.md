@@ -1,7 +1,6 @@
 {{indexmenu_n>3}}
 
-
-# MQTT协议说明
+# MQTT与设备认证开发
 
 目前物联网通信支持MQTT标准协议接入（兼容3.1.1版本协议），具体的协议请参考MQTT 3.1.1协议文档
 
@@ -48,9 +47,9 @@ option(ENABLE_FEATURE_AUTH_MODE_DYNAMIC "是否打开设备动态注册" ON)
 ```
 
 
-![](../../images/设备注册-1.png)
+![](../../images/设备注册-1.jpg)
 
-## 代码示例 
+## 代码示例
 (samples\shadow\dynamic_auth_sample.c)
 
 产品序列号，产品密钥，设备序列号信息填入MQTT初始化信息，其他信息可以使用默认参数或者根据实际需求调整。
@@ -125,9 +124,9 @@ static int _setup_connect_init_params(MQTTInitParams* initParams)
 静态认证即一机一密，相比一型一密的安全性比较高，推荐使用，提前在设备上烧写产品序列号，设备序列号，设备密钥。<br>
 通过HAL层的接口获取设备信息，填入MQTT的初始连接参数中，向物联网平台进行身份认证。
 
-![](../../images/设备注册-4.png)
+![](../../images/设备注册-4.jpg)
 
-## 代码示例 
+## 代码示例
 (samples\shadow\mqtt_sample.c)
 
 产品序列号，设备序列号，设备密钥信息填入MQTT初始化信息，其他信息可以使用默认参数或者根据实际需求调整。
