@@ -12,7 +12,6 @@
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list) |       No |
 | ProductName    | string | 产品名称                                                     |  **Yes** |
 | Description    | string | 产品描述                                                     |       No |
 
@@ -22,20 +21,22 @@
 | -------------- | ------ | ----------- | -------: |
 | RetCode        | int    | 操作返回码  |  **Yes** |
 | Action         | string | 操作名称    |  **Yes** |
+| ProductSN      | string | 产品序列号    |  **Yes** |
 
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=CreateUIoTCoreProduct
-&ProductName=QmHPudWV
-&Description=plNlsSmv
-&ProjectId=npbnwhnb
-&Region=UQxqYeOi
+&ProductName=电灯
+&Description=电灯
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
 {
     "RetCode": 0,
     "Action": "CreateUIoTCoreProductResponse"
+    "ProductSN": "7ab051kbfhhjakc0"
 }
 ```
 
@@ -49,7 +50,6 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreProduct
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 
 
@@ -69,30 +69,32 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreProduct
 | IsPublish             | bool   | 产品是否发布             |       No |
 | FirmwareNumber        | int    | 产品下的固件数量         |       No |
 | ActivatedDeviceNumber | int    | 产品下已激活的设备数量   |       No |
+| OnlineDeviceNumber    | int    | 产品下在线的设备数量   |       No |
 
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=GetUIoTCoreProductInfo
-&ProjectId=zsBblvuu
-&ProductSN=rxKrUpAX
-&Region=pMoXonyh
+&ProductSN=7ab051kbfhhjakc0
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
 {
-    "ProductSN": "gjDkEPgK",
-    "ProductName": "qMYdiIAC",
-    "Description": "EcoDIWBI",
-    "DeviceNumber": 2,
-    "CreateTime": 2,
     "RetCode": 0,
     "Action": "GetUIoTCoreProductInfoResponse",
-    "DynamicRegister": "tNUXiClO",
-    "DeviceShadow": "CJRMalKZ",
-    "Password": "mpsEWflR",
+    "ProductSN": "7ab051kbfhhjakc0",
+    "ProductName": "电灯",
+    "Description": "电灯",
+    "DeviceNumber": 100,
+    "CreateTime": 1564541035,
+    "DynamicRegister": "off",
+    "DeviceShadow": "on",
+    "Password": "8jhc0phf73e887hl",
     "IsPublish": false,
     "FirmwareNumber": 6,
-    "ActivatedDeviceNumber": 7
+    "ActivatedDeviceNumber": 7,
+    "OnlineDeviceNumber":10
 }
 ```
 
@@ -106,7 +108,6 @@ https://api.ucloud.cn/?Action=GetUIoTCoreProductInfo
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | ProductName    | string | 修改后的产品名称                                             |       No |
 | Description    | string | 修改后的产品描述                                             |       No |
@@ -121,11 +122,11 @@ https://api.ucloud.cn/?Action=GetUIoTCoreProductInfo
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=ModifyUIoTCoreProduct
-&ProductSN=dApNJjnD
-&ProductName=UeOtOcGY
-&Description=HmzADyLU
-&ProjectId=jAEVkWfw
-&Region=pjfRsejV
+&ProductSN=7ab051kbfhhjakc0
+&ProductName=light
+&Description=light
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
@@ -145,7 +146,6 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreProduct
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|       No |
 | ProductSN      | string | 产品序号                                                     |  **Yes** |
 
 
@@ -158,10 +158,9 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreProduct
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=DeleteUIoTCoreProduct
-&ProductSN=RCpKeRbj
-&ProjectId=aMKHrxpV
-&ProjectId=MjysljKm
-&Region=zfQjHRyA
+&ProductSN=7ab051kbfhhjakc0
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
@@ -181,7 +180,6 @@ https://api.ucloud.cn/?Action=DeleteUIoTCoreProduct
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list) |       No |
 | ProductSN      | string | 产品SN，如果提供则根据此字段模糊查找                         |       No |
 | ProductName    | string | 产品名称，如果提供则根据此字段模糊查找                       |       No |
 | Offset         | int    | 列表起始位置偏移量，默认为0                                  |       No |
@@ -211,16 +209,16 @@ https://api.ucloud.cn/?Action=DeleteUIoTCoreProduct
 | DeviceNumber          | int    | 产品下的设备数量         |  **Yes** |
 | FirmwareNumber        | int    | 产品下的固件数量         |  **Yes** |
 | ActivatedDeviceNumber | int    | 产品下已激活的设备数量   |  **Yes** |
+| OnlineDeviceNumber    | int    | 产品下在线的设备数量   |  **Yes** |
 
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=GetUIoTCoreProductList
-&Offset=6
-&Limit=10050
-&ProjectId=yqPCQMKy
-&ProductSN=jVEzJKmo
-&ProductName=gfHOodRZ
-&Region=LlfmYuzA
+&Offset=0
+&Limit=1
+&ProductSN=7ab051kbfhhjakc0
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
@@ -228,18 +226,18 @@ https://api.ucloud.cn/?Action=GetUIoTCoreProductList
     "TotalCount": 9,
     "ProductSet": [
         {
-            "ProductSN": "UbSggzPd",
-            "ProductName": "vdEqTZFw",
-            "CreateTime": 7,
-            "Description": "vobWGoum",
-            "DeviceNumber": 9
-        },
-        {
-            "ProductSN": "yDHlJXBU",
-            "ProductName": "YKpzWxAm",
-            "CreateTime": 6,
-            "Description": "KTAcCMzl",
-            "DeviceNumber": 4
+            "ProductSN": "7ab051kbfhhjakc0",
+            "ProductName": "light",
+            "Description": "light",
+            "DeviceNumber": 100,
+            "CreateTime": 1564541035,
+            "DynamicRegister": "off",
+            "DeviceShadow": "on",
+            "Password": "8jhc0phf73e887hl",
+            "IsPublish": false,
+            "FirmwareNumber": 6,
+            "ActivatedDeviceNumber": 7,
+            "OnlineDeviceNumber":10
         }
     ],
     "RetCode": 0,
@@ -257,7 +255,6 @@ https://api.ucloud.cn/?Action=GetUIoTCoreProductList
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 
 
@@ -270,9 +267,9 @@ https://api.ucloud.cn/?Action=GetUIoTCoreProductList
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=EnableUIoTCoreDynamicRegister
-&Region=cn-zj
-&ProjectId=aObJFQLG
-&ProductSN=FGUpVeZH
+&ProductSN=7ab051kbfhhjakc0
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
@@ -292,7 +289,6 @@ https://api.ucloud.cn/?Action=EnableUIoTCoreDynamicRegister
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 
 
@@ -305,9 +301,9 @@ https://api.ucloud.cn/?Action=EnableUIoTCoreDynamicRegister
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=DisableUIoTCoreDynamicRegister
-&Region=cn-zj
-&ProjectId=groYGqwB
-&ProductSN=WfPBywAd
+&ProductSN=7ab051kbfhhjakc0
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
@@ -327,7 +323,6 @@ https://api.ucloud.cn/?Action=DisableUIoTCoreDynamicRegister
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 
 
@@ -340,9 +335,9 @@ https://api.ucloud.cn/?Action=DisableUIoTCoreDynamicRegister
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=PublishUIoTCoreProduct
-&Region=cn-zj
-&ProjectId=UpRqzvsw
-&ProductSN=SEfgZuMU
+&ProductSN=7ab051kbfhhjakc0
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
@@ -363,7 +358,6 @@ https://api.ucloud.cn/?Action=PublishUIoTCoreProduct
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 
 
@@ -376,9 +370,9 @@ https://api.ucloud.cn/?Action=PublishUIoTCoreProduct
 ## 请求示例
 ```
 https://api.ucloud.cn/?Action=UnpublishUIoTCoreProduct
-&Region=cn-zj
-&ProjectId=VoqSzaxg
-&ProductSN=oOVURiCv
+&ProductSN=7ab051kbfhhjakc0
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
