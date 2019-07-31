@@ -1,3 +1,4 @@
+{{indexmenu_n>2}}
 
 # HAL接口详细说明文档
 
@@ -7,7 +8,7 @@
 
 创建互斥量。用于支持线程同步和互斥。
 
-```C
+```
 void *HAL_MutexCreate(void);
 ```
 
@@ -21,7 +22,7 @@ void *HAL_MutexCreate(void);
 
 销毁互斥量。
 
-```C
+```
 void HAL_MutexDestroy(_IN_ void *mutex);
 ```
 
@@ -35,7 +36,7 @@ void HAL_MutexDestroy(_IN_ void *mutex);
 
 阻塞式加锁。如果互斥量已被另一个线程锁定和拥有，则调用该函数的线程将阻塞，直到该互斥量变为可用为止。
 
-```C
+```
 void HAL_MutexLock(_IN_ void *mutex);
 ```
 
@@ -49,7 +50,7 @@ void HAL_MutexLock(_IN_ void *mutex);
 
 非阻塞式加锁。成功锁定互斥量之后返回SUCCESS，如果mutex参数所指定的互斥量已经被锁定，调用该函数将立即返回FAILURE，不会阻塞当前线程。
 
-```C
+```
 IoT_Error_t HAL_MutexTryLock(_IN_ void *mutex);
 ```
 
@@ -64,7 +65,7 @@ IoT_Error_t HAL_MutexTryLock(_IN_ void *mutex);
 
 释放互斥量。
 
-```C
+```
 void HAL_MutexUnlock(_IN_ void *mutex);
 ```
 
@@ -78,7 +79,7 @@ void HAL_MutexUnlock(_IN_ void *mutex);
 
 申请内存块。
 
-```C
+```
 void *HAL_Malloc(_IN_ uint32_t size);
 ```
 
@@ -93,7 +94,7 @@ void *HAL_Malloc(_IN_ uint32_t size);
 
 释放内存块。
 
-```C
+```
 void HAL_Free(_IN_ void *ptr);
 ```
 
@@ -107,7 +108,7 @@ void HAL_Free(_IN_ void *ptr);
 
 打印函数，向标准输出格式化打印一个字符串。
 
-```C
+```
 void HAL_Printf(_IN_ const char *fmt, ...);
 ```
 
@@ -122,7 +123,7 @@ void HAL_Printf(_IN_ const char *fmt, ...);
 
 打印函数, 向内存缓冲区格式化打印一个字符串。
 
-```C
+```
 int HAL_Snprintf(_OU_ char *str, _IN_ int len, _IN_ const char *fmt, ...);
 ```
 
@@ -140,7 +141,7 @@ int HAL_Snprintf(_OU_ char *str, _IN_ int len, _IN_ const char *fmt, ...);
 
 打印函数, 格式化输出字符串到指定buffer中。
 
-```C
+```
 int HAL_Vsnprintf(_OU_ char *str, _IN_ int len, _IN_ const char *fmt, _IN_ va_list ap);
 ```
 
@@ -158,7 +159,7 @@ int HAL_Vsnprintf(_OU_ char *str, _IN_ int len, _IN_ const char *fmt, _IN_ va_li
 
 检索自系统启动以来已运行的毫秒数。
 
-```C
+```
 uint64_t HAL_UptimeMs(void);
 ```
 
@@ -172,7 +173,7 @@ uint64_t HAL_UptimeMs(void);
 
 休眠函数。
 
-```C
+```
 void HAL_SleepMs(_IN_ uint32_t ms);
 ```
 
@@ -186,7 +187,7 @@ void HAL_SleepMs(_IN_ uint32_t ms);
 
 获取产品序列号。用于从设备持久化存储（例如FLASH）中读取产品序列号。
 
-```C
+```
 IoT_Error_t HAL_GetProductSN(_OU_ char productSN[IOT_PRODUCT_SN_LEN + 1]);
 ```
 
@@ -201,7 +202,7 @@ IoT_Error_t HAL_GetProductSN(_OU_ char productSN[IOT_PRODUCT_SN_LEN + 1]);
 
 获取产品密钥。用于从设备持久化存储（例如FLASH）中读取产品密钥。
 
-```C
+```
 IoT_Error_t HAL_GetProductSecret(_OU_ char productSecret[IOT_PRODUCT_SECRET_LEN + 1]);
 ```
 
@@ -216,7 +217,7 @@ IoT_Error_t HAL_GetProductSecret(_OU_ char productSecret[IOT_PRODUCT_SECRET_LEN 
 
 获取设备序列号。用于从设备持久化存储（例如FLASH）中读取设备序列号。
 
-```C
+```
 IoT_Error_t HAL_GetDeviceSN(_OU_ char deviceSN[IOT_DEVICE_SN_LEN + 1]);
 ```
 
@@ -231,7 +232,7 @@ IoT_Error_t HAL_GetDeviceSN(_OU_ char deviceSN[IOT_DEVICE_SN_LEN + 1]);
 
 获取设备密钥。用于从设备持久化存储（例如FLASH）中读取设备密钥。
 
-```C
+```
 IoT_Error_t HAL_GetDeviceSecret(_OU_ char deviceSecret[IOT_DEVICE_SECRET_LEN + 1]);
 ```
 
@@ -246,7 +247,7 @@ IoT_Error_t HAL_GetDeviceSecret(_OU_ char deviceSecret[IOT_DEVICE_SECRET_LEN + 1
 
 设置产品序列号。用于将产品序列号烧写到设备持久化存储（例如FLASH）中，以备后续使用。
 
-```C
+```
 IoT_Error_t HAL_SetProductSN(_IN_ const char *pProductSN);
 ```
 
@@ -261,7 +262,7 @@ IoT_Error_t HAL_SetProductSN(_IN_ const char *pProductSN);
 
 设置产品密钥。用于将产品密钥烧写到设备持久化存储（例如FLASH）中，以备后续使用。
 
-```C
+```
 IoT_Error_t HAL_SetProductSecret(_IN_ const char *pProductSecret);
 ```
 
@@ -276,7 +277,7 @@ IoT_Error_t HAL_SetProductSecret(_IN_ const char *pProductSecret);
 
 设置设备序列号。用于将设备序列号烧写到设备持久化存储（例如FLASH）中，以备后续使用。
 
-```C
+```
 IoT_Error_t HAL_SetDeviceSN(_IN_ const char *pDeviceSN);
 ```
 
@@ -291,7 +292,7 @@ IoT_Error_t HAL_SetDeviceSN(_IN_ const char *pDeviceSN);
 
 设置设备密钥。用于将设备密钥烧写到设备持久化存储（例如FLASH）中，以备后续使用。
 
-```C
+```
 IoT_Error_t HAL_SetDeviceSecret(_IN_ const char *pDeviceSecret);
 ```
 
@@ -306,7 +307,7 @@ IoT_Error_t HAL_SetDeviceSecret(_IN_ const char *pDeviceSecret);
 
 判断定时器时间是否已经过期。
 
-```C
+```
 bool HAL_Timer_Expired(_IN_ Timer *timer);
 ```
 
@@ -321,7 +322,7 @@ bool HAL_Timer_Expired(_IN_ Timer *timer);
 
 根据timeout时间开启定时器计时, 单位: ms
 
-```C
+```
 void HAL_Timer_Countdown_ms(_IN_ Timer *timer, _IN_ uint32_t timeout_ms);
 ```
 
@@ -336,7 +337,7 @@ void HAL_Timer_Countdown_ms(_IN_ Timer *timer, _IN_ uint32_t timeout_ms);
 
 根据timeout时间开启定时器计时, 单位: s
 
-```C
+```
 void HAL_Timer_Countdown(_IN_ Timer *timer, _IN_ uint32_t timeout);
 ```
 
@@ -351,7 +352,7 @@ void HAL_Timer_Countdown(_IN_ Timer *timer, _IN_ uint32_t timeout);
 
 检查给定定时器剩余时间, 单位: ms
 
-```C
+```
 uint32_t HAL_Timer_Remain_ms(_IN_ Timer *timer);
 ```
 
@@ -366,7 +367,7 @@ uint32_t HAL_Timer_Remain_ms(_IN_ Timer *timer);
 
 初始化定时器结构体。
 
-```C
+```
 void HAL_Timer_Init(_IN_ Timer *timer);
 ```
 
@@ -380,7 +381,7 @@ void HAL_Timer_Init(_IN_ Timer *timer);
 
 建立TLS连接。根据指定的HOST地址, 服务器端口号和证书文件建立TLS连接, 返回对应的连接句柄。
 
-```C
+```
 uintptr_t HAL_TLS_Connect(_IN_ const char *host, _IN_ uint16_t port, _IN_ const char *ca_crt, _IN_ size_t ca_crt_len);
 ```
 
@@ -398,7 +399,7 @@ uintptr_t HAL_TLS_Connect(_IN_ const char *host, _IN_ uint16_t port, _IN_ const 
 
 断开TLS连接, 并释放相关对象资源。
 
-```C
+```
 int32_t HAL_TLS_Disconnect(_IN_ uintptr_t handle);
 ```
 
@@ -413,7 +414,7 @@ int32_t HAL_TLS_Disconnect(_IN_ uintptr_t handle);
 
 向指定的TLS连接写入数据。此接口为同步接口, 如果在超时时间内写入了参数len指定长度的数据则立即返回, 否则在超时时间到时返回。
 
-```C
+```
 int32_t HAL_TLS_Write(_IN_ uintptr_t handle, _IN_ unsigned char *buf, _IN_ size_t len, _IN_ uint32_t timeout_ms);
 ```
 
@@ -431,7 +432,7 @@ int32_t HAL_TLS_Write(_IN_ uintptr_t handle, _IN_ unsigned char *buf, _IN_ size_
 
 从指定的TLS连接读取数据, 此接口为同步接口, 如果在超时时间内读取到参数len指定长度的数据则立即返回, 否则在超时时间到时返回。
 
-```C
+```
 int32_t HAL_TLS_Read(_IN_ uintptr_t handle, _OU_ unsigned char *buf, _IN_ size_t len, _IN_ uint32_t timeout_ms);
 ```
 
@@ -449,7 +450,7 @@ int32_t HAL_TLS_Read(_IN_ uintptr_t handle, _OU_ unsigned char *buf, _IN_ size_t
 
 建立TCP连接。根据指定的HOST地址, 服务器端口号建立TCP连接, 返回对应的连接句柄，需要注意的是如果创建失败，返回的是创建失败返回(uintptr_t)(-1)。
 
-```C
+```
 uintptr_t HAL_TCP_Connect(_IN_ const char *host, _IN_ uint16_t port);
 ```
 
@@ -465,7 +466,7 @@ uintptr_t HAL_TCP_Connect(_IN_ const char *host, _IN_ uint16_t port);
 
 断开TCP连接, 并释放相关对象资源。
 
-```C
+```
 int32_t HAL_TCP_Disconnect(_IN_ uintptr_t fd);
 ```
 
@@ -480,7 +481,7 @@ int32_t HAL_TCP_Disconnect(_IN_ uintptr_t fd);
 
 向指定的TCP连接写入数据。此接口为同步接口, 如果在超时时间内写入了参数len指定长度的数据则立即返回, 否则在超时时间到时返回。
 
-```C
+```
 int32_t HAL_TCP_Write(_IN_ uintptr_t fd, _IN_ unsigned char *buf, _IN_ size_t len, _IN_ uint32_t timeout_ms);
 ```
 
@@ -498,7 +499,7 @@ int32_t HAL_TCP_Write(_IN_ uintptr_t fd, _IN_ unsigned char *buf, _IN_ size_t le
 
 从指定的TCP连接读取数据。此接口为同步接口, 如果在超时时间内读取到参数len指定长度的数据则立即返回, 否则在超时时间到时返回。
 
-```C
+```
 int32_t HAL_TCP_Read(_IN_ uintptr_t fd, _OU_ unsigned char *buf, _IN_ size_t len, _IN_ uint32_t timeout_ms);
 ```
 

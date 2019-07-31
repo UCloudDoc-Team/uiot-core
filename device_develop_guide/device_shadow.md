@@ -6,7 +6,7 @@
 
 在设备端进行开发时，涉及的Topic：
 
-|Topic| 权限|描述|
+|Topic|权限|描述|
 |---|---|---|
 |/$system/${ProductSN}/${DeviceSN}/device/status|订阅|设备状态|
 |/$system/${ProductSN}/${DeviceSN}/shadow/upstream |发布|上行操作设备影子（更新、删除）|
@@ -20,8 +20,12 @@
 ## 设备端设备影子支持的功能
 
 对设备影子的操作包括，具体参考[设备影子相关操作](../console_guide/device_shadow/operation_guide)：
+
 - 设备端获取设备影子文档；
+
 - 设备端上报状态更新设备影子；
+
 - 设备端删除设备影子属性；
+
 - 设备端重置设备影子版本；
 

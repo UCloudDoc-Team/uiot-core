@@ -1,3 +1,5 @@
+{{indexmenu_n>3}}
+
 
 # MQTT协议说明
 目前物联网通信支持MQTT标准协议接入（兼容3.1.1版本协议），具体的协议请参考MQTT 3.1.1协议文档
@@ -21,7 +23,7 @@
 用户需要通过HAL_GetDeviceSecret接口获取到DeviceSecret填到MQTT连接参数中并重新进行静态认证。需要注意的<br>
 是已经进行过静态认证的设备如果再进行动态认证会失败。
 
-```cmake
+```
 option(ENABLE_FEATURE_AUTH_MODE_DYNAMIC "是否打开设备动态注册" ON)
 ```
 
@@ -35,7 +37,7 @@ event_handler.f_fp需要用户自己实现，用于处理云平台的MQTT响应�
 ![](../../images/设备注册-2.png)
 ![](../../images/设备注册-3.png)
 
-```c
+```
 /* 产品序列号, 与云端同步设备状态时需要  */
 #define UIOT_MY_PRODUCT_SN            "dpetdroyt44ryjoh"/*     
 设备序列号, 与云端同步设备状态时需要, 静态认证后的设备不能进行动态认证，    因此每次执行该用例需要新建一个设备。*/
@@ -67,7 +69,7 @@ static int _setup_connect_init_params(MQTTInitParams* initParams)
 
 动态认证完成后，通过HAL接口获取设备密钥，进行静态认证
 
-```c
+```
 	ret = _setup_connect_init_params(&init_params);
 	if (ret != SUCCESS) {  
 		return ret;
@@ -134,7 +136,7 @@ static int _setup_connect_init_params(MQTTInitParams* initParams)
 
 配置完设备信息，直接进行静态认证
 
-```c
+```
 	rc = _setup_connect_init_params(&init_params);
 	if (rc != SUCCESS)
 	{  
@@ -158,7 +160,7 @@ static int _setup_connect_init_params(MQTTInitParams* initParams)
 
 创建MQTT连接句柄
 
-```C
+```
 void *IOT_MQTT_Construct(MQTTInitParams *pParams);
 ```
 
@@ -173,7 +175,7 @@ void *IOT_MQTT_Construct(MQTTInitParams *pParams);
 
 销毁MQTT连接句柄。
 
-```C
+```
 void IOT_MQTT_Destroy(void **pClient);
 ```
 
@@ -187,7 +189,7 @@ void IOT_MQTT_Destroy(void **pClient);
 
 MQTT会话阶段,MQTT主循环函数, 内含了心跳的维持, 服务器下行报文的收取等
 
-```C
+```
 int IOT_MQTT_Yield(void *pClient, uint32_t timeout_ms)
 ```
 
@@ -203,7 +205,7 @@ int IOT_MQTT_Yield(void *pClient, uint32_t timeout_ms)
 
 MQTT连接后,向指定topic发送消息。
 
-```C
+```
 int IOT_MQTT_Publish(void *pClient, char *topicName, PublishParams *pParams);
 ```
 
@@ -220,7 +222,7 @@ int IOT_MQTT_Publish(void *pClient, char *topicName, PublishParams *pParams);
 
 MQTT连接后,订阅指定topic。
 
-```C
+```
 int IOT_MQTT_Subscribe(void *pClient, char *topicFilter, SubscribeParams *pParams);
 ```
 
@@ -237,7 +239,7 @@ int IOT_MQTT_Subscribe(void *pClient, char *topicFilter, SubscribeParams *pParam
 
 取消订阅指定topic
 
-```C
+```
 int HAL_MQTT_Unsubscribe(void *pClient, char *topicFilter);
 ```
 
@@ -253,7 +255,7 @@ int HAL_MQTT_Unsubscribe(void *pClient, char *topicFilter);
 
 确认MQTT是否正处于连接状态
 
-```C
+```
 bool IOT_MQTT_IsConnected(void *pClient);
 ```
 
@@ -268,7 +270,7 @@ bool IOT_MQTT_IsConnected(void *pClient);
 
 动态认证连接MQTT服务器
 
-```C
+```
 int IOT_MQTT_Dynamic_Register(MQTTInitParams *pParams);
 ```
 ### 参数列表

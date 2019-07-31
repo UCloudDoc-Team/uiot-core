@@ -1,3 +1,4 @@
+{{indexmenu_n>5}}
 
 # 设备物模型开发
 
@@ -7,18 +8,18 @@ UIoT-Core 通过物模型功能简化用户应用程序的开发。本章描述�
 
 * C-SDK 支持物模型七种消息类型，对应于 uiot_export_dm.h 中枚举类型 DM_Type
 
-  ```C
-  typedef enum _dm_type {
-      PROPERTY_RESTORE,         //设备恢复属性
-      PROPERTY_POST,            //设备上报属性
-      PROPERTY_SET,             //云端下发属性
-      PROPERTY_DESIRED_GET,     //设备获取desire属性
-      PROPERTY_DESIRED_DELETE,  //删除云端desire属性
-      EVENT_POST,               //设备上报事件
-      COMMAND,                  //命令下发
-      DM_TYPE_MAX
-  }DM_Type;
-  ```
+```
+typedef enum _dm_type {
+    PROPERTY_RESTORE,         //设备恢复属性
+    PROPERTY_POST,            //设备上报属性
+    PROPERTY_SET,             //云端下发属性
+    PROPERTY_DESIRED_GET,     //设备获取desire属性
+    PROPERTY_DESIRED_DELETE,  //删除云端desire属性
+    EVENT_POST,               //设备上报事件
+    COMMAND,                  //命令下发
+    DM_TYPE_MAX
+}DM_Type;
+```
 
   示例代码展示其中设备上报属性、云端下发属性、设备上报事件、命令下发四种操作。
 
@@ -116,7 +117,7 @@ UIoT-Core 通过物模型功能简化用户应用程序的开发。本章描述�
 
 在使用设备物模型功能之前，首先需要进行初始化，包括 MQTT 客户端的创建和物模型功能的初始化。可参照 dev_model_sample.c 中 main 函数的初始化部分代码。
 
-```C
+```
 //1. 首先创建 MQTT 客户端，并与云端建立MQTT连接
 void *client = IOT_MQTT_Construct(&init_params);
 if (client != NULL) {
@@ -140,7 +141,7 @@ IOT_DM_Yield(h_dm, 50);
 
 用户可使用 API 函数 `IOT_DM_Property_Report` 进行属性上报。如果需要接收上报响应消息，利用 `IOT_DM_RegisterCallback` 注册对应的回调函数。
 
-```C
+```
 //根据 uiot_export_dm.h 中的声明，定义属性上报的回调函数，获取属性上报的响应。
 int property_post_cb(const char *request_id, const int ret_code){
     LOG_INFO("property_post_cb; request_id: %s; ret_code: %d", request_id, ret_code)
@@ -168,7 +169,7 @@ int main(int argc, char **argv)
 
 利用 `IOT_DM_RegisterCallback` 注册对应的回调函数，接收云端下发的属性值。
 
-```C
+```
 //根据 uiot_export_dm.h 中的声明，定义属性下发的回调函数，获取云端下发的属性值。实际应用中可在该回调函数中处理下发的属性值
 int property_set_cb(const char *request_id, const char *property){
     LOG_INFO("property_set_cb; request_id: %s; property: %s", request_id, property)
@@ -188,7 +189,7 @@ int main(int argc, char **argv)
 
 用户可使用 API 函数 `IOT_DM_TriggerEvent` 进行事件上报。如果需要接收上报响应消息，利用 `IOT_DM_RegisterCallback` 注册对应的回调函数。
 
-```C
+```
 //根据 uiot_export_dm.h 中的声明，定义事件上报的回调函数，获取事件上报的响应。
 int event_post_cb(const char *request_id, const int ret_code){
     LOG_INFO("event_post_cb; request_id: %s; ret_code: %d", request_id, ret_code)
@@ -216,7 +217,7 @@ int main(int argc, char **argv)
 
 利用 `IOT_DM_RegisterCallback` 注册对应的回调函数，接收云端下发的命令。
 
-```C
+```
 //根据 uiot_export_dm.h 中的声明，定义命令下发的回调函数，获取云端下发的命令。实际应用中可在该回调函数中处理命令的输入输出
 int command_cb(const char *request_id, const char *identifier, const char *input, char **output){
     LOG_INFO("command_cb; request_id: %s; identifier: %s; input: %s", request_id, identifier, input)
@@ -238,7 +239,7 @@ int main(int argc, char **argv)
 
 ### 资源释放
 
-```C
+```
 //释放物模型资源
 IOT_DM_Destroy(h_dm);
 //（可选）释放 MQTT Client 资源
@@ -251,7 +252,7 @@ IOT_MQTT_Destroy(&client);
 
 注册消息回调函数的宏
 
-```C
+```
 #define IOT_DM_RegisterCallback(type, handle, cb)
 ```
 
@@ -268,7 +269,7 @@ IOT_MQTT_Destroy(&client);
 
 初始化设备物模型
 
-```C
+```
 void *IOT_DM_Init(const char *product_sn, const char *device_sn, void *ch_signal);
 ```
 
@@ -285,7 +286,7 @@ void *IOT_DM_Init(const char *product_sn, const char *device_sn, void *ch_signal
 
 释放设备物模型相关的资源
 
-```C
+```
 int IOT_DM_Destroy(void *handle);
 ```
 
@@ -300,7 +301,7 @@ int IOT_DM_Destroy(void *handle);
 
 属性有关的消息上报
 
-```C
+```
 int IOT_DM_Property_Report(void *handle, DM_Type type, int request_id, const char *payload);
 ```
 
@@ -318,7 +319,7 @@ int IOT_DM_Property_Report(void *handle, DM_Type type, int request_id, const cha
 
 事件消息上报
 
-```C
+```
 int IOT_DM_TriggerEvent(void *handle, int request_id, const char *identifier, const char *payload);
 ```
 
@@ -336,7 +337,7 @@ int IOT_DM_TriggerEvent(void *handle, int request_id, const char *identifier, co
 
 在当前线程为底层 MQTT 客户端让出一定 CPU 执行时间，让其接收网络报文并将消息分发到用户的回调函数中
 
-```C
+```
 int IOT_DM_Yield(void *handle, uint32_t timeout_ms);
 ```
 

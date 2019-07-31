@@ -11,7 +11,6 @@
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
 |Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
-|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|**No**|
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
 
@@ -54,14 +53,13 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceProperty
 
 ## GetUIoTCoreDeviceCommandList
 
-获取设备命令结果列表
+获取设备命令记录列表
 
 ### 请求参数
 
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
 |Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
-|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|**No**|
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
 |Offset|int|列表起始位置偏移量，默认为0|**No**|
@@ -78,7 +76,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceProperty
 |RetCode|int|操作返回码|**Yes**|
 |Action|string|操作名称|**Yes**|
 |TotalCount|int|命令记录总数|**Yes**|
-|CommandSet|array[CommandSet]|命令列表|**Yes**|
+|CommandSet|array[CommandSet]|命令记录列表|**Yes**|
 
 ### CommandSet 命令列表单元
 
@@ -88,8 +86,9 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceProperty
 |Identifier|string|标识符|**Yes**|
 |Name|string|名称|**Yes**|
 |Time|int|毫秒时间戳|**Yes**|
-|Input|object|输入|**Yes**|
-|Output|object|输出|**Yes**|
+|Input|object|命令输入|**Yes**|
+|Output|object|命令输出|**Yes**|
+|Result|string|命令执行结果|**Yes**|
 
 ### 请求示例
 
@@ -132,14 +131,13 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceCommandList
 
 ## GetUIoTCoreDeviceEventList
 
-获取设备事件结果列表
+获取设备事件记录列表
 
 ### 请求参数
 
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
 |Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
-|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|**No**|
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
 |Offset|int|列表起始位置偏移量，默认为0|**No**|
@@ -155,8 +153,8 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceCommandList
 |------|------|--------|----:|
 |RetCode|int|操作返回码|**Yes**|
 |Action|string|操作名称|**Yes**|
-|TotalCount|int|事件总数|**Yes**|
-|EventSet|array[EventSet]|事件列表|**Yes**|
+|TotalCount|int|事件记录总数|**Yes**|
+|EventSet|array[EventSet]|事件记录列表|**Yes**|
 
 ### EventSet 事件列表单元
 
@@ -167,7 +165,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceCommandList
 |Name|string|名称|**Yes**|
 |Type|string|事件类型|**Yes**|
 |Time|string|毫秒时间戳|**Yes**|
-|Output|object|输出|**Yes**|
+|Output|object|事件输出|**Yes**|
 
 ### 请求示例
 
@@ -214,7 +212,6 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceEventList
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
 |Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
-|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|**No**|
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
 |Property|string|属性列表，为base64之后的json字符串，json串的格式为{"PropertyIdentifier":PropertyValue}|**Yes**|
@@ -259,13 +256,12 @@ https://api.ucloud.cn/?Action=SetUIoTCoreDeviceProperty
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
 |Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
-|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|**No**|
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
 |Identifier|string|标识符|**Yes**|
-|Input|string|base64后的json字符串，格式参考物模型模板。默认为空|No|
-|Method|string|sync或者async。默认为async|No|
-|Timeout|int|超时时间，单位为秒，只在method为sync时有效，最长不超过5秒。默认为5|No|
+|Input|string|base64后的json字符串，格式参考物模型模板。默认为空|**No**|
+|Method|string|sync或者async。默认为async|**No**|
+|Timeout|int|超时时间，单位为秒，只在method为sync时有效，最长不超过5秒。默认为5|**No**|
 
 ### 响应参数
 
@@ -310,7 +306,6 @@ https://api.ucloud.cn/?Action=SendUIoTCoreDeviceCommand
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
 |Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
-|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|**No**|
 |ProductSN|string|产品序列号|**Yes**|
 
 ### 响应参数
