@@ -139,7 +139,8 @@ IOT_DM_Yield(h_dm, 50);
 
 ### 设备上报属性
 
-用户可使用API函数 **IOT_DM_Property_Report** 进行属性上报。如果需要接收上报响应消息，利用 **IOT_DM_RegisterCallback** 注册对应的回调函数。
+用户可使用API函数 **IOT_DM_Property_Report** 进行属性上报。
+如果需要接收上报响应消息，利用 **IOT_DM_RegisterCallback** 注册对应的回调函数。
 
 ```
 //根据 uiot_export_dm.h 中的声明，定义属性上报的回调函数，获取属性上报的响应。
@@ -148,7 +149,7 @@ int property_post_cb(const char *request_id, const int ret_code){
     return SUCCESS;
 }
 
-int main(int argc, char **argv)
+int main(int argc, char *\*argv)
 {
     ...
     //注册回调函数
