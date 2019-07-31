@@ -1,3 +1,4 @@
+{{indexmenu_n>6}}
 
 # 设备OTA开发
 
@@ -6,6 +7,7 @@ UIoT-Core 支持设备通过 OTA(Over-the-Air Technology) 进行固件升级。�
 ## 功能说明
 
 * C-SDK 提供支持固件下载及校验的 API，但固件存储以及烧录需要用户在应用程序中实现。
+
 * 建议在 OTA 功能设计之初预留充足的存储容量以便存放固件，同时充分考虑到烧录的风险，如有必要提前设计烧录失败的回退逻辑。
 
 ## 开发步骤
@@ -13,14 +15,16 @@ UIoT-Core 支持设备通过 OTA(Over-the-Air Technology) 进行固件升级。�
 ### 准备
 
 1. 在控制台创建一个产品和一个设备，替换 ota_sample.c 中的设备四元组信息。
+
 2. 上传一个固件（版本号任选，与示例代码中的 "1.0.0" 不同即可）。
+
 3. 在示例代码启动并上报版本之后，在控制台发起设备升级操作，将设备升级到上传的固件版本。
 
 ### 初始化
 
 在使用 OTA 功能之前，首先需要进行初始化，包括 MQTT 客户端的创建、OTA 的初始化以及版本上报。可参照 ota_sample.c 中 main 函数的初始化部分代码。
 
-```C
+```
 //1. 首先创建MQTT客户端，并与云端建立MQTT连接
 void *client = IOT_MQTT_Construct(&init_params);
 if (client != NULL) {
@@ -54,7 +58,7 @@ if (IOT_OTA_RequestFirmware(h_ota, "1.0.0") < 0) {
 
 流程包括固件的下载、校验、存储和烧录等步骤。由于硬件平台等差异，用户可根据实际情况仿照示例代码实现整个流程。
 
-```C
+```
 //打开一个文件，用于存储固件
 if (NULL == (fp = fopen("ota.bin", "wb+"))) {
     LOG_ERROR("open file failed");
@@ -127,7 +131,7 @@ if (upgrade_fetch_success)
 
 固件升级完成后，需要释放 OTA 过程中使用的资源。
 
-```C
+```
 //关闭文件
 fclose(fp);
 //释放OTA资源
@@ -142,7 +146,7 @@ IOT_MQTT_Destroy(&client);
 
 初始化 OTA 模块
 
-```C
+```
 void *IOT_OTA_Init(const char *product_sn, const char *device_sn, void *ch_signal);
 ```
 
@@ -159,7 +163,7 @@ void *IOT_OTA_Init(const char *product_sn, const char *device_sn, void *ch_signa
 
 释放 OTA 相关的资源
 
-```C
+```
 int IOT_OTA_Destroy(void *handle);
 ```
 
@@ -174,7 +178,7 @@ int IOT_OTA_Destroy(void *handle);
 
 向 OTA 服务器报告固件版本信息
 
-```C
+```
 int IOT_OTA_ReportVersion(void *handle, const char *version);
 ```
 
@@ -190,7 +194,7 @@ int IOT_OTA_ReportVersion(void *handle, const char *version);
 
 向 OTA 服务器报告详细进度
 
-```C
+```
 int IOT_OTA_ReportProgress(void *handle, int progress, IOT_OTA_ProgressState state);
 ```
 
@@ -207,7 +211,7 @@ int IOT_OTA_ReportProgress(void *handle, int progress, IOT_OTA_ProgressState sta
 
 向 OTA 服务器上报升级成功
 
-```C
+```
 int IOT_OTA_ReportSuccess(void *handle, const char *version);
 ```
 
@@ -223,7 +227,7 @@ int IOT_OTA_ReportSuccess(void *handle, const char *version);
 
 向 OTA 服务器上报失败信息
 
-```C
+```
 int IOT_OTA_ReportFail(void *handle, IOT_OTA_ReportErrCode err_code);
 ```
 
@@ -239,7 +243,7 @@ int IOT_OTA_ReportFail(void *handle, IOT_OTA_ReportErrCode err_code);
 
 检查是否处于下载固件的状态
 
-```C
+```
 int IOT_OTA_IsFetching(void *handle);
 ```
 
@@ -254,7 +258,7 @@ int IOT_OTA_IsFetching(void *handle);
 
 检查固件是否已经下载完成
 
-```C
+```
 int IOT_OTA_IsFetchFinish(void *handle);
 ```
 
@@ -269,7 +273,7 @@ int IOT_OTA_IsFetchFinish(void *handle);
 
 从远程服务器获取固件
 
-```C
+```
 int IOT_OTA_FetchYield(void *handle, char *buf, size_t buf_len, uint32_t timeout_s);
 ```
 
@@ -287,7 +291,7 @@ int IOT_OTA_FetchYield(void *handle, char *buf, size_t buf_len, uint32_t timeout
 
 获取指定的 OTA 信息
 
-```C
+```
 int IOT_OTA_Ioctl(void *handle, IOT_OTA_CmdType type, void *buf, size_t buf_len);
 ```
 
@@ -313,7 +317,7 @@ int IOT_OTA_Ioctl(void *handle, IOT_OTA_CmdType type, void *buf, size_t buf_len)
 
 获取最后一个错误码
 
-```C
+```
 int IOT_OTA_GetLastError(void *handle);
 ```
 
@@ -328,7 +332,7 @@ int IOT_OTA_GetLastError(void *handle);
 
 请求固件更新消息。设备离线时，不能接收服务端推送的升级消息，需要通过 MQTT 协议接入物联网平台的设备再次上线后，主动请求固件更新消息
 
-```C
+```
 int IOT_OTA_RequestFirmware(void *handle, const char *version);
 ```
 
