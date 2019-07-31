@@ -70,7 +70,7 @@ void HAL_Printf(_IN_ const char *fmt, ...)
 
 初始化MQTT的连接参数，此处直接使用设备密钥进行静态认证。
 
-![](../images/快速入门-1.png)
+![](../../images/快速入门-1.png)
 
 将控制台上用户自己创建的产品设备信息替换以下宏
 
@@ -143,10 +143,10 @@ static int _setup_connect_init_params(MQTTInitParams* initParams)
 
 属性回调函数的调用示例<br>
 1.在云平台上修改设备影子文档，设置一个属性的期望值。<br>
-![](../images/快速入门-2.png)
+![](../../images/快速入门-2.png)
 
 2.当设备发现云平台下发的期望值时会调用属性的回调函数处理。使用设备当前属性值更新云平台上的属性值<br>
-![](../images/快速入门-3.png)
+![](../../images/快速入门-3.png)
 
 
 完成属性的回调函数后，注册设备属性。
@@ -187,7 +187,7 @@ static void _update_ack_cb(void *pClient, Method method, RequestAck requestAck, 
 ```
 请求回调函数的执行示例<br>
 当云平台处理完设备发送给他的请求后，返回响应结果和消息时会调用请求回调函数。<br>
-![](../images/快速入门-4.png)
+![](../../images/快速入门-4.png)
 
 设备可能由于掉电等原因和服务器断开一段时间，这段时间服务器端设备影子的改动需要同步一下。<br>
 以上个步骤完成的请求回调函数做入参向云平台发送同步文档请求。
@@ -235,7 +235,7 @@ static void _update_ack_cb(void *pClient, Method method, RequestAck requestAck, 
 	}
 ```
 执行结果
-![](../images/快速入门-5.png)
+![](../../images/快速入门-5.png)
 
 
 执行结束，释放本地资源。
@@ -247,4 +247,4 @@ static void _update_ack_cb(void *pClient, Method method, RequestAck requestAck, 
 ## 查看日志
 通过日志可以看到一段时间内设备所有的上行和下行消息。
 
-![](../images/快速入门-6.png)
+![](../../images/快速入门-6.png)
