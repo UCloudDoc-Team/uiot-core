@@ -25,7 +25,7 @@ MQTT协议（Message Queuing Telemetry Transport），叫做遥信消息队列�
 
 MQTT连接需要先了解[设备注册](authenticate_devices/what_is_authenticate_devices)中提到的静态注册和动态注册，获取 **ClientID**，**UserName**，**Password**。
 
-1\. MQTT如须用TLS加密传输，需要[下载根证书](https://raw.githubusercontent.com/UCloudDocs/uiot-core/master/images/uiot_ca.pem)；
+1\. MQTT如须用TLS加密传输，需要[下载根证书](http://uiot.cn-sh2.ufileos.com/uiot_ca.pem)；
 
 2\. 基于[C-SDK](c_sdk_example/csdkquickstart)进行开发，其他语言可以参考[开源MQTT客户端](https://github.com/mqtt/mqtt.github.io/wiki/libraries?spm=a2c4g.11186623.2.11.793e78dcLHxgZy)进行开发，[MQTT协议](http://mqtt.org/?spm=a2c4g.11186623.2.12.577678dc5E6Qcl)详解可以参考[MQTT官网](http://mqtt.org/?spm=a2c4g.11186623.2.12.577678dc5E6Qcl)；
 

@@ -140,6 +140,7 @@ IOT_DM_Yield(h_dm, 50);
 ### 设备上报属性
 
 用户可使用API函数 **IOT_DM_Property_Report** 进行属性上报。
+
 如果需要接收上报响应消息，利用 **IOT_DM_RegisterCallback** 注册对应的回调函数。
 
 ```
