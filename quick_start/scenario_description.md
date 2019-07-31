@@ -149,7 +149,7 @@ make
 1. 设备订阅Topic **/70ly1tvowt696r15/aruidyl0rt9tuvod/set**
 
 2. 云端下发数据   
-   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入]()，其他参数参考[PublishUIoTCoreMQTTMessage]()：
+   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_guidehelp)，其他参数参考[PublishUIoTCoreMQTTMessage](../api_guide/messagemgmtapi)：
 
 ```
 POST  HTTP/1.1
@@ -180,7 +180,7 @@ Body:
 
 4. 查看日志  
 
-   平台提供[监控日志与调试]()功能可以查看所有经过平台流转的上行或下行的数据。
+   平台提供[日志管理](../console_guide/monitoring_maintenance/log)功能可以查看所有经过平台流转的上行或下行的数据。
 
    - 下行消息：下发数据给设备  
      通过Topic**/70ly1tvowt696r15/aruidyl0rt9tuvod/set**下发需要设置的温度、湿度值；  
