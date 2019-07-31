@@ -172,7 +172,7 @@ int IOT_OTA_Destroy(void *handle);
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | handle | void * | 输入 | IOT_OTA_Init 返回的句柄 |
-| ret | int | 返回值 | <0: 失败<br> =0: 成功 |
+| ret | int | 返回值 | <0: 失败  =0: 成功 |
 
 ### IOT_OTA_ReportVersion
 
@@ -188,7 +188,7 @@ int IOT_OTA_ReportVersion(void *handle, const char *version);
 | --- | --- | --- | --- |
 | handle | void * | 输入 | IOT_OTA_Init 返回的句柄 |
 | version | const char * | 输入 | 以字符串格式指定固件版本 |
-| ret | int | 返回值 | <0: 上报失败<br> >0: 成功，返回对应 publish 的 packet id |
+| ret | int | 返回值 | <0: 上报失败  >0: 成功，返回对应 publish 的 packet id |
 
 ### IOT_OTA_ReportProgress
 
@@ -205,7 +205,7 @@ int IOT_OTA_ReportProgress(void *handle, int progress, IOT_OTA_ProgressState sta
 | handle | void * | 输入 | IOT_OTA_Init 返回的句柄 |
 | progress | int | 输入 | 下载或升级进度，范围为 0-100 |
 | state | IOT_OTA_ProgressState | 输入 | 当前的 OTA 状态 |
-| ret | int | 返回值 | <0: 上报失败<br> >0: 成功，返回对应 publish 的 packet id |
+| ret | int | 返回值 | <0: 上报失败  >0: 成功，返回对应 publish 的 packet id |
 
 ### IOT_OTA_ReportSuccess
 
@@ -221,7 +221,7 @@ int IOT_OTA_ReportSuccess(void *handle, const char *version);
 | --- | --- | --- | --- |
 | handle | void * | 输入 | IOT_OTA_Init 返回的句柄 |
 | version | const char * | 输入 | 以字符串格式指定的当前固件版本，如果版本错误，云端认为固件升级失败 |
-| ret | int | 返回值 | <0: 上报失败<br> >0: 成功，返回对应 publish 的 packet id |
+| ret | int | 返回值 | <0: 上报失败  >0: 成功，返回对应 publish 的 packet id |
 
 ### IOT_OTA_ReportFail
 
@@ -237,7 +237,7 @@ int IOT_OTA_ReportFail(void *handle, IOT_OTA_ReportErrCode err_code);
 | --- | --- | --- | --- |
 | handle | void * | 输入 | IOT_OTA_Init 返回的句柄 |
 | err_code | IOT_OTA_ReportErrCode | 输入 | 错误码 |
-| ret | int | 返回值 | <0: 上报失败<br> >0: 成功，返回对应 publish 的 packet id |
+| ret | int | 返回值 | <0: 上报失败  >0: 成功，返回对应 publish 的 packet id |
 
 ### IOT_OTA_IsFetching
 
@@ -252,7 +252,7 @@ int IOT_OTA_IsFetching(void *handle);
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | handle | void * | 输入 | IOT_OTA_Init 返回的句柄 |
-| ret | int | 返回值 | 0: No<br> 1: Yes |
+| ret | int | 返回值 | 0: No  1: Yes |
 
 ### IOT_OTA_IsFetchFinish
 
@@ -267,7 +267,7 @@ int IOT_OTA_IsFetchFinish(void *handle);
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | handle | void * | 输入 | IOT_OTA_Init 返回的句柄 |
-| ret | int | 返回值 | 0: No<br> 1: Yes |
+| ret | int | 返回值 | 0: No  1: Yes |
 
 ### IOT_OTA_FetchYield
 
@@ -285,7 +285,7 @@ int IOT_OTA_FetchYield(void *handle, char *buf, size_t buf_len, uint32_t timeout
 | buf | char * | 输出 | 指定存储固件数据的缓冲区 |
 | buf_len | size_t | 输入 | buf 的长度 |
 | timeout_s | uint32_t | 输入 | 超时时间 |
-| ret | int | 返回值 | <0: 对应的错误码<br> 0: 在 timeout_s 超时期间内没有任何数据被下载<br>(0, len] : 在 timeout_s 超时时间内下载数据的长度 |
+| ret | int | 返回值 | <0: 对应的错误码  0: 在 timeout_s 超时期间内没有任何数据被下载 (0, len] : 在 timeout_s 超时时间内下载数据的长度 |
 
 ### IOT_OTA_Ioctl
 
@@ -303,7 +303,7 @@ int IOT_OTA_Ioctl(void *handle, IOT_OTA_CmdType type, void *buf, size_t buf_len)
 | type | IOT_OTA_CmdType | 输入 | 指定想要的信息 |
 | buf | void * | 输出 | 为数据交换指定缓冲区 |
 | buf_len | size_t | 输入 | buf 的长度 |
-| ret | int | 返回值 | <0: 失败<br> 0: 成功 |
+| ret | int | 返回值 | <0: 失败  0: 成功 |
 
 #### 说明
 
@@ -342,4 +342,4 @@ int IOT_OTA_RequestFirmware(void *handle, const char *version);
 | --- | --- | --- | --- |
 | handle | void * | 输入 | IOT_OTA_Init 返回的句柄 |
 | version | const char * | 输入 | 以字符串格式指定的当前版本号 |
-| ret | int | 返回值 | <0: 上报失败<br> >0: 成功，返回对应publish的packet id |
+| ret | int | 返回值 | <0: 上报失败  >0: 成功，返回对应publish的packet id |

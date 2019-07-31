@@ -31,7 +31,7 @@ typedef enum _dm_type {
 
 示例代码基于一个”智能音箱“的场景，分别定义了一个”音量“属性，一个”低电量告警“事件，以及一个”下载音乐“命令。具体的物模型 json 文档如下所示：
 
-```json
+```
 {
   "Property": [
     {
@@ -139,7 +139,7 @@ IOT_DM_Yield(h_dm, 50);
 
 ### 设备上报属性
 
-用户可使用 API 函数 `IOT_DM_Property_Report` 进行属性上报。如果需要接收上报响应消息，利用 `IOT_DM_RegisterCallback` 注册对应的回调函数。
+用户可使用API函数 **IOT_DM_Property_Report** 进行属性上报。如果需要接收上报响应消息，利用 **IOT_DM_RegisterCallback** 注册对应的回调函数。
 
 ```
 //根据 uiot_export_dm.h 中的声明，定义属性上报的回调函数，获取属性上报的响应。
@@ -167,7 +167,7 @@ int main(int argc, char **argv)
 
 ### 云端下发属性
 
-利用 `IOT_DM_RegisterCallback` 注册对应的回调函数，接收云端下发的属性值。
+利用 **IOT_DM_RegisterCallback** 注册对应的回调函数，接收云端下发的属性值。
 
 ```
 //根据 uiot_export_dm.h 中的声明，定义属性下发的回调函数，获取云端下发的属性值。实际应用中可在该回调函数中处理下发的属性值
@@ -187,7 +187,7 @@ int main(int argc, char **argv)
 
 ### 设备上报事件
 
-用户可使用 API 函数 `IOT_DM_TriggerEvent` 进行事件上报。如果需要接收上报响应消息，利用 `IOT_DM_RegisterCallback` 注册对应的回调函数。
+用户可使用 API 函数 **IOT_DM_TriggerEvent** 进行事件上报。如果需要接收上报响应消息，利用 **IOT_DM_RegisterCallback** 注册对应的回调函数。
 
 ```
 //根据 uiot_export_dm.h 中的声明，定义事件上报的回调函数，获取事件上报的响应。
@@ -215,7 +215,7 @@ int main(int argc, char **argv)
 
 ### 命令下发
 
-利用 `IOT_DM_RegisterCallback` 注册对应的回调函数，接收云端下发的命令。
+利用 **IOT_DM_RegisterCallback** 注册对应的回调函数，接收云端下发的命令。
 
 ```
 //根据 uiot_export_dm.h 中的声明，定义命令下发的回调函数，获取云端下发的命令。实际应用中可在该回调函数中处理命令的输入输出
@@ -263,7 +263,7 @@ IOT_MQTT_Destroy(&client);
 | type | DM_Type | 输入 | 消息类型，七种DM_Type之一 |
 | handle | void * | 输入 | IOT_DM_Init 返回的句柄 |
 | cb | 函数指针 | 输入 | 回调函数指针，函数类型必须与 DECLARE_DM_CALLBACK 声明的类型相同 |
-| ret | int | 返回值 | <0: 注册消息回调函数失败<br> =0: 注册消息回调函数成功 |
+| ret | int | 返回值 | <0: 注册消息回调函数失败  =0: 注册消息回调函数成功 |
 
 ### IOT_DM_Init
 
@@ -295,7 +295,7 @@ int IOT_DM_Destroy(void *handle);
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | handle | void * | 输入 | IOT_DM_Init 返回的句柄 |
-| ret | int | 返回值 | <0: 失败<br> =0: 成功 |
+| ret | int | 返回值 | <0: 失败  =0: 成功 |
 
 ### IOT_DM_Property_Report
 
@@ -313,7 +313,7 @@ int IOT_DM_Property_Report(void *handle, DM_Type type, int request_id, const cha
 | type | DM_Type | 输入 | 消息类型，PROPERTY_RESTORE, PROPERTY_POST, PROPERTY_DESIRED_GET, PROPERTY_DESIRED_DELETE 四种属性相关的消息类型之一 |
 | request_id | int | 输入 | 消息的 request_id，由用户决定，用于区分每次属性上报 |
 | payload | const char * | 输入 | 消息体 |
-| ret | int | 返回值 | <0: 上报失败<br> =0: 上报成功 |
+| ret | int | 返回值 | <0: 上报失败  =0: 上报成功 |
 
 ### IOT_DM_TriggerEvent
 
@@ -331,7 +331,7 @@ int IOT_DM_TriggerEvent(void *handle, int request_id, const char *identifier, co
 | request_id | int | 输入 | 消息的 request_id，由用户决定，用于区分不同事件 |
 | identifier | const char * | 输入 | 事件的 identifier |
 | payload | const char * | 输入 | 消息体 |
-| ret | int | 返回值 | <0: 上报失败<br> =0: 上报成功 |
+| ret | int | 返回值 | <0: 上报失败  =0: 上报成功 |
 
 ### IOT_DM_Yield
 
@@ -347,4 +347,4 @@ int IOT_DM_Yield(void *handle, uint32_t timeout_ms);
 | --- | --- | --- | --- |
 | handle | void * | 输入 | IOT_DM_Init 返回的句柄 |
 | timeout_ms | uint32_t | 输入 | 超时时间，单位：ms |
-| ret | int | 返回值 | <0: 失败<br> =0: 成功 |
+| ret | int | 返回值 | <0: 失败  =0: 成功 |
