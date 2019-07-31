@@ -1,4 +1,5 @@
 {{indexmenu_n>4}}
+
 #设备影子开发
 
 ## 修改设备影子的请求图例
@@ -6,7 +7,7 @@
 注：图例中已将一个完整的更新或者删除操作拆解开讲解
 ![](../../images/设备影子-1.jpg)
 
-## 设备影子支持的操作类型 
+## 设备影子支持的操作类型
 (c-sdk\src\sdk-impl\uiot_export_shadow.h 枚举Method)
 
 * **GET** - 获取云平台上的最新影子文档并同步属性值和版本号
@@ -23,7 +24,7 @@
 
 * **REPLY_CONTROL_DELETE** - 当版本不一致，云平台回复control后，设备根据最新影子文档更新完本地属性后回复的DELETE消息
 
-## 设备影子支持的属性值类型 
+## 设备影子支持的属性值类型
 (c-sdk\src\sdk-impl\uiot_export_shadow.h)
 
 * **int32_t** - 32位有符号整型
