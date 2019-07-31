@@ -11,7 +11,7 @@
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
 | ProductName    | string | 产品名称                                                     |  **Yes** |
 | Description    | string | 产品描述                                                     |       No |
 
@@ -49,7 +49,7 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreProduct
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)   |  **Yes** |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 
 
@@ -107,7 +107,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreProductInfo
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | ProductName    | string | 修改后的产品名称                                             |       No |
 | Description    | string | 修改后的产品描述                                             |       No |
@@ -145,7 +145,7 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreProduct
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
 | ProductSN      | string | 产品序号                                                     |  **Yes** |
 
 
@@ -179,7 +179,7 @@ https://api.ucloud.cn/?Action=DeleteUIoTCoreProduct
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
 | ProductSN      | string | 产品SN，如果提供则根据此字段模糊查找                         |       No |
 | ProductName    | string | 产品名称，如果提供则根据此字段模糊查找                       |       No |
 | Offset         | int    | 列表起始位置偏移量，默认为0                                  |       No |
@@ -254,7 +254,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreProductList
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 
 
@@ -288,7 +288,7 @@ https://api.ucloud.cn/?Action=EnableUIoTCoreDynamicRegister
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 
 
@@ -322,7 +322,7 @@ https://api.ucloud.cn/?Action=DisableUIoTCoreDynamicRegister
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)   |  **Yes** |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 
 
@@ -357,7 +357,7 @@ https://api.ucloud.cn/?Action=PublishUIoTCoreProduct
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)   |  **Yes** |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 
 

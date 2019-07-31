@@ -12,7 +12,7 @@
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
+|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
 |ProductSN|string|产品序列号|**Yes**|
 |Topic|string|产品Topic名称|**Yes**|
 |Permission|string|Topic权限，默认为sub，合法值为: sub,pub,pubsub|No|
@@ -53,7 +53,7 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreProductTopic
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
+|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
 |ProductSN|string|产品序列号|**Yes**|
 |Topic|string|Topic名称|**Yes**|
 |NewTopic|string|修改后的Topic名称|No|
@@ -96,7 +96,7 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreProductTopic
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
+|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
 |ProductSN|string|产品序列号|**Yes**|
 |Topic|string|产品Topic|**Yes**|
 
@@ -133,7 +133,7 @@ https://api.ucloud.cn/?Action=DeleteUIoTCoreProductTopic
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
+|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
 |ProductSN|string|产品序列号|**Yes**|
 |Offset|int|列表起始位置偏移量，默认为0|No|
 |Limit|int|返回最大数据长度，默认为20，最大为100|No|

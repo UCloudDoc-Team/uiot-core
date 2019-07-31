@@ -4,6 +4,7 @@
 
 
 ## 物模型定义流程
+
 1. [注册](https://passport.ucloud.cn/#register)UCloud云服务，如已注册请直接第2步；
 2. 登录进入UCloud[物联网平台](https://console.ucloud.cn/iot)；
 3. 进行[物模型功能定义](#物模型功能定义)；
@@ -17,6 +18,7 @@
 
 
 ### 操作步骤
+
 1. [注册](https://passport.ucloud.cn/#register)UCloud云服务，如已注册请直接第2步；
 2. 登录进入UCloud[物联网平台](https://console.ucloud.cn/iot)；
 3. 选择相应的产品，进入[产品详情](../product_device/create_products#产品详情)；

@@ -2,7 +2,7 @@
 
 
 # 关于API接入
-本节将会通过一个示例介绍API的接入流程，也可参考UCloud官方[API 文档综览](https://docs.ucloud.cn/api/summary/overview)。需要JAVA/GO/PHP/Python等语言的参考，可以参考UCloud SDK框架[UCloud SDK项目](https://github.com/ucloud)。
+本节将会通过一个示例介绍API的接入流程，也可参考UCloud官方[API 文档综览](https://docs.ucloud.cn/api/summary/overview)。需要JAVA/GO/PHP/Python等语言的参考，可以参考UCloud SDK框架[UCloud SDK](../device_develop_guide/c_sdk_example/csdkquickstart)。
 
 
 
@@ -10,7 +10,7 @@
 本节通过一个具体的示例（获取设备影子）介绍如何实现API调用。用户可将其中的参数换成自己的实际参数进行测试。
 
 0. 概述   
-   
+  
    接口的调用使用HTTP GET或POST调用都可以得到相同的结果。调用的参数包括接口的参数+公共参数+参数签名三部分。
    - 接口参数：某个具体接口需要的参数；
    - 公共参数：每个接口都需要用到的，包括调用接口名、项目名、公钥等
@@ -20,7 +20,7 @@
 
    名称| 内容
    ---|---
-   接口名| [GetUIoTCoreDeviceShadow]() - 获取设备影子。
+   接口名| [GetUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi) - 获取设备影子。
    接口参数|**Region**：上海二区，地域ID为    [cn-sh2](https://docs.ucloud.cn/api/summary/regionlist)。<br>**ProjectId**：项目ID为 `org-z44lmf12e`，通过控制台首页查看。主账号为空时为默认项目，子账号为必填字段。<br>**ProductSN**：产品序列号为    `8pi2i730vxsala2a`，通过控制台查看。<br>**DeviceSN**：设备序列号为`ark1d4ug1evfb1jy`，通过控制台查看。
 
 2. 获取公共参数，即每次请求都需要的参数
@@ -54,7 +54,7 @@
    ProjectId:org-z44lmf12e
    PublicKey:CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O
    Region:cn-sh2
-   ```   
+   ```
    3）将上述参数的**键值**依次相连构造字符串，并在尾部接上用户私钥
    
    - 用户私钥通过 个人中心->API密钥获取为：`ztqlj0vtg6Por5d/etqpadpTZwscLRh5cIsFAHbwuvnMY4mAWI+GT5C2yzj/KiZf`
@@ -79,7 +79,7 @@
    Signature:f1e6b4e35df41b42232e059f6020c7fd51b2889e
    ```
 4. 请求接口获取响应
-   
+  
    通过GET和POST都可以请求接口得到同样的响应结果，请求的BaseURL为`http://api.ucloud.cn/`。
 
    1）**通过GET方式**  
@@ -89,7 +89,7 @@
       - 其它字符编码成 %XY 的格式，其中 XY 是字符对应 ASCII 码的 16    进制表示。比如：英文的双引号（”）对应的编码为 %22；
       - 对于扩展的 UTF-8 字符，编码成 %XY%ZA… 的格式；
       - 英文空格（ ）要编码成 %20，而不是加号（+）。
-    
+   
     根据上述的规则将
     ```
     PublicKey:CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O

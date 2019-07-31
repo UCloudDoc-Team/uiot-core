@@ -1,6 +1,8 @@
 
 # HAL接口详细说明文档
 
+以下接口需要根据硬件平台由用户自己实现，是上层业务的运行基础。
+
 ## HAL_MutexCreate
 
 创建互斥量。用于支持线程同步和互斥。
@@ -509,4 +511,3 @@ int32_t HAL_TCP_Read(_IN_ uintptr_t fd, _OU_ unsigned char *buf, _IN_ size_t len
 | len | size_t | 输入 | 数据接收缓冲区的字节大小 |
 | timeout_ms | uint32_t | 输入 | 超时时间，单位: ms |
 | ret | int32_t | 返回 | <0: TCP读取错误<br> =0: TCP读超时, 且没有读取任何数据<br> >0: TCP成功读取的字节数 |
-

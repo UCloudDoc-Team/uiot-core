@@ -4,8 +4,8 @@
 设备期望属性，是指对设备进行属性设置时如果设备不在线，云平台将缓存需要设置的值，待设备上线后再来获取期望属性；设备在线时执行正常的属性设置流程。
 
 ## 具体流程
-1. 设备不在线时，开发者应用程序通过[SetUIoTCoreDeviceProperty]()下发命令调用接口，**Desired**参数设置为**true**，云平台缓存设置值；   
-   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入]()，其他参数参考[SetUIoTCoreDeviceProperty]()。
+1. 设备不在线时，开发者应用程序通过[SetUIoTCoreDeviceProperty](../api_guide/tingmodemgmtapi)下发命令调用接口，**Desired**参数设置为**true**，云平台缓存设置值；   
+   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_list)，其他参数参考[SetUIoTCoreDeviceProperty](../api_guide/tingmodemgmtapi)。
    ```
    POST  HTTP/1.1
    Host: api.ucloud.cn
@@ -54,12 +54,12 @@
    }
    ```
    参数解释：
-   - RetCode：返回码，具体参考[通用返回码]()；
+   - RetCode：返回码，具体参考[通用返回码](../api_guide/retcode)；
    - RequestID：返回消息的ID，对应请求消息ID；
    - Desired：返回的期望属性的集合;
    - Value：指定属性标识符的值；
    - Version：当前期望的version值，当删除期望值时该Version值需要一致。开发者应用程序每调用一次Version版本号加一次；
- 
+
 3. 请求删除期望属性值
    设备更新属性成功后，向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/desired/delete**发布一条消息，消息格式为：
    ```
@@ -88,6 +88,6 @@
    }
    ```
    参数解释：
-   - RetCode：返回码，具体参考[通用返回码]()；
+   - RetCode：返回码，具体参考[通用返回码](../api_guide/retcode)；
    - RequestID：返回消息的ID，对应请求消息ID；
    - Message：返回消息体，成功为"success"，失败则返回具体失败原因。
