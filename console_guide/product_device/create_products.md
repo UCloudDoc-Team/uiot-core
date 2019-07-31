@@ -35,7 +35,7 @@
 
 - 点击<设备管理>，进入[设备管理](create_devcies\#管理设备)页；
 
-- 点击<...>，进行[Topic管理](topic)，[功能定义](../thingmode/thingmode_guide)，[删除产品](#删除产品)操作；
+- 点击<...\>，进行[Topic管理](topic)，[功能定义](../thingmode/thingmode_guide)，[删除产品](#删除产品)操作；
 
 
 
@@ -48,6 +48,8 @@
 ## 产品详情
 
 创建完产品后，点击<详情>或者点击<产品名称>，可以查看该产品**产品概览**、**[设备管理](create_devcies\#管理设备)**、**[Topic管理](topic)**、**[功能定义（物模型）](../thingmode/thingmode_guide)**、**[固件与升级](../ota/firmware_management)**。
+
+
 
 
 产品概览页可以查看该产品的**基本信息：**
