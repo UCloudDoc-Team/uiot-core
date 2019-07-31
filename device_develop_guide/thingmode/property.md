@@ -12,7 +12,7 @@
 
 1. 上报属性值  
 
-   设备向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/post** 上报一条消息，消息格式为：
+设备向Topic **/$system/${productSN}/${DeviceSN}/tmodel/property/post** 上报一条消息，消息格式为：
 
 ```
 {
@@ -30,13 +30,13 @@
 }
 ```
 
-   参数解释：
+参数解释：
 
-   - RequestID：请求消息的ID号，为字符串型，根据RequestID确定一条请求以及响应的一一对应性；
-   - Property：所有需要上报的属性集合，包含属性名、属性值、时间戳；
-   - Value：属性的值；
-   - Time：上报时间戳，使用Unix时间戳；
-   - Method：上报的方法；
+- RequestID：请求消息的ID号，为字符串型，根据RequestID确定一条请求以及响应的一一对应性；
+- Property：所有需要上报的属性集合，包含属性名、属性值、时间戳；
+- Value：属性的值；
+- Time：上报时间戳，使用Unix时间戳；
+- Method：上报的方法；
 
 2. 云平台响应  
 

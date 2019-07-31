@@ -8,7 +8,7 @@
 
 1\. 请求获取物模型JSON文档；  
 
-   设备向Topic **/$system/${ProductSN}/${DeviceSN}/tmodel/template/get**发布一条消息，消息格式为：
+设备向Topic **/$system/${ProductSN}/${DeviceSN}/tmodel/template/get**发布一条消息，消息格式为：
 
 ```
 {
@@ -16,13 +16,14 @@
 } 
 ```
 
-   **参数解释：**
+**参数解释：**
 
-   - RequestID：请求消息的ID号，为字符串型，根据RequestID确定一条请求以及响应的一一对应性。
+- RequestID：请求消息的ID号，为字符串型，根据RequestID确定一条请求以及响应的一一对应性。
+
 
 2\. 下发JSON文档；
 
-   云平台向Topic **/$system/${ProductSN}/${DeviceSN}/tmodel/template/get_reply**下发一条消息，消息格式为：
+云平台向Topic **/$system/${ProductSN}/${DeviceSN}/tmodel/template/get_reply**下发一条消息，消息格式为：
 
 ```
 {
@@ -32,10 +33,10 @@
 }
 ```
 
-   **参数解释：**
+**参数解释：**
 
-   - RetCode：返回码，具体参考[通用返回码](../api_guide/retcode)；
-   
-   - RequestID：返回消息的ID，对应请求消息ID；
-   
-   - Template：物模型的JSON描述文档，这里省略，参考[物模型示例](../console_guide/thingmode/operation_example);
+- RetCode：返回码，具体参考[通用返回码](../api_guide/retcode)；
+
+- RequestID：返回消息的ID，对应请求消息ID；
+
+- Template：物模型的JSON描述文档，这里省略，参考[物模型示例](../console_guide/thingmode/operation_example);
