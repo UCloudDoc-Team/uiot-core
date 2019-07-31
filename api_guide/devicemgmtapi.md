@@ -11,8 +11,8 @@
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
+| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN       | string | 设备序列号，不填则由系统自动生成                             |       No |
 | Description    | string | 设备描述信息                                                 |       No |
@@ -52,8 +52,8 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreDevice
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
+| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN       | string | 设备序列号                                                   |  **Yes** |
 | NewDescription | string | 修改后的设备描述                                             |       No |
@@ -92,8 +92,8 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreDevice
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
+| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN       | string | 设备序列号                                                   |  **Yes** |
 
@@ -129,8 +129,8 @@ https://api.ucloud.cn/?Action=DeleteUIoTCoreDevice
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
+| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN       | string | 设备序列号                                                   |  **Yes** |
 
@@ -167,8 +167,8 @@ https://api.ucloud.cn/?Action=EnableUIoTCoreDevice
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
+| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN       | string | 设备序列号                                                   |  **Yes** |
 
@@ -205,8 +205,8 @@ https://api.ucloud.cn/?Action=DisableUIoTCoreDevice
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)   |  **Yes** |
+| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceCount    | int    | 生成的设备数量                                               |  **Yes** |
 
@@ -243,8 +243,8 @@ https://api.ucloud.cn/?Action=BatchCreateUIoTCoreDevice
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)   |  **Yes** |
+| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list) |       No |
 | ProductSN      | string | 设备序列号                                                   |  **Yes** |
 | DeviceSN.n     | string | 即将生成的设备的名称, 可数组传递多值，形如: DeviceSN.0=111   |  **Yes** |
 
@@ -281,8 +281,8 @@ https://api.ucloud.cn/?Action=BatchCreateUIoTCoreDeviceWithSN
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)   |  **Yes** |
+| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN.n     | string | 即将删除的设备的名称, 可数组传递多值，形如: DeviceSN.0=111   |  **Yes** |
 
@@ -319,8 +319,8 @@ https://api.ucloud.cn/?Action=BatchDeleteUIoTCoreDevice
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
+| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN.n     | string | 即将启用的设备的名称, 可数组传递多值，形如: DeviceSN.0=111   |  **Yes** |
 
@@ -357,8 +357,8 @@ https://api.ucloud.cn/?Action=BatchEnableUIoTCoreDevice
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)   |  **Yes** |
+| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN.n     | string | 即将禁用的设备的名称, 可数组传递多值，形如: DeviceSN.0=111   |  **Yes** |
 
@@ -395,8 +395,8 @@ https://api.ucloud.cn/?Action=BatchDisableUIoTCoreDevice
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
+| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN       | string | 设备SN，如提供则按照当前字段模糊查询                         |       No |
 | Offset         | int    | 列表起始位置偏移量，默认为0                                  |       No |
@@ -517,8 +517,8 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceList
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
-| Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
+| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](https://docs.ucloud.cn/api/summary/get_project_list)|       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 
 
