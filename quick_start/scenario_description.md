@@ -20,7 +20,7 @@
 
    - 创建完成后，点击产品的详情，可以对产品进行相应的配置，具体参考[创建产品](../console_guide/product_device/create_products)详细说明。
 
-   ![添加产品](../images/添加产品-3502970.png)
+   ![添加产品](../images/添加产品.png)
 
 4. 创建设备
 
@@ -187,6 +187,6 @@ Body:
      通过Topic**/70ly1tvowt696r15/aruidyl0rt9tuvod/set**下发需要设置的温度、湿度值；  
 
 
-![下行下发数据](../images/下行下发数据-3503230.png)
+![下行下发数据](../images/下行下发数据.png)
 
 ![下行下发数据内容](../images/下行下发数据内容.png)
