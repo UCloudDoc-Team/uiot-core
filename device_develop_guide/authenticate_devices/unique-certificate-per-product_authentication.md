@@ -26,7 +26,7 @@
 
 **设备获取设备密码方法为：**
 
-    1. 设备向Topic**/$system/${ProductSN}/${DeviceSN}/password**发送一条请求获取密码消息(RequestID任意指定)：
+1. 设备向Topic**/$system/${ProductSN}/${DeviceSN}/password**发送一条请求获取密码消息(RequestID任意指定)：
 
 ```
 {
@@ -34,7 +34,7 @@
 }
 ```
 
-    2. 云平台收到请求后会将**设备密码**通过Topic **/$system/${ProductSN}/${DeviceSN}/password_reply**下发给设备，消息格式为：
+2. 云平台收到请求后会将**设备密码**通过Topic **/$system/${ProductSN}/${DeviceSN}/password_reply**下发给设备，消息格式为：
 
 ```
 {

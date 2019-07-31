@@ -19,7 +19,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 ![流程图](../images/ota流程.jpg)
 
-1. 设备上报版本号；
+1\. 设备上报版本号；
 
 设备端向 **/$system/${productSN}/${deviceSN}/ota/upstream** 发布一条消息进行版本上报，消息格式如下：
 
@@ -38,11 +38,11 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 - Version：上报的版本号
 
-2. 用户在控制台[新增固件](../console_guide/ota/firmware_management\#新增固件)；
+2\. 用户在控制台[新增固件](../console_guide/ota/firmware_management\#新增固件)；
 
-3. 用户通过控制台发起[固件升级请求](../console_guide/ota/firmware_update)；
+3\. 用户通过控制台发起[固件升级请求](../console_guide/ota/firmware_update)；
 
-4. 云端下发固件升级消息给设备端
+4\. 云端下发固件升级消息给设备端
 
 设备端会通过订阅的 **/$system/${productSN}/${deviceSN}/ota/downstream** 收到固件升级的消息，内容如下：
 
@@ -70,7 +70,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 - Size：固件大小，单位为字节
 
-5. 设备在收到固件升级的消息后，根据URL下载固件，通过 **/$system/${productSN}/${deviceSN}/ota/upstream** 上报下载进度，消息格式如下：
+5\. 设备在收到固件升级的消息后，根据URL下载固件，通过 **/$system/${productSN}/${deviceSN}/ota/upstream** 上报下载进度，消息格式如下：
 
 ```
 {
@@ -90,7 +90,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 - Percent：当前下载进度，百分比
 
-6. 当设备下载完固件，通过 **/$system/${productSN}/${deviceSN}/ota/upstream** 上报升级进度，消息格式如下：
+6\. 当设备下载完固件，通过 **/$system/${productSN}/${deviceSN}/ota/upstream** 上报升级进度，消息格式如下：
 
 ```
 {
@@ -110,7 +110,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 - Percent：当前烧录进度，百分比
 
-7. 设备固件升级完成后，通过 **/$system/${productSN}/${deviceSN}/ota/upstream** 上报升级成功消息，消息格式如下：
+7\. 设备固件升级完成后，通过 **/$system/${productSN}/${deviceSN}/ota/upstream** 上报升级成功消息，消息格式如下：
 
 ```
 {
@@ -127,7 +127,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 - Version：当前固件版本，注意升级成功消息的version字段一定要与目标版本相符，否则云端会按升级失败处理
 
-8. 若升级失败，通过 **/$system/${productSN}/${deviceSN}/ota/upstream** 上报升级失败消息，消息格式如下：
+8\. 若升级失败，通过 **/$system/${productSN}/${deviceSN}/ota/upstream** 上报升级失败消息，消息格式如下：
 
 ```
 {
