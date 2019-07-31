@@ -139,7 +139,7 @@ Topic是跟随着产品一起定义的，在定义Topic时，路径中会使用*
 - 自定义Topic删除后，规则引擎的Topic需要自行删除，规则引擎不做Topic的有效性的校验；
 
 
-![删除Topic（需要修改）](../../images/删除Topic（需要修改）.png)
+![删除Topic](../../images/删除Topic.png)
 
 
 

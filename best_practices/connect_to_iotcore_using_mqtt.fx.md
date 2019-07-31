@@ -14,7 +14,7 @@
 
 ```
 ProductSN：ledubff3z85spjmu
-DeviceSN：4ythk4cav6ph4310
+DeviceSN：h9onxtzw0aep7fsr
 DeviceSecret：6g7tjlekwf3sqqqj
 ```
 
@@ -24,8 +24,8 @@ DeviceSecret：6g7tjlekwf3sqqqj
 
 |MQTT认证参数|参数值|
 |---|---|
-|ClientID | ledubff3z85spjmu.4ythk4cav6ph4310 `规则：${ProductSN}.${DeviceSN}`|
-|UserName | ledubff3z85spjmu\|4ythk4cav6ph4310\|1 `规则：${ProductSN}\|${DeviceSN}\|${authmode}` `authmode: 1表示静态注册；2表示动态注册`|
+|ClientID | `ledubff3z85spjmu.h9onxtzw0aep7fsr` `规则：${ProductSN}.${DeviceSN}`|
+|UserName | `ledubff3z85spjmu|h9onxtzw0aep7fsr|1` `规则：${ProductSN}\|${DeviceSN}\|${authmode}` `authmode: 1表示静态注册；2表示动态注册`|
 |Password | 6g7tjlekwf3sqqqj `规则：${DevSecret}`|
 
 2）参考[设备连接](../device_develop_guide/connecting_devices\#设备连接)，获取MQTT Broker连接域名和TLS CA证书：
@@ -33,7 +33,7 @@ DeviceSecret：6g7tjlekwf3sqqqj
 |Broker参数| 参数值|
 |---|---|
 |Broker Address | mqtt-cn-sh2.ucloud.cn （不同区域连接域名不同，目前仅在上海Region开放）|
-|Broker Port | 1883|
+|Broker Port | 1883或8883(使用TLS)|
 |TLS(CA Certificate file) |[CA根证书 下载地址](https://static.ucloud.cn/349d895b6a7d4f10b03f8118b021b894.pem)|
 
 3）打开MQTT.fx软件，连接成功
@@ -44,7 +44,7 @@ DeviceSecret：6g7tjlekwf3sqqqj
 
 - 输入User Name、 Password
 
-- 输入TLS证书
+- 输入TLS证书，可以不使用用TLS连接，端口为1883
 
 - 点击<Apply>，提交配置
 
@@ -52,7 +52,7 @@ DeviceSecret：6g7tjlekwf3sqqqj
 
 ![连接成功](../images/连接成功.png)
 
--  输入TLS证书：
+-  输入TLS证书（使用1883端口，跳过此步）：
 
 ![TLS证书](../images/TLS证书.png)
 
@@ -135,6 +135,10 @@ Body:
 3. 在MQTT.fx操作界面可以看到下发消息；
 
 ![设备影子下发消息](../images/设备影子下发消息.png)
+
+4. 也可以在日志里面查看下发成功结果，如图：
+
+![设备影子下发日志](../images/设备影子下发日志.png)
 
 ## 通过自定义Topic
 
