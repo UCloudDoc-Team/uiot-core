@@ -81,8 +81,8 @@
      >```
 
    - 修改上行逻辑，逻辑会每隔5秒钟上报'温度、湿度'状态。
-   
-     >'''
+
+     >```
      >int main(int argc, char **argv) {
      >  ...
      >	//register subscribe topics here
