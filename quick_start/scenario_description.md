@@ -144,6 +144,7 @@ make
 	![上行上报数据内容](../images/上行上报数据内容.png)
 
 #### 下行下发命令
+
 下行通过调用云端开发API**PublishUIoTCoreMQTTMessage**下发需要设置的温度、湿度值到自定义Topic**/70ly1tvowt696r15/aruidyl0rt9tuvod/set**，设备端订阅该Topic即可收到相应的下发消息。具体参考[关于API接入](../api_guide/api_guidehelp)。
 
 1. 设备订阅Topic **/70ly1tvowt696r15/aruidyl0rt9tuvod/set**

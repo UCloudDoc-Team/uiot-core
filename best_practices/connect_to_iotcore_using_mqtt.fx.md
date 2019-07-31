@@ -32,9 +32,9 @@ DeviceSecret：6g7tjlekwf3sqqqj
 
 |Broker参数| 参数值|
 |---|---|
-|Broker Address | mqtt-cn-sh2.ucloud.cn |
+|Broker Address | mqtt-cn-sh2.ucloud.cn （不同区域连接域名不同，目前仅在上海Region开放）|
 |Broker Port | 1883|
-|TLS(CA Certificate file) |[root.cer 下载地址](https://static.ucloud.cn/349d895b6a7d4f10b03f8118b021b894.pem)|
+|TLS(CA Certificate file) |[CA根证书 下载地址](https://static.ucloud.cn/349d895b6a7d4f10b03f8118b021b894.pem)|
 
    3）打开MQTT.fx软件，连接成功
     按照下图的顺序依次输入相应的参数值。

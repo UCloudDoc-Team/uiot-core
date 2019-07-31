@@ -33,7 +33,7 @@ MQTT连接需要先了解[设备注册](../device_develop_guide/authenticate_dev
 
 |参数|详解|
 |---|---|
-|连接域名 | mqtt-cn-sh2.ucloud.cn|
+|连接域名 | mqtt-cn-sh2.ucloud.cn （不同区域连接域名不同，目前仅在上海Region开放）|
 |可变报头（variable header）：Keep Alive  |  Connect指令中需包含Keep Alive（保活时间）。<br>保活心跳时间取值范围为30至1200秒。如果心跳时间不在此区间内，物联网平台会拒绝连接。建议取值300秒以上。如果网络不稳定，将心跳时间设置高一些。|
 |MQTT的Connect报文参数|参考[静态注册](../device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication)和[动态注册](../device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication)  **以静态注册为例：**```ClientID：${ProductSN}.${DeviceSN}``` ```UserName：${ProductSN}|${DeviceSN}|${authmode}``` ```authmode: 静态注册为1；动态注册为2``` ``` Password：${DevSecret}```|
 
