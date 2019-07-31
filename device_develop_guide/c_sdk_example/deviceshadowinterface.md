@@ -1,10 +1,10 @@
 {{indexmenu_n>4}}
+#设备影子开发
 
 ## 修改设备影子的请求图例
 
 注：图例中已将一个完整的更新或者删除操作拆解开讲解
-
-![](../../images/设备影子-1.png)
+![](../../images/设备影子-1.jpg)
 
 ## 设备影子支持的操作类型 
 (c-sdk\src\sdk-impl\uiot_export_shadow.h 枚举Method)
