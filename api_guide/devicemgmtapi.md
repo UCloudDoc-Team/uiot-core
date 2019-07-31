@@ -24,22 +24,24 @@
 | RetCode        | int    | 操作返回码  |  **Yes** |
 | Action         | string | 操作名称    |  **Yes** |
 | Password       | string | 设备密钥    |       No |
+| DeviceSN       | string | 设备序列号  |       No |
 
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=CreateUIoTCoreDevice
-&ProductSN=lOIysDWJ
-&DeviceSN=vGRfkKcd
-&Description=NbMdzhUI
-&ProjectId=qUckfKHd
-&Region=MrfhKJZs
+&ProductSN=7ab051kbfhhjakc0
+&DeviceSN=h6phdnkjvr90iq6l
+&Description=灯泡1
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
 {
     "RetCode": 0,
     "Action": "CreateUIoTCoreDeviceResponse",
-    "DevicePassword": "OjbZLcqf"
+    "Password": "r23xnp8pet765dr4",
+    "DeviceSN": "h6phdnkjvr90iq6l"
 }
 ```
 
@@ -53,7 +55,6 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreDevice
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN       | string | 设备序列号                                                   |  **Yes** |
 | NewDescription | string | 修改后的设备描述                                             |       No |
@@ -68,12 +69,11 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreDevice
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=ModifyUIoTCoreDevice
-&ProductSN=ooLvUroq
-&DeviceSN=hqfDsbCH
-&NewDescription=HZKrOzQw
-&ProjectId=ImvaimaE
-&Region=jTUxmpjV
-&Region=FVFZEZIy
+&ProductSN=7ab051kbfhhjakc0
+&DeviceSN=h6phdnkjvr90iq6l
+&NewDescription=light1
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
@@ -93,7 +93,6 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreDevice
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN       | string | 设备序列号                                                   |  **Yes** |
 
@@ -107,10 +106,10 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreDevice
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=DeleteUIoTCoreDevice
-&ProductSN=ZxwAVWNE
-&DeviceSN=hfZYejwi
-&ProjectId=tCBHHfRr
-&Region=ocrolYkx
+&ProductSN=7ab051kbfhhjakc0
+&DeviceSN=h6phdnkjvr90iq6l
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
@@ -130,7 +129,6 @@ https://api.ucloud.cn/?Action=DeleteUIoTCoreDevice
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN       | string | 设备序列号                                                   |  **Yes** |
 
@@ -144,10 +142,10 @@ https://api.ucloud.cn/?Action=DeleteUIoTCoreDevice
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=EnableUIoTCoreDevice
-&ProductSN=oEraZYtN
-&DeviceSN=KlXLwTCK
-&ProjectId=ithdvgCm
-&Region=OymiAYnB
+&ProductSN=7ab051kbfhhjakc0
+&DeviceSN=h6phdnkjvr90iq6l
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
@@ -168,7 +166,6 @@ https://api.ucloud.cn/?Action=EnableUIoTCoreDevice
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN       | string | 设备序列号                                                   |  **Yes** |
 
@@ -182,10 +179,10 @@ https://api.ucloud.cn/?Action=EnableUIoTCoreDevice
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=DisableUIoTCoreDevice
-&ProductSN=ksikAKhI
-&DeviceSN=aDbbIIES
-&ProjectId=hrOPuYxl
-&Region=rrOejcMe
+&ProductSN=7ab051kbfhhjakc0
+&DeviceSN=h6phdnkjvr90iq6l
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
@@ -206,7 +203,6 @@ https://api.ucloud.cn/?Action=DisableUIoTCoreDevice
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceCount    | int    | 生成的设备数量                                               |  **Yes** |
 
@@ -216,20 +212,35 @@ https://api.ucloud.cn/?Action=DisableUIoTCoreDevice
 | -------------- | ------ | ----------- | -------: |
 | RetCode        | int    | 操作返回码  |  **Yes** |
 | Action         | string | 操作名称    |  **Yes** |
+| DeviceSet      | array[DeviceSet] | 设备密钥列表       |  **Yes** |
+
+### DeviceSet 设备密钥列表
+
+| Parameter name    | Type   | Description          | Required |
+| ----------------- | ------ | -------------------- | -------: |
+| DeviceSN          | string | 设备序列号           |  **Yes** |
+| Password          | string | 设备密码             |  **Yes** |
 
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=BatchCreateUIoTCoreDevice
-&ProductSN=NqIjuhth
-&DeviceCount=500
-&ProjectId=dsSArCyX
-&Region=mgaKcHeL
+&ProductSN=7ab051kbfhhjakc0
+&DeviceCount=5
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
 {
     "RetCode": 0,
-    "Action": "BatchCreateUIoTCoreDeviceResponse"
+    "Action": "BatchCreateUIoTCoreDeviceResponse",
+    "DeviceSet": [
+        {"Password:":"8jhc0phf73e885hl", "DeviceSN": "jkpoo1r6ltul7l4i"},
+        {"Password:":"8jhc0phf73e886hl", "DeviceSN": "jkpoo1r6ltul7l5i"},
+        {"Password:":"8jhc0phf73e887hl", "DeviceSN": "jkpoo1r6ltul7l6i"},
+        {"Password:":"8jhc0phf73e888hl", "DeviceSN": "jkpoo1r6ltul7l7i"},
+        {"Password:":"8jhc0phf73e889hl", "DeviceSN": "jkpoo1r6ltul7l8i"}
+    ]
 }
 ```
 
@@ -244,7 +255,6 @@ https://api.ucloud.cn/?Action=BatchCreateUIoTCoreDevice
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
 | ProductSN      | string | 设备序列号                                                   |  **Yes** |
 | DeviceSN.n     | string | 即将生成的设备的名称, 可数组传递多值，形如: DeviceSN.0=111   |  **Yes** |
 
@@ -254,20 +264,39 @@ https://api.ucloud.cn/?Action=BatchCreateUIoTCoreDevice
 | -------------- | ------ | ----------- | -------: |
 | RetCode        | int    | 操作返回码  |  **Yes** |
 | Action         | string | 操作名称    |  **Yes** |
+| DeviceSet      | array[DeviceSet] | 设备密钥列表       |  **Yes** |
+
+### DeviceSet 设备密钥列表
+
+| Parameter name    | Type   | Description          | Required |
+| ----------------- | ------ | -------------------- | -------: |
+| DeviceSN          | string | 设备序列号           |  **Yes** |
+| Password          | string | 设备密码             |  **Yes** |
 
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=BatchCreateUIoTCoreDeviceWithSN
-&ProductSN=VFvBpBMc
-&DeviceSN.n=trQJoYlV
-&ProjectId=chpzkqoA
-&Region=kYaVJqCH
+&ProductSN=7ab051kbfhhjakc0
+&DeviceSN.0=jkpoo1r6ltul7l4i
+&DeviceSN.1=jkpoo1r6ltul7l5i
+&DeviceSN.2=jkpoo1r6ltul7l6i
+&DeviceSN.3=jkpoo1r6ltul7l7i
+&DeviceSN.4=jkpoo1r6ltul7l8i
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
 {
     "RetCode": 0,
-    "Action": "BatchCreateUIoTCoreDeviceWithSNResponse"
+    "Action": "BatchCreateUIoTCoreDeviceWithSNResponse",
+    "DeviceSet": [
+        {"Password:":"8jhc0phf73e885hl", "DeviceSN": "jkpoo1r6ltul7l4i"},
+        {"Password:":"8jhc0phf73e886hl", "DeviceSN": "jkpoo1r6ltul7l5i"},
+        {"Password:":"8jhc0phf73e887hl", "DeviceSN": "jkpoo1r6ltul7l6i"},
+        {"Password:":"8jhc0phf73e888hl", "DeviceSN": "jkpoo1r6ltul7l7i"},
+        {"Password:":"8jhc0phf73e889hl", "DeviceSN": "jkpoo1r6ltul7l8i"}
+    ]
 }
 ```
 
@@ -282,7 +311,6 @@ https://api.ucloud.cn/?Action=BatchCreateUIoTCoreDeviceWithSN
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN.n     | string | 即将删除的设备的名称, 可数组传递多值，形如: DeviceSN.0=111   |  **Yes** |
 
@@ -296,10 +324,11 @@ https://api.ucloud.cn/?Action=BatchCreateUIoTCoreDeviceWithSN
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=BatchDeleteUIoTCoreDevice
-&ProductSN=cUlVPIxh
-&DeviceSN.n=fUGucMqn
-&ProjectId=uhHYfVTs
-&Region=SgoFaBKw
+&ProductSN=7ab051kbfhhjakc0
+&DeviceSN.0=jkpoo1r6ltul7l4i
+&DeviceSN.1=jkpoo1r6ltul7l5i
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
@@ -320,7 +349,6 @@ https://api.ucloud.cn/?Action=BatchDeleteUIoTCoreDevice
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN.n     | string | 即将启用的设备的名称, 可数组传递多值，形如: DeviceSN.0=111   |  **Yes** |
 
@@ -334,10 +362,11 @@ https://api.ucloud.cn/?Action=BatchDeleteUIoTCoreDevice
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=BatchEnableUIoTCoreDevice
-&ProductSN=gaSmWUGm
-&DeviceSN.n=SMOBqSnl
-&ProjectId=LXNlIpbt
-&Region=PUTOkjPY
+&ProductSN=7ab051kbfhhjakc0
+&DeviceSN.0=jkpoo1r6ltul7l4i
+&DeviceSN.1=jkpoo1r6ltul7l5i
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
@@ -358,7 +387,6 @@ https://api.ucloud.cn/?Action=BatchEnableUIoTCoreDevice
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN.n     | string | 即将禁用的设备的名称, 可数组传递多值，形如: DeviceSN.0=111   |  **Yes** |
 
@@ -372,10 +400,11 @@ https://api.ucloud.cn/?Action=BatchEnableUIoTCoreDevice
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=BatchDisableUIoTCoreDevice
-&ProductSN=fqFvZTlh
-&DeviceSN.n=sGolWSIL
-&ProjectId=wVQWJgzb
-&Region=FKqvyXDW
+&ProductSN=7ab051kbfhhjakc0
+&DeviceSN.0=jkpoo1r6ltul7l4i
+&DeviceSN.1=jkpoo1r6ltul7l5i
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
@@ -396,12 +425,15 @@ https://api.ucloud.cn/?Action=BatchDisableUIoTCoreDevice
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 | DeviceSN       | string | 设备SN，如提供则按照当前字段模糊查询                         |       No |
 | Offset         | int    | 列表起始位置偏移量，默认为0                                  |       No |
 | Limit          | int    | 返回最大数据长度，默认为20，最大为100                        |       No |
-
+| ExactDeviceSN  | string | 设备SN，用于精确查询，如果提供了此字段，则DeviceSN无效            |       No |
+| Status.n       | string | 设备激活状态，用于筛选对应状态的设备                       |       No |
+| UpdateStatus.n | string | 设备升级状态，用于筛选对应状态的设备                       |       No |
+| FirmwareVersion.n | string | 当前固件版本，用于筛选对应版本的设备                     |       No |
+| DestVersion.n | string | 目标版本，用于筛选对应版本的设备                  |       No |
 
 ### 响应参数
 | Parameter name         | Type             | Description    | Required |
@@ -411,7 +443,7 @@ https://api.ucloud.cn/?Action=BatchDisableUIoTCoreDevice
 | TotalCount             | int              | 总记录数       |  **Yes** |
 | InactivatedDeviceCount | int              | 未激活设备总数 |  **Yes** |
 | DeviceSet              | array[DeviceSet] | 设备列表       |  **Yes** |
-| OnlindeDeviceCount     | int              | 在线设备总数   |       No |
+| OnlineDeviceCount      | int              | 在线设备总数   |       No |
 
 ### DeviceSet 设备列表
 
@@ -434,72 +466,27 @@ https://api.ucloud.cn/?Action=BatchDisableUIoTCoreDevice
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=GetUIoTCoreDeviceList
-&ProductSN=IblUqWrM
+&ProductSN=7ab051kbfhhjakc0
 &Offset=4
-&Limit=50
-&ProjectId=TtXVWjuG
-&DeviceSN=YQIWgQro
-&Region=VBXqzWMb
+&Limit=1
+&DeviceSN=jkpoo1
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
 {
-    "TotalCount": 2,
+    "TotalCount": 50,
     "InactivatedDeviceCount": 9,
     "DeviceSet": [
         {
-            "DeviceSN": "YVqPZMHL",
-            "Password": "DVsvqbzZ",
-            "Status": "PqOObuEb",
-            "CreateTime": 8,
-            "LatestOnlineTime": 3,
-            "LatestOfflineTime": 4,
-            "Description": "IGZMbdmj"
-        },
-        {
-            "DeviceSN": "oxyoXYtt",
-            "Password": "ufAsSkYH",
-            "Status": "rPpxTueo",
-            "CreateTime": 4,
-            "LatestOnlineTime": 8,
-            "LatestOfflineTime": 6,
-            "Description": "aJZuRaUt"
-        },
-        {
-            "DeviceSN": "gUnseqww",
-            "Password": "XTtktyXh",
-            "Status": "EvnTSDPc",
-            "CreateTime": 9,
-            "LatestOnlineTime": 2,
-            "LatestOfflineTime": 2,
-            "Description": "qGkUOjZD"
-        },
-        {
-            "DeviceSN": "wexAKsJK",
-            "Password": "gPrRgGWm",
-            "Status": "TNdIwXvy",
-            "CreateTime": 3,
-            "LatestOnlineTime": 3,
-            "LatestOfflineTime": 5,
-            "Description": "TyUTLMOq"
-        },
-        {
-            "DeviceSN": "hHjIeOjW",
-            "Password": "kdRYRPJk",
-            "Status": "SDRurPQd",
-            "CreateTime": 4,
-            "LatestOnlineTime": 6,
-            "LatestOfflineTime": 1,
-            "Description": "vycPfkht"
-        },
-        {
-            "DeviceSN": "XeNYIGrm",
-            "Password": "beiGYlCQ",
-            "Status": "tNLhJPQI",
-            "CreateTime": 4,
-            "LatestOnlineTime": 3,
-            "LatestOfflineTime": 1,
-            "Description": "fjkxQxXI"
+            "DeviceSN": "jkpoo1r6ltul7l5i",
+            "Password": "8jhc0phf73e885hl",
+            "Status": "online",
+            "CreateTime": 1564540515,
+            "LatestOnlineTime": 1564540515,
+            "LatestOfflineTime": 1534540515,
+            "Description": "light1"
         }
     ],
     "RetCode": 0,
@@ -518,7 +505,6 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceList
 | Parameter name | Type   | Description                                                  | Required |
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](../summary/regionlist.html)   |  **Yes** |
-| ProjectId      | string | 项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html) |       No |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
 
 
@@ -531,9 +517,9 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceList
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=GetUIoTCoreInactivatedDevicePasswordFile
-&ProductSN=ZETblNWb
-&ProjectId=GzdTItXK
-&Region=IxrcFmle
+&ProductSN=7ab051kbfhhjakc0
+&Region=cn-sh2
+&公共请求参数
 ```
 ### 响应示例
 ```
