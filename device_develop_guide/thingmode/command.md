@@ -16,7 +16,7 @@ UCloud物联网通信云平台同时支持命令的同步和异步，开发者�
 
 1\. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand](../../api_guide/tingmodemgmtapi)下发命令调用接口，**Method**参数设置为**sync-同步**；   
 
-UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](api_guide/api_guidehelp)，其他参数参考[SendUIoTCoreDeviceCommand](../../api_guide/tingmodemgmtapi)。
+UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../../api_guide/api_guidehelp)，其他参数参考[SendUIoTCoreDeviceCommand](../../api_guide/tingmodemgmtapi)。
 
 ```
 POST  HTTP/1.1
@@ -111,7 +111,7 @@ Body:
 
 1\. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand](../../api_guide/tingmodemgmtapi)下发命令调用接口，**Method**参数设置为**async-异步**。   
 
-UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](api_guide/api_guidehelp)，其他参数参考[SendUIoTCoreDeviceCommand](../../api_guide/tingmodemgmtapi)。
+UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../../api_guide/api_guidehelp)，其他参数参考[SendUIoTCoreDeviceCommand](../../api_guide/tingmodemgmtapi)。
 
 ```
 POST  HTTP/1.1
