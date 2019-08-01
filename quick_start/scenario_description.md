@@ -56,8 +56,9 @@
 #define DEVICESN      "aruidyl0rt9tuvod"      //修改为需要测试的设备序列号
 #define DEVICESECRET    "imwku9r4jy7jwcip"    //修改为需要测试的设备密码
 ...
-static int temperture = 0; //温度值
-static int humidity = 0;   //湿度值
+//static int sg_count = 0;   // 注释该行，替换成温度和湿度变量
+static int temperture = 0; //添加温度值变量
+static int humidity = 0;   //添加湿度值变量
 static int sg_sub_packet_id = -1;
 ...
 ```
@@ -68,19 +69,20 @@ static int sg_sub_packet_id = -1;
 static int _register_subscribe_topics(void *client)
 {
   static char topic_name[128] = {0};
-  //修改topic名称
+  // 修改topic名称
   int size = HAL_Snprintf(topic_name, sizeof(topic_name), "/%s/%s/%s", UIOT_MY_PRODUCT_SN, UIOT_MY_DEVICE_SN, "set");
   if (size < 0 || size > sizeof(topic_name) - 1)
   ...
 }
 ```
 
-- 修改消息上报的topic和消息内容格式。
+- 找到publish函数，修改消息上报的topic和消息内容格式。
 
 ```
 static int _publish_msg(void *client)
 {
   char topicName[128] = {0};
+  
   //修改topic名称
   HAL_Snprintf(topicName, 128, "/%s/%s/%s", UIOT_MY_PRODUCT_SN, UIOT_MY_DEVICE_SN, "upload");
 
@@ -88,16 +90,20 @@ static int _publish_msg(void *client)
   pub_params.qos = QOS1;
 
   char topic_content[MAX_SIZE_OF_TOPIC_CONTENT + 1] = {0};
+  
+  //添加上报属性值
   temperture = 15; //设置上报温度值
   humidity = 45;   //设置上报湿度值
-  //修改内容和格式
+  
+  //修改上报内容和组包格式
   int size = HAL_Snprintf(topic_content, sizeof(topic_content), "{\"temperture\": \"%d\", \"humidity\": \"%d\"}", temperture, humidity);
+  
   if (size < 0 || size > sizeof(topic_content) - 1)
   ...
 }
 ```
 
-- 修改上行逻辑，每隔5秒钟上报'温度、湿度'状态。
+- 找到main函数，修改上报频次，每隔5秒钟上报'温度、湿度'状态。
 
 ```
 int main(int argc, char **argv) {
@@ -115,26 +121,26 @@ int main(int argc, char **argv) {
     // 等待订阅结果
     if (sg_sub_packet_id > 0) {
       HAL_Printf("subscribe topic success!");
-    }
+     
+       while(1){
+         rc = _publish_msg(client);
+         if (rc < 0) {
+           HAL_Printf("client publish topic failed :%d.", rc);
+         }
+		 //修改上报频次，每隔5秒发送当前温度值和湿度值
+         rc = IOT_MQTT_Yield(client, 5000);
+       }
+	}
   }while (sg_sub_packet_id < 0);
-
-  //满足一定条件下，每隔5秒发送当前温度值和湿度值
-  while(1){
-    rc = _publish_msg(client);
-    if (rc < 0) {
-      HAL_Printf("client publish topic failed :%d.", rc);
-    }
-    rc = IOT_MQTT_Yield(client, 5000);
-  }
 
   rc = IOT_MQTT_Destroy(&client);    
   return rc;
 }
 ```
 
-注，实际开发中可以通过规则引擎将自定义Topic上发的数据流转到UHost/MQ/DB等进行消费，详细参考[规则引擎](../console_guide/ruleengine/data_forwarding)。
+注，实际开发中可以通过规则引擎将自定义Topic上发的数据流转到UHost/MQ/MySQL等进行消费，详细参考[规则引擎](../console_guide/ruleengine/data_forwarding)。
 
-3\. 编译生成可执行文件`mqtt_example`
+3\. 编译生成可执行文件**mqtt_example**
 
 ```
 make clean
