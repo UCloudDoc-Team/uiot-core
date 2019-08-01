@@ -283,8 +283,8 @@ int IOT_OTA_FetchYield(void *handle, char *buf, size_t buf_len, uint32_t timeout
 | --- | --- | --- | --- |
 | handle | void * | 输入 | IOT\_OTA\_Init 返回的句柄 |
 | buf | char * | 输出 | 指定存储固件数据的缓冲区 |
-| buf_len | size\_t | 输入 | buf 的长度 |
-| timeout_s | uint32\_t | 输入 | 超时时间 |
+| buf\_len | size\_t | 输入 | buf 的长度 |
+| timeout\_s | uint32\_t | 输入 | 超时时间 |
 | ret | int | 返回值 | <0: 对应的错误码  0: 在 timeout\_s 超时期间内没有任何数据被下载 (0, len] : 在 timeout\_s 超时时间内下载数据的长度 |
 
 ### IOT_OTA_Ioctl

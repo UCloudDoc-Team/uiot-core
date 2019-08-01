@@ -25,7 +25,7 @@
 * **REPLY\_CONTROL\_DELETE** - 当版本不一致，云平台回复control后，设备根据最新影子文档更新完本地属性后回复的DELETE消息
 
 ## 设备影子支持的属性值类型
-(c-sdk\src/sdk-impl/uiot_export_shadow.h)
+(c-sdk/src/sdk-impl/uiot_export_shadow.h)
 
 * **int32_t** - 32位有符号整型
 
