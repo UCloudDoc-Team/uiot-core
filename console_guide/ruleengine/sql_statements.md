@@ -54,7 +54,7 @@ SELECT deviceSN(),* FROM /70ly1tvowt696r15/+/upload
 
 
 ## FROM
-From值需要筛选的Topic，支持通配符，参考[Topic管理](../console_guide/product_device/topic)。
+From值需要筛选的Topic，支持通配符，参考[Topic管理](../product_device/topic)。
 
 binary数据类型仅支持自定义Topic，不支持系统Topic。
 
@@ -106,7 +106,7 @@ Where表示条件，支持以下语法：
     -   \*
     -   /
     -   %
-*   [函数调用](函数列表)
+*   [函数调用](#函数列表)
 
 *   JSON属性表达式
 

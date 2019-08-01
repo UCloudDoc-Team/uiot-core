@@ -9,7 +9,7 @@
 ### 操作步骤
 
 1. [注册](https://passport.ucloud.cn/#register)UCloud云服务，如已注册请直接第2步；
-2. 登录进入UCloud[物联网平台](https://console.ucloud.cn/iot)；
+2. 登录进入UCloud[物联网平台](https://console.ucloud.cn/uiot)；
 3. 选择<产品和设备管理>标签；
 4. 单击需要创建设备的产品，进入产品详情页；
 5. 点击<设备管理>标签；

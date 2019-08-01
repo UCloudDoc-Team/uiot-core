@@ -12,7 +12,7 @@ UIoT-Core平台即将推出针对不同云端开发语言的SDK，对于有云�
 
 1. [注册](https://passport.ucloud.cn/#register)UCloud云服务，如已注册请直接第2步。
 
-2. 登录进入UCloud[物联网平台](https://console.ucloud.cn/iot)。
+2. 登录进入UCloud[物联网平台](https://console.ucloud.cn/uiot)。
 
 3. 根据云平台操作指南在控制台进行相关的操作，比如创建产品，创建设备，创建Topic，创建规则引擎，创建物模型等。
 

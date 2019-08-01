@@ -17,7 +17,7 @@
 
 1. [注册](https://passport.ucloud.cn/#register)UCloud云服务，如已注册请直接第2步；
 
-2. 登录进入UCloud[物联网平台](https://console.ucloud.cn/iot)；
+2. 登录进入UCloud[物联网平台](https://console.ucloud.cn/uiot)；
 
 3. 点击<设备监控与调试>标签；
 

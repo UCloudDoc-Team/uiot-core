@@ -3,17 +3,17 @@
 
 # 功能介绍
 
-UCloud IoT通信云平台为海量设备上行上报数据、下行控制设备提供安全可靠连接保证，IoT通信云平台基于设备接入、设备管理、规则引擎、设备影子、OTA、边缘计算、设备端SDK、云端SDK等功能提供一个完整的从设备到平台到应用的解决方案。
+UCloud IoT通信云平台为海量设备上行上报数据、下行控制设备提供安全可靠连接保证，IoT通信云平台基于设备接入、设备管理、规则引擎、设备影子、OTA、边缘计算、设备端SDK、云端API等功能提供一个完整的从设备到平台到应用的解决方案。
 
 
 
 ## 设备接入
 
-提供广泛的设备接入能力，用户可以方便地通过[设备端SDK](../device_develop_guide/c_sdk_example/csdkquickstart)接入到IoT通信云平台，并且可以按照SDK中的示例代码，快速嵌入到自己的业务逻辑上实现连接云端的能力。 
+提供广泛的设备接入能力，用户可以方便地通过[设备端SDK](../device_develop_guide/c_sdk_example/csdkquickstart)接入到IoT通信云平台，并且可以按照SDK中的示例代码，快速嵌入自己的业务逻辑实现连接云端的能力。 
 
 设备端SDK提供完善的设备接入方案：
 
-- 提供安全的基于MQTT Over TLS的[设备注册](../device_develop_guide/authenticate_devices/what_is_authenticate_devices)、[设备连接](../device_develop_guide/connecting_devices)机制
+- 提供安全的基于MQTT和MQTT Over TLS的[设备注册](../device_develop_guide/authenticate_devices/what_is_authenticate_devices)、[设备连接](../device_develop_guide/connecting_devices)机制
 - 支持原生的Linux、RTOS的移植
 - 支持OTA升级功能
 - 支持设备影子功能

@@ -101,7 +101,7 @@ DeviceSecret：6g7tjlekwf3sqqqj
 
 2\. 下发期望值，有两种方法： 
  
-  1\. 参考[设备影子](../console_guide/device_shadow/operation_guide\#设备影子相关操作)，<编辑>设备影子，输入<Desired>值：
+  1. 参考[设备影子](../console_guide/device_shadow/operation_guide\#设备影子相关操作)，<编辑>设备影子，输入<Desired>值：
 
 ```
 {
@@ -109,7 +109,7 @@ DeviceSecret：6g7tjlekwf3sqqqj
 }
 ```
 
-   2\. 使用云端API进行调用，参考[UpdateUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi)，下发需要发给设备端的期望值。  
+   2. 使用云端API进行调用，参考[UpdateUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi)，下发需要发给设备端的期望值。  
 UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_guidehelp)，其他参数参考[UpdateUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi)
 
 ```
