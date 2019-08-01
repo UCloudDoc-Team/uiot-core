@@ -8,7 +8,7 @@
 
 ## 登录UIoT Core产品控制台
 
-**1、通过UCLOUD官网（www.ucloud.cn）点击登“录控制台”**
+**1、通过UCLOUD官网（www.ucloud.cn）点击登录“控制台”**
 
 ![官网首页](../images/官网首页.png)
 

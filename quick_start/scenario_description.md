@@ -24,13 +24,13 @@
 
 4\. 创建设备
 
-- 根据[创建设备](../console_guide/product_device/create_devcies)文档及页面提示，依次点击<产品详情>、点击<设备管理>、<添加设备>、<随机生成>、<生成设备个数1个>、<确定>；
+- 根据[创建设备](../console_guide/product_device/create_devcies)文档及页面提示，依次点击<详情>、点击<设备管理>、<添加设备>、<随机生成>、<生成设备个数1个>、<确定>；
 
 - 创建完成后，点击设备的详情，具体参考[创建设备](../console_guide/product_device/create_devcies)详细说明。  
 
 ![随机添加设备](../images/随机添加设备.png)
 
-5\. 记录设备注册信息  
+5\. 记录设备注册信息
 
 - 点击添加的设备，打开设备详情页，准备好设备注册相关信息，设备注册信息包含：**产品序列号** **设备序列号** **设备密码**，需要妥善保管好，后续测试需要使用。  
 
@@ -40,7 +40,7 @@
 
 这里使用平台提供的设备端C-SDK，从而快速将设备接入到物联网平台，详细参考[C-SDK使用参考](../device_develop_guide/c_sdk_example/csdkquickstart)。
 
-在C-SDK的目录**sample/mqtt/**通过修改例程**mqtt_sample.c**来介绍如何使用C-SDK。
+在C-SDK的目录**sample/mqtt/**中，通过修改例程**mqtt_sample.c**来介绍如何使用C-SDK。
 
 #### 上行上报数据
 该例程设备端通过linux环境进行模拟，上报'温度、湿度'到**自定义Topic /70ly1tvowt696r15/aruidyl0rt9tuvod/upload**。
@@ -138,7 +138,7 @@ int main(int argc, char **argv) {
 }
 ```
 
-注，实际开发中可以通过规则引擎将自定义Topic上发的数据流转到UHost/MQ/MySQL等进行消费，详细参考[规则引擎](../console_guide/ruleengine/data_forwarding)。
+注：实际开发中可以通过规则引擎将自定义Topic上发的数据流转到UHost/MQ/MySQL等进行消费，详细参考[规则引擎](../console_guide/ruleengine/data_forwarding)。
 
 3\. 编译生成可执行文件**mqtt_example**
 

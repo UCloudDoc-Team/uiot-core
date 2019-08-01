@@ -34,7 +34,7 @@
 }
 ```
 
-2\. 云平台收到请求后会将**设备密码**通过Topic **/$system/${ProductSN}/${DeviceSN}/password_reply**下发给设备，消息格式为：
+2\. 云平台收到请求后会将**设备密码**通过Topic **/$system/${ProductSN}/${DeviceSN}/password\_reply**下发给设备，消息格式为：
 
 ```
 {
@@ -100,8 +100,8 @@ Subscribe /$system/${ProductSN}/${DeviceSN}/password_reply
 
 |MQTT认证三要素|生成规则|
 |---|---|
-|ClientID | ${ProductSN}.${DeviceSN} 举例：70ly1tvowt696r15.112233445566|
-|UserName | ```${ProductSN}|${DeviceSN}|${authmode}``` ```70ly1tvowt696r15|112233445566|1``` authmode: 1 表示静态注册；2表示动态注册|
-|Password | ${DevSecret} 举例：zlc3d21u5k8fq0d2|
+|ClientID | `${ProductSN}.${DeviceSN}` `举例：70ly1tvowt696r15.112233445566`|
+|UserName | `${ProductSN}|${DeviceSN}|${authmode}` `70ly1tvowt696r15|112233445566|1` `authmode: 1 表示静态注册；2表示动态注册`|
+|Password | `${DevSecret} 举例：zlc3d21u5k8fq0d2`|
 
 8\. 参考[下一节设备连接](../device_develop_guide/connecting_devices)将设备接入到物联网平台，完成认证；
