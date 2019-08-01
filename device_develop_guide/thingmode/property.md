@@ -75,7 +75,7 @@
 应用服务调用接口[SetUIoTCoreDeviceProperty](../../api_guide/tingmodemgmtapi)设置属性。  
 
 
-UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../../api_guide/api_list)，其他参数参考[SetUIoTCoreDeviceProperty](../../api_guide/tingmodemgmtapi)
+UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../../api_guide/api_guidehelp)，其他参数参考[SetUIoTCoreDeviceProperty](../../api_guide/tingmodemgmtapi)
 
 ```
 POST  HTTP/1.1
@@ -129,7 +129,7 @@ Body:
 
 - RequestID：返回消息的ID，对应请求消息ID；
 
-- RetCode：返回码，具体参考[返回码](../../api_guide/tingmodemgmtapi)；
+- RetCode：返回码，具体参考[返回码](../../api_guide/retcode)；
 
 ## 恢复属性
 

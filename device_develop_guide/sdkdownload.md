@@ -8,8 +8,8 @@
 
 |开发语言 | 支持功能 |
 |---|---|
-|C | [设备注册](c_sdk_example/mqttinterface/#设备身份认证) [设备连接](c_sdk_example/mqttinterface/#设备身份认证) [设备影子](c_sdk_example/deviceshadowinterface) [物模型](c_sdk_example/thingmodelinterface) [设备OTA升级](c_sdk_example/otainterface) |  
-|其他语言| 正在开发中...  可以根据本章节介绍的功能规则进行开发。 |
+|C | [设备注册](/c_sdk_example/mqttinterface#设备身份认证) [设备连接](/c_sdk_example/mqttinterface#设备身份认证) [设备影子](/c_sdk_example/deviceshadowinterface) [物模型](/c_sdk_example/thingmodelinterface) [设备OTA升级](c_sdk_example/otainterface) |  
+|其他语言| 正在开发中...  可以根据本章节介绍的功能规则进行开发。[设备注册](authenticate_devices/what_is_authenticate_devices) [设备连接](connecting_devices) [设备影子](device_shadow) [物模型](thingmode/what_is_thingmode) [设备OTA升级](ota) |
 
 
 操作步骤：

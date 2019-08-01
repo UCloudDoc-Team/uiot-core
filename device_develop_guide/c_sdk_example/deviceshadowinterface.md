@@ -8,24 +8,24 @@
 ![](../../images/设备影子-1.jpg)
 
 ## 设备影子支持的操作类型
-(c-sdk\src\sdk-impl\uiot_export_shadow.h 枚举Method)
+(c-sdk/src/sdk-impl/uiot_export_shadow.h 枚举Method)
 
 * **GET** - 获取云平台上的最新影子文档并同步属性值和版本号
 
 * **UPDATE** - 更新云平台上的影子文档属性
 
-* **UPDATE_AND_RESET_VER** - 更新云平台上的影子文档属性并清零版本号
+* **UPDATE\_AND\_RESET\_VER** - 更新云平台上的影子文档属性并清零版本号
 
 * **DELETE** - 删除云平台上的影子文档属性
 
-* **DELETE_ALL** - 删除云平台上的影子文档中的全部属性
+* **DELETE\_ALL** - 删除云平台上的影子文档中的全部属性
 
-* **REPLY_CONTROL_UPDATE** - 当版本不一致，云平台回复control后，设备根据最新影子文档更新完本地属性后回复的UPDATE消息
+* **REPLY\_CONTROL\_UPDATE** - 当版本不一致，云平台回复control后，设备根据最新影子文档更新完本地属性后回复的UPDATE消息
 
-* **REPLY_CONTROL_DELETE** - 当版本不一致，云平台回复control后，设备根据最新影子文档更新完本地属性后回复的DELETE消息
+* **REPLY\_CONTROL\_DELETE** - 当版本不一致，云平台回复control后，设备根据最新影子文档更新完本地属性后回复的DELETE消息
 
 ## 设备影子支持的属性值类型
-(c-sdk\src\sdk-impl\uiot_export_shadow.h)
+(c-sdk\src/sdk-impl/uiot_export_shadow.h)
 
 * **int32_t** - 32位有符号整型
 
@@ -65,7 +65,7 @@
 
 然后将该请求送到云平台去掉期望值。
 
-回调函数示例 (samples\shadow\shadow_sample.c)
+回调函数示例 (samples/shadow/shadow_sample.c)
 
 ```
 //当设备直接按照desired字段中的属性值更新时不需要上报
@@ -91,7 +91,7 @@
 
 一个请求只支持做一种操作，支持同时修改多个属性。
 
-## 代码示例 (samples\shadow\shadow_sample.c)
+## 代码示例 (samples/shadow/shadow_sample.c)
 
 首先配置设备信息，创建设备影子的句柄
 
@@ -349,7 +349,7 @@ int IOT_Shadow_Delete(void *handle, OnRequestCallback request_callback, uint32_t
 int IOT_Shadow_Delete_All(void *handle, OnRequestCallback request_callback, uint32_t timeout_sec, void *user_context) ;
 ```
 
-### 参数列表 | 参数 | 数据类型 | 参数类型 | 说明 |
+|参数列表 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | handle | void * | 输入 | 影子文档句柄 |
 | request\_callback | OnRequestCallback | 输入 | 请求的回调函数 |

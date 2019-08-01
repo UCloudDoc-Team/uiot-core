@@ -143,7 +143,7 @@ Subscribe Topic /$system/${ProductSN}/${DeviceSN}/shadow/get_reply
         "Desired": {}
       },
       "Timestamp": 1562909435,
-      "Version": 2
+      "Version": 1
     }
 ```
 
@@ -278,7 +278,7 @@ Subscribe Topic /$system/${ProductSN}/${DeviceSN}/shadow/get_reply
 
 ### 设备重置设备影子版本
 
-当设备发送的**update**请求中的**Version**为特殊值**-1**，设备影子会将影子文档版本更新为**0**，同时清空（如有）**Desired**中的值。清空设备影子版本，不影响设备属性的正常上报。
+当设备发送的**update**请求中的**Version**为特殊值**-1**，设备影子会将影子文档版本更新为**0**。清空设备影子版本，不影响设备属性的正常上报。
 
 1\. 上报属性，并使用**Version**为**-1**。
 

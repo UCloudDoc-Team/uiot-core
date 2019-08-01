@@ -8,7 +8,7 @@
 
 1\. 设备不在线时，开发者应用程序通过[SetUIoTCoreDeviceProperty](../../api_guide/tingmodemgmtapi)下发命令调用接口，**Desired**参数设置为**true**，云平台缓存设置值；   
 
-UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../../api_guide/api_list)，其他参数参考[SetUIoTCoreDeviceProperty](../../api_guide/tingmodemgmtapi)。
+UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](api_guide/api_guidehelp)，其他参数参考[SetUIoTCoreDeviceProperty](../../api_guide/tingmodemgmtapi)。
 
 ```
 POST  HTTP/1.1

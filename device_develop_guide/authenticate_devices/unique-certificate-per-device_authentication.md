@@ -9,9 +9,9 @@
 
 2\. 准备工作：
 
-   1. 开发设备端固件，使用[SDK静态注册](#静态注册)开发相应的固件；
+   1. 开发设备端固件，比如使用[C-SDK静态注册](c_sdk_example/mqttinterface#静态认证)开发相应的固件；
 
-   2. 在设备详情页点击<获取未激活设备密码>，导出未激活的设备的凭证（**产品序列号**，**设备序列号**，**设备密码**）；
+   2. 在[设备详情](../../console_guide/product_device/create_devcies#设备详情)页点击<获取未激活设备密码>，导出未激活的设备的凭证（**产品序列号**，**设备序列号**，**设备密码**）；
 
 3\. 将步骤2开发的固件以及导出的凭证发给产线烧录，产线给每台设备烧录固件及不同的凭证；
 
@@ -28,8 +28,8 @@
 
 |MQTT认证三要素|生成规则|
 |---|---|
-|ClientID | ${ProductSN}.${DeviceSN} 举例：70ly1tvowt696r15.aruidyl0rt9tuvod|
-|UserName | ```${ProductSN}|${DeviceSN}|${authmode}``` ```举例：70ly1tvowt696r15|aruidyl0rt9tuvod|1``` authmode: 1 表示静态注册；2表示动态注册|
-|Password | ${DevSecret} hly3dk1u5y8fq0b9|
+|ClientID | `${ProductSN}.${DeviceSN}` `举例：70ly1tvowt696r15.aruidyl0rt9tuvod`|
+|UserName | `${ProductSN}|${DeviceSN}|${authmode}` `举例：70ly1tvowt696r15|aruidyl0rt9tuvod|1` `authmode: 1 表示静态注册；2表示动态注册`|
+|Password | `${DevSecret} hly3dk1u5y8fq0b9`|
 
 3\. 参考[下一节设备连接](../connecting_devices)将设备接入到物联网平台；

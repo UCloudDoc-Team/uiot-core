@@ -18,9 +18,9 @@
 |DataType|string|数据类型 json或者binary|No|
 |Description|string|规则描述|No|
 |ShortTopic|string|应用规则的具体Topic|No|
-|Select|string|要执行的Select语句|No|
-|Where|string|规则触发条件|No|
-|TopicType|string|topic类型，sys还是user|No|
+|Select|string|要执行的Select语句(base64编码)|No|
+|Where|string|规则触发条件(base64编码)|No|
+|TopicType|string|topic类型，sys或者user|No|
 
 
 ### 响应参数
@@ -56,8 +56,6 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreRule
 
 
 ## GetUIoTCoreRuleList
-
-获取规则列表-GetUIoTCoreRuleList
 
 获取规则列表
 
@@ -153,8 +151,8 @@ https://api.ucloud.cn/?Action=GetUIoTCoreRuleList
 |DataType|string|数据类型|No|
 |Description|string|规则描述|No|
 |ShortTopic|string|应用规则的具体Topic|No|
-|Select|string|要执行的Sql语句|No|
-|Where|string|规则触发条件|No|
+|Select|string|要执行的Sql语句(base64编码)|No|
+|Where|string|规则触发条件(base64编码)|No|
 |TopicType|string|topic类型，sys或者user|No|
 
 
@@ -301,7 +299,7 @@ https://api.ucloud.cn/?Action=DisableUIoTCoreRule
 |Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
 |RuleID|string|规则ID|**Yes**|
 |Type|string|规则Action的类型|**Yes**|
-|Configuration|string|对应类型的配置(该字段要求按照url.encode编码)|**Yes**|
+|Configuration|string|对应类型的配置(base64编码)|**Yes**|
 
 
 ### 响应参数
@@ -401,7 +399,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreRuleActionList
 |RuleID|string|规则ID|**Yes**|
 |ActionID|string|Action ID|**Yes**|
 |Type|string|规则Action的类型|**Yes**|
-|Configuration|string|对应类型的配置|**Yes**|
+|Configuration|string|对应类型的配置(base64编码)|**Yes**|
 
 
 ### 响应参数

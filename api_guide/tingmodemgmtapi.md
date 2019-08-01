@@ -36,7 +36,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceProperty
 
 ### 响应示例
 
-
+```
 {
   "Action": "GetUIoTCoreDevicePropertyResponse",
   "RetCode": 0,
@@ -106,7 +106,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceCommandList
 
 ### 响应示例
 
-
+```
 {
   "Action": "GetUIoTCoreDeviceCommandListResponse",
   "RetCode": 0,
@@ -183,7 +183,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceEventList
 
 ### 响应示例
 
-
+```
 {
   "Action": "GetUIoTCoreDeviceEventListResponse",
   "RetCode": 0,
@@ -239,7 +239,7 @@ https://api.ucloud.cn/?Action=SetUIoTCoreDeviceProperty
 
 ### 响应示例
 
-
+```
 {
   "Action": "SetUIoTCoreDevicePropertyResponse",
   "RetCode": 0,
@@ -288,7 +288,7 @@ https://api.ucloud.cn/?Action=SendUIoTCoreDeviceCommand
 
 ### 响应示例
 
-
+```
 {
   "Action": "SendUIoTCoreDeviceCommandResponse",
   "RetCode": 0,
@@ -327,7 +327,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreTModelTemplate
 
 ### 响应示例
 
-
+```
 {
   "Action": "GetUIoTCoreTModelTemplateResponse",
   "RetCode": 0,

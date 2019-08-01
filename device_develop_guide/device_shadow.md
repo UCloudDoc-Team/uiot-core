@@ -2,7 +2,7 @@
 
 # 设备影子
 
-设备影子在控制台操作指南中的[设备影子](../console_guide/device_shadow/operation_guide)中对设备影子已经做了详细的介绍。
+设备影子在控制台操作指南中的[设备影子](../console_guide/device_shadow/waht_is_deviceshadow)中对设备影子已经做了详细的介绍。
 
 在设备端进行开发时，涉及的Topic：
 

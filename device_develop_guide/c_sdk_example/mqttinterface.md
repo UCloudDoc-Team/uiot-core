@@ -24,7 +24,7 @@
 
 # 动态认证
 
-动态认证即一型一密，首先需要确保打开CMakeLists文件中的ENABLE_FEATURE_AUTH_MODE_DYNAMIC编译开关，
+动态认证即一型一密，首先需要确保打开CMakeLists文件中的ENABLE\_FEATURE\_AUTH\_MODE\_DYNAMIC编译开关，
 
 
 
@@ -43,7 +43,7 @@
 是已经进行过静态认证的设备如果再进行动态认证会失败。
 
 ```
-option(ENABLE_FEATURE_AUTH_MODE_DYNAMIC "是否打开设备动态注册" ON)
+option(ENABLE\_FEATURE\_AUTH\_MODE\_DYNAMIC "是否打开设备动态注册" ON)
 ```
 
 
@@ -121,7 +121,10 @@ static int _setup_connect_init_params(MQTTInitParams* initParams)
 
 # 静态认证
 
-静态认证即一机一密，相比一型一密的安全性比较高，推荐使用，提前在设备上烧写产品序列号，设备序列号，设备密钥。<br>
+静态认证即一机一密，相比一型一密的安全性比较高，推荐使用，提前在设备上烧写产品序列号，设备序列号，设备密钥。
+
+
+
 通过HAL层的接口获取设备信息，填入MQTT的初始连接参数中，向物联网平台进行身份认证。
 
 ![](../../images/设备注册-4.jpg)

@@ -27,26 +27,26 @@ C-SDK支持 **GNU Make** 及 **CMake** 构建。
 
 ### GNU Make
 
-1. 通过修改 C-SDK 顶层目录下的 make.settings 文件，配置开启或者关闭特定功能模块
+1\. 通过修改 C-SDK 顶层目录下的 make.settings 文件，配置开启或者关闭特定功能模块
 
-2. 在SDK顶层目录运行如下命令:
+2\. 在SDK顶层目录运行如下命令:
 
 ```
 make clean
 make
 ```
 
-3. 编译完成后, 生成的可执行文件在当前目录的 output/release/bin 及 output/release/unittest 目录下
+3\. 编译完成后, 生成的可执行文件在当前目录的 output/release/bin 及 output/release/unittest 目录下
 
 ### CMake
 
-1. 在SDK顶层目录运行如下命令:
+1\. 在SDK顶层目录运行如下命令:
 
 ```
 cmake . -Bbuild && cd build && make
 ```
 
-2. 编译完成后, 生成的可执行文件在当前目录的 build/samples 及 build/tests 目录下
+2\. 编译完成后, 生成的可执行文件在当前目录的 build/samples 及 build/tests 目录下
 
 ## C-SDK实现智能手环实例 
 
@@ -154,11 +154,11 @@ static int _setup_connect_init_params(MQTTInitParams* initParams)
 
 属性回调函数的调用示例
 
-1.在云平台上修改设备影子文档，设置一个属性的期望值。
+1\.在云平台上修改设备影子文档，设置一个属性的期望值。
 
 ![](../../images/快速入门-2.png)
 
-2.当设备发现云平台下发的期望值时会调用属性的回调函数处理。使用设备当前属性值更新云平台上的属性值
+2\.当设备发现云平台下发的期望值时会调用属性的回调函数处理。使用设备当前属性值更新云平台上的属性值
 
 ![](../../images/快速入门-3.png)
 

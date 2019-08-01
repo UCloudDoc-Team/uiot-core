@@ -45,18 +45,18 @@
 #### 上行上报数据
 该例程设备端通过linux环境进行模拟，上报'温度、湿度'到**自定义Topic /70ly1tvowt696r15/aruidyl0rt9tuvod/upload**。
 
-1\. 下载[设备端C-SDK](https://github.com/ucloud/ucloud-iot-device-sdk-c)，详细可以参考[C-SDK使用参考](device_develop_guide/c_sdk_example/csdkquickstart)。
+1\. 下载[设备端C-SDK](https://github.com/ucloud/ucloud-iot-device-sdk-c)，详细可以参考[C-SDK使用参考](../device_develop_guide/c_sdk_example/csdkquickstart)。
 
 2\. 修改代码**sample/mqtt/mqtt-example.c**
 
 - 修改设备密钥包含：**产品序列号** **设备序列号** **设备密码**
 
 ```
-#define PRODUCTSN      ""
-#define DEVICESN      ""
-#define DEVICESECRET    ""
+#define PRODUCTSN      "70ly1tvowt696r15"     //修改为需要测试的产品序列号
+#define DEVICESN      "aruidyl0rt9tuvod"      //修改为需要测试的设备序列号
+#define DEVICESECRET    "imwku9r4jy7jwcip"    //修改为需要测试的设备密码
 ...
-//static int sg_count = 0;
+//static int sg_count = 0; 
 static int sg_sub_packet_id = -1;
 ...
 ```
