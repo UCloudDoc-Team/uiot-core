@@ -40,14 +40,14 @@
 
 这里使用平台提供的设备端C-SDK，从而快速将设备接入到物联网平台，详细参考[C-SDK使用参考](../device_develop_guide/c_sdk_example/csdkquickstart)。
 
-在C-SDK的目录**sample/shadow/**通过修改例程**mqtt_sample.c**来介绍如何使用C-SDK。
+在C-SDK的目录**sample/mqtt/**通过修改例程**mqtt_sample.c**来介绍如何使用C-SDK。
 
 #### 上行上报数据
 该例程设备端通过linux环境进行模拟，上报'温度、湿度'到**自定义Topic /70ly1tvowt696r15/aruidyl0rt9tuvod/upload**。
 
 1\. 下载[设备端C-SDK](https://github.com/ucloud/ucloud-iot-device-sdk-c)，详细可以参考[C-SDK使用参考](device_develop_guide/c_sdk_example/csdkquickstart)。
 
-2\. 修改代码**sample/mqtt-example.c**
+2\. 修改代码**sample/mqtt/mqtt-example.c**
 
 - 修改设备密钥包含：**产品序列号** **设备序列号** **设备密码**
 
