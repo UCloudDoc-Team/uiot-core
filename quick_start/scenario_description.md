@@ -47,7 +47,7 @@
 
 1\. 下载[设备端C-SDK](https://github.com/ucloud/ucloud-iot-device-sdk-c)，详细可以参考[C-SDK使用参考](../device_develop_guide/c_sdk_example/csdkquickstart)。
 
-2\. 修改代码**sample/mqtt/mqtt-example.c**
+2\. 修改代码**sample/mqtt/mqtt_example.c**
 
 - 修改设备密钥包含：**产品序列号** **设备序列号** **设备密码**
 
@@ -130,7 +130,7 @@ int main(int argc, char **argv) {
 
 注，实际开发中可以通过规则引擎将自定义Topic上发的数据流转到UHost/MQ/DB等进行消费，详细参考[规则引擎](../console_guide/ruleengine/data_forwarding)。
 
-3\. 编译生成可执行文件`mqtt-example`
+3\. 编译生成可执行文件`mqtt_example`
 
 ```
 make clean
@@ -140,7 +140,7 @@ make
 4\. 执行可执行文件
 
 ```
-./output/reiease/bin/mqtt-example
+./output/release/bin/mqtt_example
 ```
 
 5\. 查看日志

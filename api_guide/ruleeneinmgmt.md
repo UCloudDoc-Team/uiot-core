@@ -299,7 +299,7 @@ https://api.ucloud.cn/?Action=DisableUIoTCoreRule
 |Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
 |RuleID|string|规则ID|**Yes**|
 |Type|string|规则Action的类型|**Yes**|
-|Configuration|string|对应类型的配置(base64编码)|**Yes**|
+|Configuration|string|对应类型的配置(该字段要求按照base64编码)|**Yes**|
 
 
 ### 响应参数
