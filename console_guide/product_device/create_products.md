@@ -12,7 +12,7 @@
 
 1\. [注册](https://passport.ucloud.cn/#register)UCloud云服务，如已注册请直接第2步。
 
-2\. 登录进入UCloud[物联网平台](https://console.ucloud.cn/iot)
+2\. 登录进入UCloud[物联网平台](https://console.ucloud.cn/uiot)
 
 3\. 选择<产品和设备管理>标签，点击<创建产品>
 
@@ -36,7 +36,7 @@
 
 - 点击<设备管理>，进入[设备管理](create_devcies\#管理设备)页；
 
-- 点击<...\>，进行[Topic管理](topic)，[功能定义](../thingmode/thingmode_guide)，[删除产品](#删除产品)操作；
+- 点击<...\>，进行[Topic管理](topic)，[功能定义（物模型）](../thingmode/thingmode_guide)，[删除产品](#删除产品)操作；
 
 
 

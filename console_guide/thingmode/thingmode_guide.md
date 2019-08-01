@@ -7,7 +7,7 @@
 
 1. [注册](https://passport.ucloud.cn/#register)UCloud云服务，如已注册请直接第2步；
 
-2. 登录进入UCloud[物联网平台](https://console.ucloud.cn/iot)；
+2. 登录进入UCloud[物联网平台](https://console.ucloud.cn/uiot)；
 
 3. 进行[物模型功能定义](#物模型功能定义)；
 
@@ -26,7 +26,7 @@
 
 1\. [注册](https://passport.ucloud.cn/#register)UCloud云服务，如已注册请直接第2步；
 
-2\. 登录进入UCloud[物联网平台](https://console.ucloud.cn/iot)；
+2\. 登录进入UCloud[物联网平台](https://console.ucloud.cn/uiot)；
 
 3\. 选择相应的产品，进入[产品详情](../product_device/create_products#产品详情)；
 
@@ -134,7 +134,7 @@
 
 2\. 标识符（必填）：类似于变量名，入参或出参在JSON文件中唯一标识该功能的标识符。支持大小写字母、数字和下划线"_"、不超过32个字符，必须以字母或"_"开头。
 
-3\. 数据类型（必填）：   
+3\. 数据类型（必填）：
 
 - int：int32整数型
 

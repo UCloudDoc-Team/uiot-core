@@ -12,7 +12,7 @@
 
 1\. [注册](https://passport.ucloud.cn/#register)UCloud云服务
 
-2\. 登录进入UCloud[物联网平台](https://console.ucloud.cn/iot)
+2\. 登录进入UCloud[物联网平台](https://console.ucloud.cn/uiot)
 
 3\. 创建产品  
 

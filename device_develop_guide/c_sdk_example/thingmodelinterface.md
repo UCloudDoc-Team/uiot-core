@@ -2,7 +2,7 @@
 
 # 设备物模型开发
 
-UIoT-Core 通过物模型功能简化用户应用程序的开发。本章描述如何利用设备端 C-SDK 提供的 API 进行设备端的物模型开发。下面的讲解对应于 C-SDK 示例代码 samples/dev_model/dev_model_sample.c
+UIoT-Core 通过物模型功能简化用户应用程序的开发。本章描述如何利用设备端 C-SDK 提供的API 进行设备端的物模型开发。下面的讲解对应于 C-SDK 示例代码 samples/dev_model/dev_model_sample.c
 
 ## 功能说明
 
