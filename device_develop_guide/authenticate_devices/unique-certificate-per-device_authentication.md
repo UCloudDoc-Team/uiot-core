@@ -22,7 +22,7 @@
 ## 具体流程：
 设备注册的核心是生成MQTT Broker认证需要的三要素：**ClientID**，**UserName**，**Password**。
 
-1\. 获取到设备的注册凭证（**产品序列号**，**设备序列号**，**设备密码**），分别表示为**${ProductSN}**，**${DeviceSN}**，**${DevSecret}**；
+1\. 获取到设备的注册凭证（**产品序列号**，**设备序列号**，**设备密码**），分别表示为**${ProductSN}**，**${DeviceSN}**，**${DeviceSecret}**；
 
 2\. 通过以下规则生成MQTTBroker认证的三要素；
 
@@ -30,6 +30,6 @@
 |---|---|
 |ClientID | `${ProductSN}.${DeviceSN}` `举例：70ly1tvowt696r15.aruidyl0rt9tuvod`|
 |UserName | `${ProductSN}|${DeviceSN}|${authmode}` `举例：70ly1tvowt696r15|aruidyl0rt9tuvod|1` `authmode: 1 表示静态注册；2表示动态注册`|
-|Password | `${DevSecret} hly3dk1u5y8fq0b9`|
+|Password | `${DeviceSecret} hly3dk1u5y8fq0b9`|
 
 3\. 参考[下一节设备连接](../connecting_devices)将设备接入到物联网平台；
