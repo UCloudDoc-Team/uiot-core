@@ -14,7 +14,7 @@
 
 2\. 登录进入UCloud[物联网平台](https://console.ucloud.cn/uiot)
 
-3\. 创建产品  
+3\. 创建产品
 
 - 根据[创建产品](../console_guide/product_device/create_products)文档说明及页面提示，点击<添加产品>，创建一个产品，命名为智能空调，点击<确定>；
 

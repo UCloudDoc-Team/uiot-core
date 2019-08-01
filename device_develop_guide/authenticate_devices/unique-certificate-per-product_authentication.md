@@ -10,7 +10,7 @@
 
 2\. 准备工作：
 
-   1. 开发设备端固件，比如使用[C-SDK动态注册](c_sdk_example/mqttinterface#动态认证)开发相应的固件；
+   1. 开发设备端固件，比如使用[C-SDK动态注册](../device_develop_guide/c_sdk_example/mqttinterface#动态认证)开发相应的固件；
 
    2. 确认产品详情页的<动态注册>开关已经打开；
 
@@ -44,7 +44,7 @@
 }
 ```
 
-6\. 设备通过收到的**设备密码**，以[静态注册](unique-certificate-per-device_authentication)的方式完成激活认证。
+6\. 设备通过收到的**设备密码**，以[静态注册](../device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication)的方式完成激活认证。
 
 
 
@@ -104,4 +104,4 @@ Subscribe /$system/${ProductSN}/${DeviceSN}/password_reply
 |UserName | ```${ProductSN}|${DeviceSN}|${authmode}``` ```70ly1tvowt696r15|112233445566|1``` authmode: 1 表示静态注册；2表示动态注册|
 |Password | ${DevSecret} 举例：zlc3d21u5k8fq0d2|
 
-8\. 参考[下一节设备连接](../connecting_devices)将设备接入到物联网平台，完成认证；
+8\. 参考[下一节设备连接](../device_develop_guide/connecting_devices)将设备接入到物联网平台，完成认证；

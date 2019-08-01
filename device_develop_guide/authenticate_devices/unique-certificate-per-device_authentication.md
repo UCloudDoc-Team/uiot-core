@@ -9,7 +9,7 @@
 
 2\. 准备工作：
 
-   1. 开发设备端固件，比如使用[C-SDK静态注册](c_sdk_example/mqttinterface#静态认证)开发相应的固件；
+   1. 开发设备端固件，比如使用[C-SDK静态注册](../device_develop_guide/c_sdk_example/mqttinterface#静态认证)开发相应的固件；
 
    2. 在[设备详情](../../console_guide/product_device/create_devcies#设备详情)页点击<获取未激活设备密码>，导出未激活的设备的凭证（**产品序列号**，**设备序列号**，**设备密码**）；
 
