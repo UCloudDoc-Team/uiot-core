@@ -20,7 +20,7 @@
 |ShortTopic|string|应用规则的具体Topic|No|
 |Select|string|要执行的Select语句|No|
 |Where|string|规则触发条件|No|
-|TopicType|string|topic类型，sys还是user|No|
+|TopicType|string|topic类型，sys或者user|No|
 
 
 ### 响应参数
