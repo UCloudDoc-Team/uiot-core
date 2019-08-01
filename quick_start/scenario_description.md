@@ -47,7 +47,7 @@
 
 1\. 下载[设备端C-SDK](https://github.com/ucloud/ucloud-iot-device-sdk-c)，详细可以参考[C-SDK使用参考](device_develop_guide/c_sdk_example/csdkquickstart)。
 
-2\. 修改代码**sample/mqtt/mqtt-example.c**
+2\. 修改代码**sample/mqtt/mqtt_example.c**
 
 - 修改设备密钥包含：**产品序列号** **设备序列号** **设备密码**
 
@@ -140,7 +140,7 @@ make
 4\. 执行可执行文件
 
 ```
-./output/reiease/bin/mqtt-example
+./output/release/bin/mqtt-example
 ```
 
 5\. 查看日志
