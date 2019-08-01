@@ -56,44 +56,48 @@
 #define DEVICESN      "aruidyl0rt9tuvod"      //修改为需要测试的设备序列号
 #define DEVICESECRET    "imwku9r4jy7jwcip"    //修改为需要测试的设备密码
 ...
-//static int sg_count = 0; 
+static int temperture = 0; //温度值
+static int humidity = 0;   //湿度值
 static int sg_sub_packet_id = -1;
 ...
 ```
 
-- 修改需要订阅的topic
+- 修改需要订阅的topic名称
 
 ```
 static int _register_subscribe_topics(void *client)
 {
   static char topic_name[128] = {0};
+  //修改topic名称
   int size = HAL_Snprintf(topic_name, sizeof(topic_name), "/%s/%s/%s", UIOT_MY_PRODUCT_SN, UIOT_MY_DEVICE_SN, "set");
   if (size < 0 || size > sizeof(topic_name) - 1)
   ...
 }
 ```
 
-- 修改上报的消息内容。
+- 修改消息上报的topic和消息内容格式。
 
 ```
 static int _publish_msg(void *client)
 {
   char topicName[128] = {0};
+  //修改topic名称
   HAL_Snprintf(topicName, 128, "/%s/%s/%s", UIOT_MY_PRODUCT_SN, UIOT_MY_DEVICE_SN, "upload");
 
   PublishParams pub_params = DEFAULT_PUB_PARAMS;
   pub_params.qos = QOS1;
 
   char topic_content[MAX_SIZE_OF_TOPIC_CONTENT + 1] = {0};
-  int temperture = 15; //上报温度值
-  int humidity = 45;   //上报湿度值
+  temperture = 15; //设置上报温度值
+  humidity = 45;   //设置上报湿度值
+  //修改内容和格式
   int size = HAL_Snprintf(topic_content, sizeof(topic_content), "{\"temperture\": \"%d\", \"humidity\": \"%d\"}", temperture, humidity);
   if (size < 0 || size > sizeof(topic_content) - 1)
   ...
 }
 ```
 
-- 修改上行逻辑，逻辑会每隔5秒钟上报'温度、湿度'状态。
+- 修改上行逻辑，每隔5秒钟上报'温度、湿度'状态。
 
 ```
 int main(int argc, char **argv) {
@@ -114,7 +118,7 @@ int main(int argc, char **argv) {
     }
   }while (sg_sub_packet_id < 0);
 
-  //满足一定条件下，每隔5秒发送温度值和湿度值
+  //满足一定条件下，每隔5秒发送当前温度值和湿度值
   while(1){
     rc = _publish_msg(client);
     if (rc < 0) {
