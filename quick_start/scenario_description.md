@@ -16,7 +16,7 @@
 
 3\. 创建产品
 
-- 根据[创建产品](../console_guide/product_device/create_products)文档说明及页面提示，点击<添加产品>，创建一个产品，命名为智能空调，点击<确定>；
+- 根据[创建产品](../console_guide/product_device/create_products)文档说明及页面提示，点击<创建产品>，创建一个产品，命名为智能空调，点击<确定>；
 
 - 创建完成后，点击产品的详情，可以对产品进行相应的配置，具体参考[创建产品](../console_guide/product_device/create_products)详细说明。
 
