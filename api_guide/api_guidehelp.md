@@ -2,7 +2,7 @@
 
 
 # 关于API接入
-本节将会通过一个示例介绍API的接入流程，也可参考UCloud官方[API 文档综览](https://docs.ucloud.cn/api/summary/overview)。需要JAVA/GO/PHP/Python等语言的参考，可以参考UCloud SDK框架[UCloud SDK项目](https://github.com/ucloud)。
+本节将会通过一个示例介绍API的接入流程，也可参考UCloud官方[API 文档综览](https://docs.ucloud.cn/api/summary/overview)。需要JAVA/GO/PHP/Python等语言的参考，可以参考UCloud SDK框架[UCloud SDK项目](https://github.com/ucloud?utf8=%E2%9C%93&q=SDK&type=&language=)。
 
 
 
@@ -20,8 +20,8 @@
 
    名称| 内容
    ---|---
-   接口名| [GetUIoTCoreDeviceShadow]() - 获取设备影子。
-   接口参数|**Region**：上海二区，地域ID为    [cn-sh2](https://docs.ucloud.cn/api/summary/regionlist)。<br>**ProjectId**：项目ID为 `org-z44lmf12e`，通过控制台首页查看。主账号为空时为默认项目，子账号为必填字段。<br>**ProductSN**：产品序列号为    `8pi2i730vxsala2a`，通过控制台查看。<br>**DeviceSN**：设备序列号为`ark1d4ug1evfb1jy`，通过控制台查看。
+   接口名| [GetUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi) - 获取设备影子。
+   接口参数|**Region**：上海二区，地域ID为    [cn-sh2](https://docs.ucloud.cn/api/summary/regionlist)。<br>**ProductSN**：产品序列号为    `8pi2i730vxsala2a`，通过控制台查看。<br>**DeviceSN**：设备序列号为`ark1d4ug1evfb1jy`，通过控制台查看。
 
 2. 获取公共参数，即每次请求都需要的参数
 
@@ -30,7 +30,7 @@
    Action|API名称，此例为 `GetUIoTCoreDeviceShadow`。
    PublicKey|用户公钥为`CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O`，通过个人中心->API密钥获取。
    Signature|用户签名将在第3步介绍。
-   ProjectId|项目ID为 `org-z44lmf12e`，参考第1步中的接口参数。
+   ProjectId|项目ID为 `org-z44lmf12e`，项目ID为 **org-z44lmf12e**，通过控制台首页查看。主账号为空时为默认项目，子账号为必填字段。
 
 3. 获取用户签名  
    用户签名需要接口参数和公共参数以及用户私钥参与一起完成。 
@@ -39,10 +39,9 @@
    ```
    // 接口参数
    Region:cn-sh2
-   ProjectId:org-z44lmf12e
    ProductSN:8pi2i730vxsala2a
    DeviceSN:ark1d4ug1evfb1jy
-   // 公共参数，Signature加密后获取，ProjectId在接口参数中已经出现
+   // 公共参数，Signature加密后获取
    Action:GetUIoTCoreDeviceShadow
    PublicKey:CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O
    ```

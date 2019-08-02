@@ -1,7 +1,7 @@
 {{indexmenu_n>2}}
 
 # 获取物模型JSON文档
-获取物模型定义JSON文档是指获取在[控制台操作指南-物模型]()定义的所有属性、命令、事件的JSON描述文档。
+获取物模型定义JSON文档是指获取在[控制台操作指南-物模型](../../console_guide/thingmode/operation_example)定义的所有属性、命令、事件的JSON描述文档。
 
 ## 具体流程
 1. 请求获取物模型JSON文档；  
@@ -25,6 +25,6 @@
    }
    ```
    参数解释：
-   - RetCode：返回码，具体参考[通用返回码]()；
+   - RetCode：返回码，具体参考[返回码](../../api_guide/retcode)；
    - RequestID：返回消息的ID，对应请求消息ID；
-   - Template：物模型的JSON描述文档，这里省略，参考[物模型示例]();
+   - Template：物模型的JSON描述文档，这里省略，参考[物模型示例](../../console_guide/thingmode/operation_example);

@@ -18,14 +18,14 @@ SELECT temperature as t, deviceSN() as deviceSN FROM /70ly1tvowt696r15/+/upload 
 ## SELECT
 JSON数据类型支持以下类型：
 
-- 内置函数，支持函数参考[函数列表JSON]()，比如`deviceSN()`；
+- 内置函数，支持函数参考[函数列表JSON](#函数列表)，比如`deviceSN()`；
 - JSON属性表达式，比如`light.state`；
 - 星号`*`，表示所有内容；
-- 支持使用`AS`对筛选的字段定义别名，比如`temperature as t`；
+- 支持使用`as`对筛选的字段定义别名，比如`temperature as t`；
 
 binary数据类型支持以下类型：
 
-- 部分内置函数，支持函数参考[函数列表binary]()，比如`deviceSN()`；
+- 部分内置函数，支持函数参考[函数列表binary](#函数列表)，比如`deviceSN()`；
 - 星号`*`，表示所有内容；
 
 
@@ -47,7 +47,7 @@ SELECT deviceSN(),* FROM /70ly1tvowt696r15/+/upload
 
 
 ## FROM
-From值需要筛选的Topic，支持通配符，参考[Topic管理]()。
+From值需要筛选的Topic，支持通配符，参考[Topic管理](../product_device/topic)。
 
 binary数据类型仅支持自定义Topic，不支持系统Topic。
 
@@ -63,13 +63,13 @@ binary数据类型仅支持自定义Topic，不支持系统Topic。
 ## WHERE
 JSON数据类型支持以下类型：
 
-- 内置函数，支持函数参考[函数列表-JSON]()，比如`deviceSN()`；
+- 内置函数，支持函数参考[函数列表-JSON](#函数列表)，比如`deviceSN()`；
 - JSON属性表达式的条件语句，比如`light.state = 0`；
 - 留空，所有数据；
 
 binary数据类型支持以下类型：
 
-- 部分内置函数，支持函数参考[函数列表-binary]()，比如`deviceSN()`；
+- 部分内置函数，支持函数参考[函数列表-binary](#函数列表)，比如`deviceSN()`；
 - 内置函数的条件表达式；
 
 ### WHERE 条件语法
@@ -82,11 +82,11 @@ Where表示条件，支持以下语法：
   - <=   小于等于
   - =    等于
   - <>   不等于
-  
+
 - 逻辑运算符
   - and  与
   - or   或
-  
+
 - 括号运算符 ()
 - 算术运算符
   - \+
@@ -94,7 +94,7 @@ Where表示条件，支持以下语法：
   - \*
   - /
   - %
-- [函数调用]()
+- [函数调用](#函数列表)
 - JSON属性表达式
 - CASE 语句
 - IN
@@ -102,7 +102,10 @@ Where表示条件，支持以下语法：
 
 
 ## 类型转换
-字符串和数字进行比较等操作时的类型互转时，两种类型运算由低类型往高类型转。比如`int32`和`int64`比较时，转变为`int64`和`int64`比较；`int32`和`string`比较时，转变为`string`和`string`比较。
+
+字符串和数字进行比较等操作时的类型互转时，两种类型运算由低类型往高类型转。
+
+比如`int32`和`int64`比较时，转变为`int64`和`int64`比较；`int32`和`string`比较时，转变为`string`和`string`比较。
 
 
 ## 函数列表
