@@ -45,7 +45,8 @@ C-SDK支持 `GNU Make` 及 `CMake` 构建。
    cmake . -Bbuild && cd build && make
    ```
 
-2. 编译完成后, 生成的可执行文件在当前目录的 build/samples 及 build/tests 目录下
+2. 编译完成后, 生成的可执行文件在当前目录的 `build/samples` 及 `build/tests` 目录下
+
 ## C-SDK实现智能手环实例 
 
 (c-sdk/samples/shadow/smart_bracelet_walk_step_shadow_sample.c)
@@ -58,7 +59,7 @@ C-SDK支持 `GNU Make` 及 `CMake` 构建。
 
 ## 结合代码示例讲解
 
-根据硬件平台实现全部HAL层接口，是上层业务功能的基础，以linux平台为例实现HAL_Printf。
+根据硬件平台实现全部HAL层接口，是上层业务功能的基础，以linux平台为例实现`HAL_Printf`。
 
 ```
 void HAL_Printf(_IN_ const char *fmt, ...)
@@ -140,15 +141,15 @@ static int _setup_connect_init_params(MQTTInitParams* initParams)
 
 因为当前实例行走步数只能由设备端修改，服务器端不能修改，因此回调函数中不比较两个值的大小，而直接将设备端的属性值上报上去修改云平台的值。
 
-	```
-	/* 行走步数只能通过设备上报到云端，云端不能控制数值 */
-	void Walk_Step_Callback(void *pClient, RequestParams *pParams, char *pJsonValueBuffer, uint32_t valueLength, DeviceProperty *pProperty)
-	{    
-		IOT_Shadow_Request_Add_Delta_Property(pClient, pParams,pProperty);    
-		HAL_Printf("Heart_Rate_RegCallback\n");    
-		return;
-	}
-	```
+```
+/* 行走步数只能通过设备上报到云端，云端不能控制数值 */
+void Walk_Step_Callback(void *pClient, RequestParams *pParams, char *pJsonValueBuffer, uint32_t valueLength, DeviceProperty *pProperty)
+{    
+	IOT_Shadow_Request_Add_Delta_Property(pClient, pParams,pProperty);    
+	HAL_Printf("Heart_Rate_RegCallback\n");    
+	return;
+}
+```
 
 属性回调函数的调用示例
 
@@ -163,19 +164,19 @@ static int _setup_connect_init_params(MQTTInitParams* initParams)
 完成属性的回调函数后，注册设备属性。
 
 ```
-    /* 手环统计的行走步数 */    
-	DeviceProperty *property_walk_step = (DeviceProperty *)HAL_Malloc(sizeof(DeviceProperty));    
-	uint32_t walk_step_num = 0;    
-	char walk_step_str[64] = "walk_step";    
-	property_walk_step->key= walk_step_str;    
-	property_walk_step->data = &walk_step_num;    
-	property_walk_step->type = JUINT32;    
-	ret = IOT_Shadow_Register_Property(sg_pshadow, property_walk_step, Walk_Step_Callback);     
-	if(SUCCESS != ret)    
-	{        
-		HAL_Printf("Register walk_step fail:%d\n", ret);        
-		return ret;    
-	}
+/* 手环统计的行走步数 */    
+DeviceProperty *property_walk_step = (DeviceProperty *)HAL_Malloc(sizeof(DeviceProperty));    
+uint32_t walk_step_num = 0;    
+char walk_step_str[64] = "walk_step";    
+property_walk_step->key= walk_step_str;    
+property_walk_step->data = &walk_step_num;    
+property_walk_step->type = JUINT32;    
+ret = IOT_Shadow_Register_Property(sg_pshadow, property_walk_step, Walk_Step_Callback);     
+if(SUCCESS != ret)    
+{        
+	HAL_Printf("Register walk_step fail:%d\n", ret);        
+	return ret;    
+}
 ```
 
 对云平台的请求也有回调函数需要用户实现，每次请求的回调函数都可以不一样，当云平台返回执行结果时，将调用请求的回调函数。
@@ -211,18 +212,18 @@ static void _update_ack_cb(void *pClient, Method method, RequestAck requestAck, 
 以上个步骤完成的请求回调函数做入参向云平台发送同步文档请求。
 
 ```
-	/* 先同步一下版本号和设备掉电期间更新的属性 */    
-	ret = IOT_Shadow_Get_Sync(sg_pshadow, _update_ack_cb, time_sec, &ack_update);    
-	if(SUCCESS != ret)    
-	{        
-		HAL_Printf("Get Sync fail:%d\n", ret);        
-		return ret;    
-	}
+/* 先同步一下版本号和设备掉电期间更新的属性 */    
+ret = IOT_Shadow_Get_Sync(sg_pshadow, _update_ack_cb, time_sec, &ack_update);    
+if(SUCCESS != ret)    
+{        
+	HAL_Printf("Get Sync fail:%d\n", ret);        
+	return ret;    
+}
 
-	while (ACK_NONE == ack_update)
-	{        
-		IOT_Shadow_Yield(sg_pshadow, MAX_WAIT_TIME_MS);    
-	}
+while (ACK_NONE == ack_update)
+{        
+	IOT_Shadow_Yield(sg_pshadow, MAX_WAIT_TIME_MS);    
+}
 ```
 
 前期准备工作完成，现在可以对设备影子做修改了。在对设备影子做同步和更新操作时，需要增加一段延时给CPU一段处理的时间等待云平台的响应消息。
@@ -230,30 +231,30 @@ static void _update_ack_cb(void *pClient, Method method, RequestAck requestAck, 
 下面代码是模拟运动时行走步数的增长并上报云平台修改设备影子文档。
 
 ```
-	/* 模拟心率升高产生告警的场景 */    
-	while(1)    
-	{            
-		walk_step_num = walk_step_num + 5;   
+/* 模拟心率升高产生告警的场景 */    
+while(1)    
+{            
+	walk_step_num = walk_step_num + 5;   
 
-		ret = IOT_Shadow_Update(sg_pshadow, _update_ack_cb, time_sec, &ack_update, 1, property_walk_step);            
-		if(SUCCESS != ret)            
-		{                
-			HAL_Printf("Update walk_step fail:%d\n", ret);                
-			return ret;            
-		}            
+	ret = IOT_Shadow_Update(sg_pshadow, _update_ack_cb, time_sec, &ack_update, 1, property_walk_step);            
+	if(SUCCESS != ret)            
+	{                
+		HAL_Printf("Update walk_step fail:%d\n", ret);                
+		return ret;            
+	}            
 
-		ack_update = ACK_NONE;            
-		while (ACK_NONE == ack_update)
-		{                
-			IOT_Shadow_Yield(sg_pshadow, MAX_WAIT_TIME_MS);            
-		}            
-		IOT_Shadow_Yield(sg_pshadow, 3000);            
-		if(walk_step_num >= 100)            
-		{                
-			HAL_Printf("today's goal is completed!\n");                
-			break;            
-		}    
-	}
+	ack_update = ACK_NONE;            
+	while (ACK_NONE == ack_update)
+	{                
+		IOT_Shadow_Yield(sg_pshadow, MAX_WAIT_TIME_MS);            
+	}            
+	IOT_Shadow_Yield(sg_pshadow, 3000);            
+	if(walk_step_num >= 100)            
+	{                
+		HAL_Printf("today's goal is completed!\n");                
+		break;            
+	}    
+}
 ```
 
 执行结果
@@ -263,8 +264,8 @@ static void _update_ack_cb(void *pClient, Method method, RequestAck requestAck, 
 执行结束，释放本地资源。
 
 ```
-	HAL_Free(property_walk_step);    
-	IOT_Shadow_Destroy(sg_pshadow);
+HAL_Free(property_walk_step);    
+IOT_Shadow_Destroy(sg_pshadow);
 ```
 
 ## 查看日志

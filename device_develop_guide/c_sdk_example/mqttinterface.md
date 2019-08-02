@@ -17,7 +17,7 @@
 设备身份认证分为动态认证和静态认证两种。
 
 ## 动态认证
-动态认证即一型一密，首先需要确保打开CMakeLists文件中的ENABLE\_FEATURE\_AUTH\_MODE\_DYNAMIC编译开关，提前在设备上烧写产品序列号，产品密钥，设备序列号，<br>
+动态认证即一型一密，首先需要确保打开CMakeLists文件中的ENABLE_FEATURE_AUTH_MODE_DYNAMIC编译开关，提前在设备上烧写产品序列号，产品密钥，设备序列号，<br>
 通过HAL层的接口获取设备信息，填入MQTT的初始连接参数中，向云平台进行动态身份认证，动态认证成功后会从云平台获取DeviceSecret并通过HAL_SetDeviceSecret接口保存。
 
 ![](https://i.loli.net/2019/07/18/5d30423caa2fd24915.png)
@@ -37,7 +37,7 @@
 是已经进行过静态认证的设备如果再进行动态认证会失败。
 
 ```
-option(ENABLE\_FEATURE\_AUTH\_MODE\_DYNAMIC "是否打开设备动态注册" ON)
+option(ENABLE_FEATURE_AUTH_MODE_DYNAMIC "是否打开设备动态注册" ON)
 ```
 
 
@@ -116,8 +116,6 @@ static int _setup_connect_init_params(MQTTInitParams* initParams)
 # 静态认证
 
 静态认证即一机一密，相比一型一密的安全性比较高，推荐使用，提前在设备上烧写产品序列号，设备序列号，设备密钥。
-
-
 
 通过HAL层的接口获取设备信息，填入MQTT的初始连接参数中，向物联网平台进行身份认证。
 
@@ -222,7 +220,7 @@ int IOT_MQTT_Yield(void *pClient, uint32_t timeout_ms)
 | 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | pClient | void *\* | 输入 | 指向MQTT句柄的指针 |
-| timeout\_ms | uint32\_t | 输入 | 等待时间，单位是ms |
+| timeout_ms | uint32_t | 输入 | 等待时间，单位是ms |
 | ret | int | 返回 | 成功返回SUCCESS, FAILURE表示失败 |
 
 ## IOT_MQTT_Publish
@@ -240,7 +238,7 @@ int IOT_MQTT_Publish(void *pClient, char *topicName, PublishParams *pParams);
 | pClient | void * | 输入 | MQTT句柄 |
 | topicName | char * | 输入 | 发送消息的topic名称 |
 | pParams | PublishParams * | 输入 | 发送消息的内容和相关参数 |
-| ret | int | 返回 | 发送成功返回packet\_id, FAILURE表示失败 |
+| ret | int | 返回 | 发送成功返回packet_id, FAILURE表示失败 |
 
 ## IOT_MQTT_Subscribe
 
@@ -257,7 +255,7 @@ int IOT_MQTT_Subscribe(void *pClient, char *topicFilter, SubscribeParams *pParam
 | pClient| void * | 输入 | MQTT句柄 |
 | topicFilter | char * | 输入 | 主题过滤器 |
 | pParams | SubscribeParams * | 输入 | 订阅topic的服务质量,回调函数等参数 |
-| ret | int | 返回 | 订阅成功返回packet\_id, FAILURE表示失败 |
+| ret | int | 返回 | 订阅成功返回packet_id, FAILURE表示失败 |
 
 ## IOT_MQTT_Unsubscribe
 
@@ -273,7 +271,7 @@ int HAL_MQTT_Unsubscribe(void *pClient, char *topicFilter);
 | --- | --- | --- | --- |
 | pClient| void * | 输入 | MQTT句柄 |
 | topicFilter | char * | 输入 | 主题过滤器 |
-| ret | int | 返回 | 订阅成功返回packet\_id, FAILURE表示失败 |
+| ret | int | 返回 | 订阅成功返回packet_id, FAILURE表示失败 |
 
 ## IOT_MQTT_IsConnected
 
