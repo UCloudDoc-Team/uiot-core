@@ -21,9 +21,8 @@
 2\. 查看接口文档获取接口名及参数   
 
 
-
 |名称| 内容|
-|--|--|
+|---|---|
 |接口名| [GetUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi) \- 获取设备影子。|
 |接口参数|**Region**：上海二区，地域ID为    [cn-sh2](https://docs.ucloud.cn/api/summary/regionlist)。 **ProductSN**：产品序列号为    **8pi2i730vxsala2a**，通过控制台查看。 **DeviceSN**：设备序列号为**ark1d4ug1evfb1jy**，通过控制台查看。|
 
@@ -31,7 +30,7 @@
 3\. 获取公共参数，即每次请求都需要的参数
 
 |名称|内容|
-|--|--|
+|---|---|
 |Action|API名称，此例为 **GetUIoTCoreDeviceShadow**。|
 |PublicKey|用户公钥为**CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O**，通过个人中心->API密钥获取。|
 |Signature|用户签名将在第3步介绍。|
@@ -95,9 +94,9 @@ Signature:f1e6b4e35df41b42232e059f6020c7fd51b2889e
 
 5\. 请求接口获取响应
 
-过GET和POST都可以请求接口得到同样的响应结果，请求的BaseURL为[http://api.ucloud.cn/](http://api.ucloud.cn/)。
+通过GET和POST都可以请求接口得到同样的响应结果，请求的BaseURL为[http://api.ucloud.cn/](http://api.ucloud.cn/)。
 
-）**通过GET方式** 
+1）**通过GET方式** 
 
 当参数中存在特殊字符时需要进行编码，编码的规则为： 
 
