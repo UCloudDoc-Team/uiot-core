@@ -12,7 +12,8 @@
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
 |ProductSN|string|产品序列号|**Yes**|
 |Topic|string|产品Topic名称|**Yes**|
 |Permission|string|Topic权限，默认为sub，合法值为: sub,pub,pubsub|No|
@@ -28,12 +29,12 @@
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=CreateUIoTCoreProductTopic
-&ProductSN=7ab051kbfhhjakc0
-&Topic=/7ab051kbfhhjakc0/${DeviceSN}/hello
-&Permission=sub
-&Description=hello
-&Region=cn-sh2
-&公共请求参数
+&ProductSN=wqUFnaHP
+&Topic=iWrvztwc
+&Permission=ioRZVMXq
+&Description=lKcqHTgJ
+&ProjectId=TgKGkjJw
+&Region=CkfSGPMW
 ```
 ### 响应示例
 ```
@@ -53,7 +54,8 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreProductTopic
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
 |ProductSN|string|产品序列号|**Yes**|
 |Topic|string|Topic名称|**Yes**|
 |NewTopic|string|修改后的Topic名称|No|
@@ -70,13 +72,13 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreProductTopic
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=ModifyUIoTCoreProductTopic
-&ProductSN=7ab051kbfhhjakc0
-&Topic=/7ab051kbfhhjakc0/${DeviceSN}/hello
-&NewTopic=/7ab051kbfhhjakc0/${DeviceSN}/world
-&NewPermission=pubsub
-&NewDescription=world
-&Region=cn-sh2
-&公共请求参数
+&ProductSN=FCScQghj
+&Topic=ZXEFZKns
+&NewTopic=aqvXxDfx
+&NewPermission=rjAXIEFu
+&NewDescription=ywwroxzE
+&ProjectId=PRtEeCUG
+&Region=PziWucbA
 ```
 ### 响应示例
 ```
@@ -96,7 +98,8 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreProductTopic
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
 |ProductSN|string|产品序列号|**Yes**|
 |Topic|string|产品Topic|**Yes**|
 
@@ -110,10 +113,10 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreProductTopic
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=DeleteUIoTCoreProductTopic
-&ProductSN=7ab051kbfhhjakc0
-&Topic=/7ab051kbfhhjakc0/${DeviceSN}/world
-&Region=cn-sh2
-&公共请求参数
+&ProductSN=XDbBSyNg
+&Topic=zizullnm
+&ProjectId=QcEUDfXF
+&Region=NKmHjaEu
 ```
 ### 响应示例
 ```
@@ -133,7 +136,8 @@ https://api.ucloud.cn/?Action=DeleteUIoTCoreProductTopic
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
 |ProductSN|string|产品序列号|**Yes**|
 |Offset|int|列表起始位置偏移量，默认为0|No|
 |Limit|int|返回最大数据长度，默认为20，最大为100|No|
@@ -160,94 +164,35 @@ https://api.ucloud.cn/?Action=DeleteUIoTCoreProductTopic
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=GetUIoTCoreProductTopicList
-&ProductSN=7ab051kbfhhjakc0
-&Offset=0
-&Limit=100
-&Region=cn-sh2
-&公共请求参数
+&ProductSN=ttHYkaQH
+&Offset=2
+&Limit=3
+&ProjectId=gChTfqoc
+&Region=DhBozWeo
 ```
 ### 响应示例
 ```
 {
-    "Action":"GetUIoTCoreProductTopicListResponse",
-    "RetCode":0,
-    "TopicSet":[
+    "TotalCount": 6,
+    "TopicSet": [
         {
-            "Topic":"/$system/7ab051kbfhhjakc0/${DeviceSN}/device/status",
-            "Permission":"-",
-            "Description":"设备状态变化(仅供规则引擎订阅)",
-            "Type":"sys",
-            "RuleEnginePermission":"sub"
+            "Topic": "oahkVaNc",
+            "Permission": "EtqUOLbN",
+            "Description": "QcpwKCLS"
         },
         {
-            "Topic":"/$system/7ab051kbfhhjakc0/${DeviceSN}/shadow/document",
-            "Permission":"-",
-            "Description":"设备影子发生变化时将发送完整的设备影子文档(仅供规则引擎订阅)",
-            "Type":"sys",
-            "RuleEnginePermission":"sub"
+            "Topic": "NiLWYiFm",
+            "Permission": "TwSJJsEX",
+            "Description": "EHmjijhF"
         },
         {
-            "Topic":"/$system/7ab051kbfhhjakc0/${DeviceSN}/tmodel/command",
-            "Permission":"sub",
-            "Description":"下发物模型命令到设备",
-            "Type":"sys",
-            "RuleEnginePermission":"pub"
-        },
-        {
-            "Topic":"/$system/7ab051kbfhhjakc0/${DeviceSN}/tmodel/command_reply/+",
-            "Permission":"pub",
-            "Description":"设备回复物模型命令",
-            "Type":"sys",
-            "RuleEnginePermission":"sub"
-        },
-        {
-            "Topic":"/$system/7ab051kbfhhjakc0/${DeviceSN}/tmodel/event/post",
-            "Permission":"pub",
-            "Description":"设备上报物模型事件",
-            "Type":"sys",
-            "RuleEnginePermission":"sub"
-        },
-        {
-            "Topic":"/$system/7ab051kbfhhjakc0/${DeviceSN}/tmodel/property/document",
-            "Permission":"-",
-            "Description":"设备的物模型属性发生变化时将发送完整的物模型属性文档(仅供规则引擎订阅)",
-            "Type":"sys",
-            "RuleEnginePermission":"sub"
-        },
-        {
-            "Topic":"/$system/7ab051kbfhhjakc0/${DeviceSN}/tmodel/property/post",
-            "Permission":"pub",
-            "Description":"设备上报物模型属性",
-            "Type":"sys",
-            "RuleEnginePermission":"sub"
-        },
-        {
-            "Topic":"/$system/7ab051kbfhhjakc0/${DeviceSN}/tmodel/property/set",
-            "Permission":"sub",
-            "Description":"设备接受物模型属性设置",
-            "Type":"sys",
-            "RuleEnginePermission":"pub"
-        },
-        {
-            "Topic":"/7ab051kbfhhjakc0/${DeviceSN}/upload/event",
-            "Permission":"pub",
-            "Type":"user",
-            "RuleEnginePermission":"pubsub"
-        },
-        {
-            "Topic":"/7ab051kbfhhjakc0/${DeviceSN}/upload",
-            "Permission":"pub",
-            "Type":"user",
-            "RuleEnginePermission":"pubsub"
-        },
-        {
-            "Topic":"/7ab051kbfhhjakc0/${DeviceSN}/set",
-            "Permission":"sub",
-            "Type":"user",
-            "RuleEnginePermission":"pubsub"
+            "Topic": "PFSzDqZp",
+            "Permission": "aUlAgkeC",
+            "Description": "CyXMutgU"
         }
     ],
-    "TotalCount":11
+    "RetCode": 0,
+    "Action": "GetUIoTCoreProductTopicListResponse"
 }
 ```
 

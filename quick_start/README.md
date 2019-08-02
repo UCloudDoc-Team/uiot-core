@@ -2,5 +2,3 @@
 
 # 快速入门
 
-{{indexmenu>:iot:uiot-core:quick_start#2 | nsort dsort msort}}
-

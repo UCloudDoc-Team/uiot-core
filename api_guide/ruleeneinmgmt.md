@@ -12,15 +12,16 @@
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
 |RuleName|string|规则名称|**Yes**|
 |ProductSN|string|产品序列号|No|
 |DataType|string|数据类型 json或者binary|No|
 |Description|string|规则描述|No|
 |ShortTopic|string|应用规则的具体Topic|No|
-|Select|string|要执行的Select语句(base64编码)|No|
-|Where|string|规则触发条件(base64编码)|No|
-|TopicType|string|topic类型，sys或者user|No|
+|Select|string|要执行的Select语句|No|
+|Where|string|规则触发条件|No|
+|TopicType|string|topic类型，sys还是user|No|
 
 
 ### 响应参数
@@ -33,23 +34,24 @@
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=CreateUIoTCoreRule
-&RuleName=rule_example
-&ProductSN=biozpnofy3wpybua
-&DataType=json
-&Description=规则范例
-&ShortTopic=/5q3ylz4jawrrog1c/upload
-&Select=aWQ=
-&Where=
-&Region=cn-sh2
-&TopicType=user
-&公共请求参数
+&RuleName=PAtNOOqG
+&ProductSN=upwHohgS
+&DataType=jZEBiBwB
+&Description=cbJDLoOB
+&ShortTopic=DtKwCVaz
+&Select=bjScgcES
+&Where=EKspFljR
+&ProjectId=mSiNqbNj
+&Region=mHTWGUew
+&TopicType=nwDykwnp
+&TopicType=hPCJVmDh
 ```
 ### 响应示例
 ```
 {
     "RetCode": 0,
     "Action": "CreateUIoTCoreRuleResponse",
-    "RuleID": "28"
+    "RuleID": "RjLLMyOP"
 }
 ```
 
@@ -57,12 +59,15 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreRule
 
 ## GetUIoTCoreRuleList
 
+获取规则列表-GetUIoTCoreRuleList
+
 获取规则列表
 
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
 |Offset|int|列表起始位置偏移量，默认为0|No|
 |Limit|int|返回最大数据长度，默认为20，最大为100|No|
 |RuleID|string|规则ID，用于精确查询|No|
@@ -95,10 +100,12 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreRule
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=GetUIoTCoreRuleList
-&Offset=0
-&Limit=100
-&Region=cn-sh2
-&公共请求参数
+&Offset=2
+&Limit=50
+&ProjectId=bXapdQku
+&Region=PbAhGDOC
+&RuleID=7
+&RuleID=TIECLnai
 ```
 ### 响应示例
 ```
@@ -106,28 +113,124 @@ https://api.ucloud.cn/?Action=GetUIoTCoreRuleList
     "TotalCount": 2,
     "RuleSet": [
         {
-            CreateTime: 1564466988
-            DataType: "json"
-            Description: "2↵1↵2↵333343434343243434343434324324324324"
-            ProductSN: "sp23xte8iebb43pu"
-            RuleID: "14"
-            RuleName: "testsms"
-            Select: "id"
-            ShortTopic: "/test1/upload/event"
-            Status: "disabled"
-            TopicType: "user"
+            "ProductSN": "GEnnlVPh",
+            "RuleName": "WEYzcpnq",
+            "Status": "SlMWBWAB",
+            "CreateTime": 2,
+            "DataType": "AfACJskp",
+            "ShortTopic": "GpLCzKwY",
+            "Description": "pIptYAZp",
+            "Select": "lBjDFqFd",
+            "Where": "BqFIJNkg",
+            "RuleID": "rZtpTMsQ"
         },
         {
-            CreateTime: 1564392040
-            DataType: "json"
-            ProductSN: "12go9dakt4web4nw"
-            RuleID: "6"
-            RuleName: "qyr1"
-            Select: "id,name"
-            ShortTopic: "/qyr1/upload"
-            Status: "running"
-            TopicType: "user"
-            Where: "id>0"
+            "ProductSN": "tUzcWqbQ",
+            "RuleName": "AgupeZyB",
+            "Status": "rGamrUcV",
+            "CreateTime": 2,
+            "DataType": "mACLvySR",
+            "ShortTopic": "DPkrPSSv",
+            "Description": "cwmDtOsE",
+            "Select": "jEJmXkMx",
+            "Where": "KucLLkUa",
+            "RuleID": "lYHjLkgA"
+        },
+        {
+            "ProductSN": "TAXtRTDq",
+            "RuleName": "eqQbOVzH",
+            "Status": "LJlcqaVI",
+            "CreateTime": 3,
+            "DataType": "bvUEJIWc",
+            "ShortTopic": "rvQbMepO",
+            "Description": "uphmalel",
+            "Select": "HHSchvuI",
+            "Where": "ZxZYevzp",
+            "RuleID": "BkojlXYW"
+        },
+        {
+            "ProductSN": "VsptRcHO",
+            "RuleName": "VhsgziXZ",
+            "Status": "IBdzOpok",
+            "CreateTime": 5,
+            "DataType": "nOgRWjks",
+            "ShortTopic": "lPhdlQir",
+            "Description": "AGAzBlJK",
+            "Select": "aCzqOjbI",
+            "Where": "xqKBmlMp",
+            "RuleID": "AwhGXJSP"
+        },
+        {
+            "ProductSN": "RtdUgImw",
+            "RuleName": "fvVlCMHI",
+            "Status": "LCiWQEVa",
+            "CreateTime": 6,
+            "DataType": "FlhhHZCL",
+            "ShortTopic": "iOGefDQs",
+            "Description": "TvOKrSjD",
+            "Select": "XhFAnTGB",
+            "Where": "yfECEOlB",
+            "RuleID": "LPxiVUMs"
+        },
+        {
+            "ProductSN": "yaugcgrV",
+            "RuleName": "CacKmqPv",
+            "Status": "UeLgtGAR",
+            "CreateTime": 3,
+            "DataType": "RReNVTMW",
+            "ShortTopic": "lzPqswzr",
+            "Description": "DNFsclxj",
+            "Select": "VHtbOOeg",
+            "Where": "yzgzVPZH",
+            "RuleID": "EKgNNwYC"
+        },
+        {
+            "ProductSN": "uliGYCLm",
+            "RuleName": "SBEniHkh",
+            "Status": "PxwpHdXK",
+            "CreateTime": 1,
+            "DataType": "wVHKkiBk",
+            "ShortTopic": "eExlQCBP",
+            "Description": "FjPIwYNy",
+            "Select": "UrlciCbN",
+            "Where": "WbhZWuMk",
+            "RuleID": "hNdHRKcA"
+        },
+        {
+            "ProductSN": "KiAXhiIc",
+            "RuleName": "HDJbOITS",
+            "Status": "tFipUgHl",
+            "CreateTime": 6,
+            "DataType": "miVVGGkU",
+            "ShortTopic": "hJKRoghd",
+            "Description": "voCBPsIA",
+            "Select": "UmJlMjmV",
+            "Where": "RPfsEycb",
+            "RuleID": "lhfMhlMR"
+        },
+        {
+            "ProductSN": "XaAPFabx",
+            "RuleName": "IahwPnGt",
+            "Status": "RacydrMU",
+            "CreateTime": 7,
+            "DataType": "ocUJDcMf",
+            "ShortTopic": "wraJPGRB",
+            "Description": "PdWtIfmg",
+            "Select": "FGZKBmqk",
+            "Where": "oNqpMBKk",
+            "RuleID": "ZmeSmJYm"
+        },
+        {
+            "ProductSN": "LKvrgRoI",
+            "RuleName": "APOGTFjN",
+            "Status": "TJaxzVqr",
+            "CreateTime": 1,
+            "DataType": "amQUyBYo",
+            "ShortTopic": "sdVbtJFR",
+            "Description": "jSSmTZvR",
+            "Select": "aphtimcy",
+            "Where": "wpNxHiRc",
+            "RuleID": "bPIXupPZ"
         }
     ],
     "RetCode": 0,
@@ -144,15 +247,16 @@ https://api.ucloud.cn/?Action=GetUIoTCoreRuleList
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
 |RuleID|string|规则ID|**Yes**|
 |RuleName|string|修改后的规则名称|No|
 |ProductSN|string|修改后的产品序列号|No|
 |DataType|string|数据类型|No|
 |Description|string|规则描述|No|
 |ShortTopic|string|应用规则的具体Topic|No|
-|Select|string|要执行的Sql语句(base64编码)|No|
-|Where|string|规则触发条件(base64编码)|No|
+|Select|string|要执行的Sql语句|No|
+|Where|string|规则触发条件|No|
 |TopicType|string|topic类型，sys或者user|No|
 
 
@@ -165,17 +269,17 @@ https://api.ucloud.cn/?Action=GetUIoTCoreRuleList
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=ModifyUIoTCoreRule
-&RuleID=6
-&RuleName=qyr1
-&ProductSN=12go9dakt4web4nw
-&DataType=json
-&Description=规则范例新
-&ShortTopic=/qyr1/upload
-&Select=aWQsbmFtZQ==
-&Where=aWQ+MA==
-&Region=cn-sh2
-&TopicType=user
-&公共请求参数
+&RuleID=EcidGqGP
+&RuleName=pQbiorTk
+&ProductSN=QRAevXFd
+&DataType=kisEmrGc
+&Description=JNsZbbql
+&ShortTopic=rhBBhnOL
+&Select=ZSInWfsO
+&Where=FxJKxhKF
+&ProjectId=dWXaLHNA
+&Region=uJjOytFX
+&TopicType=lQnDEPUp
 ```
 ### 响应示例
 ```
@@ -194,7 +298,8 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreRule
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
 |RuleID|string|规则ID|**Yes**|
 
 
@@ -207,9 +312,9 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreRule
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=DeleteUIoTCoreRule
-&RuleID=28
-&Region=cn-sh2
-&公共请求参数
+&RuleID=viKxxAaG
+&ProjectId=WkRimFta
+&Region=mthRKOdw
 ```
 ### 响应示例
 ```
@@ -228,7 +333,8 @@ https://api.ucloud.cn/?Action=DeleteUIoTCoreRule
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
 |RuleID|string|规则ID|**Yes**|
 
 
@@ -241,9 +347,9 @@ https://api.ucloud.cn/?Action=DeleteUIoTCoreRule
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=EnableUIoTCoreRule
-&RuleID=6
-&Region=cn-sh2
-&公共请求参数
+&RuleID=DASXntnV
+&ProjectId=eHwaKSCJ
+&Region=vYrUleNN
 ```
 ### 响应示例
 ```
@@ -262,7 +368,8 @@ https://api.ucloud.cn/?Action=EnableUIoTCoreRule
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
 |RuleID|string|规则ID|**Yes**|
 
 
@@ -275,9 +382,9 @@ https://api.ucloud.cn/?Action=EnableUIoTCoreRule
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=DisableUIoTCoreRule
-&RuleID=6
-&Region=cn-sh2
-&公共请求参数
+&RuleID=LrraFMTS
+&ProjectId=dAqklloE
+&Region=rRPEPckg
 ```
 ### 响应示例
 ```
@@ -296,10 +403,11 @@ https://api.ucloud.cn/?Action=DisableUIoTCoreRule
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
 |RuleID|string|规则ID|**Yes**|
 |Type|string|规则Action的类型|**Yes**|
-|Configuration|string|对应类型的配置(该字段要求按照base64编码)|**Yes**|
+|Configuration|string|对应类型的配置(该字段要求按照url.encode编码)|**Yes**|
 
 
 ### 响应参数
@@ -311,11 +419,11 @@ https://api.ucloud.cn/?Action=DisableUIoTCoreRule
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=CreateUIoTCoreRuleAction
-&RuleID=6
-&Type=mysql
-&Configuration=eyJSZXNvdXJjZUlEIjoidWRiaGEtMHp0bzJnYmwiLCJSZXNvdXJjZU5hbWUiOiJ1aW90Y29yZS1wcm9kdWN0aW9uLWlvdGNvbmYiLCJQb3J0IjozMzA2LCJEYXRhYmFzZSI6ImlvdCIsIlRhYmxlIjoidGFibGUxIiwiVXNlcm5hbWUiOiJyb290IiwiUGFzc3dvcmQiOiJyb290IiwiRmllbGRzIjp7ImZpZWxkMSI6IiR7aWR9In19
-&Region=cn-sh2
-&公共请求参数
+&RuleID=UHjOaeMw
+&Type=vpYvXdTf
+&Configuration=aYKBQRqB
+&ProjectId=qPhuZczR
+&Region=rLrLSFVe
 ```
 ### 响应示例
 ```
@@ -334,7 +442,8 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreRuleAction
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
 |RuleID|string|规则ID|**Yes**|
 |Offset|int|列表起始位置偏移量，默认为0|No|
 |Limit|int|返回最大数据长度，默认为20，最大为100|No|
@@ -359,26 +468,26 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreRuleAction
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=GetUIoTCoreRuleActionList
-&RuleID=6
-&Offset=0
-&Limit=100
-&Region=cn-sh2
-&公共请求参数
+&RuleID=gsVmTRPC
+&Offset=7
+&Limit=2
+&ProjectId=aiLFdQnU
+&Region=ebdIVIMf
 ```
 ### 响应示例
 ```
 {
-    "TotalCount": 2,
+    "TotalCount": 5,
     "RuleActionSet": [
         {
-            ActionID: "41"
-            Configuration: "{"ResourceID":"uhost-u3xfb5co","ResourceName":"ubuntu-vnc","Port":9090,"Path":"/hello"}"
-            Type: "http"
+            "ActionID": "WJEuPYDP",
+            "Type": "sBnZroTk",
+            "Configuration": "UkTCfyOg"
         },
         {
-           ActionID: "6"
-            Configuration: "{"TopicType":"user","Topic":"/12go9dakt4web4nw/qyr1/set"}"
-            Type: "republish"
+            "ActionID": "arZztkqm",
+            "Type": "xqfjdoTp",
+            "Configuration": "DffkEhGo"
         }
     ],
     "RetCode": 0,
@@ -395,11 +504,12 @@ https://api.ucloud.cn/?Action=GetUIoTCoreRuleActionList
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
 |RuleID|string|规则ID|**Yes**|
 |ActionID|string|Action ID|**Yes**|
 |Type|string|规则Action的类型|**Yes**|
-|Configuration|string|对应类型的配置(base64编码)|**Yes**|
+|Configuration|string|对应类型的配置|**Yes**|
 
 
 ### 响应参数
@@ -411,18 +521,19 @@ https://api.ucloud.cn/?Action=GetUIoTCoreRuleActionList
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=ModifyUIoTCoreRuleAction
-&RuleID=6
-&ActionID=41
-&Type=http
-&Configuration=eyJSZXNvdXJjZUlEIjoidWhvc3QtdTN4ZmI1Y28iLCJSZXNvdXJjZU5hbWUiOiJ1YnVudHUtdm5jIiwiUGF0aCI6Ii9oZWxsbyIsIlBvcnQiOjkwOTB9
-&Region=cn-sh2
-&公共请求参数
+&RuleID=ZFYIuYdb
+&ActionID=vnrGkmre
+&Type=RjWrgrvl
+&Configuration=rByVnmIV
+&ProjectId=VyjYFMnF
+&Region=vzXomSVe
 ```
 ### 响应示例
 ```
 {
     "RetCode": 0,
-    "Action": "ModifyUIoTCoreRuleActionResponse"
+    "Action": "ModifyUIoTCoreRuleActionResponse",
+    "Test": {}
 }
 ```
 
@@ -435,7 +546,8 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreRuleAction
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|No|
 |RuleID|string|规则ID|**Yes**|
 |ActionID|string|规则Action ID|**Yes**|
 
@@ -449,10 +561,10 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreRuleAction
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=DeleteUIoTCoreRuleAction
-&RuleID=6
-&ActionID=6
-&Region=cn-sh2
-&公共请求参数
+&RuleID=xnpbnrfM
+&ActionID=jNqkpIyt
+&ProjectId=GNNFZtRg
+&Region=vvJxEIAs
 ```
 ### 响应示例
 ```

@@ -11,9 +11,9 @@
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-| Region  | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist) |  **Yes** |
-| ProductSN      | string | 产品ID                                                       |  **Yes** |
-
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|**Yes**|
+|ProductSN|string|产品ID|**Yes**|
 
 
 ### 响应参数
@@ -26,14 +26,14 @@
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=EnableUIoTCoreDeviceShadow
-&Region=cn-sh2
+&Region=cn-zj
+&ProjectId=kXsyKClX
 &ProductSN=ulFbNbcr
-&公共请求参数
 ```
 ### 响应示例
 ```
 {
-    "Timestamp": "1564543200",
+    "Timestamp": "ZaEHdWsS",
     "RetCode": 0,
     "Action": "EnableUIoTCoreDeviceShadowResponse"
 }
@@ -50,6 +50,7 @@ https://api.ucloud.cn/?Action=EnableUIoTCoreDeviceShadow
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
 |Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|**Yes**|
 |ProductSN|string|产品ID|**Yes**|
 
 
@@ -63,14 +64,14 @@ https://api.ucloud.cn/?Action=EnableUIoTCoreDeviceShadow
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=DisableUIoTCoreDeviceShadow
-&Region=cn-sh2
+&Region=cn-zj
+&ProjectId=aDeEFNtg
 &ProductSN=QCCSxGIJ
-&公共请求参数
 ```
 ### 响应示例
 ```
 {
-    "Timestamp": "1564543200",
+    "Timestamp": "xBdMlaya",
     "RetCode": 0,
     "Action": "DisableUIoTCoreDeviceShadowResponse"
 }
@@ -86,7 +87,8 @@ https://api.ucloud.cn/?Action=DisableUIoTCoreDeviceShadow
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|**Yes**|
 |ProductSN|string|产品ID|**Yes**|
 |DeviceSN|string|设备ID|**Yes**|
 
@@ -125,44 +127,19 @@ https://api.ucloud.cn/?Action=DisableUIoTCoreDeviceShadow
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=GetUIoTCoreDeviceShadow
-&Region=cn-sh2
+&Region=cn-zj
+&ProjectId=wZnGKFpc
 &ProductSN=myYJTQTR
 &DeviceSN=XlNkDkHw
-&公共请求参数
 ```
 ### 响应示例
 ```
 {
-	"Action": "GetUIoTCoreDeviceShadowResponse",
-	"RetCode": 0,
-	"Payload": {
-		"State": {
-			"Reported": {
-				"light": "on"
-			},
-			"Desired": {
-				"key": "value",
-				"key_1": "value_1"
-			}
-		},
-		"Metadata": {
-			"Reported": {
-				"light": {
-					"Timestamp": 1564395928
-				}
-			},
-			"Desired": {
-				"key": {
-					"Timestamp": 1564399417
-				},
-				"key_1": {
-					"Timestamp": 1564557762
-				}
-			}
-		}
-	},
-	"Version": 8,
-	"Timestamp": 1564557762
+    "Payload": {},
+    "Version": 1,
+    "Timestamp": "dNktleTJ",
+    "RetCode": 0,
+    "Action": "GetUIoTCoreDeviceShadowResponse"
 }
 ```
 
@@ -176,7 +153,8 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceShadow
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|ProjectId|string|项目ID。不填写为默认项目，子帐号必须填写。 请参考[GetProjectList接口](../summary/get_project_list.html)|**Yes**|
 |Desired|string|base64编码的Json字符串|**Yes**|
 |ProductSN|string|产品ID|**Yes**|
 |DeviceSN|string|设备ID|**Yes**|
@@ -218,45 +196,20 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceShadow
 ### 请求示例
 ```
 https://api.ucloud.cn/?Action=UpdateUIoTCoreDeviceShadow
-&Region=cn-sh2
-&Desired=eyJrZXlfMSI6InZhbHVlXzEifQ==
+&Region=cn-zj
+&ProjectId=xVqvjzSS
+&Desired=bFcfVbbn
 &ProductSN=PFmsLErG
 &DeviceSN=FDRHHEQN
 &Version=5
-&公共请求参数
 ```
 ### 响应示例
 ```
 {
-	"RetCode": 0,
-	"Action": "UpdateUIoTCoreDeviceShadowResponse",
-	"Payload": {
-		"State": {
-			"Reported": {
-				"light": "on"
-			},
-			"Desired": {
-				"key": "value",
-				"key_1": "value_1"
-			}
-		},
-		"Metadata": {
-			"Reported": {
-				"light": {
-					"Timestamp": 1564395928
-				}
-			},
-			"Desired": {
-				"key": {
-					"Timestamp": 1564399417
-				},
-				"key_1": {
-					"Timestamp": 1564399352
-				}
-			}
-		}
-	},
-	"Version": 9,
-	"Timestamp": "1564543200"
+    "RetCode": 0,
+    "Action": "UpdateUIoTCoreDeviceShadowResponse",
+    "Payload": {},
+    "Version": 9,
+    "Timestamp": "FGLKHDLd"
 }
 ```

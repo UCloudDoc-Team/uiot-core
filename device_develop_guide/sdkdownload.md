@@ -1,23 +1,19 @@
 {{indexmenu_n>1}}
 
-# 概述
+# 设备端SDK概述及下载
 
 设备端SDK提供了设备端连接物联网平台的功能接口，从而方便用户快速的将设备接入平台，使用平台提供的功能。 
 
 **设备端开发语言选择：**
 
-|开发语言 | 支持功能 |
-|---|---|
-|C | 参考例子：[设备注册](../device_develop_guide/c_sdk_example/mqttinterface#设备身份认证) [设备连接](../device_develop_guide/c_sdk_example/mqttinterface#设备身份认证) [设备影子](../device_develop_guide/c_sdk_example/deviceshadowinterface) [物模型](../device_develop_guide/c_sdk_example/thingmodelinterface) [设备OTA升级](../device_develop_guide/c_sdk_example/otainterface) |  
-|其他语言| 正在开发中...  可以根据本章节介绍的功能规则进行开发。[设备注册](../device_develop_guide/authenticate_devices/what_is_authenticate_devices) [设备连接](../device_develop_guide/connecting_devices) [设备影子](../device_develop_guide/device_shadow) [物模型](../device_develop_guide/thingmode/what_is_thingmode) [设备OTA升级](../device_develop_guide/ota) |
+开发语言 | 支持功能 | 参考例程
+---|---|---
+C | 设备注册<br>设备连接<br>设备影子<br>物模型<br>设备OTA升级 | [基于FreeRTOS的SDK移植]()<br>[动态注册设备订阅发送消息]()<br>[静态注册设备更新设备影子]()|  
+其他语言| 正在开发中... <br>可以根据本章节介绍的功能规则进行开发。 |开发过程中遇到任何问题，欢迎发送邮件到邮箱[iot-help@ucloud.cn]()
 
 
 操作步骤：
-
 1. [注册](https://passport.ucloud.cn/#register)UCloud云服务，如已注册请直接第2步。
-
-2. 登录进入UCloud[物联网平台](https://console.ucloud.cn/uiot)。
-
+2. 登录进入UCloud[物联网平台](https://console.ucloud.cn/iot)。
 3. 根据云平台操作指南在控制台进行相关的操作，比如创建产品，创建设备，创建Topic，创建规则引擎等。
-
 4. 基于C-SDK或其他语言进行设备端开发。
