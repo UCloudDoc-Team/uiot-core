@@ -14,9 +14,9 @@
 
 2\. 登录进入UCloud[物联网平台](https://console.ucloud.cn/uiot)
 
-3\. 创建产品  
+3\. 创建产品
 
-- 根据[创建产品](../console_guide/product_device/create_products)文档说明及页面提示，点击<添加产品>，创建一个产品，命名为智能空调，点击<确定>；
+- 根据[创建产品](../console_guide/product_device/create_products)文档说明及页面提示，点击<创建产品>，创建一个产品，命名为智能空调，点击<确定>；
 
 - 创建完成后，点击产品的详情，可以对产品进行相应的配置，具体参考[创建产品](../console_guide/product_device/create_products)详细说明。
 
@@ -24,13 +24,13 @@
 
 4\. 创建设备
 
-- 根据[创建设备](../console_guide/product_device/create_devcies)文档及页面提示，依次点击<产品详情>、点击<设备管理>、<添加设备>、<随机生成>、<生成设备个数1个>、<确定>；
+- 根据[创建设备](../console_guide/product_device/create_devcies)文档及页面提示，依次点击<详情>、点击<设备管理>、<添加设备>、<随机生成>、<生成设备个数1个>、<确定>；
 
 - 创建完成后，点击设备的详情，具体参考[创建设备](../console_guide/product_device/create_devcies)详细说明。  
 
 ![随机添加设备](../images/随机添加设备.png)
 
-5\. 记录设备注册信息  
+5\. 记录设备注册信息
 
 - 点击添加的设备，打开设备详情页，准备好设备注册相关信息，设备注册信息包含：**产品序列号** **设备序列号** **设备密码**，需要妥善保管好，后续测试需要使用。  
 
@@ -40,60 +40,70 @@
 
 这里使用平台提供的设备端C-SDK，从而快速将设备接入到物联网平台，详细参考[C-SDK使用参考](../device_develop_guide/c_sdk_example/csdkquickstart)。
 
-在C-SDK的目录**sample/mqtt/**通过修改例程**mqtt_sample.c**来介绍如何使用C-SDK。
+在C-SDK的目录**sample/mqtt/**中，通过修改例程**mqtt_sample.c**来介绍如何使用C-SDK。
 
 #### 上行上报数据
 该例程设备端通过linux环境进行模拟，上报'温度、湿度'到**自定义Topic /70ly1tvowt696r15/aruidyl0rt9tuvod/upload**。
 
-1\. 下载[设备端C-SDK](https://github.com/ucloud/ucloud-iot-device-sdk-c)，详细可以参考[C-SDK使用参考](device_develop_guide/c_sdk_example/csdkquickstart)。
+1\. 下载[设备端C-SDK](https://github.com/ucloud/ucloud-iot-device-sdk-c)，详细可以参考[C-SDK使用参考](../device_develop_guide/c_sdk_example/csdkquickstart)。
 
 2\. 修改代码**sample/mqtt/mqtt_example.c**
 
 - 修改设备密钥包含：**产品序列号** **设备序列号** **设备密码**
 
 ```
-#define PRODUCTSN      ""
-#define DEVICESN      ""
-#define DEVICESECRET    ""
+#define PRODUCTSN      "70ly1tvowt696r15"     //修改为需要测试的产品序列号
+#define DEVICESN      "aruidyl0rt9tuvod"      //修改为需要测试的设备序列号
+#define DEVICESECRET    "imwku9r4jy7jwcip"    //修改为需要测试的设备密码
 ...
-//static int sg_count = 0;
+//static int sg_count = 0;   // 注释该行，替换成温度和湿度变量
+static int temperture = 0; //添加温度值变量
+static int humidity = 0;   //添加湿度值变量
 static int sg_sub_packet_id = -1;
 ...
 ```
 
-- 修改需要订阅的topic
+- 修改需要订阅的topic名称
 
 ```
 static int _register_subscribe_topics(void *client)
 {
   static char topic_name[128] = {0};
+  // 修改topic名称
   int size = HAL_Snprintf(topic_name, sizeof(topic_name), "/%s/%s/%s", UIOT_MY_PRODUCT_SN, UIOT_MY_DEVICE_SN, "set");
   if (size < 0 || size > sizeof(topic_name) - 1)
   ...
 }
 ```
 
-- 修改上报的消息内容。
+- 找到publish函数，修改消息上报的topic和消息内容格式。
 
 ```
 static int _publish_msg(void *client)
 {
   char topicName[128] = {0};
+  
+  //修改topic名称
   HAL_Snprintf(topicName, 128, "/%s/%s/%s", UIOT_MY_PRODUCT_SN, UIOT_MY_DEVICE_SN, "upload");
 
   PublishParams pub_params = DEFAULT_PUB_PARAMS;
   pub_params.qos = QOS1;
 
   char topic_content[MAX_SIZE_OF_TOPIC_CONTENT + 1] = {0};
-  int temperture = 15; //上报温度值
-  int humidity = 45;   //上报湿度值
+  
+  //添加上报属性值
+  temperture = 15; //设置上报温度值
+  humidity = 45;   //设置上报湿度值
+  
+  //修改上报内容和组包格式
   int size = HAL_Snprintf(topic_content, sizeof(topic_content), "{\"temperture\": \"%d\", \"humidity\": \"%d\"}", temperture, humidity);
+  
   if (size < 0 || size > sizeof(topic_content) - 1)
   ...
 }
 ```
 
-- 修改上行逻辑，逻辑会每隔5秒钟上报'温度、湿度'状态。
+- 找到main函数，修改上报频次，每隔5秒钟上报'温度、湿度'状态。
 
 ```
 int main(int argc, char **argv) {
@@ -111,26 +121,26 @@ int main(int argc, char **argv) {
     // 等待订阅结果
     if (sg_sub_packet_id > 0) {
       HAL_Printf("subscribe topic success!");
-    }
+     
+       while(1){
+         rc = _publish_msg(client);
+         if (rc < 0) {
+           HAL_Printf("client publish topic failed :%d.", rc);
+         }
+		 //修改上报频次，每隔5秒发送当前温度值和湿度值
+         rc = IOT_MQTT_Yield(client, 5000);
+       }
+	}
   }while (sg_sub_packet_id < 0);
-
-  //满足一定条件下，每隔5秒发送温度值和湿度值
-  while(1){
-    rc = _publish_msg(client);
-    if (rc < 0) {
-      HAL_Printf("client publish topic failed :%d.", rc);
-    }
-    rc = IOT_MQTT_Yield(client, 5000);
-  }
 
   rc = IOT_MQTT_Destroy(&client);    
   return rc;
 }
 ```
 
-注，实际开发中可以通过规则引擎将自定义Topic上发的数据流转到UHost/MQ/DB等进行消费，详细参考[规则引擎](../console_guide/ruleengine/data_forwarding)。
+注：实际开发中可以通过规则引擎将自定义Topic上发的数据流转到UHost/MQ/MySQL等进行消费，详细参考[规则引擎](../console_guide/ruleengine/data_forwarding)。
 
-3\. 编译生成可执行文件`mqtt_example`
+3\. 编译生成可执行文件**mqtt_example**
 
 ```
 make clean

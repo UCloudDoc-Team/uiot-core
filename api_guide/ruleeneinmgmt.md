@@ -57,8 +57,6 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreRule
 
 ## GetUIoTCoreRuleList
 
-获取规则列表-GetUIoTCoreRuleList
-
 获取规则列表
 
 ### 请求参数

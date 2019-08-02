@@ -25,8 +25,8 @@ DeviceSecret：6g7tjlekwf3sqqqj
 |MQTT认证参数|参数值|
 |---|---|
 |ClientID | `ledubff3z85spjmu.h9onxtzw0aep7fsr` `规则：${ProductSN}.${DeviceSN}`|
-|UserName | `ledubff3z85spjmu|h9onxtzw0aep7fsr|1` `规则：${ProductSN}\|${DeviceSN}\|${authmode}` `authmode: 1表示静态注册；2表示动态注册`|
-|Password | `6g7tjlekwf3sqqqj` `规则：${DevSecret}`|
+|UserName | `ledubff3z85spjmu|h9onxtzw0aep7fsr|1` `规则：${ProductSN}|${DeviceSN}|${authmode}` `authmode: 1表示静态注册；2表示动态注册`|
+|Password | `6g7tjlekwf3sqqqj` `规则：${DeviceSecret}`|
 
 2）参考[设备连接](../device_develop_guide/connecting_devices\#设备连接)，获取MQTT Broker连接域名和TLS CA证书：
 
@@ -44,7 +44,7 @@ DeviceSecret：6g7tjlekwf3sqqqj
 
 - 输入User Name、 Password
 
-- 输入TLS证书，可以不使用用TLS连接，端口为1883
+- 输入TLS证书，可以不使用TLS连接，端口为1883
 
 - 点击<Apply>，提交配置
 
@@ -52,7 +52,7 @@ DeviceSecret：6g7tjlekwf3sqqqj
 
 ![连接成功](../images/连接成功.png)
 
--  输入TLS证书（使用1883端口，跳过此步）：
+-  输入TLS证书（使用1883端口，即不使用TLS加密，跳过此步）：
 
 ![TLS证书](../images/TLS证书.png)
 
@@ -101,7 +101,7 @@ DeviceSecret：6g7tjlekwf3sqqqj
 
 2\. 下发期望值，有两种方法： 
  
-  1. 参考[设备影子](../console_guide/device_shadow/operation_guide\#设备影子相关操作)，<编辑>设备影子，输入<Desired>值：
+1）. 参考[设备影子](../console_guide/device_shadow/operation_guide\#设备影子相关操作)，<编辑>设备影子，输入<Desired>值：
 
 ```
 {
@@ -109,7 +109,7 @@ DeviceSecret：6g7tjlekwf3sqqqj
 }
 ```
 
-   2. 使用云端API进行调用，参考[UpdateUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi)，下发需要发给设备端的期望值。  
+2）. 使用云端API进行调用，参考[UpdateUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi)，下发需要发给设备端的期望值。  
 UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_guidehelp)，其他参数参考[UpdateUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi)
 
 ```
