@@ -22,7 +22,7 @@
 |Action|string|操作名称|**Yes**|
 |Status|string|设备状态|**Yes**|
 |LatestUpdateTime|string|最近更新时间, 毫秒时间戳|**Yes**|
-|Property|object|物模型属性信息|**No**|
+|Property|object|物模型属性信息|No|
 
 ### 请求示例
 
@@ -62,12 +62,12 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceProperty
 |Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
-|Offset|int|列表起始位置偏移量，默认为0|**No**|
-|Limit|int|返回最大数据长度，-1表示返回所有，默认为-1|**No**|
-|StartTime|int|开始时间戳（秒），默认为0|**No**|
-|EndTime|int|结束时间戳（秒），默认为当前时间戳|**No**|
-|Identifier|string|标识符，默认为全部标识符|**No**|
-|RequestID|string|请求ID，默认为全部请求ID|**No**|
+|Offset|int|列表起始位置偏移量，默认为0|No|
+|Limit|int|返回最大数据长度，-1表示返回所有，默认为-1|No|
+|StartTime|int|开始时间戳（秒），默认为0|No|
+|EndTime|int|结束时间戳（秒），默认为当前时间戳|No|
+|Identifier|string|标识符，默认为全部标识符|No|
+|RequestID|string|请求ID，默认为全部请求ID|No|
 
 ### 响应参数
 
@@ -140,12 +140,12 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceCommandList
 |Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
-|Offset|int|列表起始位置偏移量，默认为0|**No**|
-|Limit|int|返回数据长度，默认为-1，-1表示返回所有|**No**|
-|StartTime|int|开始时间戳（秒），默认为0|**No**|
-|EndTime|int|结束时间戳（秒），默认为当前时间戳|**No**|
-|Identifier|string|标识符，默认为所有标识符|**No**|
-|RequestID|string|请求ID，默认为全部请求ID|**No**|
+|Offset|int|列表起始位置偏移量，默认为0|No|
+|Limit|int|返回数据长度，默认为-1，-1表示返回所有|No|
+|StartTime|int|开始时间戳（秒），默认为0|No|
+|EndTime|int|结束时间戳（秒），默认为当前时间戳|No|
+|Identifier|string|标识符，默认为所有标识符|No|
+|RequestID|string|请求ID，默认为全部请求ID|No|
 
 ### 响应参数
 
@@ -215,7 +215,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceEventList
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
 |Property|string|属性列表，为base64之后的json字符串，json串的格式为{"PropertyIdentifier":PropertyValue}|**Yes**|
-|Desired|bool|设备不在线时是否缓存云端，默认为false|**No**|
+|Desired|bool|设备不在线时是否缓存云端，默认为false|No|
 
 ### 响应参数
 
@@ -259,9 +259,9 @@ https://api.ucloud.cn/?Action=SetUIoTCoreDeviceProperty
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
 |Identifier|string|标识符|**Yes**|
-|Input|string|base64后的json字符串，格式参考物模型模板。默认为空|**No**|
-|Method|string|sync或者async。默认为async|**No**|
-|Timeout|int|超时时间，单位为秒，只在method为sync时有效，最长不超过5秒。默认为5|**No**|
+|Input|string|base64后的json字符串，格式参考物模型模板。默认为空|No|
+|Method|string|sync或者async。默认为async|No|
+|Timeout|int|超时时间，单位为秒，只在method为sync时有效，最长不超过5秒。默认为5|No|
 
 ### 响应参数
 
