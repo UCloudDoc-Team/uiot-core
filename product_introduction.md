@@ -3,5 +3,5 @@
 
 # 产品简介
 
-{{indexmenu>:iot:uiot-core:product_introduction#2 | nsort dsort msort}}
+{{indexmenu>:iot:uiot-core:product_introduction#1|nsort dsort msort}}
 
