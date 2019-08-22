@@ -43,7 +43,7 @@
 是已经进行过静态认证的设备如果再进行动态认证会失败。
 
 ```
-option(ENABLE\_FEATURE\_AUTH\_MODE\_DYNAMIC "是否打开设备动态注册" ON)
+option(ENABLE_FEATURE_AUTH_MODE_DYNAMIC "是否打开设备动态注册" ON)
 ```
 
 
