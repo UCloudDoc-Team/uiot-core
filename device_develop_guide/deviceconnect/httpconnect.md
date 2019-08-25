@@ -10,7 +10,7 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 
 ## HTTP连接注意事项
 
-- 只支持TLSV1.2版本的HTTPS协议；
+- 使用HTTPS协议，支持TLS V1.2版本；
 - CA证书为国际授信的域名证书，也可以直接下载[CA证书]()；
 - HTTP请求只支持POST方式；
 - 基于MQTT的Topic规范，数据上报到MQTT的某个Topic；
