@@ -5,7 +5,7 @@
 数据流转JSON和binary数据类型的区别：  
 
 - JSON：JSON格式对于文档数据会先进行数据解析，提前JSON中的字段，再进行数据的流转。如果是非JSON格式的数据将会被规则引擎直接丢弃；
-- binary：binary格式仅支持自定义Topic类，只做数据透传，不能流转到结构化存储的目的地中（只能流转到Kafka、M2M、HTTP服务）；规则中的字段支持星号"*"，或者是部分内置函数；
+- binary：binary格式仅支持自定义Topic类，只做数据透传，不能流转到结构化存储的目的地中（只能流转到Kafka、M2M、HTTP、AI服务）；规则中的字段支持星号"*"，或者是部分内置函数；
 
 ## 操作步骤
 
@@ -15,7 +15,7 @@
    
      - 基本信息：规则的名称以及规则的描述和数据类型；
      - 消息筛选：编辑类似SQL语句，筛选出Topic、Topic字段；
-     - 执行动作：添加动作，将消息筛选出来的数据流转到其他产品，比如UHost、MySQL、MongoDB、TSDB、KafkaMQ、SMS、M2M等；
+     - 执行动作：添加动作，将消息筛选出来的数据流转到其他产品，比如UHost、MySQL、MongoDB、TSDB、KafkaMQ、SMS、M2M、AI-Inference等；
    
 2. 消息筛选：  
    
