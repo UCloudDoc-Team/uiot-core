@@ -3,14 +3,21 @@
 # 基于STM32+FreeRTOS+LWIP的SDK移植
 
 ## STM32F767
+
 * Arm M7核 216 Mhz
+
 * 2 Mbytes Falsh
+
 * 512 Kbytes SRAM 
+
 * IEEE-802.3 网络接口
+
 * 支持ST-LINK调试
+
 我们将在STM32F767上移植Freertos实时操作系统，并在Freertos系统上运行我们的SDK，本次仅演示移植MQTT收发消息部分。
 
 ## 使用STM32CubeMX工具生成新工程
+
 新建工程
 
 ![](../../images/STM32新建工程.png)
