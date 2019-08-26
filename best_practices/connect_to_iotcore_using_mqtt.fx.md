@@ -32,7 +32,7 @@ DeviceSecret：6g7tjlekwf3sqqqj
 
 |Broker参数| 参数值|
 |---|---|
-|Broker Address | mqtt-cn-sh2.ucloud.cn （不同区域连接域名不同，目前仅在上海Region开放）|
+|Broker Address | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，目前仅在上海Region开放）|
 |Broker Port | 1883或8883(使用TLS)|
 |TLS(CA Certificate file) |[CA根证书 下载地址](http://uiot.cn-sh2.ufileos.com/uiot_ca.pem)|
 
