@@ -9,7 +9,7 @@
 ## 文件上传注意事项
 
 - 使用HTTPS协议，支持TLS V1.2版本；
-- CA证书为国际授信的域名证书，也可以直接下载[CA证书]()；
+- CA证书为国际授信的域名证书，也可以直接下载[CA证书](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)；
 
 
 
@@ -25,7 +25,7 @@
 	 POST //api/v1/url HTTP/1.1
 	 Host: file-cn-sh2.iot.ucloud.cn
 	 Content-Type: application/json
-	 body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","DeviceSecret":"1214545","FileName":"file1.txt","FileSize":102654,"MD5":"dddddd","Content-Type":"text/plain"}
+	 body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","DeviceSecret":"tepfnobkoyl4qgov","FileName":"file1.txt","FileSize":102654,"MD5":"dddddd","Content-Type":"text/plain"}
 	 ```
 
 	**参数说明**
@@ -55,8 +55,8 @@
 	 ```
 	 {
 	 	"RetCode": 0,
-	 	"URL": "https://bucketname.ufliehost.com/ProductSN/DeviceSN/fileName",
-	 	"Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJEZXZpY2VTTiI6InRlc3QxIiwiUHJvZHVjdFNOIjoiZzR3ZmFycTMweXp4YXkyMyIsImV4cCI6MTU2NzA1ODg5OSwiaWF0IjoxNTY2NDU0MDk5fQ.wN1XNVciI27nTeIqCjbYKdmTaifJrGJm_DmDDpIoabs"
+	 	"URL": "https://uiotcore-55977351-55738012.cn-sh2.ufileos.com/ProductSN/DeviceSN/fileName",
+	 	"Authorization": "Ucloud eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJEZXZpY2VTTiI6InRlc3QxIiwiUHJvZHVjdFNOIjoiZzR3ZmFycTMweXp4YXkyMyIsImV4cCI6MTU2NzA1ODg5OSwiaWF0IjoxNTY2NDU0MDk5fQ.wN1XNVciI27nTeIqCjbYKdmTaifJrGJm_DmDDpIoabs"
 	 }
 	 ```
     
@@ -72,7 +72,7 @@
 	 |---|---|
 	 |Method|请求方法。只支持 PUT 方法。|
 	 |URL|`url`，请求上传文件返回的 URL 地址|
-	 |Content-Type|文件数据的编码格式。若之前请求为空，则为text/plain|
+	 |Content-Type|文件数据的编码格式。若请求为空，则为text/plain|
 	 |body|设备需要上传的文件。|
 
 
@@ -83,7 +83,7 @@
 	 - 其他返回
 	 {
 	 	"RetCode": 0,
-	 	"ErrMsg": "https://bucketname.ufliehost.com/ProductSN/DeviceSN/fileName"
+	 	"ErrMsg": "xxxxxxxx"
 	 }
 	 ```
 

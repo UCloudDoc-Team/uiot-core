@@ -11,10 +11,10 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 ## HTTP连接注意事项
 
 - 使用HTTPS协议，支持TLS V1.2版本；
-- CA证书为国际授信的域名证书，也可以直接下载[CA证书]()；
+- CA证书为国际授信的域名证书，也可以直接下载[CA证书](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)；
 - HTTP请求只支持POST方式；
 - 基于MQTT的Topic规范，数据上报到MQTT的某个Topic；
-- 上报数据请求URL：`https://http-cn-sh2.iot.ucloud.cn/topic/${topic}`。其中`${topic}`的值是指具备订阅权限的[Topic](../../console_guide/product_device/topic)。不支持以 ?query_String=xxx 格式传参；
+- 上报数据请求URL：`https://http-cn-sh2.iot.ucloud.cn/topic/${topic}`。其中`${topic}`的值是指具备发布权限的[Topic](../../console_guide/product_device/topic)。不支持以 ?query_String=xxx 格式传参；
 - HTTP协议只能用于[静态注册](../device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication)的设备上行数据，不支持[动态注册](../device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication)的情况；
 - HTTP可以和MQTT同时使用，但要做好数据的同步；
 - 数据上行传输的数据大小限制为 128 KB；
@@ -28,7 +28,7 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 
 1. 获取到设备的注册凭证：`产品序列号`，`设备序列号`，`设备密码`，分别表示为`${ProductSN}`，`${DeviceSN}`，`${DevSecret}`；  
 
-2. 下载TLS证书，[下载根证书]()；  
+2. 下载TLS证书，[下载根证书](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)；  
 
 3. 设备注册。通过HTTP POST请求获取上报数据的Token，见**返回参数**：
 
@@ -83,7 +83,7 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 
 4. 上报数据。将数据发送数据到某个 Topic。   
 
-	HTTP平台支持订阅权限的自定义或系统Topic。
+	HTTP平台支持发布权限的自定义或系统Topic。
 	- 自定义Topic，参考[用户自定义Topic](../console_guide/product_device/topic#用户自定义Topic)；
 	- [系统Topic](../console_guide/product_device/topic#系统Topic)，参考[设备影子](../console_guide/device_shadow/waht_is_deviceshadow)或者[物模型](../console_guide/thingmode/what_is_thingmode)Topic；
 

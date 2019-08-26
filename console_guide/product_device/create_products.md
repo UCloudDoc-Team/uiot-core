@@ -59,7 +59,7 @@
 - 在线设备数量：当前在线的设备数量；
 - 固件数量：已经上传的固件数量；
 - 动态注册：是否开启动态注册，参考[动态注册设备](../../device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication)；
-- 预认证：是否开启预认证（需先开启动态注册开关），参考[预认证]()；
+- 预认证：是否开启预认证（需先开启动态注册开关），参考[预认证](../../device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication#预认证)；
 - 设备影子：是否使用设备影子，参考[设备影子](../device_shadow/waht_is_deviceshadow);
 
 
