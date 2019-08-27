@@ -48,6 +48,7 @@ Host: http-cn-sh2.iot.ucloud.cn
 Content-Type: application/json
 Authorization: 47b0194e52ed1d1630830b66709b906a1e201ba410101cfaf9381bbde53a0d85
 body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","Timestamp":"1501668289957"}
+
 ```  
 
 
@@ -57,10 +58,10 @@ body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","Timestamp":"
 |参数|说明|
 |---|---|
 |Method|请求方法。只支持 POST 方法。|
-|URL|`/auth`，URL 地址|
+|URL|**/auth**，URL 地址|
 |Host|HTTP服务地址|
-|Content-Type|body 数据的编码格式。目前只支持 `application/json`|
-|Authorization|使用设备密码签名。签名计算格式为 `HMAC-SHA256(DeviceSecret, body)`|
+|Content-Type|body 数据的编码格式。目前只支持 **application/json**|
+|Authorization|使用设备密码签名。签名计算格式为 **HMAC-SHA256(DeviceSecret, body)**|
 |body|设备认证信息。JSON 数据格式。具体信息，请参见下表 body 参数。|
 
 
