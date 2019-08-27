@@ -48,12 +48,10 @@ Host: http-cn-sh2.iot.ucloud.cn
 Content-Type: application/json
 Authorization: 47b0194e52ed1d1630830b66709b906a1e201ba410101cfaf9381bbde53a0d85
 body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","Timestamp":"1501668289957"}
-
 ```  
 
 
-**参数说明**
-
+####参数说明
 
 |参数|说明|
 |---|---|
@@ -65,7 +63,7 @@ body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","Timestamp":"
 |body|设备认证信息。JSON 数据格式。具体信息，请参见下表 body 参数。|
 
 
-**body 参数**
+####body 参数
 
 
 |参数名称|必选|类型|描述|
@@ -75,7 +73,7 @@ body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","Timestamp":"
 |Timestamp|否|int64|时间戳（如填写时间误差不超过 3600 秒）|
 
 
-**返回参数**
+####返回参数
 
 ```
 {
@@ -85,7 +83,7 @@ body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","Timestamp":"
 }
 ```
 
-**错误码**
+####错误码
 
 |RetCode|Message|备注|
 |---|---|---|
@@ -115,7 +113,7 @@ body: ${your_data}
 ```
 
 
-**参数说明**
+####参数说明
 
 
 |参数|说明|
@@ -128,7 +126,7 @@ body: ${your_data}
 |body|发往 ${topic} 的数据内容，长度不超过 128 KB。|
 
 
-**返回参数**
+####返回参数
 
 
 ```
@@ -139,7 +137,7 @@ body: ${your_data}
 }
 ```
 
-**错误码**
+####错误码
 
 
 |RetCode|Message|备注|
