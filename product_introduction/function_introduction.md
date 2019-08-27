@@ -3,7 +3,7 @@
 
 # 功能介绍
 
-UCloud IoT通信云平台为海量设备上报数据、控制设备提供安全可靠连接保证，IoT通信云平台基于设备接入、设备管理、规则引擎、设备影子、OTA、边缘计算、设备端SDK、云端API等功能提供一个完整的从设备到平台到应用的解决方案。
+UCloud IoT通信云平台为海量设备上报数据、控制设备提供安全可靠连接保证，IoT通信云平台基于设备接入、设备管理、规则引擎、设备影子、物模型、文件上传、OTA、设备端SDK、云端API等功能提供一个完整的从设备到平台到应用的解决方案。
 
 
 
@@ -11,10 +11,13 @@ UCloud IoT通信云平台为海量设备上报数据、控制设备提供安全�
 
 提供广泛的设备接入能力，用户可以方便地通过[设备端SDK](../device_develop_guide/c_sdk_example/csdkquickstart)接入到IoT通信云平台，并且可以按照SDK中的示例代码，快速嵌入自己的业务逻辑实现连接云端的能力。 
 
-设备端SDK提供完善的设备接入方案：
+提供完善的设备接入方案：
 
 - 提供安全的基于MQTT和MQTT Over TLS的[设备注册](../device_develop_guide/authenticate_devices/what_is_authenticate_devices)、[设备连接](../device_develop_guide/connecting_devices)机制
-- 支持原生的Linux、RTOS的移植
+- 提供基于HTTP和HTTP Over TLS的[设备注册](../device_develop_guide/authenticate_devices/what_is_authenticate_devices)、[设备连接](../device_develop_guide/connecting_devices)机制
+- 提供基于WebSocket和WebSocket Over TLS的[设备注册](../device_develop_guide/authenticate_devices/what_is_authenticate_devices)、[设备连接](../device_develop_guide/connecting_devices)机制
+- 支持原生的Linux、RTOS(FreeRTOS)的移植
+- 支持文件上传功能
 - 支持OTA升级功能
 - 支持设备影子功能
 - 支持物模型功能
@@ -53,6 +56,13 @@ UCloud IoT通信云平台为海量设备上报数据、控制设备提供安全�
 OTA可以帮助用户管理设备的版本信息，提供可视化的版本分布分析。
 
 用户可以管理不同产品的多个版本，手动或者批量升级指定的设备到指定的版本。
+
+
+
+## 文件上传
+
+提供文件上传管理的功能。文件上传可以帮助视频复核的视频文件、历史记录或打包数据、离线数据实现数据批量上传，方便云端应用直接消费。
+
 
 
 
