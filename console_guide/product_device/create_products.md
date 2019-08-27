@@ -45,7 +45,7 @@
 - 产品名称及描述：创建产品时定义的产品名称及产品描述；
 - 产品序列号：产品序列号为系统随机生成的唯一的16位字符串，用户[设备注册](../../device_develop_guide/authenticate_devices/what_is_authenticate_devices)时使用；
 - 产品密钥：产品密钥用于批量创建设备时使用，参考[动态注册设备](../../device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication)；
-- 产品类型：产品有和网关两种类型，网关暂不支持；
+- 产品类型：产品有设备和网关两种类型，网关暂不支持；
 - 是否接入网关：该设备是否以子设备的形式接入网关，当前还不支持网关；
 - 产品发布状态：产品一旦发布将不能修改物模型、Topic；
 - 创建时间：创建该产品的时间；

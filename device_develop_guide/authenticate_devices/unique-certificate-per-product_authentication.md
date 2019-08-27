@@ -4,13 +4,13 @@
 
 动态注册也叫做一型一密，一型一密是指同一个产品下的设备激活时使用产品公共的凭证（`产品序列号`，`产品密码`）进行连接，然后再获取`设备密码`。
 
-获取到`设备密码`后，设备将`设备密码`保存到不易失存储中，然后使用取得的`密码密码`按照[静态注册](unique-certificate-per-device_authentication)的流程完成动态激活认证。      
+获取到`设备密码`后，设备将`设备密码`保存到不易失存储中，然后使用取得的`设备密码`按照[静态注册](unique-certificate-per-device_authentication)的流程完成动态激活认证。      
 
 
 
 ## 操作步骤：
 
-1. 参考云平台操作指南，[创建产品](../../console_guide/product_device/create_products)，[动态注册设备](../../console_guide/product_device/create_products)，打开<动态注册>开关；
+1. 参考云平台操作指南，[创建产品](../../console_guide/product_device/create_products)，打开<动态注册>开关；
 
 2. 参考[产品详情页](../../console_guide/product_device/create_products#产品详情)，打开或关闭<预认证>开关；
 
@@ -58,7 +58,7 @@
 
 
 
-![动态注册](../../images/动态注册-3503493.png)
+![动态注册](../../images/动态注册.png)
 
 ![](../../images/手动生成.png)
 

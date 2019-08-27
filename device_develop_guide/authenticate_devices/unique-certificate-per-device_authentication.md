@@ -29,7 +29,7 @@
    ---|---
    ClientID | ${ProductSN}.${DeviceSN}<br>举例：70ly1tvowt696r15.aruidyl0rt9tuvod
    UserName | ${ProductSN}\|${DeviceSN}\|${authmode}<br>举例：70ly1tvowt696r15\|aruidyl0rt9tuvod\|1<br>authmode: 1 表示静态注册；2表示动态注册
-   Password | ${DevSecret}<br>举例：hly3dk1u5y8fq0b9
+   Password | ${DeviceSecret}<br>举例：hly3dk1u5y8fq0b9
 
-3. 参考[下一节设备连接]()将设备接入到物联网平台；
+3. 参考[下一节设备连接](../connecting_devices)将设备接入到物联网平台；
 
