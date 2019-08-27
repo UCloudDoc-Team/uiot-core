@@ -31,13 +31,15 @@ body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","DeviceSecret
 
 **参数说明**
 	
+
 |参数|说明|
 |---|---|
 |Method|请求方法。只支持 POST 方法。|
-|URL|`/auth`，URL 地址|
+|URL|**/auth**，URL 地址|
 |Host|endpoint 地址|
 |Content-Type|body 数据的编码格式。目前只支持 application/json|
 |body|设备认证信息。JSON 数据格式。具体信息，请参见下表 body 参数。|
+
 
 **body参数**
 
@@ -51,13 +53,14 @@ body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","DeviceSecret
 |MD5|是|string|文件的MD5|
 |Content-Type|否|string|上传文件时使用的Content-Type，默认为 text/plain|
 
+
 **返回**
 
 ```
 {
-	"RetCode": 0,
-	"URL": "https://uiotcore-55977351-55738012.cn-sh2.ufileos.com/ProductSN/DeviceSN/fileName",
-	"Authorization": "Ucloud eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJEZXZpY2VTTiI6InRlc3QxIiwiUHJvZHVjdFNOIjoiZzR3ZmFycTMweXp4YXkyMyIsImV4cCI6MTU2NzA1ODg5OSwiaWF0IjoxNTY2NDU0MDk5fQ.wN1XNVciI27nTeIqCjbYKdmTaifJrGJm_DmDDpIoabs"
+  "RetCode": 0,
+  "URL": "https://uiotcore-55977351-55738012.cn-sh2.ufileos.com/ProductSN/DeviceSN/fileName",
+  "Authorization": "Ucloud eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJEZXZpY2VTTiI6InRlc3QxIiwiUHJvZHVjdFNOIjoiZzR3ZmFycTMweXp4YXkyMyIsImV4cCI6MTU2NzA1ODg5OSwiaWF0IjoxNTY2NDU0MDk5fQ.wN1XNVciI27nTeIqCjbYKdmTaifJrGJm_DmDDpIoabs"
 }
 ```
     
@@ -85,8 +88,8 @@ PUT  HTTP/1.1
 - 其他返回
 
 {
-	"RetCode": 0,
-	"ErrMsg": "xxxxxxxx"
+  "RetCode": 0,
+  "ErrMsg": "xxxxxxxx"
 }
 ```
 
