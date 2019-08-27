@@ -48,7 +48,7 @@ Host: http-cn-sh2.iot.ucloud.cn
 Content-Type: application/json
 Authorization: 47b0194e52ed1d1630830b66709b906a1e201ba410101cfaf9381bbde53a0d85
 body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","Timestamp":"1501668289957"}
-``` 
+```
 
 
 **参数说明**
