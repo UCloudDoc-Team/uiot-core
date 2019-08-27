@@ -75,7 +75,7 @@ PUT  HTTP/1.1
 |参数|说明|
 |---|---|
 |Method|请求方法。只支持 PUT 方法。|
-|URL|`url`，请求上传文件返回的 URL 地址|
+|URL|**url**，请求上传文件返回的 URL 地址|
 |Content-Type|文件数据的编码格式。若请求为空，则为text/plain|
 |body|设备需要上传的文件。|
 
