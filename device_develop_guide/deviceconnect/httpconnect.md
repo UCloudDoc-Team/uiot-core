@@ -53,6 +53,7 @@ body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","Timestamp":"
 
 **参数说明**
 
+
 |参数|说明|
 |---|---|
 |Method|请求方法。只支持 POST 方法。|
@@ -62,13 +63,16 @@ body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","Timestamp":"
 |Authorization|使用设备密码签名。签名计算格式为 `HMAC-SHA256(DeviceSecret, body)`|
 |body|设备认证信息。JSON 数据格式。具体信息，请参见下表 body 参数。|
 
+
 **body 参数**
+
 
 |参数名称|必选|类型|描述|
 |---|---|---|---|
 |ProductSN|是|string|产品序列号|
 |DeviceSN|是|string|设备序列号|
 |Timestamp|否|int64|时间戳（如填写时间误差不超过 3600 秒）|
+
 
 **返回参数**
 
@@ -109,7 +113,9 @@ Content-Type: application/octet-stream
 body: ${your_data}
 ```
 
+
 **参数说明**
+
 
 |参数|说明|
 |---|---|
@@ -120,7 +126,9 @@ body: ${your_data}
 |Password|放在Header中的参数，取值为调用设备认证接口 auth 返回的 token 值。|
 |body|发往 ${topic} 的数据内容，长度不超过 128 KB。|
 
+
 **返回参数**
+
 
 ```
 {
@@ -131,6 +139,7 @@ body: ${your_data}
 ```
 
 **错误码**
+
 
 |RetCode|Message|备注|
 |---|---|---|
