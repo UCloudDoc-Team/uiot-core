@@ -9,6 +9,7 @@
 ## 文件上传注意事项
 
 - 使用HTTPS协议，支持TLS V1.2版本；
+
 - CA证书为国际授信的域名证书，也可以直接下载[CA证书](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)；
 
 
@@ -19,71 +20,73 @@
 
 1. 获取上传文件目标URL；
 
-	设备端HTTP请求获取上传文件的目标URL以及上传文件的Authorization
+设备端HTTP请求获取上传文件的目标URL以及上传文件的Authorization
 
-	 ```
-	 POST //api/v1/url HTTP/1.1
-	 Host: file-cn-sh2.iot.ucloud.cn
-	 Content-Type: application/json
-	 body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","DeviceSecret":"tepfnobkoyl4qgov","FileName":"file1.txt","FileSize":102654,"MD5":"dddddd","Content-Type":"text/plain"}
-	 ```
+```
+POST //api/v1/url HTTP/1.1
+Host: file-cn-sh2.iot.ucloud.cn
+Content-Type: application/json
+body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","DeviceSecret":"tepfnobkoyl4qgov","FileName":"file1.txt","FileSize":102654,"MD5":"dddddd","Content-Type":"text/plain"}
+```
 
-	**参数说明**
+**参数说明**
 	
-	 |参数|说明|
-	 |---|---|
-	 |Method|请求方法。只支持 POST 方法。|
-	 |URL|`/auth`，URL 地址|
-	 |Host|endpoint 地址|
-	 |Content-Type|body 数据的编码格式。目前只支持 application/json|
-	 |body|设备认证信息。JSON 数据格式。具体信息，请参见下表 body 参数。|
+|参数|说明|
+|---|---|
+|Method|请求方法。只支持 POST 方法。|
+|URL|`/auth`，URL 地址|
+|Host|endpoint 地址|
+|Content-Type|body 数据的编码格式。目前只支持 application/json|
+|body|设备认证信息。JSON 数据格式。具体信息，请参见下表 body 参数。|
 
-	**body参数**
+**body参数**
 
-     |参数名称|必选|类型|描述|
-     |---|---|---|---|
-     |ProductSN|是|string|产品序列号|
-     |DeviceSN|是|string|设备序列号|
-     |DeviceSecret|是|string|设备密码|
-     |FileName|是|string|文件名称|
-     |FileSize|是|int|文件大小|
-     |MD5|是|string|文件的MD5|
-     |Content-Type|否|string|上传文件时使用的Content-Type，默认为 text/plain|
+|参数名称|必选|类型|描述|
+|---|---|---|---|
+|ProductSN|是|string|产品序列号|
+|DeviceSN|是|string|设备序列号|
+|DeviceSecret|是|string|设备密码|
+|FileName|是|string|文件名称|
+|FileSize|是|int|文件大小|
+|MD5|是|string|文件的MD5|
+|Content-Type|否|string|上传文件时使用的Content-Type，默认为 text/plain|
 
-	**返回**
+**返回**
 
-	 ```
-	 {
-	 	"RetCode": 0,
-	 	"URL": "https://uiotcore-55977351-55738012.cn-sh2.ufileos.com/ProductSN/DeviceSN/fileName",
-	 	"Authorization": "Ucloud eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJEZXZpY2VTTiI6InRlc3QxIiwiUHJvZHVjdFNOIjoiZzR3ZmFycTMweXp4YXkyMyIsImV4cCI6MTU2NzA1ODg5OSwiaWF0IjoxNTY2NDU0MDk5fQ.wN1XNVciI27nTeIqCjbYKdmTaifJrGJm_DmDDpIoabs"
-	 }
-	 ```
+```
+{
+	"RetCode": 0,
+	"URL": "https://uiotcore-55977351-55738012.cn-sh2.ufileos.com/ProductSN/DeviceSN/fileName",
+	"Authorization": "Ucloud eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJEZXZpY2VTTiI6InRlc3QxIiwiUHJvZHVjdFNOIjoiZzR3ZmFycTMweXp4YXkyMyIsImV4cCI6MTU2NzA1ODg5OSwiaWF0IjoxNTY2NDU0MDk5fQ.wN1XNVciI27nTeIqCjbYKdmTaifJrGJm_DmDDpIoabs"
+}
+```
     
 2. 设备根据URL和Authorization上传文件；
 
-	 ```
-	 PUT  HTTP/1.1
-	 ```
+```
+PUT  HTTP/1.1
+```
 
-	**参数说明**
+**参数说明**
 
-	 |参数|说明|
-	 |---|---|
-	 |Method|请求方法。只支持 PUT 方法。|
-	 |URL|`url`，请求上传文件返回的 URL 地址|
-	 |Content-Type|文件数据的编码格式。若请求为空，则为text/plain|
-	 |body|设备需要上传的文件。|
+|参数|说明|
+|---|---|
+|Method|请求方法。只支持 PUT 方法。|
+|URL|`url`，请求上传文件返回的 URL 地址|
+|Content-Type|文件数据的编码格式。若请求为空，则为text/plain|
+|body|设备需要上传的文件。|
 
 
-	**返回参数**
+**返回参数**
 
-	 ```
-	 - 200 时返回空json
-	 - 其他返回
-	 {
-	 	"RetCode": 0,
-	 	"ErrMsg": "xxxxxxxx"
-	 }
-	 ```
+```
+- 200 时返回空json
+
+- 其他返回
+
+{
+	"RetCode": 0,
+	"ErrMsg": "xxxxxxxx"
+}
+```
 
