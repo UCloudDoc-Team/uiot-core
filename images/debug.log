@@ -1,3 +1,10 @@
 [0827/100422:INFO:exception_record.cc(518)] [QB]Process ID: 25080 Type: 2
 [0827/100424:ERROR:waituntilobserver.cpp(144)] NOT IMPLEMENTED
 [0827/130203:INFO:exception_record.cc(518)] [QB]Process ID: 24068 Type: 2
+[0827/193823:WARNING:webmediaplayer_impl.cc(341)] Using MultibufferDataSource
+[0827/231929:INFO:exception_record.cc(518)] [QB]Process ID: 25716 Type: 2
+[0827/232236:INFO:exception_record.cc(518)] [QB]Process ID: 26228 Type: 2
+[0827/234134:INFO:exception_record.cc(518)] [QB]Process ID: 17216 Type: 2
+[0827/234320:INFO:exception_record.cc(518)] [QB]Process ID: 25828 Type: 2
+[0827/234640:INFO:exception_record.cc(518)] [QB]Process ID: 2648 Type: 2
+[0828/115351:INFO:exception_record.cc(518)] [QB]Process ID: 22644 Type: 2
