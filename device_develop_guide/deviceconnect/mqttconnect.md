@@ -19,7 +19,7 @@ MQTT协议（Message Queuing Telemetry Transport），叫做遥信消息队列�
 
 
 
-# 具体流程：
+## 具体流程：
 
 MQTT-TCP连接需要先了解[设备注册](../device_develop_guide/authenticate_devices/what_is_authenticate_devices)中提到的静态注册和动态注册，获取 `ClientID`，`UserName`，`Password`。
 1. MQTT-TCP如需使用TLS加密传输，需要[下载根证书](http://uiot.cn-sh2.ufileos.com/ca-cert.pem)；
@@ -37,7 +37,7 @@ MQTT-TCP连接需要先了解[设备注册](../device_develop_guide/authenticate
 
 
 
-## 消息上行及下行
+### 消息上行及下行
 
 设备连接成功后即可订阅或发布消息，物联网平台支持
 - 自定义Topic，参考[用户自定义Topic](../console_guide/product_device/topic#用户自定义Topic)；

@@ -48,7 +48,7 @@
      |FileName|是|string|文件名称|
      |FileSize|是|int|文件大小|
      |MD5|是|string|文件的MD5|
-     |Content-Type|否|string|上传文件时使用的Content-Type，默认为 text/plain|
+     |Content-Type|否|string|文件数据的编码格式，比如application/zip等。默认为 text/plain|
 
 	**返回**
 
@@ -72,18 +72,33 @@
 	 |---|---|
 	 |Method|请求方法。只支持 PUT 方法。|
 	 |URL|`url`，请求上传文件返回的 URL 地址|
-	 |Content-Type|文件数据的编码格式。若请求为空，则为text/plain|
-	 |body|设备需要上传的文件。|
+	 
+	 **Header参数**
+	 
+	 |参数|说明|必填项|
+	 |---|---|---|
+	 |Authorization|请求上传文件返回的Authorization |必填|
+	 |Content-Type|文件数据的编码格式，比如application/zip等。默认为 text/plain|必填|
+	 |Content-MD5|文件数据的MD5|必填|
+	 
+	 
+	 **Body参数**
+	 
+	 |参数|说明|必填项|
+	 |---|---|---|
+	 |Body|上传文件的数据 | 必填 |
+
 
 
 	**返回参数**
 
 	 ```
-	 - 200 时返回空json
+	 - status为200时返回空json
 	 - 其他返回
 	 {
-	 	"RetCode": 0,
+	 	"RetCode": xxx,
 	 	"ErrMsg": "xxxxxxxx"
 	 }
 	 ```
 
+	其中RetCode参考[UFile 错误码列表](https://docs.ucloud.cn/api/ufile-api/error_code)。
