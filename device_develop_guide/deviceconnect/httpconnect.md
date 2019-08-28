@@ -10,7 +10,7 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 
 ## HTTP连接注意事项
 
-- 仅支持HTTPS协议，TLS为V1.2版本；
+- HTTP接入仅支持HTTPS协议，TLS为V1.2版本；
 
 - CA证书为国际授信的域名证书，也可以直接下载[CA证书](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)；
 
@@ -20,7 +20,7 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 
 - 上报数据请求URL：**https://http-cn-sh2.iot.ucloud.cn/topic/${topic}**。其中**${topic}**的值是指具备发布权限的[Topic](../../console_guide/product_device/topic)。不支持以 ?query_String=xxx 格式传参；
 
-- HTTP接入注册需要已知${DeviceSecret}，不支持使用${ProductSecret}进行注册；
+- HTTP接入注册需要已知**${DeviceSecret}**，不支持使用**${ProductSecret}**进行注册；
 
 - 数据上行传输的数据大小限制为 128 KB；
 
