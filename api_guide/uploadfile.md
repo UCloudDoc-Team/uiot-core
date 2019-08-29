@@ -41,12 +41,10 @@
 
 ```
 https://api.ucloud.cn/?Action=QueryUIoTCoreDeviceFileList
-&Region=cn-zj
-&ProjectId=jBOWQpfe
-&ProductSN=FQWBguZp
-&DeviceSN=mKDypuNP
-&FileName=NIPZVNCf
-&Offset=2
+&Region=cn-sh2
+&ProductSN=s488594zqqrz7v3y
+&DeviceSN=10001
+&Offset=0
 &Limit=9
 ```
 
@@ -92,11 +90,10 @@ https://api.ucloud.cn/?Action=QueryUIoTCoreDeviceFileList
 
 ```
 https://api.ucloud.cn/?Action=GetUIoTCoreDeviceFileURL
-&Region=cn-zj
-&ProjectId=acwOYtPz
-&ProductSN=lDpcgkBp
-&DeviceSN=CwdvwHRj
-&FileName=jwAxNPBI
+&Region=cn-sh2
+&ProductSN=s488594zqqrz7v3y
+&DeviceSN=10001
+&FileName=ota.zip
 ```
 
 ### 响应示例
@@ -132,11 +129,11 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceFileURL
 
 ```
 https://api.ucloud.cn/?Action=DeleteUIoTCoreDeviceFile
-&Region=cn-zj
-&ProjectId=PBJfEFJn
-&ProductSN=bSndazuy
-&DeviceSN=WSHISalB
-&FileName=mvgqJWEf
+&Region=cn-sh2
+&ProductSN=s488594zqqrz7v3y
+&DeviceSN=10001
+&FileName=ota.ziq
+
 ```
 
 ### 响应示例
