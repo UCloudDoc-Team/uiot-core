@@ -48,3 +48,5 @@ MQTT-WebSocket连接需要先了解[设备注册](../device_develop_guide/authen
 使用WebSocket可以便于在WEB浏览器建立MQTT长连接，下载下面的例子双击打开**index.html**可以体验。
 
 [WebSocket Over MQTT WEB页面使用示例下载](http://uiot.cn-sh2.ufileos.com/mqtt_over_ws_tool.zip)。
+
+![WebSocket在线测试工具](../../images/websocket在线测试工具.png)
