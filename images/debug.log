@@ -13,3 +13,28 @@
 [0829/105137:INFO:exception_record.cc(518)] [QB]Process ID: 26224 Type: 2
 [0829/110428:INFO:exception_record.cc(518)] [QB]Process ID: 24952 Type: 2
 [0829/173105:INFO:exception_record.cc(518)] [QB]Process ID: 15884 Type: 2
+[0831/185118:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0831/192840:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0831/192841:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0831/212617:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0831/212618:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0831/215541:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0831/215542:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0831/215735:INFO:exception_record.cc(518)] [QB]Process ID: 8652 Type: 2
+[0831/215736:INFO:http_cache_transaction.cc(72)] IgnoreZeroCacheError: 0
+[0831/220101:INFO:exception_record.cc(518)] [QB]Process ID: 27556 Type: 2
+[0831/220414:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0831/220415:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0831/220947:INFO:exception_record.cc(518)] [QB]Process ID: 11836 Type: 2
+[0831/222917:INFO:exception_record.cc(518)] [QB]Process ID: 22460 Type: 2
+[0901/214430:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0901/214431:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0901/221307:INFO:exception_record.cc(518)] [QB]Process ID: 23424 Type: 2
+[0902/093552:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/093553:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/093553:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/093555:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/093558:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/093558:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/093558:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0902/094635:INFO:exception_record.cc(518)] [QB]Process ID: 18576 Type: 2
