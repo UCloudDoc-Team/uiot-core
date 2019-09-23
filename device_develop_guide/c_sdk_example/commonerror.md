@@ -1,10 +1,10 @@
-{{indexmenu_n>7}}
+{{indexmenu_n>8}}
 
 # 常见问题
 
 ## 编译问题
 
-##### 编译出现**undefined reference**错误
+#### 1. 编译出现undefined reference错误
 
 ```
 [CC] HAL_OS_linux.o                     <= HAL_OS_linux.c                                    
@@ -27,7 +27,7 @@ make: *** [mqtt_sample] Error 1
 
 **解决方法**
 
-修改文件：**${SDK_DIR}/tools/scripts/parse_make_settings.mk**
+修改文件：**./tools/scripts/parse_make_settings.mk**
 
 
 将line32,35
@@ -48,7 +48,7 @@ CFLAGS  += -DENABLE_LOG_DEBUG -DENABLE_IOT_TRACE -lrt
 endif
 ```
 
-#### 编译出现**g++ not found**错误
+#### 2. 编译出现g++ not found错误
 
 ```
 [AR] libiot_platform.a                  <= HAL_OS_linux.o                                    
@@ -68,9 +68,10 @@ ARM平台使用交叉编译时，需要添加编译器。
 由于SDK使用了googletest框架作为用例测试，而googletest使用的是C++编写的，所以需要C++编译器。
 
 **解决方法**
+
 关闭googletest模块；
 
-修改**${SDK_DIR}/make.settings**
+修改文件：  **./make.settings**
 
 
 将line24
@@ -86,7 +87,7 @@ FEATURE_SDK_TESTS_ENABLED               = n     # 是否打开SDK测试用例编
 ```
 
 
-#### 编译出现**C99**错误
+#### 3. 编译出现**C99**错误
 
 ```
 [CC] mqtt_client_common.o               <= mqtt_client_common.c                                    
@@ -106,12 +107,12 @@ make: *** [/root/ucloud/ucloud-iot-device-sdk-c/src/mqtt/src/mqtt_client_common.
 
 添加C99支持。
 
-修改**${SDK_DIR}/make.settings**
+修改文件：  **./tools/scripts/parse_make_settings.mk**
 
 将line32,35
 
 ```
-CFLAGS  += -std=gnu99 -DFORCE_SSL_VERIFY -DENABLE_LOG_ERR -DENABLE_LOG_WARN -DENABLE_LOG_INFO
+CFLAGS  += -DFORCE_SSL_VERIFY -DENABLE_LOG_ERR -DENABLE_LOG_WARN -DENABLE_LOG_INFO
 ifeq (debug,$(strip $(BUILD_TYPE)))
 CFLAGS  += -DENABLE_LOG_DEBUG -DENABLE_IOT_TRACE
 endif
