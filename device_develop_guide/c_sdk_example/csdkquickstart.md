@@ -70,7 +70,7 @@ C-SDK支持 **GNU Make** 及 **CMake** 构建，开发者可以选择自己熟�
 
 HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关于线程、内存、Timer、TCP的操作。UCloud IoT C-SDK已经实现了linux、FreeRTOS下的HAL层实现。
 
-本例以linux平台为例，实现HAL接口HAL_Printf：**./platform/os/linux/HAL_OS_linux.c**。
+本例以linux平台为例，实现HAL接口HAL\_Printf：**./platform/os/linux/HAL_OS_linux.c**。
 
 
 ```
@@ -84,7 +84,7 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
   }
 ```
 
-2\. 获取产品序列号、设备序列号、设备密钥，通过C-SDK接入UIoT-Core。
+2\. 获取产品序列号、设备序列号、设备密钥，通过C-SDK接入UIoT-Core。  
 
 
 
