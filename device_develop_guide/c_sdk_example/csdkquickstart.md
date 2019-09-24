@@ -70,7 +70,7 @@ C-SDK支持 **GNU Make** 及 **CMake** 构建，开发者可以选择自己熟�
 
 HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关于线程、内存、Timer、TCP的操作。UCloud IoT C-SDK已经实现了linux、FreeRTOS下的HAL层实现。
 
-本例以linux平台为例，实现HAL接口HAL\_Printf：**./platform/os/linux/HAL_OS_linux.c**。
+本例以linux平台为例，实现HAL接口HAL\_Printf：**./platform/os/linux/HAL\_OS\_linux.c**。
 
 
 ```
@@ -162,6 +162,7 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
 	
 	注：本例中设备端获取到云端设置的期望值后，仅做打印处理。
 
+
 ```
   // 创建回调函数
    /* 云端设置期望值后的回调函数 */
@@ -188,7 +189,8 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
 	通过设备影子上报属性值，详情可以参考[设备端上报状态更新设备影子](../../console_guide/device_shadow/operation_guide#设备端上报状态更新设备影子)。
 	
 	设备影子上报属性后，云平台会给出响应，SDK需要设置对应的回调函数处理响应结果。
-	
+
+
 ```
   /* 收到云平台响应后的回调函数 */
   static void _update_ack_cb(void *pClient, Method method, RequestAck requestAck, const char *pReceivedJsonDocument, void *pUserdata)
@@ -230,7 +232,8 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
     设备由于网络不稳定或者设备复位导致设备与云平台失去连接，此时如果云平台对设备进行期望设置，设置值将会暂存在云端的设备影子中。
 	
 	设备再次上线后，需要先和云平台做一次同步，获取设备影子最新状态，具体参考[设备端获取设备影子文档](../../console_guide/device_shadow/operation_guide#设备端获取设备影子文档)。
-	
+
+
 ```
   /* 收到云平台响应后的回调函数 */
   static void _update_ack_cb(void *pClient, Method method, RequestAck requestAck, const char *pReceivedJsonDocument, void *pUserdata)
