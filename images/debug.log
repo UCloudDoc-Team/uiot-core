@@ -94,3 +94,4 @@
 [0923/125446:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
 [0923/125446:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
 [0923/125526:INFO:exception_record.cc(518)] [QB]Process ID: 18908 Type: 2
+[0923/172908:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
