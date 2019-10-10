@@ -26,12 +26,11 @@ Body:
 {
 	"Action": "SendUIoTCoreDeviceCommand",
 	"ProductSN": "70ly1tvowt696r15",
-	"DeviceSN":"00:14:32:e1:72:f1
-",
- "Identifier": "commandIdentifier",
+	"DeviceSN":"00:14:32:e1:72:f1",
+ 	"Identifier": "commandIdentifier",
 	"Input": "eyJpbnB1dDEiOiJpbnB1dFZhbHVlMSJ9", //base64Encode({"input1":"inputValue1"})
 	"Method": "sync",
-"Timeout": 5,
+	"Timeout": 5,
 	"ProjectId": "org-z44lmf12e",
 	"PublicKey": "CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTK   Cmh7Bp5W1UH64D/O",
 	"Region": "cn-sh2",
@@ -121,12 +120,11 @@ Body:
 {
 	"Action": "SendUIoTCoreDeviceCommand",
 	"ProductSN": "70ly1tvowt696r15",
-	"DeviceSN":"00:14:32:e1:72:f1
-",
- "Identifier": "commandIdentifier",
+	"DeviceSN":"00:14:32:e1:72:f1",
+ 	"Identifier": "commandIdentifier",
 	"Input": "eyJpbnB1dDEiOiJpbnB1dFZhbHVlMSJ9", //base64Encode({"input1":"inputValue1"})
 	"Method": "async",
-"Timeout": 5, // 异步调用时，该参数无效
+	"Timeout": 5, // 异步调用时，该参数无效
 	"ProjectId": "org-z44lmf12e",
 	"PublicKey": "CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTK   Cmh7Bp5W1UH64D/O",
 	"Region": "cn-sh2",
