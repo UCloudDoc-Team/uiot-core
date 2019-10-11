@@ -13,7 +13,7 @@
 3. 创建产品  
 
    - 根据[创建产品](../console_guide/product_device/create_products)文档说明及页面提示，点击<创建产品>，创建一个产品，命名为智能空调，点击<确定>；
-   - 创建完成后，点击产品的详情，可以对产品进行相应的配置，具体参考[创建产品]()详细说明。
+   - 创建完成后，点击产品的详情，可以对产品进行相应的配置，具体参考[创建产品](../console_guide/product_device/create_products)详细说明。
    
    ![添加产品](../images/添加产品.png)
 
@@ -44,14 +44,14 @@
 
 1. 下载[设备端C-SDK](https://github.com/ucloud/ucloud-iot-device-sdk-c)，详细可以参考[C-SDK使用参考](../device_develop_guide/c_sdk_example/csdkquickstart)。
 
-2. 修改代码`sample/mqtt/mqtt_example.c`
+2. 修改代码`sample/mqtt/mqtt_sample.c`
 
    - 修改设备密钥包含：`产品序列号` `设备序列号` `设备密码`
    
      ```
-     #define PRODUCTSN      "70ly1tvowt696r15"     //修改为需要测试的产品序列号
-     #define DEVICESN      "aruidyl0rt9tuvod"      //修改为需要测试的设备序列号
-     #define DEVICESECRET    "imwku9r4jy7jwcip"    //修改为需要测试的设备密码
+     #define UIOT_MY_PRODUCT_SN      "70ly1tvowt696r15"     //修改为需要测试的产品序列号
+     #define UIOT_MY_DEVICE_SN      "aruidyl0rt9tuvod"      //修改为需要测试的设备序列号
+     #define UIOT_MY_DEVICE_SECRET    "imwku9r4jy7jwcip"    //修改为需要测试的设备密码
      ...
      //static int sg_count = 0;   // 注释该行，替换成温度和湿度变量
      static int temperture = 0; //添加温度值变量
@@ -137,7 +137,7 @@
 
      注：实际开发中可以通过规则引擎将自定义Topic上发的数据流转到UHost/MQ/MySQL等进行消费，详细参考[规则引擎](../console_guide/ruleengine/data_forwarding)。
 
-3. 编译生成可执行文件`mqtt_example`
+3. 编译生成可执行文件`mqtt_sample`
 
      ```
      make clean
@@ -147,7 +147,7 @@
 4. 执行可执行文件
 
      ```
-     ./output/release/bin/mqtt_example
+     ./output/release/bin/mqtt_sample
      ```
 
 5. 查看日志
