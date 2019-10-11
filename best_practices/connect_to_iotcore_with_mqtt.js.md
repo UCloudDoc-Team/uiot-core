@@ -7,7 +7,9 @@
 
 本实践介绍一个完整的利用WebSocket的接入方式实现应用程序与设备的消息上报和下发，详细参考[基于MQTT-WebSocket协议建立连接](../device_develop_guide/deviceconnect/websocketconnect)。
 
-使用WebSocket可以直接[下载以下源文件](http://uiot.cn-sh2.ufileos.com/mqtt_over_ws_tool.zip)进行测试，示例界面如下：
+使用WebSocket可以直接下载以下源文件进行测试，示例界面如下：
+
+[代码源文件下载](http://uiot.cn-sh2.ufileos.com/mqtt_over_ws_tool.zip)
 
 ![WebSocket在线测试工具](../../images/websocket在线测试工具.png)
 
