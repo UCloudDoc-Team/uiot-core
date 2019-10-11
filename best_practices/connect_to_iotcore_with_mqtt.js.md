@@ -80,10 +80,13 @@ client.on('reconnect', (error) => {
 
 上面代码中连接地址为：**(d.SSL == "true" ? "wss://" : "ws://") + d.Address + ":" + d.Port**
 
-即 协议/\/域名:端口
-协议：使用SSL为wss，反之ws；
-域名：mqtt-cn-sh2.iot.ucloud.cn
-端口：wss为443，ws为80
+即 协议/ /域名:端口
+
+- 协议：使用SSL为wss，反之ws；
+
+- 域名：mqtt-cn-sh2.iot.ucloud.cn
+
+- 端口：wss为443，ws为80
 
 
 #### 连接选项
