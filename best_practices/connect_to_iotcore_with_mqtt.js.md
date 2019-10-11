@@ -5,7 +5,7 @@
 对于web即时聊天或者棋类对决等需要实时推送消息给对方的应用，需要建立WEB客户端与服务器的长连接，完成消息的接收与发送。
 
 
-本实践介绍一个完整的利用WebSocket的接入方式实现应用程序与设备的消息上报和下发，详细参考[基于MQTT-WebSocket协议建立连接](../device_develop_guide/deviceconnect/websocketconnect)。
+本实践介绍如何基于WebSocket-MQTT实现应用程序与浏览器的消息上报和下发，详细参考[基于MQTT-WebSocket协议建立连接](../device_develop_guide/deviceconnect/websocketconnect)。
 
 使用WebSocket可以直接下载以下源文件进行测试，示例界面如下：
 
@@ -80,7 +80,7 @@ client.on('reconnect', (error) => {
 
 上面代码中连接地址为：**(d.SSL == "true" ? "wss://" : "ws://") + d.Address + ":" + d.Port**
 
-即 协议\/\/域名:端口
+即 协议\//域名:端口
 协议：使用SSL为wss，反之ws；
 域名：mqtt-cn-sh2.iot.ucloud.cn
 端口：wss为443，ws为80
