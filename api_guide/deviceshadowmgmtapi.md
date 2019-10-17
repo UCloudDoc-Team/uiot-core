@@ -49,7 +49,7 @@ https://api.ucloud.cn/?Action=EnableUIoTCoreDeviceShadow
 ### 请求参数
 |Parameter name|Type|Description|Required|
 |------|------|--------|----:|
-|Region|string|地域。 参见 [地域和可用区列表](../summary/regionlist.html)|**Yes**|
+|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
 |ProductSN|string|产品ID|**Yes**|
 
 
