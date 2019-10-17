@@ -133,3 +133,4 @@ SQL表达式可以使用函数来优化我们的SQL语句，使得消息筛选�
 |tanh(n)	|返回n值的双曲正切（hyperbolic tangent）。|√|×|
 |topic(number)	 |返回Topic分段信息。<br>如，有一个Topic： /abcdef/ghi。使用函数 topic()，则 返回 "/abcdef/ghi"； 使用 topic(1)，则 返回 "abcdef" ； 使用 topic(2) ，则返回 "ghi"。|√|√|
 |upper(string)	|返回大写字符。|√|√|
+|to_base64()|当原始Payload数据为二进制数据时，可使用该函数，将所有二进制数据转换成base64String。|√|√|
