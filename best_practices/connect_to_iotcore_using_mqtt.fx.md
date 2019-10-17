@@ -28,13 +28,13 @@ DeviceSecret：6g7tjlekwf3sqqqj
 |UserName | `ledubff3z85spjmu|h9onxtzw0aep7fsr|1` `规则：${ProductSN}|${DeviceSN}|${authmode}` `authmode: 1表示静态注册；2表示动态注册`|
 |Password | `6g7tjlekwf3sqqqj` `规则：${DeviceSecret}`|
 
-2）参考[设备连接](../device_develop_guide/connecting_devices\#设备连接)，获取MQTT Broker连接域名和TLS CA证书：
+2）参考[设备连接](../device_develop_guide/deviceconnect/mqttconnect)，获取MQTT Broker连接域名和TLS CA证书：
 
 |Broker参数| 参数值|
 |---|---|
 |Broker Address | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，目前仅在上海Region开放）|
 |Broker Port | 1883或8883(使用TLS)|
-|TLS(CA Certificate file) |[CA根证书 下载地址](http://uiot.cn-sh2.ufileos.com/uiot_ca.pem)|
+|TLS(CA Certificate file) |[CA根证书 下载地址](http://uiot.cn-sh2.ufileos.com/ca-cert.pem)|
 
 3）打开MQTT.fx软件，连接成功
 
@@ -55,6 +55,72 @@ DeviceSecret：6g7tjlekwf3sqqqj
 -  输入TLS证书（使用1883端口，即不使用TLS加密，跳过此步）：
 
 ![TLS证书](../images/TLS证书.png)
+
+
+
+## 通过自定义Topic
+
+自定义Topic的具体详情参考[用户自定义Topic](../console_guide/product_device/topic)，创建上行和下行两个自定义Topic为：
+
+|Topic | 权限|描述|
+|---|---|---|
+|/ledubff3z85spjmu/h9onxtzw0aep7fsr/uplink |发布|上行消息|
+|/ledubff3z85spjmu/h9onxtzw0aep7fsr/downlink | 订阅| 下行消息|
+
+### 上行测试
+
+1\. 在MQTT.fx操作界面，点击<Publish>，输入Topic：**/ledubff3z85spjmu/h9onxtzw0aep7fsr/uplink**；
+
+2\. 输入任意内容的Payload：
+
+```
+   {
+     "payload":"uplink-test"
+   }
+```
+
+3\. 在日志里面查看上报成功结果，如图：
+
+![自定义上行](../images/自定义上行.png)
+
+4\. 也可以通过规则引擎M2M、HTTP、MQ等进行消息的接收消费。
+
+### 下行测试
+
+1\. 在MQTT.fx操作界面，点击<Subscribe>，输入Topic：**/ledubff3z85spjmu/h9onxtzw0aep7fsr/downlink**；
+
+![下行订阅](../images/下行订阅.png)
+
+2\. 使用云端API进行调用，参考[PublishUIoTCoreMQTTMessage](../api_guide/messagemgmtapi)发送下行消息。
+
+UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_guidehelp)，其他参数参考[PublishUIoTCoreMQTTMessage](../api_guide/messagemgmtapi)
+
+```
+POST  HTTP/1.1
+Host: api.ucloud.cn
+Content-Type: application/json
+Body:
+{
+	"Action": "PublishUIoTCoreMQTTMessage",
+	"ProductSN": "ledubff3z85spjmu",
+	"MessageContent": "eyJwYXlsb2FkIjoiZG93bmxpbmstdGVzdCJ9", //base64Encode({"payload":"downlink-test"})
+	"TopicFullName": "/ledubff3z85spjmu/h9onxtzw0aep7fsr/downlink",
+	"ProjectId": "org-z44lmf12e",
+	"PublicKey": "CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTK   Cmh7Bp5W1UH64D/O",
+	"Region": "cn-sh2",
+	"Signature": "2we34r35dc41b434s2d059f642047fd51c2881f"
+}
+```
+
+3\. 在MQTT.fx操作界面看到下发消息；
+
+![自定义下行](../images/自定义下行.png)
+
+4\. 也可以通过日志查看下发成功结果
+
+![自定义下行日志](../images/自定义下行日志.png)
+
+
 
 ## 通过设备影子
 
@@ -139,65 +205,3 @@ Body:
 4\. 也可以在日志里面查看下发成功结果，如图：
 
 ![设备影子下发日志](../images/设备影子下发日志.png)
-
-## 通过自定义Topic
-
-自定义Topic的具体详情参考[用户自定义Topic](../console_guide/product_device/topic)，创建上行和下行两个自定义Topic为：
-
-|Topic | 权限|描述|
-|---|---|---|
-|/ledubff3z85spjmu/h9onxtzw0aep7fsr/uplink |发布|上行消息|
-|/ledubff3z85spjmu/h9onxtzw0aep7fsr/downlink | 订阅| 下行消息|
-
-### 上行测试
-
-1\. 在MQTT.fx操作界面，点击<Publish>，输入Topic：**/ledubff3z85spjmu/h9onxtzw0aep7fsr/uplink**；
-
-2\. 输入任意内容的Payload：
-
-```
-   {
-     "payload":"uplink-test"
-   }
-```
-
-3\. 在日志里面查看上报成功结果，如图：
-
-![自定义上行](../images/自定义上行.png)
-
-4\. 也可以通过规则引擎M2M、HTTP、MQ等进行消息的接收消费。
-
-### 下行测试
-
-1\. 在MQTT.fx操作界面，点击<Subscribe>，输入Topic：**/ledubff3z85spjmu/h9onxtzw0aep7fsr/downlink**；
-
-![下行订阅](../images/下行订阅.png)
-
-2\. 使用云端API进行调用，参考[PublishUIoTCoreMQTTMessage](../api_guide/messagemgmtapi)发送下行消息。
-
-UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_guidehelp)，其他参数参考[PublishUIoTCoreMQTTMessage](../api_guide/messagemgmtapi)
-
-```
-POST  HTTP/1.1
-Host: api.ucloud.cn
-Content-Type: application/json
-Body:
-{
-	"Action": "PublishUIoTCoreMQTTMessage",
-	"ProductSN": "ledubff3z85spjmu",
-	"MessageContent": "eyJwYXlsb2FkIjoiZG93bmxpbmstdGVzdCJ9", //base64Encode({"payload":"downlink-test"})
-	"TopicFullName": "/ledubff3z85spjmu/h9onxtzw0aep7fsr/downlink",
-	"ProjectId": "org-z44lmf12e",
-	"PublicKey": "CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTK   Cmh7Bp5W1UH64D/O",
-	"Region": "cn-sh2",
-	"Signature": "2we34r35dc41b434s2d059f642047fd51c2881f"
-}
-```
-
-3\. 在MQTT.fx操作界面看到下发消息；
-
-![自定义下行](../images/自定义下行.png)
-
-4\. 也可以通过日志查看下发成功结果
-
-![自定义下行日志](../images/自定义下行日志.png)

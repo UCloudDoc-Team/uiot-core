@@ -30,7 +30,7 @@ MQTT协议（Message Queuing Telemetry Transport），叫做遥信消息队列�
 
 ## 具体流程：
 
-MQTT-WebSocket连接需要先了解[设备注册](../device_develop_guide/authenticate_devices/what_is_authenticate_devices)中提到的静态注册和动态注册，获取 **ClientID**，**UserName**，**Password**。
+MQTT-WebSocket连接需要先了解[设备注册](../authenticate_devices/what_is_authenticate_devices)中提到的静态注册和动态注册，获取 **ClientID**，**UserName**，**Password**。
 
 1\. MQTT-WebSocket如需使TLS加密传输，使用国际授信TLS根证书，浏览器可以直接使用，也可以从这里[下载CA证书](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)；
 
@@ -43,7 +43,7 @@ MQTT-WebSocket连接需要先了解[设备注册](../device_develop_guide/authen
 |连接域名 | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，目前仅在上海Region开放）|
 |端口号 |`80` 或 `443(使用TLS)`|
 |可变报头（variable header）：Keep Alive  |  Connect指令中需包含Keep Alive（保活时间）。 取值范围为30至1200秒。如取值不在此区间，平台拒绝连接。建议取值300秒以上，如网络不稳定，设置高一些。|
-|MQTT的Connect报文参数|参考[静态注册](../device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication)和[动态注册](../device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication)  ** 以静态注册为例：**```ClientID：${ProductSN}.${DeviceSN}``` ```UserName：${ProductSN}|${DeviceSN}|${authmode}``` ```authmode: 静态注册为1；动态注册为2``` ``` Password：${DeviceSecret}```|
+|MQTT的Connect报文参数|参考[静态注册](../authenticate_devices/unique-certificate-per-device_authentication)和[动态注册](../authenticate_devices/unique-certificate-per-product_authentication)  ** 以静态注册为例：**```ClientID：${ProductSN}.${DeviceSN}``` ```UserName：${ProductSN}|${DeviceSN}|${authmode}``` ```authmode: 静态注册为1；动态注册为2``` ``` Password：${DeviceSecret}```|
 
 4\. 连接成功后需要定期发送心跳包保活，设备端在保活时间间隔内，至少需要发送一次报文，如果物联网平台在该间隔内无法收到任何报文，物联网平台会断开连接，设备端需要进行重连。
 
