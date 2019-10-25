@@ -1,4 +1,4 @@
-
+{{indexmenu_n>2}}
 
 # API列表
 
@@ -89,13 +89,5 @@
 |ModifyUIoTCoreRuleAction | 修改规则Action|
 |DeleteUIoTCoreRuleAction | 删除规则Action|
 
-
-## 上传文件
-
-|API名称 | 描述|
-|---|---|
-|QueryUIoTCoreDeviceFileList | 查询设备上传的文件列表|
-|GetUIoTCoreDeviceFileURL | 获取设备文件的下载链接，有效期30分钟|
-|DeleteUIoTCoreDeviceFile | 删除设备文件|
 
 

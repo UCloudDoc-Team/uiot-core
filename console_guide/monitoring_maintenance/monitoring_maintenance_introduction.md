@@ -1,4 +1,4 @@
-
+{{indexmenu_n>1}}
 
 
 # 概述
@@ -14,12 +14,8 @@
 
 
 ## 操作步骤
-
 1. [注册](https://passport.ucloud.cn/#register)UCloud云服务，如已注册请直接第2步；
-
 2. 登录进入UCloud[物联网平台](https://console.ucloud.cn/uiot)；
-
 3. 依次点击不同的标签，查看<监控视图>，查看<日志管理>，查看<设备调试>；
-
 
 ![监控日志和调试](../../images/监控日志和调试.png)

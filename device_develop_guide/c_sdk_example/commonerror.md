@@ -1,4 +1,4 @@
-
+{{indexmenu_n>8}}
 
 # 常见问题
 
@@ -68,7 +68,6 @@ ARM平台使用交叉编译时，需要添加编译器。
 由于SDK使用了googletest框架作为用例测试，而googletest使用的是C++编写的，所以需要C++编译器。
 
 **解决方法**
-
 关闭googletest模块；
 
 修改文件：  **./make.settings**

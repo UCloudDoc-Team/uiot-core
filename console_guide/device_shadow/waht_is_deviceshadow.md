@@ -1,14 +1,11 @@
-
+{{indexmenu_n>1}}
 
 
 # 设备影子简介
-
 设备影子可以理解为是设备在云端的属性缓存。设备上报其属性值到设备影子中，应用服务可以通过设备影子直接获取设备的最后一次更新的属性值，而无需每次访问设备。
 
 设备影子作用：
-
 - 云端应用可以直接获取设备的属性而无需关心设备是否在线；
-
 - 云端应用可以随时下发控制指令给设备，而无需关心设备是否在线。当设备在线时，平台会将设置值推送给设备；如果设备不在线，设备上线的第一时间从云端主动获取设置的属性值。
 
 
@@ -18,41 +15,40 @@
 设备影子示例：
 ```
 {
-  "State": {
-    "Reported": {
-      "humidity": 16,
-      "smoke": 10.5,
-      "temperature": 27
-    },
-    "Desired": {
-      "humidity": 70
-    }
-  },
-  "Metadata": {
-    "Reported": {
-      "humidity": {
-        "Timestamp": 1557222636
-      },
-      "smoke": {
-        "Timestamp": 1557222636
-      },
-      "temperature": {
-        "Timestamp": 1557222636
-      }
-    },
-    "Desired": {
-      "humidity": {
-        "Timestamp": 1557222800
-      }
-    }
-  },
-  "Timestamp": 1557222800,
-  "Version": 3
+	"State": {
+		"Reported": {
+			"humidity": 16,
+			"smoke": 10.5,
+			"temperature": 27
+		},
+		"Desired": {
+		    "humidity": 70
+		}
+	},
+	"Metadata": {
+		"Reported": {
+			"humidity": {
+				"Timestamp": 1557222636
+			},
+			"smoke": {
+				"Timestamp": 1557222636
+			},
+			"temperature": {
+				"Timestamp": 1557222636
+			}
+		},
+		"Desired": {
+		    "humidity": {
+				"Timestamp": 1557222800
+			}
+		}
+	},
+	"Timestamp": 1557222800,
+	"Version": 3
 }
 ```
 
 设备影子的组成：
-
 - **State** 设备的属性值
   - **Reported**  记录设备上报的属性值。具体包含哪些值，由设备自行决定。如果设备不上报，则Reported部分为空。
   - **Desired**   云端应用设置设备期望值。

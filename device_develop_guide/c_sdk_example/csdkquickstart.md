@@ -1,4 +1,4 @@
-
+{{indexmenu_n>1}}
 
 # C-SDK 快速入门
 
@@ -6,8 +6,8 @@
 
 ## 准备开发环境
 
-* 操作系统：**Ubuntu16.04**
-* 必备软件：**make**, **gcc**, **git**, **cmake**
+* 操作系统：`Ubuntu16.04`
+* 必备软件：`make`, `gcc`, `git`, `cmake`
 
 本SDK开发测试均在 64 位 Ubuntu16.04 进行，其他 Linux 版本尚未验证。为避免兼容性问题建议使用相同的编译及运行环境。Windows 环境下，建议使用 WSL(Ubuntu on Windows)。
 
@@ -24,34 +24,31 @@ sudo apt-get install -y build-essential make git gcc cmake
 ```
 git clone https://github.com/ucloud/ucloud-iot-device-sdk-c
 ```
-
 ## 编译及运行
 
-C-SDK支持 **GNU Make** 及 **CMake** 构建，开发者可以选择自己熟悉的编译。
+C-SDK支持 `GNU Make` 及 `CMake` 构建。
 
 ### GNU Make
 
-1\. 通过修改 C-SDK 顶层目录下的 make.settings 文件，配置开启或者关闭特定功能模块
+1. 通过修改 C-SDK 顶层目录下的 make.settings 文件，配置开启或者关闭特定功能模块
+2. 在SDK顶层目录运行如下命令:
 
-2\. 在SDK顶层目录运行如下命令:
+   ```
+   make clean
+   make
+   ```
 
-```
-  make clean
-  make
-```
-
-3\. 编译完成后, 生成的可执行文件在当前目录的 output/release/bin目录下
+3. 编译完成后, 生成的可执行文件在当前目录的 output/release/bin目录下
 
 ### CMake
 
-1\. 在SDK顶层目录运行如下命令:
+1. 在SDK顶层目录运行如下命令:
 
-```
-  cmake . -Bbuild && cd build && make
-```
+   ```
+   cmake . -Bbuild && cd build && make
+   ```
 
-2\. 编译完成后, 生成的可执行文件在当前目录的 build/samples 及 build/tests 目录下
-
+2. 编译完成后, 生成的可执行文件在当前目录的 `build/samples` 及 `build/tests` 目录下
 
 ## 基于C-SDK实现智能手环接入UIoT-Core 
 
@@ -66,11 +63,11 @@ C-SDK支持 **GNU Make** 及 **CMake** 构建，开发者可以选择自己熟�
 
 ### 移植步骤
 
-1\. 基于使用的OS的实现HAL层接口
+1. 基于使用的OS的实现HAL层接口
 
 HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关于线程、内存、Timer、TCP的操作。UCloud IoT C-SDK已经实现了linux、FreeRTOS下的HAL层实现。
 
-本例以linux平台为例，实现HAL接口HAL\_Printf：**./platform/os/linux/HAL\_OS\_linux.c**。
+本例以linux平台为例，实现HAL接口HAL_Printf：`./platform/os/linux/HAL_OS_linux.c`。
 
 
 ```
@@ -84,13 +81,12 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
   }
 ```
 
-2\. 获取产品序列号、设备序列号、设备密钥，通过C-SDK接入UIoT-Core。  
-
-
+2. 获取产品序列号、设备序列号、设备密钥，通过C-SDK接入UIoT-Core。
 
 1) 参考[设备详情](../../console_guide/product_device/create_devcies#设备详情)获取设备三要素；
 
 ![](../../images/快速入门-1.png)
+
 
 
 2) 通过三要素通过[静态注册](../authenticate_devices/unique-certificate-per-device_authentication)接入到UIoT-Core
@@ -156,12 +152,11 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
   }
 ```
 
-3\. 云端修改**行走步数**，设备端进行回调打印
+3. 云端修改`行走步数`，设备端进行回调打印
 
-设备影子是设备端在云平台的缓存，应用程序可以对其属性值进行修改，详情参考[更新设备影子期望值](../../console_guide/device_shadow/operation_guide#应用程序更新设备影子期望值)。
-
-注：本例中设备端获取到云端设置的期望值后，仅做打印处理。
-
+    设备影子是设备端在云平台的缓存，应用程序可以对其属性值进行修改，详情参考[更新设备影子期望值](../../console_guide/device_shadow/operation_guide#应用程序更新设备影子期望值)。
+	
+	注：本例中设备端获取到云端设置的期望值后，仅做打印处理。
 
 ```
   // 创建回调函数
@@ -184,13 +179,12 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
   }
 ```
 
-4\. 设备上报属性值
-
-通过设备影子上报属性值，详情可以参考[设备端上报状态更新设备影子](../../console_guide/device_shadow/operation_guide#设备端上报状态更新设备影子)。
-
-设备影子上报属性后，云平台会给出响应，SDK需要设置对应的回调函数处理响应结果。
-
-
+4. 设备上报属性值
+	
+	通过设备影子上报属性值，详情可以参考[设备端上报状态更新设备影子](../../console_guide/device_shadow/operation_guide#设备端上报状态更新设备影子)。
+	
+	设备影子上报属性后，云平台会给出响应，SDK需要设置对应的回调函数处理响应结果。
+	
 ```
   /* 收到云平台响应后的回调函数 */
   static void _update_ack_cb(void *pClient, Method method, RequestAck requestAck, const char *pReceivedJsonDocument, void *pUserdata)
@@ -227,14 +221,12 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
 ```
 
 
-5\. 与云端同步设备影子
+5. 与云端同步设备影子
 
-
-设备由于网络不稳定或者设备复位导致设备与云平台失去连接，此时如果云平台对设备进行期望设置，设置值将会暂存在云端的设备影子中。
-
-设备再次上线后，需要先和云平台做一次同步，获取设备影子最新状态，具体参考[设备端获取设备影子文档](../../console_guide/device_shadow/operation_guide#设备端获取设备影子文档)。
-
-
+    设备由于网络不稳定或者设备复位导致设备与云平台失去连接，此时如果云平台对设备进行期望设置，设置值将会暂存在云端的设备影子中。
+	
+	设备再次上线后，需要先和云平台做一次同步，获取设备影子最新状态，具体参考[设备端获取设备影子文档](../../console_guide/device_shadow/operation_guide#设备端获取设备影子文档)。
+	
 ```
   /* 收到云平台响应后的回调函数 */
   static void _update_ack_cb(void *pClient, Method method, RequestAck requestAck, const char *pReceivedJsonDocument, void *pUserdata)
@@ -267,8 +259,7 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
 
 ```
 
-6\. 执行结束，释放本地资源
-
+6. 执行结束，释放本地资源
 
 ```
   HAL_Free(property_walk_step);    
@@ -278,8 +269,7 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
 
 ### 执行结果
 
-
-1\. 重新编译并执行
+1. 重新编译并执行
 
 ```
 make clean
@@ -287,33 +277,29 @@ make
 ./output/release/bin/smart_bracelet_walk_step_shadow_sample
 ```
 
-2\. 第一次上线后同步属性值以及上报属性值
+2. 第一次上线后同步属性值以及上报属性值
 
 ![同步上报属性值](../../images/同步上报属性值.png)
 
 
-3\. 参考[设备影子查看与更新](../../console_guide/device_shadow/waht_is_deviceshadow#设备影子查看与更新)更新设备影子期望值。
+3. 参考[设备影子查看与更新](../../console_guide/device_shadow/waht_is_deviceshadow#设备影子查看与更新)更新设备影子期望值。
 
 
 **操作步骤：**
 
 - 点击控制台设备影子页的<编辑>；
 
-
 - 输入Desired的期望值；
 
-
 - 点击<确定>下发命令；
-
 
 
 ![更新设备影子期望值](../../images/修改影子文档.png)
 
 
-4\. 设备端处理下发的期望
+4. 设备端处理下发的期望
 
 ![下发属性设置](../../images/设备影子callback.png)
-
 
 
 ## 查看日志

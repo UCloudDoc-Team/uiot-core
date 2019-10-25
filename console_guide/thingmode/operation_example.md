@@ -1,4 +1,4 @@
-
+{{indexmenu_n>3}}
 
 # 功能定义示例
 物模型以JSON格式进行表述，下面为一个物模型JSON模板：
@@ -6,7 +6,7 @@
 
 JSON文档中的PropertyID、EventID、CommandID由系统生成，云端应用可以根据此ID值修改物模型的定义。
 
-```
+```JSON
 {
   "Template": {
     "Property": [{
