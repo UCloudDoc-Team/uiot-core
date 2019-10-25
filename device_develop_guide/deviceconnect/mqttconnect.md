@@ -1,5 +1,3 @@
-{{indexmenu_n>1}}
-
 # 基于MQTT-TCP协议建立连接
 
 MQTT协议（Message Queuing Telemetry Transport），叫做遥信消息队列传输。MQTT是一个基于TCP的发布订阅协议，对于有限的内存设备和网络带宽很低的网络不可靠的通信MQTT是比较理想的选择，非常适合物联网通信。

@@ -1,5 +1,3 @@
-{{indexmenu_n>3}}
-
 # 基于HTTP协议建立连接
 
 HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备接入到UCloud IoT-Core通信云平台，将数据上传到云端。

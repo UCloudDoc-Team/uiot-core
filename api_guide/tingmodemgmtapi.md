@@ -1,5 +1,3 @@
-{{indexmenu_n>8}}
-
 # 物模型
 
 ## GetUIoTCoreDeviceProperty

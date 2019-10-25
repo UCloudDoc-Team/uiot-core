@@ -1,5 +1,3 @@
-{{indexmenu_n>1}}
-
 # 登录控制台
 
 ## 注册UCLOUD账号

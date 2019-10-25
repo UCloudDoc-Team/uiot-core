@@ -1,6 +1,3 @@
-{{indexmenu_n>11}}
-
-
 # 上传文件
 
 ## QueryUIoTCoreDeviceFileList

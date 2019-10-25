@@ -1,5 +1,3 @@
-{{indexmenu_n>10}}
-
 # 数据流转到HTTP服务
 数据流转到AI-Inference服务需要：
 

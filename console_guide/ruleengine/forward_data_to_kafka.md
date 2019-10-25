@@ -1,5 +1,3 @@
-{{indexmenu_n>6}}
-
 # 数据流转到分布式消息系统kafka
 数据流转到分布式消息系统kafka需要：
 - 完成[数据流转管理](data_forwarding)中操作步骤的前两步，已经配置好消息筛选SQL；

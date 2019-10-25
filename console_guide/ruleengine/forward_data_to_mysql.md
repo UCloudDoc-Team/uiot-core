@@ -1,5 +1,3 @@
-{{indexmenu_n>4}}
-
 # 数据流转到MySQL
 数据流转到MySQL需要：
 

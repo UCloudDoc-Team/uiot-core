@@ -1,5 +1,3 @@
-{{indexmenu_n>2}}
-
 # 基于MQTT-WebSocket协议建立连接
 
 MQTT协议（Message Queuing Telemetry Transport），叫做遥信消息队列传输。本节介绍基于WebSocket的MQTT连接，从而帮助WEB浏览器实现基于MQTT物联网通信云平台的长连接。

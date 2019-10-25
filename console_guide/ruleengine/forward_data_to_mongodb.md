@@ -1,5 +1,3 @@
-{{indexmenu_n>5}}
-
 # 数据流转到MongoDB
 数据流转到MongoDB需要：
 

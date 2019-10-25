@@ -1,5 +1,3 @@
-{{indexmenu_n>2}}
-
 # 获取物模型JSON文档
 获取物模型定义JSON文档是指获取在[控制台操作指南-物模型](../../console_guide/thingmode/operation_example)定义的所有属性、命令、事件的JSON描述文档。
 

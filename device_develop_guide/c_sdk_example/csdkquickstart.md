@@ -1,5 +1,3 @@
-{{indexmenu_n>1}}
-
 # C-SDK 快速入门
 
 本章描述如何在 Ubuntu 环境，通过设备端 C-SDK 快速接入 UIoT-Core 平台服务。

@@ -1,5 +1,3 @@
-{{indexmenu_n>6}}
-
 # 设备OTA升级
 
 

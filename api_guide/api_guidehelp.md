@@ -1,6 +1,3 @@
-{{indexmenu_n>3}}
-
-
 # 关于API接入
 本节将会通过一个示例介绍API的接入流程，也可参考UCloud官方[API 文档综览](https://docs.ucloud.cn/api/summary/overview)。需要JAVA/GO/PHP/Python等语言的参考，可以参考UCloud SDK框架[UCloud SDK项目](https://github.com/ucloud?utf8=%E2%9C%93&q=SDK&type=&language=)。
 

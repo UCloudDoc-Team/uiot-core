@@ -1,5 +1,3 @@
-{{indexmenu_n>4}}
-
 # 设备影子
 
 设备影子在控制台操作指南中已经做了详细介绍。详细参考[设备影子](../console_guide/device_shadow/waht_is_deviceshadow)。
