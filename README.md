@@ -8,4 +8,3 @@ UCloud 物联网通信云平台（UCloud IoT Core）为设备上云和产业互�
 
 **目录：**
 
-{{indexmenu>:iot:uiot-core#1 | nsort dsort msort}}
