@@ -24,7 +24,7 @@ MQTT-TCP连接需要先了解[设备注册](../authenticate_devices/what_is_auth
 2. 基于[C-SDK](../c_sdk_example/csdkquickstart)进行开发，其他语言可以参考[开源MQTT客户端](https://github.com/mqtt/mqtt.github.io/wiki/libraries?spm=a2c4g.11186623.2.11.793e78dcLHxgZy)进行开发，[MQTT协议](http://mqtt.org/?spm=a2c4g.11186623.2.12.577678dc5E6Qcl)详解可以参考[MQTT官网](http://mqtt.org/?spm=a2c4g.11186623.2.12.577678dc5E6Qcl)；
 3. MQTT连接
 
-    |参数| 详解|
+    |参数|详解|
     |---|---|
     |连接域名 | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，目前仅在上海Region开放）|
     |端口号 |`1883` 或 `8883(使用TLS)`|
