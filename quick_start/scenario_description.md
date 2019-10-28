@@ -207,6 +207,6 @@
         通过Topic**/70ly1tvowt696r15/aruidyl0rt9tuvod/set**下发需要设置的温度、湿度值；  
 
 
-       ![下行下发数据](../images/下行下发数据.png)
+![下行下发数据](../images/下行下发数据.png)
 
-       ![下行下发数据内容](../images/下行下发数据内容.png)
+![下行下发数据内容](../images/下行下发数据内容.png)
