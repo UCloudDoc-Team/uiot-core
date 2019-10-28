@@ -28,12 +28,8 @@ MQTT-TCP连接需要先了解[设备注册](../authenticate_devices/what_is_auth
 |---|---|
 |连接域名 | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，目前仅在上海Region开放）|
 |端口号 |`1883` 或 `8883(使用TLS)`|
-	
-	
-	
-	|可变报头（variable header）：Keep Alive  |  Connect指令中需包含Keep Alive（保活时间）。<br>取值范围为30至1200秒。如取值不在此区间，平台拒绝连接。建议取值300秒以上，如网络不稳定，设置高一些。|
-    
-	|MQTT的Connect报文参数|参考[静态注册](../authenticate_devices/unique-certificate-per-device_authentication)和[动态注册](../authenticate_devices/unique-certificate-per-product_authentication)<br>**静态注册为例：**<br>`ClientID：${ProductSN}.${DeviceSN}`<br>`UserName：${ProductSN}\|${DeviceSN}\|${authmode}`<br>`authmode: 静态注册为1；动态注册为2`<br>`Password：${DeviceSecret}`|
+|可变报头（variable header）：Keep Alive  |  Connect指令中需包含Keep Alive（保活时间）。<br>取值范围为30至1200秒。如取值不在此区间，平台拒绝连接。建议取值300秒以上，如网络不稳定，设置高一些。|
+|MQTT的Connect报文参数|参考[静态注册](../authenticate_devices/unique-certificate-per-device_authentication)和[动态注册](../authenticate_devices/unique-certificate-per-product_authentication)<br>**静态注册为例：**<br>`ClientID：${ProductSN}.${DeviceSN}`<br>`UserName：${ProductSN}\|${DeviceSN}\|${authmode}`<br>`authmode: 静态注册为1；动态注册为2`<br>`Password：${DeviceSecret}`|
 
 
 
