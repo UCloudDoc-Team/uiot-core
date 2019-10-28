@@ -203,6 +203,7 @@
      平台提供[日志管理](../console_guide/monitoring_maintenance/log)功能可以查看所有经过平台流转的上行或下行的数据。
 
      - 下行消息：下发数据给设备  
+
         通过Topic `/70ly1tvowt696r15/aruidyl0rt9tuvod/set`下发需要设置的温度、湿度值；  
 
 
