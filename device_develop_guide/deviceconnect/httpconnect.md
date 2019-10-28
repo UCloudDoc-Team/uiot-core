@@ -43,22 +43,22 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 	 
     **参数说明**
 
-	 |参数|说明|
-	 |---|---|
-	 |Method|请求方法。只支持 POST 方法。|
-	 |URL|`/auth`，URL 地址|
-	 |Host|HTTP服务地址|
-	 |Content-Type|body 数据的编码格式。目前只支持 `application/json`|
-	 |Authorization|使用设备密码签名。签名计算格式为 `HMAC-SHA256(DeviceSecret, body)`|
-	 |body|设备认证信息。JSON 数据格式。具体信息，请参见下表 body 参数。|
+|参数|说明|
+|---|---|
+|Method|请求方法。只支持 POST 方法。|
+|URL|`/auth`，URL 地址|
+|Host|HTTP服务地址|
+|Content-Type|body 数据的编码格式。目前只支持 `application/json`|
+|Authorization|使用设备密码签名。签名计算格式为 `HMAC-SHA256(DeviceSecret, body)`|
+|body|设备认证信息。JSON 数据格式。具体信息，请参见下表 body 参数。|
 
 	**body 参数**
 
-	 |参数名称|必选|类型|描述|
-	 |---|---|---|---|
-	 |ProductSN|是|string|产品序列号|
-	 |DeviceSN|是|string|设备序列号|
-	 |Timestamp|否|int64|时间戳（如填写时间误差不超过 3600 秒）|
+|参数名称|必选|类型|描述|
+|---|---|---|---|
+|ProductSN|是|string|产品序列号|
+|DeviceSN|是|string|设备序列号|
+|Timestamp|否|int64|时间戳（如填写时间误差不超过 3600 秒）|
 
 	**返回参数**
 
@@ -72,14 +72,14 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 
 	**错误码**
 
-	 |RetCode|Message|备注|
-	 |---|---|---|
-	 |130|Service is temporarily unavailable, we are working hard to restore it, please retry later|服务暂时不可用。|
-	 |171|Signature error|签名错误。|
-	 |230|Parameter error, please reenter|请求的参数异常。|
-	 |100070|Timestamp error|时间戳错误，误差超过限制。|
-	 |100071|Product or device not exist|产品或设备不存在。|
-	 |100072|Device disabled|设备已禁用。|
+|RetCode|Message|备注|
+|---|---|---|
+|130|Service is temporarily unavailable, we are working hard to restore it, please retry later|服务暂时不可用。|
+|171|Signature error|签名错误。|
+|230|Parameter error, please reenter|请求的参数异常。|
+|100070|Timestamp error|时间戳错误，误差超过限制。|
+|100071|Product or device not exist|产品或设备不存在。|
+|100072|Device disabled|设备已禁用。|
 
 
 4. 上报数据。将数据发送数据到某个 Topic。   
@@ -99,14 +99,14 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 
 	**参数说明**
 
-	 |参数|说明|
-	 |---|---|
-	 |Method|请求方法。只支持 POST 方法。|
-	 |URL|`/topic/${topic}`。其中，变量 ${topic} 需替换为数据发往的目标Topic。|
-	 |Host|endpoint 地址|
-	 |Content-Type|body 数据的编码格式。目前只支持 application/octet-stream|
-	 |Password|放在Header中的参数，取值为调用设备认证接口 auth 返回的 token 值。|
-	 |body|发往 ${topic} 的数据内容，长度不超过 128 KB。|
+|参数|说明|
+|---|---|
+|Method|请求方法。只支持 POST 方法。|
+|URL|`/topic/${topic}`。其中，变量 ${topic} 需替换为数据发往的目标Topic。|
+|Host|endpoint 地址|
+|Content-Type|body 数据的编码格式。目前只支持 application/octet-stream|
+|Password|放在Header中的参数，取值为调用设备认证接口 auth 返回的 token 值。|
+|body|发往 ${topic} 的数据内容，长度不超过 128 KB。|
 
 	**返回参数**
 
@@ -120,15 +120,15 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 
 	**错误码**
 
-	 |RetCode|Message|备注|
-	 |---|---|---|
-	 |130|Service is temporarily unavailable, we are working hard to restore it, please retry later|服务暂时不可用。|
-	 |230|Parameter error, please reenter|请求的参数异常。|
-	 |100071|Product or device not exist|产品或设备不存在。|
-	 |100072|Device disabled|设备已禁用。|
-	 |100073|Check token error|token错误。需重新调用auth进行鉴权，获取token。|
-	 |100074|Token is expired|token过期。需重新调用auth进行鉴权，获取token。|
-	 |100075|ACL Failed|ACL 失败，无相应 topic 权限。|
-	 |100076|Maximum request length exceeded|body 长度超过限制。|
-	 |100077|Publish message Failed|数据发送失败。|
+|RetCode|Message|备注|
+|---|---|---|
+|130|Service is temporarily unavailable, we are working hard to restore it, please retry later|服务暂时不可用。|
+|230|Parameter error, please reenter|请求的参数异常。|
+|100071|Product or device not exist|产品或设备不存在。|
+|100072|Device disabled|设备已禁用。|
+|100073|Check token error|token错误。需重新调用auth进行鉴权，获取token。|
+|100074|Token is expired|token过期。需重新调用auth进行鉴权，获取token。|
+|100075|ACL Failed|ACL 失败，无相应 topic 权限。|
+|100076|Maximum request length exceeded|body 长度超过限制。|
+|100077|Publish message Failed|数据发送失败。|
 

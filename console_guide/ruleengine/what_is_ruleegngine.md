@@ -4,10 +4,8 @@
 平台支持数据流转的方式
 - 数据流转到MySQL中；
 - 数据流转到MongoDB中；
-- 数据流转到TSDB中；
 - 数据流转到分布式消息系统Kafka中；
 - 数据流转到其他Topic，实现M2M；
-- 数据流转到短信平台；
 - 数据流转到UHost的HTTP服务；
 - 数据流转到UAI-Inference服务；
 

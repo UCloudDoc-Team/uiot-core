@@ -20,7 +20,7 @@
 	设备端HTTP请求获取上传文件的目标URL以及上传文件的Authorization
 
 	 ```
-	 POST //api/v1/url HTTP/1.1
+	 POST /api/v1/url HTTP/1.1
 	 Host: file-cn-sh2.iot.ucloud.cn
 	 Content-Type: application/json
 	 body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","DeviceSecret":"tepfnobkoyl4qgov","FileName":"file1.txt","FileSize":102654,"MD5":"dddddd","Content-Type":"text/plain"}
@@ -31,7 +31,7 @@
 	 |参数|说明|
 	 |---|---|
 	 |Method|请求方法。只支持 POST 方法。|
-	 |URL|`/auth`，URL 地址|
+	 |URL|`/api/v1/url`，URL 地址|
 	 |Host|endpoint 地址|
 	 |Content-Type|body 数据的编码格式。目前只支持 application/json|
 	 |body|设备认证信息。JSON 数据格式。具体信息，请参见下表 body 参数。|

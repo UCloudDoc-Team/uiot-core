@@ -157,8 +157,7 @@
        通过Topic**/70ly1tvowt696r15/aruidyl0rt9tuvod/upload**上报的温度值；
      
        ![上行上报数据](../images/上行上报数据.png)
-     
-        ![上行上报数据内容](../images/上行上报数据内容.png)
+       ![上行上报数据内容](../images/上行上报数据内容.png)
 
 #### 下行下发命令
 
@@ -204,9 +203,8 @@
      平台提供[日志管理](../console_guide/monitoring_maintenance/log)功能可以查看所有经过平台流转的上行或下行的数据。
 
      - 下行消息：下发数据给设备  
-        通过Topic**/70ly1tvowt696r15/aruidyl0rt9tuvod/set**下发需要设置的温度、湿度值；  
+        通过Topic `/70ly1tvowt696r15/aruidyl0rt9tuvod/set`下发需要设置的温度、湿度值；  
 
 
-       ![下行下发数据](../images/下行下发数据.png)
-
-       ![下行下发数据内容](../images/下行下发数据内容.png)
+        ![下行下发数据](../images/下行下发数据.png)
+        ![下行下发数据内容](../images/下行下发数据内容.png)
