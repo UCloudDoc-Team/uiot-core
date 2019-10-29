@@ -95,9 +95,9 @@ Topic | 权限|描述
 ### 下行测试（设置期望值）
 
 1. 在MQTT.fx操作界面，点击<Subscribe>，输入Topic：`/$system/ledubff3z85spjmu/h9onxtzw0aep7fsr/shadow/downstream`；
-   
 
     ![订阅消息](../images/订阅消息.png)
+	
 
 2. 下发期望值，有两种方法：  
    ① 参考[设备影子](../console_guide/device_shadow/operation_guide\#设备影子相关操作)，<编辑>设备影子，输入<Desired>值：
