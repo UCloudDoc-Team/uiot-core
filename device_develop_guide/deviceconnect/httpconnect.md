@@ -29,7 +29,7 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 
 1. 获取到设备的注册凭证：`产品序列号`，`设备序列号`，`设备密码`，分别表示为`${ProductSN}`，`${DeviceSN}`，`${DevSecret}`；  
 
-2. 下载TLS证书，[下载根证书](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)；  
+2. 下载TLS证书，[下载CA证书](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)；  
 
 3. 设备注册。通过HTTP POST请求获取上报数据的Token，见**返回参数**：
 

@@ -14,7 +14,6 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 
 
 
-![框图](../images/框图.jpg)
 
 ## 具体流程
 设备的升级流程如下所示：
@@ -28,15 +27,15 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
     设备端向`/$system/${productSN}/${deviceSN}/ota/upstream`发布一条消息进行版本上报，消息格式如下：
     ```
     {
-        "method": "report_version",
-        "payload":{
-            "version": "1.0"
+        "Method": "report_version",
+        "Payload":{
+            "Version": "1.0"
         }
     }
     ```
     参数解释:
-    - method：消息类型为report_version
-    - version：上报的版本号
+    - Method：消息类型为report_version
+    - Version：上报的版本号
     
 2. 用户在控制台[新增固件](../console_guide/ota/firmware_management\#新增固件)；
 
