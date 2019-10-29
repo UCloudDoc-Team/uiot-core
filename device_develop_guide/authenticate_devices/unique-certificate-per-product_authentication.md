@@ -79,9 +79,9 @@
 
 MQTT认证三要素| 生成规则
 ---|---
-ClientID | ${ProductSN}.${DeviceSN}<br>举例：70ly1tvowt696r15.112233445566
-UserName | ${ProductSN}\|${DeviceSN}\|${authmode}<br>举例：70ly1tvowt696r15\|112233445566\|2<br>authmode: 1 表示静态注册；2表示动态注册
-Password | ${ProdSecret}<br>举例：sqx0cltqba402z7z
+ClientID | `${ProductSN}.${DeviceSN}`<br>举例：`70ly1tvowt696r15.112233445566`
+UserName | `${ProductSN}\|${DeviceSN}\|${authmode}`<br>举例：`70ly1tvowt696r15\|112233445566\|2`<br>`authmode: 1 表示静态注册；2表示动态注册`
+Password | `${ProdSecret}`<br>举例：`sqx0cltqba402z7z`
 
 5. 订阅Topic `/$system/${ProductSN}/${DeviceSN}/password_reply`，举例：`/$system/70ly1tvowt696r15/112233445566/password_reply`；
 
