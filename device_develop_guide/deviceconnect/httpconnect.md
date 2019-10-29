@@ -33,15 +33,15 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 
 3. 设备注册。通过HTTP POST请求获取上报数据的Token，见**返回参数**：
 
-     ```
-     POST /auth HTTP/1.1
-     Host: http-cn-sh2.iot.ucloud.cn
-     Content-Type: application/json
-     Authorization: 47b0194e52ed1d1630830b66709b906a1e201ba410101cfaf9381bbde53a0d85
-     body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","Timestamp":"1501668289957"}
-     ```  
+    ```
+    POST /auth HTTP/1.1
+    Host: http-cn-sh2.iot.ucloud.cn
+    Content-Type: application/json
+    Authorization: 47b0194e52ed1d1630830b66709b906a1e201ba410101cfaf9381bbde53a0d85
+    body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","Timestamp":"1501668289957"}
+    ```  
 	 
-    **参数说明**
+**参数说明**
 
 |参数|说明|
 |---|---|
@@ -52,7 +52,7 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 |Authorization|使用设备密码签名。签名计算格式为 `HMAC-SHA256(DeviceSecret, body)`|
 |body|设备认证信息。JSON 数据格式。具体信息，请参见下表 body 参数。|
 
-	**body 参数**
+**body 参数**
 
 |参数名称|必选|类型|描述|
 |---|---|---|---|
@@ -60,17 +60,17 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 |DeviceSN|是|string|设备序列号|
 |Timestamp|否|int64|时间戳（如填写时间误差不超过 3600 秒）|
 
-	**返回参数**
+**返回参数**
 
-	 ```
-	 {
+	```
+	{
 		 "RetCode": 0,
 		 "Message": "Success",
 		 "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJEZXZpY2VTTiI6InRlc3QxIiwiUHJvZHVjdFNOIjoiZzR3ZmFycTMweXp4YXkyMyIsImV4cCI6MTU2NzA1ODg5OSwiaWF0IjoxNTY2NDU0MDk5fQ.wN1XNVciI27nTeIqCjbYKdmTaifJrGJm_DmDDpIoabs"
-	 }
-	 ```
+	}
+	```
 
-	**错误码**
+**错误码**
 
 |RetCode|Message|备注|
 |---|---|---|
@@ -89,15 +89,15 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 	- [系统Topic](../../console_guide/product_device/topic#系统Topic)，参考[设备影子](../../console_guide/device_shadow/waht_is_deviceshadow)或者[物模型](../../console_guide/thingmode/what_is_thingmode)Topic；
 
 
-	 ```
-	 POST /topic/${topic} HTTP/1.1
-	 Host: http-cn-sh2.iot.ucloud.cn
-	 Password: ${token}
-	 Content-Type: application/octet-stream
-	 body: ${your_data}
-	 ```
+	```
+	POST /topic/${topic} HTTP/1.1
+	Host: http-cn-sh2.iot.ucloud.cn
+	Password: ${token}
+	Content-Type: application/octet-stream
+	body: ${your_data}
+	```
 
-	**参数说明**
+**参数说明**
 
 |参数|说明|
 |---|---|
@@ -108,17 +108,17 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 |Password|放在Header中的参数，取值为调用设备认证接口 auth 返回的 token 值。|
 |body|发往 ${topic} 的数据内容，长度不超过 128 KB。|
 
-	**返回参数**
+**返回参数**
 
-	 ```
-	 {
+	```
+	{
 		 "RetCode": 0,
 		 "Message": "Success",
 		 "MessageID": "349022219378098176"
-	 }
-	 ```
+	}
+	```
 
-	**错误码**
+**错误码**
 
 |RetCode|Message|备注|
 |---|---|---|
