@@ -5,9 +5,7 @@ MQTT协议（Message Queuing Telemetry Transport），叫做遥信消息队列�
 
 
 ## MQTT连接注意事项
-
 - 支持最高协议版本MQTT3.1，不支持MQTT5.0；
-
 - 不支持will、retain 消息；
 - 不支持QoS2；
 - 支持clean session；
