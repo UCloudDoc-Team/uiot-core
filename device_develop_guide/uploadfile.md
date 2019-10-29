@@ -19,12 +19,12 @@
 
 	设备端HTTP请求获取上传文件的目标URL以及上传文件的Authorization
 
-	```
-	POST /api/v1/url HTTP/1.1
-	Host: file-cn-sh2.iot.ucloud.cn
-	Content-Type: application/json
-	body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","DeviceSecret":"tepfnobkoyl4qgov","FileName":"file1.txt","FileSize":102654,"MD5":"dddddd","Content-Type":"text/plain"}
-	```
+```
+POST /api/v1/url HTTP/1.1
+Host: file-cn-sh2.iot.ucloud.cn
+Content-Type: application/json
+body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","DeviceSecret":"tepfnobkoyl4qgov","FileName":"file1.txt","FileSize":102654,"MD5":"dddddd","Content-Type":"text/plain"}
+```
 
 **参数说明**
 
@@ -50,19 +50,19 @@
 
 **返回**
 
-	```
-	{
-		"RetCode": 0,
-		"URL": "https://uiotcore-55977351-55738012.cn-sh2.ufileos.com/ProductSN/DeviceSN/fileName",
-		"Authorization": "Ucloud eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJEZXZpY2VTTiI6InRlc3QxIiwiUHJvZHVjdFNOIjoiZzR3ZmFycTMweXp4YXkyMyIsImV4cCI6MTU2NzA1ODg5OSwiaWF0IjoxNTY2NDU0MDk5fQ.wN1XNVciI27nTeIqCjbYKdmTaifJrGJm_DmDDpIoabs"
-	}
-	```
+```
+{
+	"RetCode": 0,
+	"URL": "https://uiotcore-55977351-55738012.cn-sh2.ufileos.com/ProductSN/DeviceSN/fileName",
+	"Authorization": "Ucloud eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJEZXZpY2VTTiI6InRlc3QxIiwiUHJvZHVjdFNOIjoiZzR3ZmFycTMweXp4YXkyMyIsImV4cCI6MTU2NzA1ODg5OSwiaWF0IjoxNTY2NDU0MDk5fQ.wN1XNVciI27nTeIqCjbYKdmTaifJrGJm_DmDDpIoabs"
+}
+```
     
 2. 设备根据URL和Authorization上传文件；
 
-	```
-	PUT  HTTP/1.1
-	```
+```
+PUT  HTTP/1.1
+```
 
 **参数说明**
 
@@ -90,13 +90,13 @@
 
 **返回参数**
 
-	 ```
-	 - status为200时返回空json
-	 - 其他返回
-	 {
-	 	"RetCode": xxx,
-	 	"ErrMsg": "xxxxxxxx"
-	 }
-	 ```
+```
+- status为200时返回空json
+- 其他返回
+{
+	"RetCode": xxx,
+	"ErrMsg": "xxxxxxxx"
+}
+```
 
 	其中RetCode参考[UFile 错误码列表](https://docs.ucloud.cn/api/ufile-api/error_code)。
