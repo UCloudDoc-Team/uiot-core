@@ -25,19 +25,19 @@
 
    1） 根据静态连接获取到MQTT登录需要的三要素：`ClientID`，`UserName`，`Password`。
 
-    MQTT认证参数| 参数值
-    ---|---
-    ClientID | ledubff3z85spjmu.h9onxtzw0aep7fsr<br>`规则：${ProductSN}.${DeviceSN}`
-    UserName | ledubff3z85spjmu\|h9onxtzw0aep7fsr\|1<br>`规则：${ProductSN}\|${DeviceSN}\|${authmode}`<br>`authmode: 1表示静态注册`
-    Password | 6g7tjlekwf3sqqqj<br>`规则：${DeviceSecret}`
+MQTT认证参数| 参数值
+---|---
+ClientID | `ledubff3z85spjmu.h9onxtzw0aep7fsr`<br>规则：`${ProductSN}.${DeviceSN}`
+UserName | `ledubff3z85spjmu\|h9onxtzw0aep7fsr\|1`<br>规则：`${ProductSN}\|${DeviceSN}\|${authmode}`<br>`authmode: 1表示静态注册`
+Password | `6g7tjlekwf3sqqqj`<br>规则：`${DeviceSecret}`
    
    2）参考[设备连接](../device_develop_guide/connecting_devices\#设备连接)，获取MQTT Broker连接域名和TLS CA证书(如使用IE、Edge、Chrome等浏览器CA证书不需要显性加载)：
    
-    Broker参数| 参数值
-    ---|---
-    Broker Address | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，目前仅在上海Region开放）
-    Broker Port | 80或443(使用HTTPS)
-    TLS(CA Certificate file) |[CA根证书 下载地址](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)
+Broker参数| 参数值
+---|---
+Broker Address | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，目前仅在上海Region开放）
+Broker Port | 80或443(使用HTTPS)
+TLS(CA Certificate file) |[CA根证书 下载地址](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)
    
    3）按照如下步骤编写代码，接入mqtt broker。
 
