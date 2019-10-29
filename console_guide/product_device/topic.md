@@ -1,5 +1,7 @@
-# Topic管理
-Topic或称为主题是物联网平台的核心概念，也是一切消息流转的载体，平台为每个产品提供了一些默认的系统Topic，同时用户也可以针对各自的产品自定义自己的Topic，为Topic指定相应的权限。
+# Topic主题管理
+
+
+主题或Topic是物联网平台的核心概念，也是一切消息流转的载体，平台为每个产品提供了一些默认的系统Topic，同时用户也可以针对各自的产品自定义自己的Topic，为Topic指定相应的权限。
 
 Topic是跟随着产品一起定义的，在定义Topic时，路径中会使用`${DeviceSN}`标识具体设备，当该设备发布或订阅该Topic时，使用该设备的`设备序列号`来替换即可。
 
@@ -8,7 +10,7 @@ Topic是跟随着产品一起定义的，在定义Topic时，路径中会使用`
 2. 某个设备的`设备序列号`为`pcur1q7jm2lb57rk`，则该设备订阅时使用Topic：`/70ly1tvowt696r15/pcur1q7jm2lb57rk/download`；
 
 
-
+<br>
 
 
 **关于Topic的一些限制：**   
@@ -55,6 +57,8 @@ Topic是跟随着产品一起定义的，在定义Topic时，路径中会使用`
 |/$system/${productSN}/${DeviceSN}/tmodel/command_reply/${requestid}|发布|设备端对云平台下发命令的响应|
 |/$system/${productSN}/${deviceSN}/ota/upstream|发布|设备上报固件版本升级状态|
 |/$system/${productSN}/${deviceSN}/ota/downstream|订阅|云端下发固件升级消息|
+|/$system/${ProductSN}/${DeviceSN}/password|发布|动态注册请求获取设备密码|
+|/$system/${ProductSN}/${DeviceSN}/password_reply|订阅|动态注册平台返回设备密码|
 
 
 

@@ -2,7 +2,10 @@
 
 动态注册也叫做一型一密，一型一密是指同一个产品下的设备激活时使用产品公共的凭证（`产品序列号`，`产品密码`）进行连接，然后再获取`设备密码`。
 
-获取到`设备密码`后，设备将`设备密码`保存到不易失存储中，然后使用取得的`设备密码`按照[静态注册](unique-certificate-per-device_authentication)的流程完成动态激活认证。      
+获取到`设备密码`后，设备将`设备密码`保存到不易失存储中，然后使用取得的`设备密码`按照[静态注册](unique-certificate-per-device_authentication)的流程完成动态激活认证。 
+
+
+注：设备通过动态注册获取到设备密码登录成功一次后，将不能再进行动态注册，否则将出现权限受限。    
 
 
 
@@ -21,6 +24,7 @@
 
 
 3. 准备工作：
+
    1). 开发设备端固件，比如使用[C-SDK动态注册](../../device_develop_guide/c_sdk_example/mqttinterface#动态认证)开发相应的固件；
    
    2). 确认产品详情页的<动态注册>开关已经打开；
@@ -34,7 +38,7 @@
 
 6. 预认证通过后（如果打开该开关），设备可以接入物联网平台，但是此时权限受限，不能进行消息的收发，设备需要获取`设备密码`，通过`设备密码`登录，才能正常使用平台功能，进行消息收发。
 
-设备获取`设备密码`方法为：
+**设备获取`设备密码`方法为：**
 
    设备向Topic`/$system/${ProductSN}/${DeviceSN}/password`发送一条请求获取密码消息(RequestID任意指定)：
 
@@ -106,9 +110,9 @@ Password | ${ProdSecret}<br>举例：sqx0cltqba402z7z
 
 MQTT认证三要素| 生成规则
 ---|---
-ClientID | ${ProductSN}.${DeviceSN}<br>举例：70ly1tvowt696r15.112233445566
-UserName | ${ProductSN}\|${DeviceSN}\|${authmode}<br>举例：70ly1tvowt696r15\|112233445566\|1<br>authmode: 1 表示静态注册；2表示动态注册
-Password | ${DeviceSecret}<br>举例：zlc3d21u5k8fq0d2
+ClientID | `${ProductSN}.${DeviceSN}`<br>举例：`70ly1tvowt696r15.112233445566`
+UserName | `${ProductSN}\|${DeviceSN}\|${authmode}`<br>举例：`70ly1tvowt696r15\|112233445566\|1`<br>`authmode`: `1` 表示静态注册；`2`表示动态注册
+Password | `${DeviceSecret}`<br>举例：`zlc3d21u5k8fq0d2`
 
 8. 参考[下一节设备连接](../../device_develop_guide/deviceconnect)将设备接入到物联网平台，完成认证；
 
