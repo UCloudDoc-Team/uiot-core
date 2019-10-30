@@ -37,7 +37,7 @@ Broker参数| 参数值
 ---|---
 Broker Address | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，目前仅在上海Region开放）
 Broker Port | 80或443(使用HTTPS)
-TLS(CA Certificate file) |[CA根证书 下载地址](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)
+TLS(CA Certificate file) |[CA根证书 下载地址](http://uiot.cn-sh2.ufileos.com/iot_ca.crt) 如使用IE、Edge、Chrome等浏览器不需要下载
    
    3）按照如下步骤编写代码，接入mqtt broker。
 

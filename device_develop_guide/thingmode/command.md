@@ -98,8 +98,7 @@ UCloud物联网通信云平台同时支持命令的同步和异步，开发者�
    {
    	"Action": "SendUIoTCoreDeviceCommand",
    	"ProductSN": "70ly1tvowt696r15",
-   	"DeviceSN":"00:14:32:e1:72:f1
-   ",
+   	"DeviceSN":"00:14:32:e1:72:f1",
     "Identifier": "commandIdentifier",
    	"Input": "eyJpbnB1dDEiOiJpbnB1dFZhbHVlMSJ9", //base64Encode({"input1":"inputValue1"})
    	"Method": "async",
@@ -148,7 +147,7 @@ UCloud物联网通信云平台同时支持命令的同步和异步，开发者�
    ```
    参数解释：
    - RequestID：返回消息的ID，对应请求消息ID；
-   - RetCode：返回码，具体参考[返回码]()；
+   - RetCode：返回码，具体参考[返回码](../../api_guide/retcode)；
    - Identifier：调用命令的唯一标识符；
    - Output：输出参数的键值对集合；云平台将响应作为Response返回给该HTTP请求，否则同步命令失败。
    

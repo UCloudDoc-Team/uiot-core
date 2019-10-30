@@ -34,7 +34,7 @@
 
 这里使用平台提供的设备端C-SDK，从而快速将设备接入到物联网平台，详细参考[C-SDK使用参考](../device_develop_guide/c_sdk_example/csdkquickstart)。
 
-在C-SDK的目录`sample/mqtt/`通过修改例程`mqtt_sample.c`来与云平台进行通信。
+在C-SDK的目录`sample/mqtt/`中，通过修改例程`mqtt_sample.c`来介绍如何使用C-SDK。
 
 
 #### 上行上报数据

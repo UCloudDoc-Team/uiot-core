@@ -24,7 +24,7 @@ git clone https://github.com/ucloud/ucloud-iot-device-sdk-c
 ```
 ## 编译及运行
 
-C-SDK支持 `GNU Make` 及 `CMake` 构建。
+C-SDK支持 `GNU Make` 及 `CMake` 构建，开发者可以选择自己熟悉的编译。
 
 ### GNU Make
 

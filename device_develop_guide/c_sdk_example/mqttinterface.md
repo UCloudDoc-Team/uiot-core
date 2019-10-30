@@ -15,12 +15,17 @@
 设备身份认证分为动态认证和静态认证两种。
 
 ## 动态认证
-动态认证即一型一密，首先需要确保打开CMakeLists文件中的ENABLE_FEATURE_AUTH_MODE_DYNAMIC编译开关，提前在设备上烧写产品序列号，产品密钥，设备序列号，<br>
-通过HAL层的接口获取设备信息，填入MQTT的初始连接参数中，向云平台进行动态身份认证，动态认证成功后会从云平台获取DeviceSecret并通过HAL_SetDeviceSecret接口保存。
+动态认证即一型一密，首先需要确保打开CMakeLists文件中的ENABLE_FEATURE_AUTH_MODE_DYNAMIC编译开关，
+
+
+提前在设备上烧写产品序列号，产品密钥，设备序列号，通过HAL层的接口获取设备信息，填入MQTT的初始连接参数中，
+
+
+向云平台进行动态身份认证，动态认证成功后会从云平台获取DeviceSecret并通过HAL_SetDeviceSecret接口保存。
 
 ![](https://i.loli.net/2019/07/18/5d30423caa2fd24915.png)
 
-## 动态认证的函数调用流程图示 
+### 动态认证的函数调用流程图示 
 
 ![](https://i.loli.net/2019/07/18/5d30454b6ebb641211.jpg)
 
