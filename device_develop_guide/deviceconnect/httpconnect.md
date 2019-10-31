@@ -62,13 +62,13 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 
 **返回参数**
 
-	```
-	{
-		 "RetCode": 0,
-		 "Message": "Success",
-		 "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJEZXZpY2VTTiI6InRlc3QxIiwiUHJvZHVjdFNOIjoiZzR3ZmFycTMweXp4YXkyMyIsImV4cCI6MTU2NzA1ODg5OSwiaWF0IjoxNTY2NDU0MDk5fQ.wN1XNVciI27nTeIqCjbYKdmTaifJrGJm_DmDDpIoabs"
-	}
-	```
+```
+{
+	"RetCode": 0,
+	"Message": "Success",
+	"Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJEZXZpY2VTTiI6InRlc3QxIiwiUHJvZHVjdFNOIjoiZzR3ZmFycTMweXp4YXkyMyIsImV4cCI6MTU2NzA1ODg5OSwiaWF0IjoxNTY2NDU0MDk5fQ.wN1XNVciI27nTeIqCjbYKdmTaifJrGJm_DmDDpIoabs"
+}
+```
 
 **错误码**
 
@@ -89,13 +89,13 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 	- [系统Topic](../../console_guide/product_device/topic#系统Topic)，参考[设备影子](../../console_guide/device_shadow/waht_is_deviceshadow)或者[物模型](../../console_guide/thingmode/what_is_thingmode)Topic；
 
 
-	```
-	POST /topic/${topic} HTTP/1.1
-	Host: http-cn-sh2.iot.ucloud.cn
-	Password: ${token}
-	Content-Type: application/octet-stream
-	body: ${your_data}
-	```
+```
+POST /topic/${topic} HTTP/1.1
+Host: http-cn-sh2.iot.ucloud.cn
+Password: ${token}
+Content-Type: application/octet-stream
+body: ${your_data}
+```
 
 **参数说明**
 
@@ -110,13 +110,13 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 
 **返回参数**
 
-	```
-	{
-		 "RetCode": 0,
-		 "Message": "Success",
-		 "MessageID": "349022219378098176"
-	}
-	```
+```
+{
+	"RetCode": 0,
+	"Message": "Success",
+	"MessageID": "349022219378098176"
+}
+```
 
 **错误码**
 
