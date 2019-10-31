@@ -31,7 +31,7 @@ ClientID | `ledubff3z85spjmu.h9onxtzw0aep7fsr`<br>规则：`${ProductSN}.${Devic
 UserName | `ledubff3z85spjmu\|h9onxtzw0aep7fsr\|1`<br>规则：`${ProductSN}\|${DeviceSN}\|${authmode}`<br>`authmode: 1表示静态注册`
 Password | `6g7tjlekwf3sqqqj`<br>规则：`${DeviceSecret}`
    
-   2）参考[设备连接](../device_develop_guide/connecting_devices\#设备连接)，获取MQTT Broker连接域名和TLS CA证书(如使用IE、Edge、Chrome等浏览器CA证书不需要显性加载)：
+   2）参考[设备连接](../device_develop_guide/deviceconnect/mqttconnect)，获取MQTT Broker连接域名和TLS CA证书(如使用IE、Edge、Chrome等浏览器CA证书不需要显性加载)：
    
 Broker参数| 参数值
 ---|---

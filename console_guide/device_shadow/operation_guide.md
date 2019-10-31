@@ -339,7 +339,7 @@ UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数�
     }
     ```
 
-2. 平台更新设备影子并添加`Desired`键值，版本号加1，并通过`/$system/${ProductSN}/${DeviceSN}/shadow/downstream`下发给设备，假如设备在线的话会立即收到，如果设备不在线需要设备上线后主动获取一次设备影子文档，参考[设备端获取设备影子文档]()。
+2. 平台更新设备影子并添加`Desired`键值，版本号加1，并通过`/$system/${ProductSN}/${DeviceSN}/shadow/downstream`下发给设备，假如设备在线的话会立即收到，如果设备不在线需要设备上线后主动获取一次设备影子文档，参考[设备端获取设备影子文档](设备端获取设备影子文档)。
     ```
     Subscribe Topic: /$system/${ProductSN}/${DeviceSN}/shadow/downstream
     
