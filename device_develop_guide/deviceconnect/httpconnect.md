@@ -14,7 +14,7 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 - HTTP请求只支持POST方式；
 - 基于MQTT的Topic规范，数据上报到MQTT的某个Topic；
 
-- 上报数据请求URL：`https://http-cn-sh2.iot.ucloud.cn/topic/${topic}`。其中`${topic}`的值是指具备发布权限的[Topic](../../console_guide/product_device/topic)。不支持以 ?query_String=xxx 格式传参；
+- 上报数据请求URL：`https://http-cn-sh2.iot.ucloud.cn/topic/${topic}`。其中`${topic}`的值是指具备发布权限的[Topic](/iot/uiot-core/console_guide/product_device/topic)。不支持以 ?query_String=xxx 格式传参；
 
 - HTTP接入注册需要已知`${DeviceSecret}`，不支持使用`${ProductSecret}`进行注册；
 
@@ -85,8 +85,8 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 4. 上报数据。将数据发送数据到某个 Topic。   
 
 	HTTP平台支持发布权限的自定义或系统Topic。
-	- 自定义Topic，参考[用户自定义Topic](../../console_guide/product_device/topic#用户自定义Topic)；
-	- [系统Topic](../../console_guide/product_device/topic#系统Topic)，参考[设备影子](../../console_guide/device_shadow/waht_is_deviceshadow)或者[物模型](../../console_guide/thingmode/what_is_thingmode)Topic；
+	- 自定义Topic，参考[用户自定义Topic](/iot/uiot-core/console_guide/product_device/topic#用户自定义Topic)；
+	- [系统Topic](/iot/uiot-core/console_guide/product_device/topic#系统Topic)，参考[设备影子](/iot/uiot-core/console_guide/device_shadow/waht_is_deviceshadow)或者[物模型](/iot/uiot-core/console_guide/thingmode/what_is_thingmode)Topic；
 
 
 ```

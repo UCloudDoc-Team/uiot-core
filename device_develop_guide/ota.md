@@ -37,9 +37,9 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
     - Method：消息类型为report_version
     - Version：上报的版本号
     
-2. 用户在控制台[新增固件](../console_guide/ota/firmware_management\#新增固件)；
+2. 用户在控制台[新增固件](/iot/uiot-core/console_guide/ota/firmware_management\#新增固件)；
 
-3. 用户通过控制台发起[固件升级请求](../console_guide/ota/firmware_update)；
+3. 用户通过控制台发起[固件升级请求](/iot/uiot-core/console_guide/ota/firmware_update)；
 4. 云端下发固件升级消息给设备端
     设备端会通过订阅的`/$system/${productSN}/${deviceSN}/ota/downstream`收到固件升级的消息，内容如下：
     ```

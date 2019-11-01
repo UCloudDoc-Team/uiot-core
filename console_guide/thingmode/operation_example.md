@@ -1,6 +1,6 @@
 # 功能定义示例
 物模型以JSON格式进行表述，下面为一个物模型JSON模板：
-可以参考设备物模型开发[获取物模型JSON文档](../../device_develop_guide/thingmode/get_json)获取定义的物模型。
+可以参考设备物模型开发[获取物模型JSON文档](/iot/uiot-core/device_develop_guide/thingmode/get_json)获取定义的物模型。
 
 JSON文档中的PropertyID、EventID、CommandID由系统生成，云端应用可以根据此ID值修改物模型的定义。
 

@@ -5,10 +5,10 @@
 
 ## 操作步骤：
 
-1. 参考控制台操作指南，[创建产品](../../console_guide/product_device/create_products)，[创建设备](../../console_guide/product_device/create_devcies)，[创建单个或多个设备](../../console_guide/product_device/create_devcies#创建单个或多个设备)，批量创建该产品下的设备；
+1. 参考控制台操作指南，[创建产品](/iot/uiot-core/console_guide/product_device/create_products)，[创建设备](/iot/uiot-core/console_guide/product_device/create_devcies)，[创建单个或多个设备](/iot/uiot-core/console_guide/product_device/create_devcies#创建单个或多个设备)，批量创建该产品下的设备；
 2. 准备工作：
-   1. 开发设备端固件，比如使用[C-SDK静态注册](../../device_develop_guide/c_sdk_example/mqttinterface#静态认证)开发相应的固件；
-   2. [设备详情](../../console_guide/product_device/create_devcies#设备详情)点击<获取未激活设备密码>，导出未激活的设备的凭证（`产品序列号`，`设备序列号`，`设备密码`）；
+   1. 开发设备端固件，比如使用[C-SDK静态注册](/iot/uiot-core/device_develop_guide/c_sdk_example/mqttinterface#静态认证)开发相应的固件；
+   2. [设备详情](/iot/uiot-core/console_guide/product_device/create_devcies#设备详情)点击<获取未激活设备密码>，导出未激活的设备的凭证（`产品序列号`，`设备序列号`，`设备密码`）；
 3. 将步骤2开发的固件以及导出的凭证发给产线烧录，产线给每台设备烧录固件及不同的凭证；
 4. 设备首次连接云平台，通过凭证认证激活设备。
 

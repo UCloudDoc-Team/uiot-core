@@ -2,11 +2,11 @@
 数据流转到其他Topic是指将筛选的消息数据转发到另外一个Topic上，从而实现M2M通信。
 
 数据流转到其他Topic需要：
-- 完成[数据流转管理](data_forwarding)中操作步骤的前两步，已经配置好消息筛选SQL；
+- 完成[数据流转管理](/iot/uiot-core/console_guide/ruleengine/data_forwarding)中操作步骤的前两步，已经配置好消息筛选SQL；
 
 
 ## 操作步骤
-1. 在[数据流转管理](data_forwarding)页面中，点击<添加动作>;
+1. 在[数据流转管理](/iot/uiot-core/console_guide/ruleengine/data_forwarding)页面中，点击<添加动作>;
 2. 在弹出的对话框中，选择动作"转发到其他Topic"；
 
    - 选择动作：选择需要流转到的目的地，这里选择“转发到其他Topic”；

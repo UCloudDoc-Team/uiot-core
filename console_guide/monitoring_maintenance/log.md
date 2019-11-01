@@ -2,11 +2,11 @@
 
 物联网平台提供接入平台的设备日志查询和管理功能，可以方便的查询并了解设备的历史行为，日志管理功能包括
 
-- [设备行为日志](#设备行为日志)；
-- [上行消息流日志](#上行消息流日志)；
-- [下行消息流日志](#下行消息流日志)；
-- [根据MessageID查询日志](#按MessageID查询日志)
-- [根据消息内容查询日志](#消息内容查询日志)；
+- [设备行为日志](/iot/uiot-core/console_guide/monitoring_maintenance/log#设备行为日志)；
+- [上行消息流日志](/iot/uiot-core/console_guide/monitoring_maintenance/log#上行消息流日志)；
+- [下行消息流日志](/iot/uiot-core/console_guide/monitoring_maintenance/log#下行消息流日志)；
+- [根据MessageID查询日志](/iot/uiot-core/console_guide/monitoring_maintenance/log#按MessageID查询日志)
+- [根据消息内容查询日志](/iot/uiot-core/console_guide/monitoring_maintenance/log#消息内容查询日志)；
 
 日志管理的使用说明：
 

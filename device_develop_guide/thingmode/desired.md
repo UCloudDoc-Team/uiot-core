@@ -2,8 +2,8 @@
 设备期望属性，是指对设备进行属性设置时如果设备不在线，云平台将缓存需要设置的值，待设备上线后再来获取期望属性；设备在线时执行正常的属性设置流程。
 
 ## 具体流程
-1. 设备不在线时，开发者应用程序通过[SetUIoTCoreDeviceProperty](../../api_guide/tingmodemgmtapi)下发命令调用接口，`Desired`参数设置为`true`，云平台缓存设置值；   
-   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../../api_guide/api_guidehelp)，其他参数参考[SetUIoTCoreDeviceProperty](../../api_guide/tingmodemgmtapi)。
+1. 设备不在线时，开发者应用程序通过[SetUIoTCoreDeviceProperty](/iot/uiot-core/api_guide/tingmodemgmtapi)下发命令调用接口，`Desired`参数设置为`true`，云平台缓存设置值；   
+   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[SetUIoTCoreDeviceProperty](/iot/uiot-core/api_guide/tingmodemgmtapi)。
    ```
    POST  HTTP/1.1
    Host: api.ucloud.cn
@@ -52,7 +52,7 @@
    }
    ```
    参数解释：
-   - RetCode：返回码，具体参考[返回码](../../api_guide/retcode)；
+   - RetCode：返回码，具体参考[返回码](/iot/uiot-core/api_guide/retcode)；
    - RequestID：返回消息的ID，对应请求消息ID；
    - Desired：返回的期望属性的集合;
    - Value：指定属性标识符的值；
@@ -86,6 +86,6 @@
    }
    ```
    参数解释：
-   - RetCode：返回码，具体参考[返回码](../../api_guide/retcode)；
+   - RetCode：返回码，具体参考[返回码](/iot/uiot-core/api_guide/retcode)；
    - RequestID：返回消息的ID，对应请求消息ID；
    - Message：返回消息体，成功为"success"，失败则返回具体失败原因。

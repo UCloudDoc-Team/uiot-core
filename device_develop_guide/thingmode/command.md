@@ -9,8 +9,8 @@ UCloud物联网通信云平台同时支持命令的同步和异步，开发者�
 不管同步调用还是异步调用，都需要设备在线，否则云平台会直接返回设备不在线。
 
 ### 同步命令
-1. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand](../../api_guide/tingmodemgmtapi)下发命令调用接口，`Method`参数设置为`sync-同步`；   
-   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../../api_guide/api_guidehelp)，其他参数参考[SendUIoTCoreDeviceCommand](../../api_guide/tingmodemgmtapi)。
+1. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand](/iot/uiot-core/api_guide/tingmodemgmtapi)下发命令调用接口，`Method`参数设置为`sync-同步`；   
+   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[SendUIoTCoreDeviceCommand](/iot/uiot-core/api_guide/tingmodemgmtapi)。
    ```
    POST  HTTP/1.1
    Host: api.ucloud.cn
@@ -60,7 +60,7 @@ UCloud物联网通信云平台同时支持命令的同步和异步，开发者�
    ```
    参数解释：
    - RequestID：返回消息的ID，对应请求消息ID；
-   - RetCode：返回码，具体参考[返回码](../../api_guide/retcode)；
+   - RetCode：返回码，具体参考[返回码](/iot/uiot-core/api_guide/retcode)；
    - Identifier：调用命令的唯一标识符；
    - Output：输出参数的键值对集合；云平台将响应作为Response返回给该HTTP请求，否则同步命令失败。
 
@@ -88,8 +88,8 @@ UCloud物联网通信云平台同时支持命令的同步和异步，开发者�
    注：应用程序下发的输入参数以及设备端上报的输出参数需要和平台定义的输入和输出Identifier一致，同时取值范围也会做检查，否则会报错，或者为空。
 
 ### 异步命令
-1. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand](../../api_guide/tingmodemgmtapi)下发命令调用接口，`Method`参数设置为`async-异步`。   
-   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../../api_guide/api_guidehelp)，其他参数参考[SendUIoTCoreDeviceCommand](../../api_guide/tingmodemgmtapi)。
+1. 开发者应用服务程序通过[SendUIoTCoreDeviceCommand](/iot/uiot-core/api_guide/tingmodemgmtapi)下发命令调用接口，`Method`参数设置为`async-异步`。   
+   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[SendUIoTCoreDeviceCommand](/iot/uiot-core/api_guide/tingmodemgmtapi)。
    ```
    POST  HTTP/1.1
    Host: api.ucloud.cn
@@ -147,7 +147,7 @@ UCloud物联网通信云平台同时支持命令的同步和异步，开发者�
    ```
    参数解释：
    - RequestID：返回消息的ID，对应请求消息ID；
-   - RetCode：返回码，具体参考[返回码](../../api_guide/retcode)；
+   - RetCode：返回码，具体参考[返回码](/iot/uiot-core/api_guide/retcode)；
    - Identifier：调用命令的唯一标识符；
    - Output：输出参数的键值对集合；云平台将响应作为Response返回给该HTTP请求，否则同步命令失败。
    

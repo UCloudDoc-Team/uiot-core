@@ -81,13 +81,13 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
 
 2. 获取产品序列号、设备序列号、设备密钥，通过C-SDK接入UIoT-Core。
 
-1) 参考[设备详情](../../console_guide/product_device/create_devcies#设备详情)获取设备三要素；
+1) 参考[设备详情](/iot/uiot-core/console_guide/product_device/create_devcies#设备详情)获取设备三要素；
 
 ![](../../images/快速入门-1.png)
 
 
 
-2) 通过三要素通过[静态注册](../authenticate_devices/unique-certificate-per-device_authentication)接入到UIoT-Core
+2) 通过三要素通过[静态注册](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication)接入到UIoT-Core
 
 修改**./samples/shadow/smart_bracelet_walk_step_shadow_sample.c**中对应的宏。
 
@@ -152,7 +152,7 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
 
 3. 云端修改`行走步数`，设备端进行回调打印
 
-    设备影子是设备端在云平台的缓存，应用程序可以对其属性值进行修改，详情参考[更新设备影子期望值](../../console_guide/device_shadow/operation_guide#应用程序更新设备影子期望值)。
+    设备影子是设备端在云平台的缓存，应用程序可以对其属性值进行修改，详情参考[更新设备影子期望值](/iot/uiot-core/console_guide/device_shadow/operation_guide#应用程序更新设备影子期望值)。
 	
 	注：本例中设备端获取到云端设置的期望值后，仅做打印处理。
 
@@ -179,7 +179,7 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
 
 4. 设备上报属性值
 	
-	通过设备影子上报属性值，详情可以参考[设备端上报状态更新设备影子](../../console_guide/device_shadow/operation_guide#设备端上报状态更新设备影子)。
+	通过设备影子上报属性值，详情可以参考[设备端上报状态更新设备影子](/iot/uiot-core/console_guide/device_shadow/operation_guide#设备端上报状态更新设备影子)。
 	
 	设备影子上报属性后，云平台会给出响应，SDK需要设置对应的回调函数处理响应结果。
 	
@@ -223,7 +223,7 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
 
     设备由于网络不稳定或者设备复位导致设备与云平台失去连接，此时如果云平台对设备进行期望设置，设置值将会暂存在云端的设备影子中。
 	
-	设备再次上线后，需要先和云平台做一次同步，获取设备影子最新状态，具体参考[设备端获取设备影子文档](../../console_guide/device_shadow/operation_guide#设备端获取设备影子文档)。
+	设备再次上线后，需要先和云平台做一次同步，获取设备影子最新状态，具体参考[设备端获取设备影子文档](/iot/uiot-core/console_guide/device_shadow/operation_guide#设备端获取设备影子文档)。
 	
 ```
   /* 收到云平台响应后的回调函数 */
@@ -280,7 +280,7 @@ make
 ![同步上报属性值](../../images/同步上报属性值.png)
 
 
-3. 参考[设备影子查看与更新](../../console_guide/device_shadow/waht_is_deviceshadow#设备影子查看与更新)更新设备影子期望值。
+3. 参考[设备影子查看与更新](/iot/uiot-core/console_guide/device_shadow/waht_is_deviceshadow#设备影子查看与更新)更新设备影子期望值。
 
 
 **操作步骤：**

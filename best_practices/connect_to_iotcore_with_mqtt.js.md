@@ -3,7 +3,7 @@
 对于web即时聊天或者棋类对决等需要实时推送消息给对方的应用，需要建立WEB客户端与服务器的长连接，完成消息的接收与发送。
 
 
-本实践介绍如何基于WebSocket-MQTT实现应用程序与浏览器的消息上报和下发，详细参考[基于MQTT-WebSocket协议建立连接](../device_develop_guide/deviceconnect/websocketconnect)。
+本实践介绍如何基于WebSocket-MQTT实现应用程序与浏览器的消息上报和下发，详细参考[基于MQTT-WebSocket协议建立连接](/iot/uiot-core/device_develop_guide/deviceconnect/websocketconnect)。
 
 使用WebSocket可以直接下载以下源文件进行测试，示例界面如下：
 
@@ -14,14 +14,14 @@
 
 ## 前提条件
 
-1. 参考[创建产品](../console_guide/product_device/create_products\#创建产品)、[创建设备](../console_guide/product_device/create_devcies\#创建设备)，获取产品序列号、设备序列号、设备密钥：
+1. 参考[创建产品](/iot/uiot-core/console_guide/product_device/create_products\#创建产品)、[创建设备](/iot/uiot-core/console_guide/product_device/create_devcies\#创建设备)，获取产品序列号、设备序列号、设备密钥：
     ```
     ProductSN：ledubff3z85spjmu
     DeviceSN：h9onxtzw0aep7fsr
     DeviceSecret：6g7tjlekwf3sqqqj
     ```
 
-2. 建立连接，web应用先通过设备序列号与用户名进行绑定，然后发放设备密钥，所以web应用一般会以[静态注册](../device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication\#静态注册)的方式建立连接。
+2. 建立连接，web应用先通过设备序列号与用户名进行绑定，然后发放设备密钥，所以web应用一般会以[静态注册](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication\#静态注册)的方式建立连接。
 
    1） 根据静态连接获取到MQTT登录需要的三要素：`ClientID`，`UserName`，`Password`。
 

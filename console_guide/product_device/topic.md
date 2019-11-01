@@ -19,14 +19,14 @@ Topic是跟随着产品一起定义的，在定义Topic时，路径中会使用`
 - Topic命名以正斜线`/`做层级处理，`${ProductSN}`为抽象层级，表示`产品序列号`；`${DeviceSN}`为抽象层级，表示`设备序列号`；`$broadcast`是关键词，用于添加广播类型topic（只发给按需的订阅者）；
 - 自定义Topic的命名以`/`分割，每层可包含字母、数字、`-`、`_`、`@`、`:`、`+`、`#`，长度限制64，编辑部分最多支持5层。`+`和`#`仅用于订阅权限Topic，`#`只能放在结尾；
 - Topic的权限可以设置为发布、订阅、同时支持发布和订阅；
-- Topic用于规则引擎筛选时，支持MQTT默认的通配符`+`，`#`，参考[Topic通配符](#Topic通配符)；
+- Topic用于规则引擎筛选时，支持MQTT默认的通配符`+`，`#`，参考[Topic通配符](/iot/uiot-core/console_guide/product_device/topic#Topic通配符)；
 
 注：文档中**${ProductSN}**代表一个变量，实际使用时需要以实际的产品序列号替换，**$system**代表实际`$`为一个字符，为其组成部分。
 
 
 
 ## 系统Topic
-系统Topic是指系统预定义的有特殊用途的Topic，比如操作[设备影子](../device_shadow/operation_guide)、操作[物模型](../thingmode/what_is_thingmode)、操作设备状态、操作[固件升级](../ota/what_is_ota)，具体概念可以参考对应章节。
+系统Topic是指系统预定义的有特殊用途的Topic，比如操作[设备影子](/iot/uiot-core/console_guide/device_shadow/operation_guide)、操作[物模型](/iot/uiot-core/console_guide/thingmode/what_is_thingmode)、操作设备状态、操作[固件升级](/iot/uiot-core/console_guide/ota/what_is_ota)，具体概念可以参考对应章节。
 
 系统Topic会在第一层级以`/$system`开始。
 
@@ -83,7 +83,7 @@ Topic是跟随着产品一起定义的，在定义Topic时，路径中会使用`
      - 单击<确定>，创建成功；
 7. 自定义Topic添加完成后
    - 修改：点击<修改>，修改Topic内容；
-   - 删除：点击<删除>，删除该Topic，参考[Topic删除](#Topic删除)；
+   - 删除：点击<删除>，删除该Topic，参考[Topic删除](/iot/uiot-core/console_guide/product_device#Topic删除)；
    - 批量删除：多选后，批量<删除>自定义Topic；
    - 产品发布状态：打开后表示产品为已发布状态，已发布产品无法修改Topic和物模型；
    - 可以对Topic权限或类型进行筛选；

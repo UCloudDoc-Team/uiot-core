@@ -8,14 +8,14 @@
 
 
 ## 前提条件
-1. 参考[创建产品](../console_guide/product_device/create_products\#创建产品)、[创建设备](../console_guide/product_device/create_devcies\#创建设备)，获取产品序列号、设备序列号、设备密钥：
+1. 参考[创建产品](/iot/uiot-core/console_guide/product_device/create_products\#创建产品)、[创建设备](/iot/uiot-core/console_guide/product_device/create_devcies\#创建设备)，获取产品序列号、设备序列号、设备密钥：
     ```
     ProductSN：ledubff3z85spjmu
     DeviceSN：h9onxtzw0aep7fsr
     DeviceSecret：6g7tjlekwf3sqqqj
     ```
 
-2. 建立连接，本例以[静态注册](../device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication\#静态注册)的方式建立连接，如需动态注册请参考[动态注册](../device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication\#动态注册)。  
+2. 建立连接，本例以[静态注册](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication\#静态注册)的方式建立连接，如需动态注册请参考[动态注册](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication\#动态注册)。  
 
    1） 根据静态连接获取到MQTT登录需要的三要素：`ClientID`，`UserName`，`Password`。
 
@@ -25,7 +25,7 @@ ClientID | `ledubff3z85spjmu.h9onxtzw0aep7fsr`<br>规则：`${ProductSN}.${Devic
 UserName | `ledubff3z85spjmu\|h9onxtzw0aep7fsr\|1`<br>规则：`${ProductSN}\|${DeviceSN}\|${authmode}`<br>`authmode: 1表示静态注册；2表示动态注册`
 Password | `6g7tjlekwf3sqqqj`<br>规则：`${DeviceSecret}`
    
-   2）参考[设备连接](../device_develop_guide/deviceconnect/mqttconnect)，获取MQTT Broker连接域名和TLS CA证书：
+   2）参考[设备连接](/iot/uiot-core/device_develop_guide/deviceconnect/mqttconnect)，获取MQTT Broker连接域名和TLS CA证书：
    
 Broker参数| 参数值
 ---|---
@@ -51,7 +51,7 @@ TLS(CA Certificate file) |[CA根证书 下载地址](http://uiot.cn-sh2.ufileos.
 
 
 ## 通过自定义Topic
-自定义Topic的具体详情参考[用户自定义Topic](../console_guide/product_device/topic)，创建上行和下行两个自定义Topic为：
+自定义Topic的具体详情参考[用户自定义Topic](/iot/uiot-core/console_guide/product_device/topic)，创建上行和下行两个自定义Topic为：
 
 Topic | 权限|描述
 ---|---|---
@@ -84,8 +84,8 @@ Topic | 权限|描述
 1. 在MQTT.fx操作界面，点击<Subscribe>，输入Topic：`/ledubff3z85spjmu/h9onxtzw0aep7fsr/downlink`；
 ![下行订阅](../images/下行订阅.png)   
 
-2. 使用云端API进行调用，参考[PublishUIoTCoreMQTTMessage](../api_guide/messagemgmtapi)发送下行消息。
-    UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_guidehelp)，其他参数参考[PublishUIoTCoreMQTTMessage](../api_guide/messagemgmtapi)
+2. 使用云端API进行调用，参考[PublishUIoTCoreMQTTMessage](/iot/uiot-core/api_guide/messagemgmtapi)发送下行消息。
+    UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[PublishUIoTCoreMQTTMessage](/iot/uiot-core/api_guide/messagemgmtapi)
 
     ```
     POST  HTTP/1.1
@@ -111,7 +111,7 @@ Topic | 权限|描述
 ![自定义下行日志](../images/自定义下行日志.png)
 ## 通过设备影子
 
-设备影子的具体详情参考[设备影子](../console_guide/device_shadow/operation_guide\#设备影子相关操作)，本例中设备影子的Topic为：
+设备影子的具体详情参考[设备影子](/iot/uiot-core/console_guide/device_shadow/operation_guide\#设备影子相关操作)，本例中设备影子的Topic为：
 
 Topic | 权限|描述
 ---|---|---
@@ -124,7 +124,7 @@ Topic | 权限|描述
 
 1. 在MQTT.fx操作界面，点击<Publish>，输入Topic：`/$system/ledubff3z85spjmu/h9onxtzw0aep7fsr/shadow/upstream`；
 
-2. 根据[设备影子](../console_guide/device_shadow/operation_guide\#设备影子相关操作)文档输入Payload，上报属性`"color" : "red"`；
+2. 根据[设备影子](/iot/uiot-core/console_guide/device_shadow/operation_guide\#设备影子相关操作)文档输入Payload，上报属性`"color" : "red"`；
    ```
    { 
     "Method" : "update" , 
@@ -157,15 +157,15 @@ Topic | 权限|描述
 	
 
 2. 下发期望值，有两种方法：  
-   1) 参考[设备影子](../console_guide/device_shadow/operation_guide\#设备影子相关操作)，<编辑>设备影子，输入<Desired>值：
+   1) 参考[设备影子](/iot/uiot-core/console_guide/device_shadow/operation_guide\#设备影子相关操作)，<编辑>设备影子，输入<Desired>值：
 
    ```
    {
     "color":"green"
    }
    ```
-   2) 使用云端API进行调用，参考[UpdateUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi)，下发需要发给设备端的期望值。  
-   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](../api_guide/api_guidehelp)，其他参数参考[UpdateUIoTCoreDeviceShadow](../api_guide/deviceshadowmgmtapi)
+   2) 使用云端API进行调用，参考[UpdateUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi)，下发需要发给设备端的期望值。  
+   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[UpdateUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi)
    ```
    POST  HTTP/1.1
    Host: api.ucloud.cn

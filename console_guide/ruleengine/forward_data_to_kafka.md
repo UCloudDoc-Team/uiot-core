@@ -1,12 +1,12 @@
 # 数据流转到分布式消息系统kafka
 数据流转到分布式消息系统kafka需要：
-- 完成[数据流转管理](data_forwarding)中操作步骤的前两步，已经配置好消息筛选SQL；
+- 完成[数据流转管理](/iot/uiot-core/console_guide/ruleengine/data_forwarding)中操作步骤的前两步，已经配置好消息筛选SQL；
 - 在UCloud购买了[Kafka实例 ](https://console.ucloud.cn/ukafka/ukafka)，并已经配置好Kafka实例，并设置好Kafka的Topic。
 
 
 ## 操作步骤
 
-1. 在[数据流转管理](data_forwarding)页面中，点击<添加动作>;
+1. 在[数据流转管理](/iot/uiot-core/console_guide/ruleengine/data_forwarding)页面中，点击<添加动作>;
 2. 在弹出的对话框中，选择动作"转发到分布式消息系统Kafka中"；
 
    - 选择动作：选择需要流转到的目的地，这里选择“转发到分布式消息系统Kafka中”；
