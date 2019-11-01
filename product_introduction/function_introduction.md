@@ -9,9 +9,9 @@ UCloud IoT通信云平台为海量设备上报数据、控制设备提供安全�
 
 提供完善的设备接入方案：
 
-- 提供安全的基于MQTT和MQTT Over TLS的[设备注册](/iot/uiot-core/device_develop_guide/authenticate_devices/what_is_authenticate_devices)、[设备连接](../device_develop_guide/deviceconnect/mqttconnect)机制
-- 提供基于HTTP和HTTP Over TLS的[设备注册](/iot/uiot-core/device_develop_guide/authenticate_devices/what_is_authenticate_devices)、[设备连接](../device_develop_guide/deviceconnect/mqttconnect)机制
-- 提供基于WebSocket和WebSocket Over TLS的[设备注册](/iot/uiot-core/device_develop_guide/authenticate_devices/what_is_authenticate_devices)、[设备连接](../device_develop_guide/deviceconnect/mqttconnect)机制
+- 提供安全的基于MQTT和MQTT Over TLS的[设备注册](/iot/uiot-core/device_develop_guide/authenticate_devices/what_is_authenticate_devices)、[设备连接](/iot/uiot-core/device_develop_guide/deviceconnect/mqttconnect)机制
+- 提供基于HTTP和HTTP Over TLS的[设备注册](/iot/uiot-core/device_develop_guide/authenticate_devices/what_is_authenticate_devices)、[设备连接](/iot/uiot-core/device_develop_guide/deviceconnect/mqttconnect)机制
+- 提供基于WebSocket和WebSocket Over TLS的[设备注册](/iot/uiot-core/device_develop_guide/authenticate_devices/what_is_authenticate_devices)、[设备连接](/iot/uiot-core/device_develop_guide/deviceconnect/mqttconnect)机制
 - 支持原生的Linux、RTOS(FreeRTOS)的移植
 - 支持文件上传功能
 - 支持OTA升级功能
