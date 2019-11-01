@@ -38,5 +38,5 @@ MQTT-TCP连接需要先了解[设备注册](/iot/uiot-core/device_develop_guide/
 ### 消息上行及下行
 
 设备连接成功后即可订阅或发布消息，物联网平台支持
-- 自定义Topic，参考[用户自定义Topic](../console_guide/product_device/topic#用户自定义Topic)；
-- 基于[设备影子](../../console_guide/device_shadow/waht_is_deviceshadow)或者[物模型](../../console_guide/thingmode/what_is_thingmode)进行开发，Topic参考[系统Topic](../../console_guide/product_device/topic#系统Topic)；
+- 自定义Topic，参考[用户自定义Topic](/iot/uiot-core/console_guide/product_device/topic#用户自定义Topic)；
+- 基于[设备影子](/iot/uiot-core/console_guide/device_shadow/waht_is_deviceshadow)或者[物模型](/iot/uiot-core/console_guide/thingmode/what_is_thingmode)进行开发，Topic参考[系统Topic](/iot/uiot-core/console_guide/product_device/topic#系统Topic)；
