@@ -1,14 +1,14 @@
 * 物联网通信云平台 UIoT Core
     * [概览](iot/uiot-core/overview)
-    * 产品简介
+    * [产品简介](iot/uiot-core/product_introduction)
         * [什么是物联网通信云平台](iot/uiot-core/product_introduction/what_is_iotcore)
         * [功能介绍](iot/uiot-core/product_introduction/function_introduction)
         * [名词解释](iot/uiot-core/product_introduction/terms)
         * [使用限制](iot/uiot-core/product_introduction/limitation)
     * [产品定价](iot/uiot-core/pricing)
-    * 快速入门
+    * [快速入门](iot/uiot-core/quick_start)
         * [快速入门示例](iot/uiot-core/quick_start/scenario_description)
-    * 控制台操作指南
+    * [控制台操作指南](iot/uiot-core/console_guide)
         * [登录控制台](iot/uiot-core/console_guide/chek_in)
         * 产品和设备管理
             * [创建产品](iot/uiot-core/console_guide/product_device/create_products)
@@ -40,7 +40,7 @@
             * [日志管理](iot/uiot-core/console_guide/monitoring_maintenance/log)
             * [设备调试](iot/uiot-core/console_guide/monitoring_maintenance/online_debug)
         * [上传文件](iot/uiot-core/console_guide/uploadfile)
-    * 设备端开发指南
+    * [设备端开发指南](iot/uiot-core/device_develop_guide)
         * [概述](iot/uiot-core/device_develop_guide/sdkdownload)
         * 设备注册
             * [什么是设备注册](iot/uiot-core/device_develop_guide/authenticate_devices/what_is_authenticate_devices)
@@ -69,7 +69,7 @@
             * [设备OTA开发](iot/uiot-core/device_develop_guide/c_sdk_example/otainterface)
             * [常见问题](iot/uiot-core/device_develop_guide/c_sdk_example/commonerror)
             * [基于STM32+FreeRTOS+LWIP的SDK移植](iot/uiot-core/device_develop_guide/c_sdk_example/stm32_freertos_lwip_portingguide)
-    * 云端开发指南
+    * [云端开发指南](iot/uiot-core/api_guide)
         * [概述](iot/uiot-core/api_guide/summary)
         * [API列表](iot/uiot-core/api_guide/api_list)
         * [关于API接入](iot/uiot-core/api_guide/api_guidehelp)
@@ -82,7 +82,7 @@
         * [规则引擎](iot/uiot-core/api_guide/ruleeneinmgmt)
         * [上传文件](iot/uiot-core/api_guide/uploadfile)
         * [返回码](iot/uiot-core/api_guide/retcode)
-    * 最佳实践
+    * [最佳实践](iot/uiot-core/best_practices)
         * [使用MQTT.fx接入物联网通信云平台](iot/uiot-core/best_practices/connect_to_iotcore_using_mqtt.fx)
         * [使用mqtt.js接入物联网通信云平台](iot/uiot-core/best_practices/connect_to_iotcore_with_mqtt.js)
     * [常见问题](iot/uiot-core/faq)
