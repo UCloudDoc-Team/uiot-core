@@ -40,11 +40,11 @@ TLS(CA Certificate file) |[CA根证书 下载地址](http://uiot.cn-sh2.ufileos.
     - 输入TLS证书，可以不使用TLS连接，端口为1883
     - 点击<Apply>，提交配置
     - 点击<Connect>，进行连接
-	![连接成功](../images/连接成功.png)
+	![连接成功](/images/连接成功.png)
    
     -  输入TLS证书（使用1883端口，即不使用TLS加密，跳过此步）：
    
-![TLS证书](../images/TLS证书.png)
+![TLS证书](/images/TLS证书.png)
 
 
 
@@ -72,7 +72,7 @@ Topic | 权限|描述
    ```
 
 3. 在日志里面查看上报成功结果，如图：
-![自定义上行](../images/自定义上行.png)
+![自定义上行](/images/自定义上行.png)
    
    
 4. 也可以通过规则引擎M2M、HTTP、MQ等进行消息的接收消费。
@@ -82,7 +82,7 @@ Topic | 权限|描述
 
 ### 下行测试
 1. 在MQTT.fx操作界面，点击<Subscribe>，输入Topic：`/ledubff3z85spjmu/h9onxtzw0aep7fsr/downlink`；
-![下行订阅](../images/下行订阅.png)   
+![下行订阅](/images/下行订阅.png)   
 
 2. 使用云端API进行调用，参考[PublishUIoTCoreMQTTMessage](/iot/uiot-core/api_guide/messagemgmtapi)发送下行消息。
     UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[PublishUIoTCoreMQTTMessage](/iot/uiot-core/api_guide/messagemgmtapi)
@@ -105,10 +105,10 @@ Topic | 权限|描述
     ```
 
 3. 在MQTT.fx操作界面看到下发消息；
-![自定义下行](../images/自定义下行.png)
+![自定义下行](/images/自定义下行.png)
 
 4. 也可以通过日志查看下发成功结果
-![自定义下行日志](../images/自定义下行日志.png)
+![自定义下行日志](/images/自定义下行日志.png)
 ## 通过设备影子
 
 设备影子的具体详情参考[设备影子](/iot/uiot-core/console_guide/device_shadow/operation_guide\#设备影子相关操作)，本例中设备影子的Topic为：
@@ -136,24 +136,24 @@ Topic | 权限|描述
     "Version" : 0 
    }
    ```
-![更新设备影子](../images/更新设备影子.png)
+![更新设备影子](/images/更新设备影子.png)
    
    
    
 3. 在控制台查看设备影子的更新，上行数据上报成功，如图： 
-![设备影子上报成功](../images/设备影子上报成功.png)
+![设备影子上报成功](/images/设备影子上报成功.png)
 
   
 
 4. 也可以在日志里面查看上报成功结果，如图：
-![设备影子日志上报成功](../images/设备影子日志上报成功.png)
+![设备影子日志上报成功](/images/设备影子日志上报成功.png)
 
 
 
 ### 下行测试（设置期望值）
 
 1. 在MQTT.fx操作界面，点击<Subscribe>，输入Topic：`/$system/ledubff3z85spjmu/h9onxtzw0aep7fsr/shadow/downstream`；
-![订阅消息](../images/订阅消息.png)
+![订阅消息](/images/订阅消息.png)
 	
 
 2. 下发期望值，有两种方法：  
@@ -185,13 +185,13 @@ Topic | 权限|描述
    ```
 
    
-![设置期望](../images/设置期望.png)
+![设置期望](/images/设置期望.png)
 
    
 
 3. 在MQTT.fx操作界面可以看到下发消息；
-![设备影子下发消息](../images/设备影子下发消息.png)
+![设备影子下发消息](/images/设备影子下发消息.png)
 
 4. 也可以在日志里面查看下发成功结果，如图：
-![设备影子下发日志](../images/设备影子下发日志.png)
+![设备影子下发日志](/images/设备影子下发日志.png)
    

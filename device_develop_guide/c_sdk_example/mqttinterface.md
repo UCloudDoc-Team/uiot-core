@@ -44,7 +44,7 @@ option(ENABLE_FEATURE_AUTH_MODE_DYNAMIC "是否打开设备动态注册" ON)
 ```
 
 
-![](../../images/设备注册-1.jpg)
+![](/images/设备注册-1.jpg)
 
 ## 代码示例
 (samples\shadow\dynamic_auth_sample.c)
@@ -52,8 +52,8 @@ option(ENABLE_FEATURE_AUTH_MODE_DYNAMIC "是否打开设备动态注册" ON)
 产品序列号，产品密钥，设备序列号信息填入MQTT初始化信息，其他信息可以使用默认参数或者根据实际需求调整。
 event_handler.f_fp需要用户自己实现，用于处理云平台的MQTT响应消息。将控制台上的设备信息替换下列宏。
 
-![](../../images/设备注册-2.png)
-![](../../images/设备注册-3.png)
+![](/images/设备注册-2.png)
+![](/images/设备注册-3.png)
 
 ```
 /* 产品序列号, 与云端同步设备状态时需要  */
@@ -122,7 +122,7 @@ static int _setup_connect_init_params(MQTTInitParams* initParams)
 
 通过HAL层的接口获取设备信息，填入MQTT的初始连接参数中，向物联网平台进行身份认证。
 
-![](../../images/设备注册-4.jpg)
+![](/images/设备注册-4.jpg)
 
 ## 代码示例
 (samples\shadow\mqtt_sample.c)
@@ -133,7 +133,7 @@ static int _setup_connect_init_params(MQTTInitParams* initParams)
 
 将控制台上用户自己创建的产品设备信息替换以下宏。
 
-![](../../images/设备注册-5.png)
+![](/images/设备注册-5.png)
 
 ```
 #define UIOT_MY_PRODUCT_SN            "dpetdroyt44ryjoh"

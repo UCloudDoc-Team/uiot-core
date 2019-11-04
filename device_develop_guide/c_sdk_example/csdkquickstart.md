@@ -83,7 +83,7 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
 
 1) 参考[设备详情](/iot/uiot-core/console_guide/product_device/create_devcies#设备详情)获取设备三要素；
 
-![](../../images/快速入门-1.png)
+![](/images/快速入门-1.png)
 
 
 
@@ -277,7 +277,7 @@ make
 
 2. 第一次上线后同步属性值以及上报属性值
 
-![同步上报属性值](../../images/同步上报属性值.png)
+![同步上报属性值](/images/同步上报属性值.png)
 
 
 3. 参考[设备影子查看与更新](/iot/uiot-core/console_guide/device_shadow/waht_is_deviceshadow#设备影子查看与更新)更新设备影子期望值。
@@ -292,16 +292,16 @@ make
 - 点击<确定>下发命令；
 
 
-![更新设备影子期望值](../../images/修改影子文档.png)
+![更新设备影子期望值](/images/修改影子文档.png)
 
 
 4. 设备端处理下发的期望
 
-![下发属性设置](../../images/设备影子callback.png)
+![下发属性设置](/images/设备影子callback.png)
 
 
 ## 查看日志
 
 通过日志可以看到一段时间内设备所有的上行和下行消息。
 
-![](../../images/快速入门-6.png)
+![](/images/快速入门-6.png)

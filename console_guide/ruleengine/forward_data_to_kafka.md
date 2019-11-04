@@ -18,7 +18,7 @@
 5. 测试此条规则是否生效；
 
 
-![转发到Kafka中](../../images/转发到Kafka中.png)
+![转发到Kafka中](/images/转发到Kafka中.png)
 
 
 

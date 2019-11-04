@@ -9,7 +9,7 @@
 
 [代码源文件下载](http://uiot.cn-sh2.ufileos.com/mqtt_over_ws_tool.zip)
 
-![WebSocket在线测试工具](../../images/websocket在线测试工具.png)
+![WebSocket在线测试工具](/images/websocket在线测试工具.png)
 
 
 ## 前提条件

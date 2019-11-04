@@ -26,4 +26,4 @@
    
 3. 添加动作：将在[数据流转到其他服务](/iot/uiot-core/console_guide/ruleengine/data_forwarding)具体介绍；
 
-![编辑规则](../../images/编辑规则.png)
+![编辑规则](/images/编辑规则.png)

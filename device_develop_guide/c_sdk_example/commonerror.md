@@ -124,3 +124,9 @@ CFLAGS  += -std=gnu99 -DENABLE_LOG_DEBUG -DENABLE_IOT_TRACE
 endif
 ```
 
+
+## 使用问题
+
+#### 如何防止MQTTS的CA证书过期？
+
+答：如果使用mbedTLS库，配置接口`mbedtls_ssl_conf_authmode`的认证模式参数`mbedtls_ssl_conf_authmode`从`MBEDTLS_SSL_VERIFY_REQUIRED`改为`MBEDTLS_SSL_VERIFY_NONE`即可跳过认证而仅使用CA证书加密，即使证书过期也不受影响。

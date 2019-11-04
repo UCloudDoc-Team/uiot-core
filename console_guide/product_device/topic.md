@@ -88,9 +88,9 @@ Topic是跟随着产品一起定义的，在定义Topic时，路径中会使用`
    - 产品发布状态：打开后表示产品为已发布状态，已发布产品无法修改Topic和物模型；
    - 可以对Topic权限或类型进行筛选；
 
-![添加Topic](../../images/添加Topic.png)
+![添加Topic](/images/添加Topic.png)
 
-![Topic列表](../../images/Topic列表.png)
+![Topic列表](/images/Topic列表.png)
 
 
 
@@ -105,7 +105,7 @@ Topic是跟随着产品一起定义的，在定义Topic时，路径中会使用`
 - 自定义Topic删除后，规则引擎的Topic需要自行删除，规则引擎不做Topic的有效性的校验；
 
 
-![删除Topic](../../images/删除Topic.png)
+![删除Topic](/images/删除Topic.png)
 
 
 

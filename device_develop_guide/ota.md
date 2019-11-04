@@ -18,7 +18,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 ## 具体流程
 设备的升级流程如下所示：
 
-![流程图](../images/ota流程.jpg)
+![流程图](/images/ota流程.jpg)
 
 
 

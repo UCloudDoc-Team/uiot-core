@@ -31,3 +31,11 @@
 6. 动态注册之后，我还能通过动态注册获取设备密钥吗？
    
    答：为了安全，动态注册在激活之后不能再通过动态注册获取设备密钥，需要本地做持久化保存。
+   
+7. MQTT over TLS的CA证书可以只做加密，而不认证吗？
+
+   答：如果使用mbedTLS库，配置接口`mbedtls_ssl_conf_authmode`的认证模式参数`mbedtls_ssl_conf_authmode`从`MBEDTLS_SSL_VERIFY_REQUIRED`改为`MBEDTLS_SSL_VERIFY_NONE`即可跳过认证而仅使用CA证书加密。
+
+8. 如何防止MQTTS的CA证书过期？
+
+   答：基于上述问题7的操作，即可跳过认证而仅使用CA证书加密，即使证书过期也不受影响。

@@ -21,7 +21,7 @@
 5. 测试此条规则是否生效；
 
 
-![转发到HTTP服务](../../images/转发到HTTP服务.png)
+![转发到HTTP服务](/images/转发到HTTP服务.png)
 
 
 

@@ -46,4 +46,4 @@ MQTT-WebSocket连接需要先了解[设备注册](/iot/uiot-core/device_develop_
 
 [WebSocket Over MQTT WEB页面使用示例下载](http://uiot.cn-sh2.ufileos.com/mqtt_over_ws_tool.zip)。
 
-![WebSocket在线测试工具](../../images/websocket在线测试工具.png)
+![WebSocket在线测试工具](/images/websocket在线测试工具.png)

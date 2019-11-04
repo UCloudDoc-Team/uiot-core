@@ -37,9 +37,9 @@
    - 启用/禁用：启用或禁用规则，参考[规则启用](/iot/uiot-core/console_guide/ruleengine/what_is_ruleegngine#规则启用)；
    - 删除：删除规则，运行状态下的规则无法删除，也可对规则进行批量删除，参考[规则删除](/iot/uiot-core/console_guide/ruleengine/what_is_ruleegngine#规则删除)；
 
-![新建规则](../../images/新建规则.png)
+![新建规则](/images/新建规则.png)
 
-![规则列表](../../images/规则列表.png)
+![规则列表](/images/规则列表.png)
 
 
 

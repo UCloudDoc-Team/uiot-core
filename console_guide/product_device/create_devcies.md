@@ -36,11 +36,11 @@
    - 点击<设备调试>，进入[设备调试](/iot/uiot-core/console_guide/monitoring_maintenance/online_debug)页；
    - 点击<删除>，进入[设备删除](/iot/uiot-core/console_guide/product_device/create_devcies#设备删除)页；
 
-![随机生成](../../images/随机生成.png)
+![随机生成](/images/随机生成.png)
 
-![手动生成](../../images/手动生成.png)
+![手动生成](/images/手动生成.png)
 
-![设备列表](../../images/设备列表.png)
+![设备列表](/images/设备列表.png)
 
 
 
@@ -54,7 +54,7 @@
 
 动态注册设备的具体流程可以参考[设备端开发指南-动态注册](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication)。
 
-![动态注册](../../images/动态注册.png)
+![动态注册](/images/动态注册.png)
 
 
 
@@ -95,7 +95,7 @@
 
    - 文件管理是设备端通过上传文件功能上传的文件列表，可以对文件进行管理，详细参考[上传文件](/iot/uiot-core/device_develop_guide/uploadfile)；
 
-![设备详情](../../images/设备详情.png)
+![设备详情](/images/设备详情.png)
 
 
 
@@ -105,7 +105,7 @@
 
 设备禁用后可以通过<启用>重新开启。
 
-![设备禁用](../../images/设备禁用.png)
+![设备禁用](/images/设备禁用.png)
 
 
 
@@ -117,7 +117,7 @@
 
 - 删除后的设备将不再出现在设备列表中，可以通过添加设备重新添加该设备；
 
-![删除设备](../../images/删除设备.png)
+![删除设备](/images/删除设备.png)
 
 
 
@@ -127,4 +127,4 @@
 
 获取未激活设备密码：以csv的格式导出所有未激活的设备的`设备序列号`和`设备密码`。
 
-![批量操作](../../images/批量操作.png)
+![批量操作](/images/批量操作.png)
