@@ -1,0 +1,33 @@
+# 控制台操作指南
+
+* [登录控制台](iot/uiot-core/console_guide/chek_in)
+* 产品和设备管理
+  * [创建产品](iot/uiot-core/console_guide/product_device/create_products)
+  * [创建设备](iot/uiot-core/console_guide/product_device/create_devcies)
+  * [Topic管理](iot/uiot-core/console_guide/product_device/topic)
+* 规则引擎
+  * [概览](iot/uiot-core/console_guide/ruleengine/what_is_ruleegngine)
+  * [数据流转管理](iot/uiot-core/console_guide/ruleengine/data_forwarding)
+  * [SQL表达式特性](iot/uiot-core/console_guide/ruleengine/sql_statements)
+  * [数据流转到MySQL](iot/uiot-core/console_guide/ruleengine/forward_data_to_mysql)
+  * [数据流转到MongoDB](iot/uiot-core/console_guide/ruleengine/forward_data_to_mongodb)
+  * [数据流转到分布式消息系统kafka](iot/uiot-core/console_guide/ruleengine/forward_data_to_kafka)
+  * [数据流转到其他Topic](iot/uiot-core/console_guide/ruleengine/forward_data_to_topic)
+  * [数据流转到HTTP服务](iot/uiot-core/console_guide/ruleengine/forward_data_to_http)
+* 设备影子
+  * [设备影子简介](iot/uiot-core/console_guide/device_shadow/waht_is_deviceshadow)
+  * [设备影子相关操作](iot/uiot-core/console_guide/device_shadow/operation_guide)
+* 物模型
+  * [什么是物模型](iot/uiot-core/console_guide/thingmode/what_is_thingmode)
+  * [物模型定义流程](iot/uiot-core/console_guide/thingmode/thingmode_guide)
+  * [功能定义示例](iot/uiot-core/console_guide/thingmode/operation_example)
+* 固件与升级
+  * [概述](iot/uiot-core/console_guide/ota/what_is_ota)
+  * [固件管理](iot/uiot-core/console_guide/ota/firmware_management)
+  * [升级管理](iot/uiot-core/console_guide/ota/firmware_update)
+* 运维功能
+  * [概述](iot/uiot-core/console_guide/monitoring_maintenance/monitoring_maintenance_introduction)
+  * [监控视图](iot/uiot-core/console_guide/monitoring_maintenance/monitor)
+  * [日志管理](iot/uiot-core/console_guide/monitoring_maintenance/log)
+  * [设备调试](iot/uiot-core/console_guide/monitoring_maintenance/online_debug)
+* [上传文件](iot/uiot-core/console_guide/uploadfile)
