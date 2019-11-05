@@ -16,7 +16,7 @@
 2. 查看接口文档获取接口名及参数   
 名称| 内容
 ---|---
-接口名| [GetUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi) - 获取设备影子。
+接口名| [GetUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi#GetUIoTCoreDeviceShadow) - 获取设备影子。
 接口参数|**Region**：上海二区，地域ID为    [cn-sh2](https://docs.ucloud.cn/api/summary/regionlist)。<br>**ProductSN**：产品序列号为    `8pi2i730vxsala2a`，通过控制台查看。<br>**DeviceSN**：设备序列号为`ark1d4ug1evfb1jy`，通过控制台查看。
 
 3. 获取公共参数，即每次请求都需要的参数

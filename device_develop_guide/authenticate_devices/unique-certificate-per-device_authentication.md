@@ -28,5 +28,5 @@ ClientID | `${ProductSN}.${DeviceSN}`<br>举例：`70ly1tvowt696r15.aruidyl0rt9t
 UserName | `${ProductSN}\|${DeviceSN}\|${authmode}`<br>举例：`70ly1tvowt696r15\|aruidyl0rt9tuvod\|1`<br>`authmode: 1表示静态注册；2表示动态注册`
 Password | `${DeviceSecret}`<br>举例：`hly3dk1u5y8fq0b9`
 
-3. 参考[下一节设备连接](/iot/uiot-core/device_develop_guide/deviceconnect/mqttconnect.mdconnecting_devices)将设备接入到物联网平台；
+3. 参考[下一节设备连接](/iot/uiot-core/device_develop_guide/deviceconnect/mqttconnect)将设备接入到物联网平台；
 

@@ -114,6 +114,6 @@ ClientID | `${ProductSN}.${DeviceSN}`<br>举例：`70ly1tvowt696r15.112233445566
 UserName | `${ProductSN}\|${DeviceSN}\|${authmode}`<br>举例：`70ly1tvowt696r15\|112233445566\|1`<br>`authmode: 1`表示静态注册；2表示动态注册`
 Password | `${DeviceSecret}`<br>举例：`zlc3d21u5k8fq0d2`
 
-8. 参考[下一节设备连接](/iot/uiot-core/device_develop_guide/deviceconnect)将设备接入到物联网平台，完成认证；
+8. 参考[下一节设备连接](/iot/uiot-core/device_develop_guide/deviceconnect/mqttconnect)将设备接入到物联网平台，完成认证；
 
 

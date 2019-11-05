@@ -48,8 +48,8 @@
 如果设备不在线需要对设备进行属性设置，可以参考[设备期望属性](/iot/uiot-core/device_develop_guide/thingmode/desired)，设置属性期望值，从而方便设备上线后重新获取。
 ### 具体流程
 1. 设置属性值  
-   应用服务调用接口[SetUIoTCoreDeviceProperty](/iot/uiot-core/api_guide/tingmodemgmtapi)设置属性。  
-   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[SetUIoTCoreDeviceProperty](/iot/uiot-core/api_guide/tingmodemgmtapi)
+   应用服务调用接口[SetUIoTCoreDeviceProperty](/iot/uiot-core/api_guide/tingmodemgmtapi#SetUIoTCoreDeviceProperty)设置属性。  
+   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[SetUIoTCoreDeviceProperty](/iot/uiot-core/api_guide/tingmodemgmtapi#SetUIoTCoreDeviceProperty)
    ```
    POST  HTTP/1.1
    Host: api.ucloud.cn

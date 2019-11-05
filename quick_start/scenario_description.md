@@ -169,7 +169,7 @@
 
 2. 云端下发数据   
 
-     UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[PublishUIoTCoreMQTTMessage](/iot/uiot-core/api_guide/messagemgmtapi)：
+     UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[PublishUIoTCoreMQTTMessage](/iot/uiot-core/api_guide/messagemgmtapi#PublishUIoTCoreMQTTMessage)：
 
      ```
      POST  HTTP/1.1

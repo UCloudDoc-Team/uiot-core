@@ -84,8 +84,8 @@ Topic | 权限|描述
 1. 在MQTT.fx操作界面，点击<Subscribe>，输入Topic：`/ledubff3z85spjmu/h9onxtzw0aep7fsr/downlink`；
 ![下行订阅](/images/下行订阅.png)   
 
-2. 使用云端API进行调用，参考[PublishUIoTCoreMQTTMessage](/iot/uiot-core/api_guide/messagemgmtapi)发送下行消息。
-    UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[PublishUIoTCoreMQTTMessage](/iot/uiot-core/api_guide/messagemgmtapi)
+2. 使用云端API进行调用，参考[PublishUIoTCoreMQTTMessage](/iot/uiot-core/api_guide/messagemgmtapi#PublishUIoTCoreMQTTMessage)发送下行消息。
+    UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[PublishUIoTCoreMQTTMessage](/iot/uiot-core/api_guide/messagemgmtapi#PublishUIoTCoreMQTTMessage)
 
     ```
     POST  HTTP/1.1
@@ -164,8 +164,8 @@ Topic | 权限|描述
     "color":"green"
    }
    ```
-   2) 使用云端API进行调用，参考[UpdateUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi)，下发需要发给设备端的期望值。  
-   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[UpdateUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi)
+   2) 使用云端API进行调用，参考[UpdateUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi#UpdateUIoTCoreDeviceShadow)，下发需要发给设备端的期望值。  
+   UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[UpdateUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi#UpdateUIoTCoreDeviceShadow)
    ```
    POST  HTTP/1.1
    Host: api.ucloud.cn

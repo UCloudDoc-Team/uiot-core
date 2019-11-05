@@ -319,8 +319,8 @@
 
 ### 应用程序更新设备影子期望值
 
-1. 应用服务端通过[UpdateUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi)，下发需要发给设备端的期望值。  
-UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[UpdateUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi)
+1. 应用服务端通过[UpdateUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi#UpdateUIoTCoreDeviceShadow)，下发需要发给设备端的期望值。  
+UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[UpdateUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi#UpdateUIoTCoreDeviceShadow)
     ```
     POST  HTTP/1.1
     Host: api.ucloud.cn
@@ -450,8 +450,8 @@ UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数�
 
 ### 应用程序获取设备影子状态
 
-应用程序直接通过[GetUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi)可以获取设备影子状态。  
-UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[GetUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi)
+应用程序直接通过[GetUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi#GetUIoTCoreDeviceShadow)可以获取设备影子状态。  
+UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[GetUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi#GetUIoTCoreDeviceShadow)
 ```
 POST  HTTP/1.1
 Host: api.ucloud.cn
@@ -473,8 +473,8 @@ Body:
 
 ### 应用程序开启/关闭设备影子
 
-应用程序直接通过[EnableUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi)和[DisableUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi)可以开启/关闭设备影子状态。  
-UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[EnableUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi)和[DisableUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi)。
+应用程序直接通过[EnableUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi#EnableUIoTCoreDeviceShadow)和[DisableUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi#DisableUIoTCoreDeviceShadow)可以开启/关闭设备影子状态。  
+UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[EnableUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi#EnableUIoTCoreDeviceShadow)和[DisableUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi#DisableUIoTCoreDeviceShadow)。
 ```
 POST  HTTP/1.1
 Host: api.ucloud.cn
