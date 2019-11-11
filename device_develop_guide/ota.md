@@ -60,7 +60,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
     - MD5：固件的MD5值
     - Size：固件大小，单位为字节
     
-5. 设备在收到固件升级的消息后，根据URL下载固件，通过`/$system/${productSN}/${deviceSN}/ota/upstream`上报下载进度，消息格式如下：
+5. 设备在收到固件升级的消息后，根据URL通过HTTP连接下载固件到设备，通过`/$system/${productSN}/${deviceSN}/ota/upstream`上报下载进度，消息格式如下：
     ```
     {
         "Method": "report_progress",
