@@ -43,20 +43,20 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 4. 云端下发固件升级消息给设备端
     设备端会通过订阅的`/$system/${productSN}/${deviceSN}/ota/downstream`收到固件升级的消息，内容如下：
     ```
-    {
-        "Method": "update_firmware",
-        "Payload":{
-            "Version": "2.0",
-            "URL": "http://uiottestufile.cn-sh2.ufileos.com",
-            "MD5": "aa30e838c7cdbbcbf8be7668aaeebee3",
-            "Size": 10000
-        }
-    }
+	{
+		"Method": "update_firmware",
+		"Payload": {
+			"Version": "1.0.0",
+			"URL": "http://uiot-ota1.cn-sh2.ufileos.com/iwfrdgwhmwscqbmv_2.0.0_ver.bin?UCloudPublicKey=dhX3367CNkw1sSL2qVjybhBBjkQapw%2BDH3tqkhwvN%2F0B6EckE%2BCZ%2FFI%3D&Signature=8QUp6d73BZAo%2FLDr3H0xJlpE4Ug%3D&Expires=1573281691",
+			"MD5": "17ffea1119f36d1b366353f4edef1780",
+			"Size": 4233
+		}
+	}
     ```
     参数解释：
     - Method：消息类型为update_firmware
     - Version：升级版本
-    - URL：下载固件的url
+    - URL：下载固件的url，该URL会在1天后失效，不能下载
     - MD5：固件的MD5值
     - Size：固件大小，单位为字节
     
