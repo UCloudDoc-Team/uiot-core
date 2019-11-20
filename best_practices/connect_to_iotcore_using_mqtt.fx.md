@@ -31,6 +31,7 @@ Broker参数| 参数值
 ---|---
 Broker Address | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，目前仅在上海Region开放）
 Broker Port | 1883或8883(使用TLS)
+KeepAlive | 30秒-1200秒，建议设置为300秒。 **当出现连接出错时，需要仔细检查该参数。**
 TLS(CA Certificate file) |[CA根证书 下载地址](http://uiot.cn-sh2.ufileos.com/ca-cert.pem)
    
    3）打开MQTT.fx软件，连接成功
