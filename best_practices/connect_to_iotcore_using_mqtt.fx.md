@@ -41,7 +41,8 @@ TLS(CA Certificate file) |[CA根证书 下载地址](http://uiot.cn-sh2.ufileos.
     - 输入TLS证书，可以不使用TLS连接，端口为1883
     - 点击<Apply>，提交配置
     - 点击<Connect>，进行连接
-	![连接成功](/images/连接成功.png)
+	
+![连接成功](/images/连接成功.png)
    
     -  输入TLS证书（使用1883端口，即不使用TLS加密，跳过此步）：
    

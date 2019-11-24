@@ -6,7 +6,7 @@
 
 ## 文件上传注意事项
 
-- 使用HTTPS协议，支持TLS V1.2版本；
+- 必须使用HTTPS协议，支持TLS V1.2版本；
 - CA证书为国际授信的域名证书，也可以直接下载[CA证书](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)；
 
 
@@ -17,7 +17,7 @@
 
 1. 获取上传文件目标URL；
 
-	设备端HTTP请求获取上传文件的目标URL以及上传文件的Authorization
+	设备端HTTPS请求获取上传文件的目标URL以及上传文件的Authorization
 
 ```
 POST /api/v1/url HTTP/1.1
@@ -32,7 +32,7 @@ body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","DeviceSecret
 |---|---|
 |Method|请求方法。只支持 POST 方法。|
 |URL|`/api/v1/url`，URL 地址|
-|Host|endpoint 地址|
+|Host|`file-cn-sh2.iot.ucloud.cn` endpoint 地址，端口必须为443|
 |Content-Type|body 数据的编码格式。目前只支持 application/json|
 |body|设备认证信息。JSON 数据格式。具体信息，请参见下表 body 参数。|
 
