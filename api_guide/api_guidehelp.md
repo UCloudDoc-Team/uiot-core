@@ -39,9 +39,9 @@ ProjectId|项目ID为 `org-z44lmf12e`，项目ID为 **org-z44lmf12e**，通过�
    ProductSN:8pi2i730vxsala2a
    DeviceSN:ark1d4ug1evfb1jy
    // 公共参数，Signature加密后获取
-   ProjectId:org-z44lmf12e
    Action:GetUIoTCoreDeviceShadow
    PublicKey:CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O
+   ProjectId:org-z44lmf12e   
    ```
    2）将上述参数按照参数名（上面参数中的`Region、ProductSN`等）进行升序排序
    ```
