@@ -56,9 +56,9 @@ ProjectId|项目ID为 `org-z44lmf12e`，项目ID为 **org-z44lmf12e**，通过�
    
    - 用户私钥通过 个人中心->API密钥获取为：`ztqlj0vtg6Por5d/etqpadpTZwscLRh5cIsFAHbwuvnMY4mAWI+GT5C2yzj/KiZf`
    - 拼接获得字符串为（键值依次相连+用户私钥）：
-   ```   ActionGetUIoTCoreDeviceShadowDeviceSNark1d4ug1evfb1jyProductSN8pi2i730vxsala2aProjectIdorg-z44lmf12ePublicKeyCJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/ORegioncn-sh2ztqlj0vtg6Por5d/etqpadpTZwscLRh5cIsFAHbwuvnMY4mAWI+GT5C2yzj/KiZf
    ```
-   
+   ActionGetUIoTCoreDeviceShadowDeviceSNark1d4ug1evfb1jyProductSN8pi2i730vxsala2aProjectIdorg-z44lmf12ePublicKeyCJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/ORegioncn-sh2ztqlj0vtg6Por5d/etqpadpTZwscLRh5cIsFAHbwuvnMY4mAWI+GT5C2yzj/KiZf
+   ``` 
    4）计算SHA1签名
    
    将第3）步字符串进行SHA1签名，获取签名串为
