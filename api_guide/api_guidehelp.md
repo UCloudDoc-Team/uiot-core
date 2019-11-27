@@ -13,7 +13,8 @@
    - 公共参数：每个接口都需要用到的，包括调用接口名、项目名、公钥等
    - 签名：通过私钥签名，方便网关鉴权。
 
-2. 查看接口文档获取接口名及参数   
+2. 查看接口文档获取接口名及参数
+
 名称| 内容
 ---|---
 接口名| [GetUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi#GetUIoTCoreDeviceShadow) - 获取设备影子。
@@ -38,10 +39,11 @@ ProjectId|项目ID为 `org-z44lmf12e`，项目ID为 **org-z44lmf12e**，通过�
    ProductSN:8pi2i730vxsala2a
    DeviceSN:ark1d4ug1evfb1jy
    // 公共参数，Signature加密后获取
+   ProjectId:org-z44lmf12e
    Action:GetUIoTCoreDeviceShadow
    PublicKey:CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O
    ```
-   2）将上述参数按照参数名（上面参数中的`Region、ProjectId`等）进行升序排序
+   2）将上述参数按照参数名（上面参数中的`Region、ProductSN`等）进行升序排序
    ```
    Action:GetUIoTCoreDeviceShadow
    DeviceSN:ark1d4ug1evfb1jy
@@ -54,9 +56,10 @@ ProjectId|项目ID为 `org-z44lmf12e`，项目ID为 **org-z44lmf12e**，通过�
    
    - 用户私钥通过 个人中心->API密钥获取为：`ztqlj0vtg6Por5d/etqpadpTZwscLRh5cIsFAHbwuvnMY4mAWI+GT5C2yzj/KiZf`
    - 拼接获得字符串为（键值依次相连+用户私钥）：
+   
+   ```   ActionGetUIoTCoreDeviceShadowDeviceSNark1d4ug1evfb1jyProductSN8pi2i730vxsala2aProjectIdorg-z44lmf12ePublicKeyCJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/ORegioncn-sh2ztqlj0vtg6Por5d/etqpadpTZwscLRh5cIsFAHbwuvnMY4mAWI+GT5C2yzj/KiZf
    ```
-   ActionGetUIoTCoreDeviceShadowDeviceSNark1d4ug1evfb1jyProductSN8pi2i730vxsala2aProjectIdorg-z44lmf12ePublicKeyCJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/ORegioncn-sh2ztqlj0vtg6Por5d/etqpadpTZwscLRh5cIsFAHbwuvnMY4mAWI+GT5C2yzj/KiZf
-   ```
+   
    4）计算SHA1签名
    
    将第3）步字符串进行SHA1签名，获取签名串为
