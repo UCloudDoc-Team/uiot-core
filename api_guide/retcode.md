@@ -4,7 +4,7 @@
 | 错误码         | 中文                                                  | 英文                                                  |
 | -------------- | ---------------------------------------------------- | --------------------------------------------------- |
 |-1|数据加载失败，请稍后重试。|Data loading failed, please retry later.|
-|0|请求成功|请求成功|
+|0|请求成功|Request Success.|
 |100|签名生成失败,请联系技术支持或提交工单。|Signature generation failed, please contact technical support or submit a ticket.|
 |110|该操作请求超时，请稍后重试|This operation request has timed out, please retry later|
 |120|日期格式错误，请重新选择日期。|Date format error, please reselect the date.|
