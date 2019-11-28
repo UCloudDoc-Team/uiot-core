@@ -10,7 +10,7 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 
 - HTTP接入仅支持HTTPS协议，TLS为V1.2版本；
 
-- CA证书为国际授信的域名证书，也可以直接[下载CA证书](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)；
+- CA证书为国际授信的域名证书，也可以直接[下载CA证书](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)（不同区域连接域名不同，目前仅在上海Region开放）；
 - HTTP请求只支持POST方式；
 - 基于MQTT的Topic规范，数据上报到MQTT的某个Topic；
 
