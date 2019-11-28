@@ -1,15 +1,44 @@
 # 返回码
 
 ### 错误码
-| 错误码          | 中文                                                  | 英文                                                  |
+| 错误码         | 中文                                                  | 英文                                                  |
 | -------------- | ---------------------------------------------------- | --------------------------------------------------- |
-| 0              | 请求成功                                              | Success                                |
-| 120            | 日期格式错误，请重新选择日期                              | Date format error, please reselect the date          |
-| 130            | 服务目前不可用，我们正在努力恢复中，请稍后重试            | Service is temporarily unavailable, we are working hard to restore it, please retry later |
-| 160            | 缺少关键参数Action，请提供完整的参数                                           | Key parameter Action is missing, please provide the complete parameters |
-| 161            | Action 不存在                                           | Action not found                                     |
-| 171            | 签名错误                                           | Signature error                                |
-| 230            | 参数错误，请重新输入                                           | Parameter error, please reenter                                |
+|-1|数据加载失败，请稍后重试。|Data loading failed, please retry later.|
+|0|请求成功|请求成功|
+|100|签名生成失败,请联系技术支持或提交工单。|Signature generation failed, please contact technical support or submit a ticket.|
+|110|该操作请求超时，请稍后重试|This operation request has timed out, please retry later|
+|120|日期格式错误，请重新选择日期。|Date format error, please reselect the date.|
+|130|服务目前不可用，我们正在努力恢复中，请稍后重试。|Service is temporarily unavailable, we are working hard to restore it, please retry later.|
+|140|权限错误，请联系技术支持或提交工单。|Authorization error, please contact technical support or submit a ticket.|
+|150|服务目前不可用，我们正在努力恢复中，请稍后重试。|Service is temporarily unavailable, we are working hard to restore it, please retry later.|
+|151|网关缓存服务异常|Redis Service unavilable|
+|152|API 错误或后端不可用|API Error Or Service unavailable|
+|160|缺少关键参数Action，请提供完整的参数。|Key parameter Action is missing, please provide the complete parameters.|
+|161|Action 不存在|Action not found|
+|170|缺少关键参数signature，请提供完整的参数。|Key parameter Signature is missing, please provide the complete parameters.|
+|171|签名错误。|Signature error.|
+|172|该账号不存在。|This account does not exist.|
+|173|账户限制|Account restriction|
+|174|Token 不存在|Token Not Exists|
+|180|缺少关键参数API version。|Key parameter API Version is missing.|
+|190|API版本错误。|API Version error.|
+|200|服务目前不可用，我们正在努力修复中，请稍后再试。|Service is temporarily unavailable, we are working hard to restore, please retry later.|
+|210|缺少关键参数，请提供完整的参数信息。|Key parameter is missing, please provide the complete parameters.|
+|220|参数超出范围，请重新输入。|Parameter exceeds limits, please reenter.|
+|230|参数错误，请重新输入。|Parameter error, please reenter.|
+|240|权限错误，请联系技术支持|Authorization error, please contact technical support|
+|260|降级失败,请联系技术支持或提交工单。|Downgrade failed, please contact technical support or submit a ticket.|
+|270|结算错误,请联系技术支持或提交工单。|Settlement error, please contact technical support or submit a ticket.|
+|290|项目未授权|project unauthorized error|
+|291|该账户没有执行对应 Action 和产品类型的权限|Action , ProductType unauthorized error|
+|292|项目不存在|project not exists|
+|293|地区权限错误|Region Unauthorized Error|
+|294|访问ip被黑名单|Access ip denied|
+|295|安全锁认证失败|Safe lock miss verification|
+|300|结束时间不能小于开始时间，请重新选择。|End time cannot be less than start time, please reselect.|
+|310|参数类型错误|param type error|
+|520|余额不足，请充值。|Balance is insufficient, please recharge.|
+|999|抱歉当前机房服务目前不可用，恢复中。|Sorry, server room service is currently unavailable, restoration is in progress.|
 | 100000         | 创建产品失败                                           | Create product failed                                |
 | 100001         | 产品名称已存在                                          | Product name exists                                  |
 | 100002         | 产品名称不存在                                          | Product name does not exists                         |
