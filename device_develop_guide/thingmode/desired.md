@@ -6,7 +6,7 @@
    UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[SetUIoTCoreDeviceProperty](/iot/uiot-core/api_guide/tingmodemgmtapi#SetUIoTCoreDeviceProperty)。
    ```
    POST  HTTP/1.1
-   Host: api.ucloud.cn
+   Host: api-cn-sh2.iot.ucloud.cn
    Content-Type: application/json
    Body:
    {

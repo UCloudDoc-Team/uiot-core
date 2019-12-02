@@ -116,6 +116,7 @@
 - 按MessageID查询可以直接根据MessageID查询指定时间范围内的消息；
 - 日志搜索字段：
   - 按MessageID：按照MessageID搜索某条消息在平台内部的流转过程；
+- PayLoad编码方式: PayLoad提供Base64、UTF-8、Hex三种方式查看Payload的内容；
 - 日志包含字段：
   - 时间：消息发生的时间；
   - MessageID： MessageID是某条消息在平台流转的唯一标识，通过Message  ID可以查询设备在平台流转的路径，比如经过设备影子，或者经过规则引擎；
@@ -142,7 +143,8 @@
 - 消息内容查询可以根据筛选条件查询指定时间范围内的消息；
 - 日志包含筛选字段：
   - 选择设备：查询某个设备，或者全部设备；
-  - 按MessageID：按照MessageID搜索某条消息在平台内部的流转过程；
+  - 按内容查询：按照内容关键字查找指定设备上下行消息；
+- PayLoad编码方式: PayLoad提供Base64、UTF-8、Hex三种方式查看Payload的内容；
 - 日志包含字段：
   - 时间：消息发生的时间；
   - MessageID： MessageID是某条消息在平台流转的唯一标识，通过Message  ID可以查询设备在平台流转的路径，比如经过设备影子，或者经过规则引擎

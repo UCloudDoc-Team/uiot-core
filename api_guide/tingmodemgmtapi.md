@@ -25,7 +25,7 @@
 ### 请求示例
 
 ```
-https://api.ucloud.cn/?Action=GetUIoTCoreDeviceProperty
+https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreDeviceProperty
 &Region=cn-sh2
 &ProductSN=sp23xte8iebb43pu
 &DeviceSN=test1
@@ -91,7 +91,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceProperty
 ### 请求示例
 
 ```
-https://api.ucloud.cn/?Action=GetUIoTCoreDeviceCommandList
+https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreDeviceCommandList
 &Region=cn-sh2
 &ProductSN=sp23xte8iebb43pu
 &DeviceSN=test1
@@ -168,7 +168,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceCommandList
 ### 请求示例
 
 ```
-https://api.ucloud.cn/?Action=GetUIoTCoreDeviceEventList
+https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreDeviceEventList
 &Region=cn-sh2
 &ProductSN=sp23xte8iebb43pu
 &DeviceSN=test1
@@ -226,7 +226,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceEventList
 ### 请求示例
 
 ```
-https://api.ucloud.cn/?Action=SetUIoTCoreDeviceProperty
+https://api-cn-sh2.iot.ucloud.cn/?Action=SetUIoTCoreDeviceProperty
 &Region=cn-sh2
 &ProductSN=sp23xte8iebb43pu
 &DeviceSN=test1
@@ -273,7 +273,7 @@ https://api.ucloud.cn/?Action=SetUIoTCoreDeviceProperty
 ### 请求示例
 
 ```
-https://api.ucloud.cn/?Action=SendUIoTCoreDeviceCommand
+https://api-cn-sh2.iot.ucloud.cn/?Action=SendUIoTCoreDeviceCommand
 &Region=cn-sh2
 &ProductSN=sp23xte8iebb43pu
 &DeviceSN=test1
@@ -317,7 +317,7 @@ https://api.ucloud.cn/?Action=SendUIoTCoreDeviceCommand
 ### 请求示例
 
 ```
-https://api.ucloud.cn/?Action=GetUIoTCoreTModelTemplate
+https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreTModelTemplate
 &Region=cn-sh2
 &ProductSN=sp23xte8iebb43pu
 &公共请求参数

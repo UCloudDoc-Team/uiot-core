@@ -22,7 +22,7 @@
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=PublishUIoTCoreMQTTMessage
+https://api-cn-sh2.iot.ucloud.cn/?Action=PublishUIoTCoreMQTTMessage
 &Region=cn-sh2
 &ProductSN=7ab051kbfhhjakc0
 &TopicFullName=/7ab051kbfhhjakc0/h6phdnkjvr90iq6l/hello
@@ -61,7 +61,7 @@ https://api.ucloud.cn/?Action=PublishUIoTCoreMQTTMessage
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=BroadcastUIoTCoreMQTTMessage
+https://api-cn-sh2.iot.ucloud.cn/?Action=BroadcastUIoTCoreMQTTMessage
 &Region=cn-sh2
 &ProductSN=7ab051kbfhhjakc0
 &TopicFullName=/7ab051kbfhhjakc0/$broadcast/world

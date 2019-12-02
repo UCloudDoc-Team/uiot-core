@@ -35,7 +35,7 @@ Password | `6g7tjlekwf3sqqqj`<br>规则：`${DeviceSecret}`
    
 Broker参数| 参数值
 ---|---
-Broker Address | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，目前仅在上海Region开放）
+Broker Address | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，参考[已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)）
 Broker Port | 80或443(使用HTTPS)
 KeepAlive | 30秒-1200秒，建议设置为300秒。 **当出现连接出错时，需要仔细检查该参数。**
 TLS(CA Certificate file) |[CA根证书 下载地址](http://uiot.cn-sh2.ufileos.com/iot_ca.crt) 如使用IE、Edge、Chrome等浏览器不需要下载
@@ -75,7 +75,7 @@ client.on('reconnect', (error) => {
 
 即 协议//域名:端口
 协议：使用SSL为wss，反之ws；
-域名：mqtt-cn-sh2.iot.ucloud.cn
+域名：mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，参考[已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)）
 端口：wss为443，ws为80
 
 

@@ -24,7 +24,7 @@
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=CreateUIoTCoreProductTopic
+https://api-cn-sh2.iot.ucloud.cn/?Action=CreateUIoTCoreProductTopic
 &ProductSN=7ab051kbfhhjakc0
 &Topic=/7ab051kbfhhjakc0/${DeviceSN}/hello
 &Permission=sub
@@ -66,7 +66,7 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreProductTopic
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=ModifyUIoTCoreProductTopic
+https://api-cn-sh2.iot.ucloud.cn/?Action=ModifyUIoTCoreProductTopic
 &ProductSN=7ab051kbfhhjakc0
 &Topic=/7ab051kbfhhjakc0/${DeviceSN}/hello
 &NewTopic=/7ab051kbfhhjakc0/${DeviceSN}/world
@@ -106,7 +106,7 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreProductTopic
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=DeleteUIoTCoreProductTopic
+https://api-cn-sh2.iot.ucloud.cn/?Action=DeleteUIoTCoreProductTopic
 &ProductSN=7ab051kbfhhjakc0
 &Topic=/7ab051kbfhhjakc0/${DeviceSN}/world
 &Region=cn-sh2
@@ -156,7 +156,7 @@ https://api.ucloud.cn/?Action=DeleteUIoTCoreProductTopic
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=GetUIoTCoreProductTopicList
+https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreProductTopicList
 &ProductSN=7ab051kbfhhjakc0
 &Offset=0
 &Limit=100

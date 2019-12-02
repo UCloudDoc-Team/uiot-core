@@ -24,8 +24,7 @@
    - RequestID：请求消息的ID号，为字符串型，根据RequestID确定一条请求以及响应的一一对应性；
    - Property：所有需要上报的属性集合，包含属性名、属性值、时间戳；
    - Value：属性的值；
-   - Time：上报时间戳，使用Unix时间戳；
-   - Method：上报的方法；
+   - Time：上报时间戳，使用Unix时间戳。该字段可以省略，此时平台使用当前时间填充；
    
 2. 云平台响应  
    云平台响应，并向Topic `/$system/${productSN}/${DeviceSN}/tmodel/property/post_reply` 下发一条消息，消息格式为：
@@ -52,7 +51,7 @@
    UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[SetUIoTCoreDeviceProperty](/iot/uiot-core/api_guide/tingmodemgmtapi#SetUIoTCoreDeviceProperty)
    ```
    POST  HTTP/1.1
-   Host: api.ucloud.cn
+   Host: api-cn-sh2.iot.ucloud.cn
    Content-Type: application/json
    Body:
    {

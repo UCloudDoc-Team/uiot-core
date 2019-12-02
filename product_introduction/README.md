@@ -4,3 +4,4 @@
 * [功能介绍](iot/uiot-core/product_introduction/function_introduction)
 * [名词解释](iot/uiot-core/product_introduction/terms)
 * [使用限制](iot/uiot-core/product_introduction/limitation)
+* [已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)

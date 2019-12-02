@@ -13,7 +13,7 @@
 |FileName|string|文件名称|No|
 |Offset|int|列表起始位置偏移量，默认为0|No|
 |Limit|int|返回最大数据长度，默认为20，最大为100|No|
-
+|URLExpire|int|下载URL的过期时间，单位秒。默认为0值，小于0值则有效期为99年|No|
 
 ### 响应参数
 |Parameter name|Type|Description|Required|
@@ -32,12 +32,12 @@
 |FileName|string|文件名称|**Yes**|
 |FileSize|int|文件大小|**Yes**|
 |CreateTime|int|创建时间|**Yes**|
-|UpdateTime|int|更新时间|**Yes**|
+|URL|string|文件下载链接|**Yes**|
 
 ### 请求示例
 
 ```
-https://api.ucloud.cn/?Action=QueryUIoTCoreDeviceFileList
+https://api-cn-sh2.iot.ucloud.cn/?Action=QueryUIoTCoreDeviceFileList
 &Region=cn-sh2
 &ProductSN=s488594zqqrz7v3y
 &DeviceSN=10001
@@ -55,10 +55,62 @@ https://api.ucloud.cn/?Action=QueryUIoTCoreDeviceFileList
             "FileName": "umrLuNQz",
             "CreateTime": 1248577,
             "FileSize": 124,
-            "UpdateTime": 1248577
+            "URL":"http://uiotcore-55977352-55738012.cn-sh2.ufileos.com/s488594zqqrz7v3y/vfvjqYKWIdHbK/filename.txt?Expires=1575028870&Signature=FDtXmo%3D&UCloudPublicKey=dhXd%2F0B6EckE%2BCZ%2FFI%3D"
         }
     ],
     "TotalCount": 7
+}
+```
+
+# QueryUIoTCoreDeviceFile
+
+获取设备文件信息
+
+# 请求参数
+|Parameter name|Type|Description|Required|
+|---|---|---|---|
+|Region|string|地地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
+|ProductSN|string|产品序列号|**Yes**|
+|DeviceSN|string|设备序列号|**Yes**|
+|FileName|string|文件名称，文件名称不能以`/`结尾|**Yes**|
+|URLExpire|int|文件下载链接的URL，单位秒。默认为0值，小于0值则有效期为99年|No|
+
+# 响应参数
+|Parameter name|Type|Description|Required|
+|---|---|---|---|
+|RetCode|int|返回码|**Yes**|
+|Action|string|操作名称|**Yes**|
+|FileInfo|object|文件信息|**Yes**|
+
+## FileInfo
+|Parameter name|Type|Description|Required|
+|---|---|---|---|
+|FileName|string|文件名称|**Yes**|
+|FileSize|int|文件大小|**Yes**|
+|CreateTime|int|创建时间|**Yes**|
+|URL|string|文件下载链接|**Yes**|
+
+# 请求示例
+```
+https://api-cn-sh2.iot.ucloud.cn/?Action=QueryUIoTCoreDeviceFile
+&Region=cn-zj
+&ProductSN=s488594zqqrz7v3y
+&DeviceSN=vfvjqYKWIdHbK
+&FileName=filename.txt
+&URLExpire=0
+```
+
+# 响应示例
+```
+{
+    "Action": "QueryUIoTCoreDeviceFileResponse", 
+    "FileInfo": {
+            "FileName": "umrLuNQz",
+            "CreateTime": 1248577,
+            "FileSize": 124,
+            "URL":"http://uiotcore-55977352-55738012.cn-sh2.ufileos.com/s488594zqqrz7v3y/vfvjqYKWIdHbK/filename.txt?Expires=1575028870&Signature=FDtXmo%3D&UCloudPublicKey=dhXd%2F0B6EckE%2BCZ%2FFI%3D"		
+        }, 
+    "RetCode": 0
 }
 ```
 
@@ -74,7 +126,7 @@ https://api.ucloud.cn/?Action=QueryUIoTCoreDeviceFileList
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
 |FileName|string|文件名称，文件名称不能以 / 结尾|**Yes**|
-
+|URLExpire|int|文件下载链接的URL，单位秒。默认为0值，小于0值则有效期为99年|No|
 
 ### 响应参数
 |Parameter name|Type|Description|Required|
@@ -86,7 +138,7 @@ https://api.ucloud.cn/?Action=QueryUIoTCoreDeviceFileList
 ### 请求示例
 
 ```
-https://api.ucloud.cn/?Action=GetUIoTCoreDeviceFileURL
+https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreDeviceFileURL
 &Region=cn-sh2
 &ProductSN=s488594zqqrz7v3y
 &DeviceSN=10001
@@ -125,7 +177,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceFileURL
 ### 请求示例
 
 ```
-https://api.ucloud.cn/?Action=DeleteUIoTCoreDeviceFile
+https://api-cn-sh2.iot.ucloud.cn/?Action=DeleteUIoTCoreDeviceFile
 &Region=cn-sh2
 &ProductSN=s488594zqqrz7v3y
 &DeviceSN=10001

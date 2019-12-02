@@ -29,6 +29,7 @@
 |[BatchDeleteUIoTCoreDevice](/iot/uiot-core/api_guide/devicemgmtapi#BatchDeleteUIoTCoreDevice) | 批量删除设备|
 |[BatchEnableUIoTCoreDevice](/iot/uiot-core/api_guide/devicemgmtapi#BatchEnableUIoTCoreDevice) | 批量启用设备|
 |[BatchDisableUIoTCoreDevice](/iot/uiot-core/api_guide/devicemgmtapi#BatchDisableUIoTCoreDevice) | 批量禁用设备|
+|[ResetUIoTCoreDevice](/iot/uiot-core/api_guide/devicemgmtapi#ResetUIoTCoreDevice)|重置设备激活状态|
 |[GetUIoTCoreDeviceList](/iot/uiot-core/api_guide/devicemgmtapi#GetUIoTCoreDeviceList) | 获取设备列表|
 |[GetUIoTCoreInactivatedDevicePasswordFile](/iot/uiot-core/api_guide/devicemgmtapi#GetUIoTCoreInactivatedDevicePasswordFile) | 获取未激活设备的密码文件|
 
@@ -93,6 +94,7 @@
 |API名称 | 描述|
 |---|---|
 |[QueryUIoTCoreDeviceFileList](/iot/uiot-core/api_guide/uploadfile#QueryUIoTCoreDeviceFileList) | 查询设备上传的文件列表|
-|[GetUIoTCoreDeviceFileURL](/iot/uiot-core/api_guide/uploadfile#GetUIoTCoreDeviceFileURL) | 获取设备文件的下载链接，有效期30分钟|
+|[QueryUIoTCoreDeviceFile](/iot/uiot-core/api_guide/uploadfile#QueryUIoTCoreDeviceFile) |获取设备文件信息|
+|[GetUIoTCoreDeviceFileURL](/iot/uiot-core/api_guide/uploadfile#GetUIoTCoreDeviceFileURL) | 获取设备文件的下载链接|
 |[DeleteUIoTCoreDeviceFile](/iot/uiot-core/api_guide/uploadfile#DeleteUIoTCoreDeviceFile) | 删除设备文件|
 

@@ -25,7 +25,7 @@
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=CreateUIoTCoreDevice
+https://api-cn-sh2.iot.ucloud.cn/?Action=CreateUIoTCoreDevice
 &ProductSN=7ab051kbfhhjakc0
 &DeviceSN=h6phdnkjvr90iq6l
 &Description=灯泡1
@@ -65,7 +65,7 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreDevice
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=ModifyUIoTCoreDevice
+https://api-cn-sh2.iot.ucloud.cn/?Action=ModifyUIoTCoreDevice
 &ProductSN=7ab051kbfhhjakc0
 &DeviceSN=h6phdnkjvr90iq6l
 &NewDescription=light1
@@ -102,7 +102,7 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreDevice
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=DeleteUIoTCoreDevice
+https://api-cn-sh2.iot.ucloud.cn/?Action=DeleteUIoTCoreDevice
 &ProductSN=7ab051kbfhhjakc0
 &DeviceSN=h6phdnkjvr90iq6l
 &Region=cn-sh2
@@ -138,7 +138,7 @@ https://api.ucloud.cn/?Action=DeleteUIoTCoreDevice
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=EnableUIoTCoreDevice
+https://api-cn-sh2.iot.ucloud.cn/?Action=EnableUIoTCoreDevice
 &ProductSN=7ab051kbfhhjakc0
 &DeviceSN=h6phdnkjvr90iq6l
 &Region=cn-sh2
@@ -175,7 +175,7 @@ https://api.ucloud.cn/?Action=EnableUIoTCoreDevice
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=DisableUIoTCoreDevice
+https://api-cn-sh2.iot.ucloud.cn/?Action=DisableUIoTCoreDevice
 &ProductSN=7ab051kbfhhjakc0
 &DeviceSN=h6phdnkjvr90iq6l
 &Region=cn-sh2
@@ -220,7 +220,7 @@ https://api.ucloud.cn/?Action=DisableUIoTCoreDevice
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=BatchCreateUIoTCoreDevice
+https://api-cn-sh2.iot.ucloud.cn/?Action=BatchCreateUIoTCoreDevice
 &ProductSN=7ab051kbfhhjakc0
 &DeviceCount=5
 &Region=cn-sh2
@@ -272,7 +272,7 @@ https://api.ucloud.cn/?Action=BatchCreateUIoTCoreDevice
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=BatchCreateUIoTCoreDeviceWithSN
+https://api-cn-sh2.iot.ucloud.cn/?Action=BatchCreateUIoTCoreDeviceWithSN
 &ProductSN=7ab051kbfhhjakc0
 &DeviceSN.0=jkpoo1r6ltul7l4i
 &DeviceSN.1=jkpoo1r6ltul7l5i
@@ -320,7 +320,7 @@ https://api.ucloud.cn/?Action=BatchCreateUIoTCoreDeviceWithSN
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=BatchDeleteUIoTCoreDevice
+https://api-cn-sh2.iot.ucloud.cn/?Action=BatchDeleteUIoTCoreDevice
 &ProductSN=7ab051kbfhhjakc0
 &DeviceSN.0=jkpoo1r6ltul7l4i
 &DeviceSN.1=jkpoo1r6ltul7l5i
@@ -358,7 +358,7 @@ https://api.ucloud.cn/?Action=BatchDeleteUIoTCoreDevice
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=BatchEnableUIoTCoreDevice
+https://api-cn-sh2.iot.ucloud.cn/?Action=BatchEnableUIoTCoreDevice
 &ProductSN=7ab051kbfhhjakc0
 &DeviceSN.0=jkpoo1r6ltul7l4i
 &DeviceSN.1=jkpoo1r6ltul7l5i
@@ -396,7 +396,7 @@ https://api.ucloud.cn/?Action=BatchEnableUIoTCoreDevice
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=BatchDisableUIoTCoreDevice
+https://api-cn-sh2.iot.ucloud.cn/?Action=BatchDisableUIoTCoreDevice
 &ProductSN=7ab051kbfhhjakc0
 &DeviceSN.0=jkpoo1r6ltul7l4i
 &DeviceSN.1=jkpoo1r6ltul7l5i
@@ -411,6 +411,41 @@ https://api.ucloud.cn/?Action=BatchDisableUIoTCoreDevice
 }
 ```
 
+
+# ResetUIoTCoreDevice
+
+重置设备激活状态
+
+# 请求参数
+|Parameter name|Type|Description|Required|
+|---|---|---|---|
+|Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist) |**Yes**|
+|ProductSN|string|产品序列号|**Yes**|
+|DeviceSN|string|设备序列号|**Yes**|
+|ResetPassword|bool|是否重置密码,默认为否|No|
+
+# 响应参数
+|Parameter name|Type|Description|Required|
+|---|---|---|---|
+|RetCode|int|返回码|**Yes**|
+|Action|string|操作名称|**Yes**|
+
+# 请求示例
+```
+https://api-cn-sh2.iot.ucloud.cn/?Action=ResetUIoTCoreDevice
+&Region=cn-sh2
+&ProductSN=7ab051kbfhhjakc0
+&DeviceSN=jkpoo1r6ltul7l4i
+&ResetPassword=true
+```
+
+# 响应示例
+```
+{
+    "Action": "ResetUIoTCoreDeviceResponse", 
+    "RetCode": 0
+}
+```
 
 
 
@@ -462,7 +497,7 @@ https://api.ucloud.cn/?Action=BatchDisableUIoTCoreDevice
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=GetUIoTCoreDeviceList
+https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreDeviceList
 &ProductSN=7ab051kbfhhjakc0
 &Offset=4
 &Limit=1
@@ -513,7 +548,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceList
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=GetUIoTCoreInactivatedDevicePasswordFile
+https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreInactivatedDevicePasswordFile
 &ProductSN=7ab051kbfhhjakc0
 &Region=cn-sh2
 &公共请求参数

@@ -23,7 +23,7 @@
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=CreateUIoTCoreProduct
+https://api-cn-sh2.iot.ucloud.cn/?Action=CreateUIoTCoreProduct
 &ProductName=电灯
 &Description=电灯
 &Region=cn-sh2
@@ -71,7 +71,7 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreProduct
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=GetUIoTCoreProductInfo
+https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreProductInfo
 &ProductSN=7ab051kbfhhjakc0
 &Region=cn-sh2
 &公共请求参数
@@ -119,7 +119,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreProductInfo
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=ModifyUIoTCoreProduct
+https://api-cn-sh2.iot.ucloud.cn/?Action=ModifyUIoTCoreProduct
 &ProductSN=7ab051kbfhhjakc0
 &ProductName=light
 &Description=light
@@ -155,7 +155,7 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreProduct
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=DeleteUIoTCoreProduct
+https://api-cn-sh2.iot.ucloud.cn/?Action=DeleteUIoTCoreProduct
 &ProductSN=7ab051kbfhhjakc0
 &Region=cn-sh2
 &公共请求参数
@@ -211,7 +211,7 @@ https://api.ucloud.cn/?Action=DeleteUIoTCoreProduct
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=GetUIoTCoreProductList
+https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreProductList
 &Offset=0
 &Limit=1
 &ProductSN=7ab051kbfhhjakc0
@@ -264,7 +264,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreProductList
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=EnableUIoTCoreDynamicRegister
+https://api-cn-sh2.iot.ucloud.cn/?Action=EnableUIoTCoreDynamicRegister
 &ProductSN=7ab051kbfhhjakc0
 &Region=cn-sh2
 &公共请求参数
@@ -298,7 +298,7 @@ https://api.ucloud.cn/?Action=EnableUIoTCoreDynamicRegister
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=DisableUIoTCoreDynamicRegister
+https://api-cn-sh2.iot.ucloud.cn/?Action=DisableUIoTCoreDynamicRegister
 &ProductSN=7ab051kbfhhjakc0
 &Region=cn-sh2
 &公共请求参数
@@ -332,7 +332,7 @@ https://api.ucloud.cn/?Action=DisableUIoTCoreDynamicRegister
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=PublishUIoTCoreProduct
+https://api-cn-sh2.iot.ucloud.cn/?Action=PublishUIoTCoreProduct
 &ProductSN=7ab051kbfhhjakc0
 &Region=cn-sh2
 &公共请求参数
@@ -367,7 +367,7 @@ https://api.ucloud.cn/?Action=PublishUIoTCoreProduct
 
 ## 请求示例
 ```
-https://api.ucloud.cn/?Action=UnpublishUIoTCoreProduct
+https://api-cn-sh2.iot.ucloud.cn/?Action=UnpublishUIoTCoreProduct
 &ProductSN=7ab051kbfhhjakc0
 &Region=cn-sh2
 &公共请求参数

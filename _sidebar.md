@@ -5,6 +5,7 @@
         * [功能介绍](iot/uiot-core/product_introduction/function_introduction)
         * [名词解释](iot/uiot-core/product_introduction/terms)
         * [使用限制](iot/uiot-core/product_introduction/limitation)
+		* [已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)
     * [产品定价](iot/uiot-core/pricing)
     * [快速入门](iot/uiot-core/quick_start/)
         * [快速入门示例](iot/uiot-core/quick_start/scenario_description)
@@ -59,7 +60,7 @@
             * [设备命令](iot/uiot-core/device_develop_guide/thingmode/command)
             * [设备期望属性](iot/uiot-core/device_develop_guide/thingmode/desired)
         * [设备OTA升级](iot/uiot-core/device_develop_guide/ota)
-        * [文件上传](iot/uiot-core/device_develop_guide/uploadfile)
+        * [上传文件](iot/uiot-core/device_develop_guide/uploadfile)
         * C-SDK使用参考
             * [C-SDK 快速入门](iot/uiot-core/device_develop_guide/c_sdk_example/csdkquickstart)
             * [HAL接口详细说明](iot/uiot-core/device_develop_guide/c_sdk_example/halinterface)
@@ -86,6 +87,7 @@
         * [使用MQTT.fx接入物联网通信云平台](iot/uiot-core/best_practices/connect_to_iotcore_using_mqtt.fx)
         * [使用mqtt.js接入物联网通信云平台](iot/uiot-core/best_practices/connect_to_iotcore_with_mqtt.js)
     * [常见问题](iot/uiot-core/faq)
+	* [版本更新说明](iot/uiot-core/release_notes)
 
 
 
