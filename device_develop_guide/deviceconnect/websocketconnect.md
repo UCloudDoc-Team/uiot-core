@@ -25,7 +25,7 @@ MQTT-WebSocket连接需要先了解[设备注册](/iot/uiot-core/device_develop_
 
 |参数| 详解|
 |---|---|
-|连接域名 | mqtt-cn-sh2.ucloud.cn （不同区域连接域名不同，参考[已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)）|
+|连接域名 | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，参考[已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)）|
 |端口号 |`80` 或 `443(使用TLS)`|
 |可变报头（variable header）：Keep Alive  |  Connect指令中需包含Keep Alive（保活时间）。<br>取值范围为30至1200秒。如取值不在此区间，平台拒绝连接。建议取值300秒以上，如网络不稳定，设置高一些。<br>**当出现连接出错时，需要仔细检查该参数。**|
 |MQTT的Connect报文参数|参考[静态注册](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication)和[动态注册](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication)<br>**静态注册为例：**<br>`ClientID：${ProductSN}.${DeviceSN}`<br>`UserName：${ProductSN}\|${DeviceSN}\|${authmode}`<br>`authmode: 静态注册为1；动态注册为2`<br>`Password：${DeviceSecret}`|
