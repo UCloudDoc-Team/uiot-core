@@ -101,4 +101,4 @@ PUT  HTTP/1.1
 }
 ```
 
-	其中RetCode参考[UFile 错误码列表](https://docs.ucloud.cn/api/ufile-api/error_code)。
+其中RetCode参考[UFile 错误码列表](https://docs.ucloud.cn/api/ufile-api/error_code)。
