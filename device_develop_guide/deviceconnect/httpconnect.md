@@ -10,11 +10,11 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 
 - HTTP接入仅支持HTTPS协议，TLS为V1.2版本；
 
-- CA证书为国际授信的域名证书，也可以直接[下载CA证书](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)（不同区域连接域名不同，目前仅在上海Region开放）；
+- CA证书为国际授信的域名证书，也可以直接[下载CA证书](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)；
 - HTTP请求只支持POST方式；
 - 基于MQTT的Topic规范，数据上报到MQTT的某个Topic；
 
-- 上报数据请求URL：`https://http-cn-sh2.iot.ucloud.cn/topic/${topic}`。其中`${topic}`的值是指具备发布权限的[Topic](/iot/uiot-core/console_guide/product_device/topic)。不支持以 ?query_String=xxx 格式传参；
+- 上报数据请求URL：`https://http-cn-sh2.iot.ucloud.cn/topic/${topic}`（不同区域连接域名不同，参考[已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)）。其中`${topic}`的值是指具备发布权限的[Topic](/iot/uiot-core/console_guide/product_device/topic)。不支持以 ?query_String=xxx 格式传参；
 
 - HTTP接入注册需要已知`${DeviceSecret}`，不支持使用`${ProductSecret}`进行注册；
 
@@ -47,7 +47,7 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
 |---|---|
 |Method|请求方法。只支持 POST 方法。|
 |URL|`/auth`，URL 地址|
-|Host|HTTP服务地址|
+|Host|http-cn-sh2.iot.ucloud.cn（不同区域连接域名不同，参考[已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)）|
 |Content-Type|body 数据的编码格式。目前只支持 `application/json`|
 |Authorization|使用设备密码签名。签名计算格式为 `HMAC-SHA256(DeviceSecret, body)`|
 |body|设备认证信息。JSON 数据格式。具体信息，请参见下表 body 参数。|
@@ -103,7 +103,7 @@ body: ${your_data}
 |---|---|
 |Method|请求方法。只支持 POST 方法。|
 |URL|`/topic/${topic}`。其中，变量 ${topic} 需替换为数据发往的目标Topic。|
-|Host|endpoint 地址|
+|Host|http-cn-sh2.iot.ucloud.cn（不同区域连接域名不同，参考[已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)）|
 |Content-Type|body 数据的编码格式。目前只支持 application/octet-stream|
 |Password|放在Header中的参数，取值为调用设备认证接口 auth 返回的 token 值。|
 |body|发往 ${topic} 的数据内容，长度不超过 128 KB。|

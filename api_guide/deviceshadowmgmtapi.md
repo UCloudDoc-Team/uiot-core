@@ -23,7 +23,7 @@
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=EnableUIoTCoreDeviceShadow
+https://api-cn-sh2.iot.ucloud.cn/?Action=EnableUIoTCoreDeviceShadow
 &Region=cn-sh2
 &ProductSN=ulFbNbcr
 &公共请求参数
@@ -60,7 +60,7 @@ https://api.ucloud.cn/?Action=EnableUIoTCoreDeviceShadow
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=DisableUIoTCoreDeviceShadow
+https://api-cn-sh2.iot.ucloud.cn/?Action=DisableUIoTCoreDeviceShadow
 &Region=cn-sh2
 &ProductSN=QCCSxGIJ
 &公共请求参数
@@ -122,7 +122,7 @@ https://api.ucloud.cn/?Action=DisableUIoTCoreDeviceShadow
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=GetUIoTCoreDeviceShadow
+https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreDeviceShadow
 &Region=cn-sh2
 &ProductSN=myYJTQTR
 &DeviceSN=XlNkDkHw
@@ -215,7 +215,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreDeviceShadow
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=UpdateUIoTCoreDeviceShadow
+https://api-cn-sh2.iot.ucloud.cn/?Action=UpdateUIoTCoreDeviceShadow
 &Region=cn-sh2
 &Desired=eyJrZXlfMSI6InZhbHVlXzEifQ==
 &ProductSN=PFmsLErG

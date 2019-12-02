@@ -29,7 +29,7 @@
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=CreateUIoTCoreRule
+https://api-cn-sh2.iot.ucloud.cn/?Action=CreateUIoTCoreRule
 &RuleName=rule_example
 &ProductSN=biozpnofy3wpybua
 &DataType=json
@@ -91,7 +91,7 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreRule
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=GetUIoTCoreRuleList
+https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreRuleList
 &Offset=0
 &Limit=100
 &Region=cn-sh2
@@ -161,7 +161,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreRuleList
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=ModifyUIoTCoreRule
+https://api-cn-sh2.iot.ucloud.cn/?Action=ModifyUIoTCoreRule
 &RuleID=6
 &RuleName=qyr1
 &ProductSN=12go9dakt4web4nw
@@ -203,7 +203,7 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreRule
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=DeleteUIoTCoreRule
+https://api-cn-sh2.iot.ucloud.cn/?Action=DeleteUIoTCoreRule
 &RuleID=28
 &Region=cn-sh2
 &公共请求参数
@@ -237,7 +237,7 @@ https://api.ucloud.cn/?Action=DeleteUIoTCoreRule
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=EnableUIoTCoreRule
+https://api-cn-sh2.iot.ucloud.cn/?Action=EnableUIoTCoreRule
 &RuleID=6
 &Region=cn-sh2
 &公共请求参数
@@ -271,7 +271,7 @@ https://api.ucloud.cn/?Action=EnableUIoTCoreRule
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=DisableUIoTCoreRule
+https://api-cn-sh2.iot.ucloud.cn/?Action=DisableUIoTCoreRule
 &RuleID=6
 &Region=cn-sh2
 &公共请求参数
@@ -307,7 +307,7 @@ https://api.ucloud.cn/?Action=DisableUIoTCoreRule
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=CreateUIoTCoreRuleAction
+https://api-cn-sh2.iot.ucloud.cn/?Action=CreateUIoTCoreRuleAction
 &RuleID=6
 &Type=mysql
 &Configuration=eyJSZXNvdXJjZUlEIjoidWRiaGEtMHp0bzJnYmwiLCJSZXNvdXJjZU5hbWUiOiJ1aW90Y29yZS1wcm9kdWN0aW9uLWlvdGNvbmYiLCJQb3J0IjozMzA2LCJEYXRhYmFzZSI6ImlvdCIsIlRhYmxlIjoidGFibGUxIiwiVXNlcm5hbWUiOiJyb290IiwiUGFzc3dvcmQiOiJyb290IiwiRmllbGRzIjp7ImZpZWxkMSI6IiR7aWR9In19
@@ -355,7 +355,7 @@ https://api.ucloud.cn/?Action=CreateUIoTCoreRuleAction
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=GetUIoTCoreRuleActionList
+https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreRuleActionList
 &RuleID=6
 &Offset=0
 &Limit=100
@@ -407,7 +407,7 @@ https://api.ucloud.cn/?Action=GetUIoTCoreRuleActionList
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=ModifyUIoTCoreRuleAction
+https://api-cn-sh2.iot.ucloud.cn/?Action=ModifyUIoTCoreRuleAction
 &RuleID=6
 &ActionID=41
 &Type=http
@@ -445,7 +445,7 @@ https://api.ucloud.cn/?Action=ModifyUIoTCoreRuleAction
 
 ### 请求示例
 ```
-https://api.ucloud.cn/?Action=DeleteUIoTCoreRuleAction
+https://api-cn-sh2.iot.ucloud.cn/?Action=DeleteUIoTCoreRuleAction
 &RuleID=6
 &ActionID=6
 &Region=cn-sh2

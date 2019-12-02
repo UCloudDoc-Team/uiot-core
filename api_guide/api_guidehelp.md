@@ -1,14 +1,16 @@
 # 关于API接入
-本节将会通过一个示例介绍API的接入流程，也可参考UCloud官方[API 文档综览](https://docs.ucloud.cn/api/summary/overview)。需要JAVA/GO/PHP/Python等语言的参考，可以参考UCloud SDK框架[UCloud SDK项目](https://github.com/ucloud?utf8=%E2%9C%93&q=SDK&type=&language=)。
+
+UCloud物联网通信云平台使用独立的API调用网关，以满足客户的业务需求。物联网云平台的API调用和UCloud官方API调用的流程完全一致，本节将会通过一个示例介绍API的接入流程，也可参考UCloud官方[API 文档综览](https://docs.ucloud.cn/api/summary/overview)。需要JAVA/GO/PHP/Python等语言的参考，可以参考UCloud SDK框架[UCloud SDK项目](https://github.com/ucloud?utf8=%E2%9C%93&q=SDK&type=&language=)。
 
 
 
 ## API调用示例
-本节通过一个具体的示例（获取设备影子）介绍如何实现API调用。用户可将其中的参数换成自己的实际参数进行测试。
+
+本节通过一个具体的示例（获取设备影子）介绍如何实现API调用。用户可将其中的参数换成自己的实际参数进行测试。API仅支持HTTPS调用。
 
 1. 概述   
    
-   接口的调用使用HTTP GET或POST调用都可以得到相同的结果。调用的参数包括接口的参数+公共参数+参数签名三部分。
+   接口的调用使用HTTPS GET或POST调用都可以得到相同的结果。调用的参数包括接口的参数+公共参数+参数签名三部分。
    - 接口参数：某个具体接口需要的参数；
    - 公共参数：每个接口都需要用到的，包括调用接口名、项目名、公钥等
    - 签名：通过私钥签名，方便网关鉴权。
@@ -18,7 +20,7 @@
 名称| 内容
 ---|---
 接口名| [GetUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi#GetUIoTCoreDeviceShadow) - 获取设备影子。
-接口参数|**Region**：上海二区，地域ID为    [cn-sh2](https://docs.ucloud.cn/api/summary/regionlist)。<br>**ProductSN**：产品序列号为    `8pi2i730vxsala2a`，通过控制台查看。<br>**DeviceSN**：设备序列号为`ark1d4ug1evfb1jy`，通过控制台查看。
+接口参数|**Region**：上海二区，地域ID为    [cn-sh2](https://docs.ucloud.cn/api/summary/regionlist) ，其他地域参考[已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)。<br>**ProductSN**：产品序列号为    `8pi2i730vxsala2a`，通过控制台查看。<br>**DeviceSN**：设备序列号为`ark1d4ug1evfb1jy`，通过控制台查看。
 
 3. 获取公共参数，即每次请求都需要的参数
 
@@ -77,7 +79,7 @@ ProjectId|项目ID为 `org-z44lmf12e`，项目ID为 **org-z44lmf12e**，通过�
    ```
 5. 请求接口获取响应
    
-   通过GET和POST都可以请求接口得到同样的响应结果，请求的BaseURL为`http://api.ucloud.cn/`。
+   通过HTTPS GET和POST都可以请求接口得到同样的响应结果，请求的BaseURL参考[已开通可用区及域名列表](iot/uiot-core/product_introduction/available_region_url)，例如上海二为`https://api-cn-sh2.iot.ucloud.cn`。
 
    1）**通过GET方式**  
    ① 当参数中存在特殊字符时需要进行编码，编码的规则为：  
@@ -98,7 +100,7 @@ ProjectId|项目ID为 `org-z44lmf12e`，项目ID为 **org-z44lmf12e**，通过�
 
    ② 将请求参数转换成URL Params，拼接上Base URL进行GET请求：
      ```
-     http(s)://api.ucloud.cn/?Action=GetUIoTCoreDeviceShadow&DeviceSN=ark1d4ug1evfb1jy&ProductSN=8pi2i730vxsala2a&ProjectId=org-z44lmf12e&PublicKey=CJf%2BLfjjXPk70z%2FfsBlK9sHC%2BkBTTj7gr2g%2FC%2FR7YSi3EFTKCmh7Bp5W1UH64D%2FO& Region=cn-sh2&Signature=f1e6b4e35df41b42232e059f6020c7fd51b2889e
+     https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreDeviceShadow&DeviceSN=ark1d4ug1evfb1jy&ProductSN=8pi2i730vxsala2a&ProjectId=org-z44lmf12e&PublicKey=CJf%2BLfjjXPk70z%2FfsBlK9sHC%2BkBTTj7gr2g%2FC%2FR7YSi3EFTKCmh7Bp5W1UH64D%2FO& Region=cn-sh2&Signature=f1e6b4e35df41b42232e059f6020c7fd51b2889e
      ```
    ③ 返回响应结果为：
    ```
@@ -124,7 +126,7 @@ ProjectId|项目ID为 `org-z44lmf12e`，项目ID为 **org-z44lmf12e**，通过�
    ① POST通过JSON格式请求：
    ```
    POST  HTTP/1.1
-   Host: api.ucloud.cn
+   Host: api-cn-sh2.iot.ucloud.cn
    Content-Type: application/json
    Body:
    {
@@ -132,7 +134,7 @@ ProjectId|项目ID为 `org-z44lmf12e`，项目ID为 **org-z44lmf12e**，通过�
    	"DeviceSN": "ark1d4ug1evfb1jy",
    	"ProductSN": "8pi2i730vxsala2a",
    	"ProjectId": "org-z44lmf12e",
-   	"PublicKey": "CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTK   Cmh7Bp5W1UH64D/O",
+   	"PublicKey": "CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O",
    	"Region": "cn-sh2",
    	"Signature": "f1e6b4e35df41b42232e059f6020c7fd51b2889e"
    }
@@ -158,6 +160,11 @@ ProjectId|项目ID为 `org-z44lmf12e`，项目ID为 **org-z44lmf12e**，通过�
    ```
    
 ## 常见问题
+
+- 当使用HTTP，80端口请求时：
+
+  提示`target machine actively refused`
+  
 - 当使用GET请求有特殊字符未编码时会出现：
   ```
   {

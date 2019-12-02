@@ -19,7 +19,7 @@
   * [设备命令](iot/uiot-core/device_develop_guide/thingmode/command)
   * [设备期望属性](iot/uiot-core/device_develop_guide/thingmode/desired)
 * [设备OTA升级](iot/uiot-core/device_develop_guide/ota)
-* [文件上传](iot/uiot-core/device_develop_guide/uploadfile)
+* [上传文件](iot/uiot-core/device_develop_guide/uploadfile)
 * C-SDK使用参考
   * [C-SDK 快速入门](iot/uiot-core/device_develop_guide/c_sdk_example/csdkquickstart)
   * [HAL接口详细说明](iot/uiot-core/device_develop_guide/c_sdk_example/halinterface)

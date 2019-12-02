@@ -29,7 +29,7 @@ Password | `6g7tjlekwf3sqqqj`<br>规则：`${DeviceSecret}`
    
 Broker参数| 参数值
 ---|---
-Broker Address | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，目前仅在上海Region开放）
+Broker Address | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，参考[已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)）
 Broker Port | 1883或8883(使用TLS)
 KeepAlive | 30秒-1200秒，建议设置为300秒。 **当出现连接出错时，需要仔细检查该参数。**
 TLS(CA Certificate file) |[CA根证书 下载地址](http://uiot.cn-sh2.ufileos.com/ca-cert.pem)
@@ -91,7 +91,7 @@ Topic | 权限|描述
 
     ```
     POST  HTTP/1.1
-    Host: api.ucloud.cn
+    Host: api-cn-sh2.iot.ucloud.cn
     Content-Type: application/json
     Body:
     {
@@ -170,7 +170,7 @@ Topic | 权限|描述
    UCloud API的调用可以通过GET或POST请求，这里以POST为例，参数中密钥、签名的使用参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)，其他参数参考[UpdateUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi#UpdateUIoTCoreDeviceShadow)
    ```
    POST  HTTP/1.1
-   Host: api.ucloud.cn
+   Host: api-cn-sh2.iot.ucloud.cn
    Content-Type: application/json
    Body:
    {

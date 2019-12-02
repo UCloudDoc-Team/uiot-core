@@ -173,7 +173,7 @@
 
      ```
      POST  HTTP/1.1
-     Host: api.ucloud.cn
+     Host: api-cn-sh2.iot.ucloud.cn
      Content-Type: application/json
      Body:
      {
