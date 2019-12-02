@@ -24,7 +24,7 @@ POST /api/v1/url HTTP/1.1
 Host: file-cn-sh2.iot.ucloud.cn
 Content-Type: application/json
 Authorization: 325fb7b81989204aa75b02212d98e2d377e7140c010b7ad0a6e17fb6aea06543
-body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","FileName":"file1.txt","FileSize":102654,"MD5":"5bd57f342dd954e3c1cebac6c6660a79","Content-Type":"text/plain"}
+body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","FileName":"file1.txt","FileSize":102654,"MD5":"5bd57f342dd954e3c1cebac6c6660a79","Content-Type":"plain/text"}
 ```
 
 **参数说明**
@@ -47,7 +47,7 @@ body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","FileName":"f
 |FileName|是|string|文件名称|
 |FileSize|是|int|文件大小|
 |MD5|是|string|文件的MD5|
-|Content-Type|否|string|文件数据的编码格式，比如application/zip等。默认为 text/plain|
+|Content-Type|否|string|文件数据的编码格式，比如application/zip等。默认为 plain/text|
 
 **返回**
 
@@ -78,7 +78,7 @@ PUT  HTTP/1.1
 |参数|说明|必填项|
 |---|---|---|
 |Authorization|请求上传文件返回的Authorization |必填|
-|Content-Type|文件数据的编码格式，比如application/zip等。默认为 text/plain|必填|
+|Content-Type|文件数据的编码格式，比如application/zip等。默认为 plain/text|必填|
 |Content-MD5|文件数据的MD5|必填|
 	 
 	 

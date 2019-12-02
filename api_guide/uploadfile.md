@@ -13,7 +13,7 @@
 |FileName|string|文件名称|No|
 |Offset|int|列表起始位置偏移量，默认为0|No|
 |Limit|int|返回最大数据长度，默认为20，最大为100|No|
-|URLExpire|int|下载URL的过期时间，单位秒。默认为0值，小于0值则有效期为99年|No|
+|URLExpire|int|下载URL的过期时间，单位秒。小于等于0值则有效期为60年，默认为0|No|
 
 ### 响应参数
 |Parameter name|Type|Description|Required|
@@ -73,7 +73,7 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=QueryUIoTCoreDeviceFileList
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
 |FileName|string|文件名称，文件名称不能以`/`结尾|**Yes**|
-|URLExpire|int|文件下载链接的URL，单位秒。默认为0值，小于0值则有效期为99年|No|
+|URLExpire|int|下载URL的过期时间，单位秒。小于等于0值则有效期为60年，默认为0|No|
 
 # 响应参数
 |Parameter name|Type|Description|Required|
@@ -126,7 +126,7 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=QueryUIoTCoreDeviceFile
 |ProductSN|string|产品序列号|**Yes**|
 |DeviceSN|string|设备序列号|**Yes**|
 |FileName|string|文件名称，文件名称不能以 / 结尾|**Yes**|
-|URLExpire|int|文件下载链接的URL，单位秒。默认为0值，小于0值则有效期为99年|No|
+|URLExpire|int|下载URL的过期时间，单位秒。小于等于0值则有效期为60年，默认为0|No|
 
 ### 响应参数
 |Parameter name|Type|Description|Required|
