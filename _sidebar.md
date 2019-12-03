@@ -6,7 +6,7 @@
     * [功能介绍](iot/uiot-core/product_introduction/function_introduction)
     * [名词解释](iot/uiot-core/product_introduction/terms)
     * [使用限制](iot/uiot-core/product_introduction/limitation)
-* [已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)
+    * [已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)
 * [产品定价](iot/uiot-core/pricing)
 * [快速入门](iot/uiot-core/quick_start/)
     * [快速入门示例](iot/uiot-core/quick_start/scenario_description)
