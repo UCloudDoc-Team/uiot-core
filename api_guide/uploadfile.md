@@ -117,7 +117,7 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=QueryUIoTCoreDeviceFile
 
 ## GetUIoTCoreDeviceFileURL
 
-获取设备文件的下载链接，有效期30分钟
+获取设备文件的下载链接
 
 ### 请求参数
 |Parameter name|Type|Description|Required|
