@@ -19,14 +19,10 @@ UCloud目前拥有25大地域（Region），具体参见参见 [地域和可用�
 
 ## 域名列表
 
-下表中列出了平台的涉及的所有域名的列表，用户根据自己使用到的功能使用相应的域名。
-
-提供的TLS根证书分为两种：
-- 自签名根证书，一般设备端接入MQTT使用，有效期20年，MQTT 使用TCP直连时加密使用该证书；
-- 国际授信根证书，不需要另外导入证书，浏览器可以直接支持，有效期10年；
+下表中列出了平台涉及的所有域名的列表，用户根据自己使用到的功能使用相应的域名。
 
 
-|功能|域名|端口(明文/加密)|TLS根证书|
+|功能|域名|端口(明文/加密)|TLS证书|
 |----|----|----|----|
 |[MQTT连接](/iot/uiot-core/device_develop_guide/deviceconnect/mqttconnect)|mqtt-$\{RegionId\}.iot.ucloud.cn |`1883`/`8883(使用TLS)`|[下载CA证书(自签名)](http://uiot.cn-sh2.ufileos.com/ca-cert.pem)|
 |[WebSocket连接](/iot/uiot-core/device_develop_guide/deviceconnect/websocketconnect)|mqtt-$\{RegionId\}.iot.ucloud.cn|`80`/`443(使用TLS)`|[下载CA证书(国际授信)](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)|
@@ -34,3 +30,7 @@ UCloud目前拥有25大地域（Region），具体参见参见 [地域和可用�
 |[云端API调用](/iot/uiot-core/api_guide/api_guidehelp)|api-$\{RegionId\}.iot.ucloud.cn|仅支持`443(使用TLS)`|[下载CA证书(国际授信)](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)|
 |[上传文件](/iot/uiot-core/device_develop_guide/uploadfile)|file-$\{RegionId\}.iot.ucloud.cn|仅支持`443(使用TLS)`|[下载CA证书(国际授信)](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)|
 
+提供的TLS证书分为两种：
+
+ - 自签名证书，设备通过MQTT Over TLS连接时使用，有效期20年
+ - 国际授信CA证书，一般不需要另外导入证书，浏览器可以直接支持

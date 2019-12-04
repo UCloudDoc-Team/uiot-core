@@ -24,16 +24,16 @@ MQTT认证参数| 参数值
 ClientID | `ledubff3z85spjmu.h9onxtzw0aep7fsr`<br>规则：`${ProductSN}.${DeviceSN}`
 UserName | `ledubff3z85spjmu\|h9onxtzw0aep7fsr\|1`<br>规则：`${ProductSN}\|${DeviceSN}\|${authmode}`<br>`authmode: 1表示静态注册；2表示动态注册`
 Password | `6g7tjlekwf3sqqqj`<br>规则：`${DeviceSecret}`
-   
+
    2）参考[设备连接](/iot/uiot-core/device_develop_guide/deviceconnect/mqttconnect)，获取MQTT Broker连接域名和TLS CA证书：
-   
+
 Broker参数| 参数值
 ---|---
 Broker Address | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，参考[已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)）
 Broker Port | 1883或8883(使用TLS)
 KeepAlive | 30秒-1200秒，建议设置为300秒。 **当出现连接出错时，需要仔细检查该参数。**
-TLS(CA Certificate file) |[CA根证书 下载地址](http://uiot.cn-sh2.ufileos.com/ca-cert.pem)
-   
+TLS(CA Certificate file) |[CA证书 下载地址](http://uiot.cn-sh2.ufileos.com/ca-cert.pem)
+
    3）打开MQTT.fx软件，连接成功
     按照下图的顺序依次输入相应的参数值。
     - 输入Broker Address、Broker Port
@@ -43,9 +43,9 @@ TLS(CA Certificate file) |[CA根证书 下载地址](http://uiot.cn-sh2.ufileos.
     - 点击<Connect>，进行连接
 	
 ![连接成功](/images/连接成功.png)
-   
+
     -  输入TLS证书（使用1883端口，即不使用TLS加密，跳过此步）：
-   
+
 ![TLS证书](/images/TLS证书.png)
 
 
@@ -75,7 +75,6 @@ Topic | 权限|描述
 
 3. 在日志里面查看上报成功结果，如图：
 ![自定义上行](/images/自定义上行.png)
-   
    
 4. 也可以通过规则引擎M2M、HTTP、MQ等进行消息的接收消费。
 
@@ -157,7 +156,6 @@ Topic | 权限|描述
 1. 在MQTT.fx操作界面，点击<Subscribe>，输入Topic：`/$system/ledubff3z85spjmu/h9onxtzw0aep7fsr/shadow/downstream`；
 ![订阅消息](/images/订阅消息.png)
 	
-
 2. 下发期望值，有两种方法：  
    1) 参考[设备影子](/iot/uiot-core/console_guide/device_shadow/operation_guide\#设备影子相关操作)，<编辑>设备影子，输入<Desired>值：
 
@@ -187,6 +185,7 @@ Topic | 权限|描述
    ```
 
    
+
 ![设置期望](/images/设置期望.png)
 
    
