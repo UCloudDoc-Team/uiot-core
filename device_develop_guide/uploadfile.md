@@ -47,7 +47,7 @@ body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","FileName":"f
 |FileName|是|string|文件名称|
 |FileSize|是|int|文件大小|
 |MD5|是|string|文件的MD5|
-|Content-Type|否|string|文件数据的编码格式，比如application/zip等。默认为 plain/text|
+|Content-Type|是|string|文件数据的编码格式，比如plain/text，application/zip等|
 
 **返回**
 
@@ -59,7 +59,7 @@ body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","FileName":"f
 }
 ```
 
-    
+
 2. 设备根据返回的URL和Authorization上传文件；
 
 ```
@@ -72,23 +72,20 @@ PUT  HTTP/1.1
 |---|---|
 |Method|请求方法。只支持 PUT 方法。|
 |URL|`url`，请求上传文件返回的 URL 地址|
-	 
+
 **Header参数**
-	 
+
 |参数|说明|必填项|
 |---|---|---|
 |Authorization|请求上传文件返回的Authorization |必填|
-|Content-Type|文件数据的编码格式，比如application/zip等。默认为 plain/text|必填|
+|Content-Type|文件数据的编码格式，比如plain/text，application/zip等|必填|
 |Content-MD5|文件数据的MD5|必填|
-	 
-	 
+
 **Body参数**
-	 
+
 |参数|说明|必填项|
 |---|---|---|
 |Body|上传文件的数据 | 必填 |
-
-
 
 **返回参数**
 
@@ -102,3 +99,4 @@ PUT  HTTP/1.1
 ```
 
 其中RetCode参考[UFile 错误码列表](https://docs.ucloud.cn/api/ufile-api/error_code)。
+
