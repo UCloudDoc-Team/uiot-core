@@ -12,6 +12,7 @@
   * [数据流转到MySQL](iot/uiot-core/console_guide/ruleengine/forward_data_to_mysql)
   * [数据流转到MongoDB](iot/uiot-core/console_guide/ruleengine/forward_data_to_mongodb)
   * [数据流转到分布式消息系统kafka](iot/uiot-core/console_guide/ruleengine/forward_data_to_kafka)
+  * [数据流转到TSDB](iot/uiot-core/console_guide/ruleengine/forward_data_to_tsdb)
   * [数据流转到其他Topic](iot/uiot-core/console_guide/ruleengine/forward_data_to_topic)
   * [数据流转到HTTP服务](iot/uiot-core/console_guide/ruleengine/forward_data_to_http)
 * 设备影子

@@ -35,7 +35,7 @@
 
 ##### 规则引擎   
 
-* 规则引擎可以通过类SQL语法的语句将设备发送的数据进行筛选，并将其转发到UHost/Kafka MQ/MySQL/MongoDB/M2M等其他产品，供用户服务器使用。
+* 规则引擎可以通过类SQL语法的语句将设备发送的数据进行筛选，并将其转发到UHost/Kafka MQ/TSDB/MySQL/MongoDB/M2M等其他产品，供用户服务器使用。
 
 
 

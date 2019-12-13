@@ -14,7 +14,7 @@
    
      - 基本信息：规则的名称以及规则的描述和数据类型；
      - 消息筛选：编辑类似SQL语句，筛选出Topic、Topic字段；
-     - 执行动作：添加动作，将消息筛选出来的数据流转到其他产品，比如UHost、MySQL、MongoDB、KafkaMQ、M2M、AI-Inference等；
+     - 执行动作：添加动作，将消息筛选出来的数据流转到其他产品，比如UHost、MySQL、MongoDB、KafkaMQ、TSDB、M2M、AI-Inference等；
    
 2. 消息筛选：  
    

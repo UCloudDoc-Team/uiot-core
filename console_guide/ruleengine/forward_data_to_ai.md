@@ -1,5 +1,6 @@
 # 数据流转到HTTP服务
-数据流转到AI-Inference服务需要：
+
+数据流转到AI-Inference服务(当前服务暂未开放，如有需求可以提交工单或联系您的客户经理)需要：
 
 - 完成[数据流转管理](/iot/uiot-core/console_guide/ruleengine/data_forwarding)中操作步骤的前两步，已经配置好消息筛选SQL；
 - 在UCloud创建了[UAI Inference AI在线服务](https://console.ucloud.cn/uai)，并已经提供HTTP服务；
