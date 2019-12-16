@@ -1,4 +1,4 @@
-<div class="sidebar_title icon__uiot"> 物联网通信云平台 UIoT Core</div>
+<div class="sidebar_title icon__uiot">物联网通信云平台 UIoT Core</div>
 
 * [概览](iot/uiot-core/overview)
 * [产品简介](iot/uiot-core/product_introduction/)
