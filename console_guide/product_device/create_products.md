@@ -13,7 +13,11 @@
 4. 在弹出的对话框中输入<产品名称>和产品<描述>
 
    - 产品名称：名称长度为4-32个字符，可包含中文、字母、数字、`_`、`-`、`@`、`:`的组合；
-   - 产品描述：支持任意字符，长度限制0-100个字符；
+   - 产品类型：
+       - 设备，设备结合选项“是否接入网关”，表示能直接联网的设备和需要接入到网关下的子设备；
+	   - 网关，表示设备下面可以挂在不能直接联网（485等）子设备；
+   - 是否接入网关：是，代表创建的设备为子设备，需要通过网关代理上云；否，代表创建的是普通设备，能直接上云；
+   - 描述：支持任意字符，长度限制0-100个字符；
    
    
    
@@ -21,9 +25,11 @@
 6. 创建产品成功后，可以在产品列表页查看
 
    - 点击<产品名称>或<详情>，进入产品详情页；
-   - 点击<设备数量数>，进入[设备管理](/iot/uiot-core/console_guide/product_device/create_devcies\#管理设备)页；
-   - 点击<固件数量数>，进入[固件管理](/iot/uiot-core/console_guide/ota/firmware_management)页；
-   - 点击<发布状态按钮>，发布产品或取消发布产品，产品一旦发布将不能修改物模型、Topic等；
+   - 产品类型，该产品的类型，普通设备、网关设备、子设备；
+   - 点击<设备数量>，进入[设备管理](/iot/uiot-core/console_guide/product_device/create_devcies\#管理设备)页；
+   - 点击<固件数量>，进入[固件管理](/iot/uiot-core/console_guide/ota/firmware_management)页；
+   - 创建时间：产品创建的时间，可以进行排序显示；
+   - 点击<产品发布状态>，发布产品或取消发布产品，产品一旦发布将不能修改物模型、Topic等，可以进行筛选；
    - 点击<设备管理>，进入[设备管理](/iot/uiot-core/console_guide/product_device/create_devcies\#管理设备)页；
    - 点击<...>，进行[Topic管理](/iot/uiot-core/console_guide/product_device/topic)，[功能定义](/iot/uiot-core/console_guide/thingmode/thingmode_guide)，[删除产品](/iot/uiot-core/console_guide/product_device/create_products\#删除产品)操作；
 
@@ -36,6 +42,7 @@
 
 
 ## 产品详情
+
 创建完产品后，点击<详情>或者点击<产品名称>，可以查看该产品**产品概览**、**[设备管理](/iot/uiot-core/console_guide/product_device/create_devcies\#管理设备)**、**[Topic管理](/iot/uiot-core/console_guide/product_device/topic)**、**[功能定义（物模型）](/iot/uiot-core/console_guide/thingmode/thingmode_guide)**、**[固件与升级](/iot/uiot-core/console_guide/ota/firmware_management)**。
 
 产品概览页可以查看该产品的**基本信息：**
@@ -43,8 +50,8 @@
 - 产品名称及描述：创建产品时定义的产品名称及产品描述；
 - 产品序列号：产品序列号为系统随机生成的唯一的16位字符串，用户[设备注册](/iot/uiot-core/device_develop_guide/authenticate_devices/what_is_authenticate_devices)时使用；
 - 产品密钥：产品密钥用于批量创建设备时使用，参考[动态注册设备](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication)；
-- 产品类型：产品有设备和网关两种类型，网关暂不支持；
-- 是否接入网关：该设备是否以子设备的形式接入网关，当前还不支持网关；
+- 产品类型：产品有可接入网关设备、普通设备和网关三种类型；
+- 是否接入网关：该设备是否以子设备的形式接入网关；
 - 产品发布状态：产品一旦发布将不能修改物模型、Topic；
 - 创建时间：创建该产品的时间；
 

@@ -8,6 +8,7 @@
 1. 在[数据流转管理](/iot/uiot-core/console_guide/ruleengine/data_forwarding)页面中，点击<添加动作>;
 2. 在弹出的对话框中，选择动作"存储到MYSQL中"；
    - 选择动作：选择需要流转到的目的地，这里选择“存储到MYSQL中”；
+   - 项目名称：选择项目ID，系统会列出该项目下的所有MySQL实例；
    - MYSQL实例：选择已经购买的MYSQL实例；
    - 数据库： 使用MYSQL的哪个数据库；
    - 账户： MYSQL使用数据库的账户名称；

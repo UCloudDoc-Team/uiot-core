@@ -20,8 +20,8 @@
 
    - 手动输入
 
-     1. 手动输入设备序列号，添加多个可以通过<回车/换行符>隔开，单次最多可以批量添加1000个设备；
-     2.  手动输入设备序列号长度为4-64个字符，可包含英文字母、数字和连接号`-`、下划线`_`、`@`、英文冒号`:`；
+     1. 手动输入设备序列号，添加多个可以通过<回车/换行符>隔开，单次最多可以批量添加1000个设备，该功能可以结合[预认证](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication#预认证)功能使用；
+     2. 手动输入设备序列号长度为4-64个字符，可包含英文字母、数字和连接号`-`、下划线`_`、`@`、英文冒号`:`；
      3. 点击<确定>，系统会生成指定`设备序列号`的设备，以及`设备密码`；
 
 8. `设备序列号`和`设备密码`是[设备注册](/iot/uiot-core/device_develop_guide/authenticate_devices/what_is_authenticate_devices)到平台的重要凭证，需要妥善保存；
@@ -50,7 +50,7 @@
 
 动态注册设备需要产品开启动态注册开关。
 
-为了防止产品密码泄露后非授权设备登录到平台，动态注册设备需要先通过**手动输入**预登记设备序列号，设备出厂后首次接入到平台时需要进行匹配，成功后方可接入平台。
+为了防止产品密码泄露后非授权设备登录到平台，用户可以打开<预认证>开关，动态注册设备需要先通过**手动输入**预登记设备序列号，设备出厂后首次接入到平台时需要进行匹配，成功后方可接入平台。具体可以参考[预认证](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication#预认证)
 
 动态注册设备的具体流程可以参考[设备端开发指南-动态注册](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication)。
 

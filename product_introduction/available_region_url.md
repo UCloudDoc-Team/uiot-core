@@ -6,7 +6,7 @@
 
 ## 已开通可用区列表
 
-UCloud目前拥有25大地域（Region），具体参见参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)。 
+UCloud目前拥有25大地域（Region），具体参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)。 
 
 用户使用UIoT-Core时，须在以下已开通地域选择，同一地域下UIoT-Core的规则引擎只能流转到同一地域的UHost、UDB、UTSDB、UKafka、UAI、USMS等产品。每个地域下开设有多个可用区（Zone），同一地域的可用区之间是可以相通的。每个地域所提供的服务有所不同，用户需根据自己的实际情况选择开通的地域。
 
