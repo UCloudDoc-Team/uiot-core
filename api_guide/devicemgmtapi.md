@@ -462,8 +462,8 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=ResetUIoTCoreDevice
 | Offset         | int    | 列表起始位置偏移量，默认为0                                  |       No |
 | Limit          | int    | 返回最大数据长度，默认为20，最大为100                        |       No |
 | ExactDeviceSN  | string | 设备SN，用于精确查询，如果提供了此字段，则DeviceSN无效            |       No |
-| Status.n       | string | 设备激活状态，用于结果筛选出对应状态的设备，状态枚举包括：`disabled`, `inactivated`, `offline`,`online`；可以传递多值，形如：`Status.0=disabled`,`Status.1=offline`|       No |
-| UpdateStatus.n | string | 设备升级状态，用于筛选对应升级状态的设备，升级状态枚举包括：`unreported`,`init_version`,`to_be_updated`,`updating,success`,`fail`；可以传递多值，形如：`UpdateStatus.0=unreported`,`UpdateStatus.1=init_version` |       No |
+| Status.n       | string | 设备激活状态，用于结果筛选出对应状态的设备；<br>状态枚举包括：`disabled`, `inactivated`, `offline`,`online`；<br>可以传递多值，形如：`Status.0=disabled`,`Status.1=offline`|       No |
+| UpdateStatus.n | string | 设备升级状态，用于筛选对应升级状态的设备；<br>升级状态枚举包括：`unreported`,`init_version`,`to_be_updated`,`updating,success`,`fail`；<br>可以传递多值，形如：`UpdateStatus.0=unreported`,`UpdateStatus.1=init_version` |       No |
 
 ### 响应参数
 | Parameter name         | Type             | Description    | Required |
