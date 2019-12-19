@@ -30,7 +30,7 @@
 |[BatchEnableUIoTCoreDevice](/iot/uiot-core/api_guide/devicemgmtapi#BatchEnableUIoTCoreDevice) | 批量启用设备|
 |[BatchDisableUIoTCoreDevice](/iot/uiot-core/api_guide/devicemgmtapi#BatchDisableUIoTCoreDevice) | 批量禁用设备|
 |[ResetUIoTCoreDevice](/iot/uiot-core/api_guide/devicemgmtapi#ResetUIoTCoreDevice)|重置设备激活状态|
-|[GetUIoTCoreDeviceList](/iot/uiot-core/api_guide/devicemgmtapi#GetUIoTCoreDeviceList) | 获取设备列表|
+|[GetUIoTCoreDeviceList](/iot/uiot-core/api_guide/devicemgmtapi#GetUIoTCoreDeviceList) | 获取单个或批量设备状态、设备详情、设备列表等|
 |[GetUIoTCoreInactivatedDevicePasswordFile](/iot/uiot-core/api_guide/devicemgmtapi#GetUIoTCoreInactivatedDevicePasswordFile) | 获取未激活设备的密码文件|
 
 

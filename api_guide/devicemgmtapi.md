@@ -253,7 +253,7 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=BatchCreateUIoTCoreDevice
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)   |  **Yes** |
 | ProductSN      | string | 设备序列号                                                   |  **Yes** |
-| DeviceSN.n     | string | 即将生成的设备的名称, 可数组传递多值，形如: DeviceSN.0=111   |  **Yes** |
+| DeviceSN.n     | string | 即将生成的设备的名称, 可传递多值，形如: `DeviceSN.0=000`,`DeviceSN.1=111`    |  **Yes** |
 
 
 ### 响应参数
@@ -309,7 +309,7 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=BatchCreateUIoTCoreDeviceWithSN
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)   |  **Yes** |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
-| DeviceSN.n     | string | 即将删除的设备的名称, 可数组传递多值，形如: DeviceSN.0=111   |  **Yes** |
+| DeviceSN.n     | string | 即将删除的设备的名称, 可传递多值，形如: `DeviceSN.0=000`,`DeviceSN.1=111`   |  **Yes** |
 
 
 ### 响应参数
@@ -347,7 +347,7 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=BatchDeleteUIoTCoreDevice
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)  |  **Yes** |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
-| DeviceSN.n     | string | 即将启用的设备的名称, 可数组传递多值，形如: DeviceSN.0=111   |  **Yes** |
+| DeviceSN.n     | string | 即将启用的设备的名称, 可传递多值，形如: `DeviceSN.0=000`,`DeviceSN.1=111`   |  **Yes** |
 
 
 ### 响应参数
@@ -385,7 +385,7 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=BatchEnableUIoTCoreDevice
 | -------------- | ------ | ------------------------------------------------------------ | -------: |
 | Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)   |  **Yes** |
 | ProductSN      | string | 产品序列号                                                   |  **Yes** |
-| DeviceSN.n     | string | 即将禁用的设备的名称, 可数组传递多值，形如: DeviceSN.0=111   |  **Yes** |
+| DeviceSN.n     | string | 即将禁用的设备的名称, 可传递多值，形如: `DeviceSN.0=000`,`DeviceSN.1=111`   |  **Yes** |
 
 
 ### 响应参数
@@ -451,7 +451,7 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=ResetUIoTCoreDevice
 
 ## GetUIoTCoreDeviceList
 
-获取设备列表
+获取单个或批量设备状态、设备详情、设备列表等
 
 ### 请求参数
 | Parameter name | Type   | Description                                                  | Required |
@@ -462,10 +462,8 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=ResetUIoTCoreDevice
 | Offset         | int    | 列表起始位置偏移量，默认为0                                  |       No |
 | Limit          | int    | 返回最大数据长度，默认为20，最大为100                        |       No |
 | ExactDeviceSN  | string | 设备SN，用于精确查询，如果提供了此字段，则DeviceSN无效            |       No |
-| Status.n       | string | 设备激活状态，用于筛选对应状态的设备                       |       No |
-| UpdateStatus.n | string | 设备升级状态，用于筛选对应状态的设备                       |       No |
-| FirmwareVersion.n | string | 当前固件版本，用于筛选对应版本的设备                     |       No |
-| DestVersion.n | string | 目标版本，用于筛选对应版本的设备                  |       No |
+| Status.n       | string | 设备激活状态，用于结果筛选出对应状态的设备，状态枚举包括：`disabled`, `inactivated`, `offline`,`online`；可以传递多值，形如：`Status.0=disabled`,`Status.1=offline`|       No |
+| UpdateStatus.n | string | 设备升级状态，用于筛选对应升级状态的设备，升级状态枚举包括：`unreported`,`init_version`,`to_be_updated`,`updating,success`,`fail`；可以传递多值，形如：`UpdateStatus.0=unreported`,`UpdateStatus.1=init_version` |       No |
 
 ### 响应参数
 | Parameter name         | Type             | Description    | Required |
