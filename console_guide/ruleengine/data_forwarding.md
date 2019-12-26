@@ -24,7 +24,7 @@
    - 字段：字段支持内置函数、JSON表达式、星号`*`，参考[SQL表达式特性](/iot/uiot-core/console_guide/ruleengine/sql_statements)；
    - 条件：支持比较运算符、逻辑运算符、括号运算符、算数运算符、函数调用、JSON表达式、CASE语句、IN、LIKE操作；具体参考[SQL表达式特性](/iot/uiot-core/console_guide/ruleengine/sql_statements);
    
-3. 添加动作：将在[数据流转到其他服务](/iot/uiot-core/console_guide/ruleengine/data_forwarding)具体介绍；
+3. 添加动作：将在[数据流转到http/kafka/mysql/TSDB/AI](/iot/uiot-core/console_guide/ruleengine/forward_data_to_mysql)中逐一介绍；
 
 ![消息筛选](/images/消息筛选.png)
 ![添加动作](/images/添加动作.png)
