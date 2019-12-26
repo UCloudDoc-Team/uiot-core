@@ -31,11 +31,11 @@ git clone https://github.com/ucloud/ucloud-iot-device-sdk-c
 ```
 ## 编译及运行
 
-C-SDK支持 `GNU Make` 构建，开发者可以选择自己熟悉的编译。
+C-SDK支持 `GNU Make` 构建。
 
 ### GNU Make
 
-1. 通过修改 C-SDK 顶层目录下的 make.settings 文件，配置开启或者关闭特定功能模块
+1. 通过修改 C-SDK 顶层目录下的 make.settings 文件，开启或者关闭相应的模块。
 
 ```
 // 本例仅使用消息上下行收发，所以关闭其他模块
@@ -74,14 +74,14 @@ make
 
 ### 移植步骤
 
-1. 基于使用的OS(linux)的实现HAL层接口
+1. 基于使用的OS的实现HAL层接口
 
 HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关于线程、内存、Timer、TCP的操作。UCloud IoT C-SDK已经实现了linux、FreeRTOS、RT-Thread下的HAL层实现。
 
 
-本例移植平台OS为linux，该步已经官方实现，用户可以直接跳过。
+本例使用平台OS为linux，该步已经官方实现，用户可以直接跳过。
 
-示例：HAL接口HAL_Printf：`./platform/os/linux/HAL_OS_linux.c`。
+以接口HAL_Printf为例：`./platform/os/linux/HAL_OS_linux.c`。
 
 ```
   void HAL_Printf(_IN_ const char *fmt, ...)
@@ -118,6 +118,7 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
 3. main函数详解
 
 - 创建MQTT连接:`IOT_MQTT_Construct`
+
 ```
   ret = _setup_connect_init_params(&sg_initParams);    
   if(ret != SUCCESS)    
