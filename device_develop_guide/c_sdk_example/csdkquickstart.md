@@ -117,7 +117,9 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
 
 3. main函数详解
 
+
 - 创建MQTT连接:`IOT_MQTT_Construct`
+
 
 ```
   ret = _setup_connect_init_params(&sg_initParams);    
