@@ -99,7 +99,7 @@ Topic | 权限|描述
     	"MessageContent": "eyJwYXlsb2FkIjoiZG93bmxpbmstdGVzdCJ9", //base64Encode({"payload":"downlink-test"})
     	"TopicFullName": "/ledubff3z85spjmu/h9onxtzw0aep7fsr/downlink",
     	"ProjectId": "org-z44lmf12e",
-    	"PublicKey": "CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTK   Cmh7Bp5W1UH64D/O",
+    	"PublicKey": "CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O",
     	"Region": "cn-sh2",
     	"Signature": "2we34r35dc41b434s2d059f642047fd51c2881f"
     }
