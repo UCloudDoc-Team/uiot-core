@@ -44,7 +44,7 @@
 
 ## 静态查询
 
-参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)调用接口GetUIoTCoreDeviceList](/iot/uiot-core/api_guide/devicemgmtapi#getuiotcoredevicelist)可以获取设备状态。
+参考[关于API接入](/iot/uiot-core/api_guide/api_guidehelp)调用接口[GetUIoTCoreDeviceList](/iot/uiot-core/api_guide/devicemgmtapi#getuiotcoredevicelist)可以获取设备状态。
 
 
 
