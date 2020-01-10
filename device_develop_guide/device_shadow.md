@@ -6,7 +6,6 @@
 
 |Topic| 权限|描述|
 |---|---|---|
-|/$system/${ProductSN}/${DeviceSN}/device/status|订阅|设备状态|
 |/$system/${ProductSN}/${DeviceSN}/shadow/upstream |发布|上行操作设备影子（更新、删除）|
 |/$system/${ProductSN}/${DeviceSN}/shadow/downstream | 订阅| 设置期望值|
 |/$system/${ProductSN}/${DeviceSN}/shadow/get|发布|获取设备影子|

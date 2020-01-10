@@ -10,6 +10,7 @@
   * [基于MQTT-TCP协议建立连接](iot/uiot-core/device_develop_guide/deviceconnect/mqttconnect)
   * [基于MQTT-WebSocket协议建立连接](iot/uiot-core/device_develop_guide/deviceconnect/websocketconnect)
   * [基于HTTP协议建立连接](iot/uiot-core/device_develop_guide/deviceconnect/httpconnect)
+  * [获取设备在线状态](iot/uiot-core/device_develop_guide/deviceconnect/status)
 * [设备影子](iot/uiot-core/device_develop_guide/device_shadow)
 * 设备物模型开发
   * [物模型定义](iot/uiot-core/device_develop_guide/thingmode/what_is_thingmode)
