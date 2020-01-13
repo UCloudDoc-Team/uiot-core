@@ -31,7 +31,7 @@ Topic是跟随着产品一起定义的，在定义Topic时，路径中会使用`
 系统Topic会在第一层级以`/$system`开始。
 
 |Topic  | 权限  |描述  |
-|:---------|:---- |:------ |
+|---------|----|------|
 |/$system/${ProductSN}/${DeviceSN}/device/status    |订阅     |设备状态   |
 |/$system/${ProductSN}/${DeviceSN}/shadow/upstream |发布|上行操作设备影子（更新、删除）|
 |/$system/${ProductSN}/${DeviceSN}/shadow/downstream | 订阅| 设置期望值|
