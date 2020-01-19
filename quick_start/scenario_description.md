@@ -37,7 +37,7 @@
 在C-SDK的目录`sample/mqtt/`中，通过修改例程`mqtt_sample.c`来介绍如何使用C-SDK。
 
 
-#### 上行上报数据
+#### **上行上报数据**
 该例程设备端通过linux环境进行模拟，上报'温度、湿度'到`自定义Topic /70ly1tvowt696r15/aruidyl0rt9tuvod/upload`。
 
 1. 下载[设备端C-SDK](https://github.com/ucloud/ucloud-iot-device-sdk-c)，详细可以参考[C-SDK使用参考](/iot/uiot-core/device_develop_guide/c_sdk_example/csdkquickstart)。
@@ -159,7 +159,7 @@
        ![上行上报数据](/images/上行上报数据.png)
        ![上行上报数据内容](/images/上行上报数据内容.png)
 
-#### 下行下发命令
+#### **下行下发命令**
 
 下行通过调用云端开发API`PublishUIoTCoreMQTTMessage`下发需要设置的温度、湿度值到自定义Topic`/70ly1tvowt696r15/aruidyl0rt9tuvod/set`，设备端订阅该Topic即可收到相应的下发消息。
 

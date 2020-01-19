@@ -83,7 +83,7 @@ Topic是跟随着产品一起定义的，在定义Topic时，路径中会使用`
      - 单击<确定>，创建成功；
 7. 自定义Topic添加完成后
    - 修改：点击<修改>，修改Topic内容；
-   - 删除：点击<删除>，删除该Topic，参考[Topic删除](/iot/uiot-core/console_guide/product_device#Topic删除)；
+   - 删除：点击<删除>，删除该Topic，参考[Topic删除](/iot/uiot-core/console_guide/product_device/topic#Topic删除)；
    - 批量删除：多选后，批量<删除>自定义Topic；
    - 产品发布状态：打开后表示产品为已发布状态，已发布产品无法修改Topic和物模型；
    - 可以对Topic权限或类型进行筛选；
