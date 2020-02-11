@@ -11,7 +11,7 @@ MQTT协议（Message Queuing Telemetry Transport），叫做遥信消息队列�
 - 支持clean session；
 - 同一注册凭证（`产品序列号`，`设备序列号`，`设备密码`）同时只能有一个设备在线，其它会被踢下线；
 - 支持TLSV1.2 版本的协议来建立安全连接，安全级别高；
-- MQTT-WebSocket使用国际授信TLS证书，浏览器可以直接使用，也可以从这里[下载CA证书](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)；
+- MQTT-WebSocket使用国际授信TLS证书，浏览器可以直接使用，也可以从这里[下载CA根证书](http://uiot.cn-sh2.ufileos.com/DigiCertRootCA.cer)；
 - MQTT client不能跨Topic订阅或发布消息，只能在自己的所属Topic上订阅或发布消息；
 
 
@@ -19,7 +19,7 @@ MQTT协议（Message Queuing Telemetry Transport），叫做遥信消息队列�
 ## 具体流程：
 
 MQTT-WebSocket连接需要先了解[设备注册](/iot/uiot-core/device_develop_guide/authenticate_devices/what_is_authenticate_devices)中提到的静态注册和动态注册，获取 `ClientID`，`UserName`，`Password`。
-1. MQTT-WebSocket如需使TLS加密传输，使用国际授信TLS证书，浏览器可以直接使用，也可以从这里[下载CA证书](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)；
+1. MQTT-WebSocket如需使TLS加密传输，使用国际授信TLS证书，浏览器可以直接使用，也可以从这里[下载CA根证书](http://uiot.cn-sh2.ufileos.com/DigiCertRootCA.cer)；
 2. 基于javascrip开源库[MQTT.js](https://github.com/mqttjs/MQTT.js)或[paho.mqtt.javascript](https://github.com/eclipse/paho.mqtt.javascript)进行开发，[MQTT协议](http://mqtt.org/?spm=a2c4g.11186623.2.12.577678dc5E6Qcl)详解可以参考[MQTT官网](http://mqtt.org/?spm=a2c4g.11186623.2.12.577678dc5E6Qcl)；
 3. MQTT连接
 

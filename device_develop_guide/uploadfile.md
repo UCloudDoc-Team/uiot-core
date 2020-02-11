@@ -7,7 +7,7 @@
 ## 上传文件注意事项
 
 - 必须使用HTTPS协议，支持TLS V1.2版本；
-- CA证书为国际授信的域名证书，也可以直接下载[CA证书](http://uiot.cn-sh2.ufileos.com/iot_ca.crt)；
+- CA证书为国际授信的域名证书，也可以直接下载[CA根证书](http://uiot.cn-sh2.ufileos.com/DigiCertRootCA.cer)；
 
 
 
