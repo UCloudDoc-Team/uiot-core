@@ -29,4 +29,3 @@
   * [设备物模型开发](iot/uiot-core/device_develop_guide/c_sdk_example/thingmodelinterface)
   * [设备OTA开发](iot/uiot-core/device_develop_guide/c_sdk_example/otainterface)
   * [常见问题](iot/uiot-core/device_develop_guide/c_sdk_example/commonerror)
-  * [基于STM32+FreeRTOS+LWIP的SDK移植](iot/uiot-core/device_develop_guide/c_sdk_example/stm32_freertos_lwip_portingguide)

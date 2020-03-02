@@ -70,7 +70,6 @@
     * [设备物模型开发](iot/uiot-core/device_develop_guide/c_sdk_example/thingmodelinterface)
     * [设备OTA开发](iot/uiot-core/device_develop_guide/c_sdk_example/otainterface)
     * [常见问题](iot/uiot-core/device_develop_guide/c_sdk_example/commonerror)
-    * [基于STM32+FreeRTOS+LWIP的SDK移植](iot/uiot-core/device_develop_guide/c_sdk_example/stm32_freertos_lwip_portingguide)
 * [云端开发指南](iot/uiot-core/api_guide/)
   * [概述](iot/uiot-core/api_guide/summary)
   * [API列表](iot/uiot-core/api_guide/api_list)
@@ -87,6 +86,8 @@
 * [最佳实践](iot/uiot-core/best_practices/)
   * [使用MQTT.fx接入物联网通信云平台](iot/uiot-core/best_practices/connect_to_iotcore_using_mqtt.fx)
   * [使用mqtt.js接入物联网通信云平台](iot/uiot-core/best_practices/connect_to_iotcore_with_mqtt.js)
+  *[基于STM32+FreeRTOS+LWIP的SDK移植](iot/uiot-core/device_develop_guide/c_sdk_example/stm32_freertos_lwip_portingguide)  
+  *[基于STM32+Nos+AT的SDK移植](iot/uiot-core/device_develop_guide/c_sdk_example/stm32_nos_at_portingguide)  
 * [常见问题](iot/uiot-core/faq)
 * [版本更新说明](iot/uiot-core/release_notes)
 
