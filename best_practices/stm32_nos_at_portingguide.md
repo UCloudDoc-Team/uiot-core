@@ -18,7 +18,7 @@
 
 ![](/images/stm32f1新建工程.png)
 
-设置新增一个用于输出的打印串口
+设置新增一个用于输出的打印串口，USART1用于打印输出，USART2用于ST-Link调试，USART3用于控制EC20
 
 ![](/images/stm32f1新增打印串口.png)
 
@@ -49,6 +49,8 @@
 将抽取的文件夹加入STM32CubeMX生成的工程
 
 ![](/images/stm32f1将代码加入工程.png)
+
+配置编译宏和添加头文件
 
 ![](/images/stm32f1增加编译宏和头文件.png)
 
