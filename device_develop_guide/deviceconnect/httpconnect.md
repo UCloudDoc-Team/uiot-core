@@ -1,6 +1,6 @@
 # 基于HTTP协议建立连接
 
-HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备接入到UCloud IoT-Core通信云平台，将数据上传到云端。
+HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备接入到UIoT Core通信云平台，将数据上传到云端。
 
 由于HTTP的采用请求/响应的模型，所以HTTP仅能用于数据上报，不能用于命令的下发。
 
@@ -39,8 +39,9 @@ HTTP(Hypertext Transfer Protocol )协议接入是指通过HTTP的方式将设备
     Content-Type: application/json
     Authorization: 47b0194e52ed1d1630830b66709b906a1e201ba410101cfaf9381bbde53a0d85
     body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","Timestamp":"1501668289957"}
-    ```  
-	 
+    ```
+	
+
 **参数说明**
 
 |参数|说明|

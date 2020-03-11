@@ -1,6 +1,6 @@
 # 设备OTA开发
 
-UIoT-Core 支持设备通过 OTA(Over-the-Air Technology) 进行固件升级。本章描述如何利用设备端 C-SDK 提供的API进行设备端 OTA 功能开发。下面的讲解对应于 C-SDK 示例代码 samples/ota/ota_sample.c 。
+UIoT Core 支持设备通过 OTA(Over-the-Air Technology) 进行固件升级。本章描述如何利用设备端 C-SDK 提供的API进行设备端 OTA 功能开发。下面的讲解对应于 C-SDK 示例代码 samples/ota/ota_sample.c 。
 
 ## 功能说明
 

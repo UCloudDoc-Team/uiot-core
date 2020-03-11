@@ -1,6 +1,6 @@
 # C-SDK 快速入门
 
-本章描述如何在 linux 环境，通过设备端 C-SDK 快速接入 UIoT-Core 平台服务。
+本章描述如何在 linux 环境，通过设备端 C-SDK 快速接入 UIoT Core 平台服务。
 
 本例通过自定义上行、下行Topic，以及规则引擎的M2M功能，将设备上行数据直接转发到同一设备的下行Topic。
 
@@ -76,7 +76,7 @@ make
 
 1. 基于使用的OS的实现HAL层接口
 
-HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关于线程、内存、Timer、TCP的操作。UCloud IoT C-SDK已经实现了linux、FreeRTOS、RT-Thread下的HAL层实现。
+HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关于线程、内存、Timer、TCP的操作。UIoT C-SDK已经实现了linux、FreeRTOS、RT-Thread下的HAL层实现。
 
 
 本例使用平台OS为linux，该步已经官方实现，用户可以直接跳过。
@@ -104,12 +104,12 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
 
 
 
-2) 通过三要素通过[静态注册](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication)接入到UIoT-Core
+2) 通过三要素通过[静态注册](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication)接入到UIoT Core
 
 修改`./samples/mqtt/mqtt_sample.c`中对应的宏。
 
 ```
-  // 接入UIoT-Core三要素（需要根据控制台信息修改）
+  // 接入UIoT Core三要素（需要根据控制台信息修改）
   #define UIOT_MY_PRODUCT_SN            "6yggf1so12ex2ska"
   #define UIOT_MY_DEVICE_SN             "00:12:13:14:15:16"
   #define UIOT_MY_DEVICE_SECRET         "qnom9gil9h59x96s"

@@ -1,7 +1,7 @@
 # 概述	
 物联网通信云平台提供设备上云的通道，起到了设备与应用程序桥梁的作用。云端API列表，帮助用户实现产品管理、设备管理、Topic管理、规则引擎管理、物模型管理、上下行消息通信等功能。
 
-UIoT-Core平台即将推出针对不同云端开发语言的SDK，对于有云端开发需求的可以参考[云端API文档](/iot/uiot-core/api_guide/api_list)，或者参考UCloud SDK框架[UCloud SDK](https://github.com/ucloud?utf8=%E2%9C%93&q=sdk&type=&language=)。
+UIoT Core平台即将推出针对不同云端开发语言的SDK，对于有云端开发需求的可以参考[云端API文档](/iot/uiot-core/api_guide/api_list)，或者参考UCloud SDK框架[UCloud SDK](https://github.com/ucloud?utf8=%E2%9C%93&q=sdk&type=&language=)。
 
 
 
