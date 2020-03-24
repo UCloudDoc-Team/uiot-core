@@ -5,7 +5,6 @@ UCloud 物联网通信云平台（UIoT Core）为设备上云和产业互联网�
 物联网通信云平台核心功能包括设备管理、物模型、设备影子、规则引擎、固件远程升级等服务，可广泛应用于智慧城市、智能制造、智能家居、智慧农业、无人值守、新零售、智慧能源、智慧医疗等领域。
 
 
-
 * [产品简介](/uiot-core/product_introduction/)
     * [什么是物联网通信云平台](/uiot-core/product_introduction/what_is_iotcore)
     * [功能介绍](/uiot-core/product_introduction/function_introduction)
