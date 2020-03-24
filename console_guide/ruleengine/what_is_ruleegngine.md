@@ -14,7 +14,7 @@
 
 注意：
 
-1. UCloud有[项目](https://docs.ucloud.cn/management_monitor/uproject/index)的概念，不同项目间的资源彼此隔离，所以规则引擎只能流转到同一项目下的其他产品，比如UHost；
+1. UCloud有[项目](https://docs.ucloud.cn/uproject/README)的概念，不同项目间的资源彼此隔离，所以规则引擎只能流转到同一项目下的其他产品，比如UHost；
 2. 不同Region的产品不支持相互流转，比如IoT-Core开通Region在上海二区，则规则引擎不能流转到北京Region的UHost。
 
 
@@ -35,8 +35,8 @@
    - 状态：可以对规则进行筛选，有<未启用>、<运行>两种状态；
    - 检索规则：可以根据规则名或描述检索规则；
    - 点击<管理>或<规则名称>：可以编辑规则；
-   - 启用/禁用：启用或禁用规则，参考[规则启用](/iot/uiot-core/console_guide/ruleengine/what_is_ruleegngine#规则启用)；
-   - 删除：删除规则，运行状态下的规则无法删除，也可对规则进行批量删除，参考[规则删除](/iot/uiot-core/console_guide/ruleengine/what_is_ruleegngine#规则删除)；
+   - 启用/禁用：启用或禁用规则，参考[规则启用](uiot-core/console_guide/ruleengine/what_is_ruleegngine#规则启用)；
+   - 删除：删除规则，运行状态下的规则无法删除，也可对规则进行批量删除，参考[规则删除](uiot-core/console_guide/ruleengine/what_is_ruleegngine#规则删除)；
 
 ![新建规则](/images/新建规则.png)
 

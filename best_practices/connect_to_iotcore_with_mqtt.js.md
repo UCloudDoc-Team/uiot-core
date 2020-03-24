@@ -3,7 +3,7 @@
 对于web即时聊天或者棋类对决等需要实时推送消息给对方的应用，需要建立WEB客户端与服务器的长连接，完成消息的接收与发送。
 
 
-本实践介绍如何基于WebSocket-MQTT实现应用程序与浏览器的消息上报和下发，详细参考[基于MQTT-WebSocket协议建立连接](/iot/uiot-core/device_develop_guide/deviceconnect/websocketconnect)。
+本实践介绍如何基于WebSocket-MQTT实现应用程序与浏览器的消息上报和下发，详细参考[基于MQTT-WebSocket协议建立连接](uiot-core/device_develop_guide/deviceconnect/websocketconnect)。
 
 使用WebSocket可以直接下载以下源文件进行测试，示例界面如下：
 
@@ -14,14 +14,14 @@
 
 ## 前提条件
 
-1. 参考[创建产品](/iot/uiot-core/console_guide/product_device/create_products\#创建产品)、[创建设备](/iot/uiot-core/console_guide/product_device/create_devcies\#创建设备)，获取产品序列号、设备序列号、设备密钥：
+1. 参考[创建产品](uiot-core/console_guide/product_device/create_products\#创建产品)、[创建设备](uiot-core/console_guide/product_device/create_devcies\#创建设备)，获取产品序列号、设备序列号、设备密钥：
     ```
     ProductSN：ledubff3z85spjmu
     DeviceSN：h9onxtzw0aep7fsr
     DeviceSecret：6g7tjlekwf3sqqqj
     ```
 
-2. 建立连接，web应用先通过设备序列号与用户名进行绑定，然后发放设备密钥，所以web应用一般会以[静态注册](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication\#静态注册)的方式建立连接。
+2. 建立连接，web应用先通过设备序列号与用户名进行绑定，然后发放设备密钥，所以web应用一般会以[静态注册](uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication\#静态注册)的方式建立连接。
 
    1） 根据静态连接获取到MQTT登录需要的三要素：`ClientID`，`UserName`，`Password`。
 
@@ -31,11 +31,11 @@ ClientID | `ledubff3z85spjmu.h9onxtzw0aep7fsr`<br>规则：`${ProductSN}.${Devic
 UserName | `ledubff3z85spjmu\|h9onxtzw0aep7fsr\|1`<br>规则：`${ProductSN}\|${DeviceSN}\|${authmode}`<br>`authmode: 1表示静态注册`
 Password | `6g7tjlekwf3sqqqj`<br>规则：`${DeviceSecret}`
 
-   2）参考[设备连接](/iot/uiot-core/device_develop_guide/deviceconnect/mqttconnect)，获取MQTT Broker连接域名和TLS CA证书(如使用IE、Edge、Chrome等浏览器CA证书不需要显性加载)：
+   2）参考[设备连接](uiot-core/device_develop_guide/deviceconnect/mqttconnect)，获取MQTT Broker连接域名和TLS CA证书(如使用IE、Edge、Chrome等浏览器CA证书不需要显性加载)：
 
 Broker参数| 参数值
 ---|---
-Broker Address | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，参考[已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)）
+Broker Address | mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，参考[已开通区域及域名列表](uiot-core/product_introduction/available_region_url)）
 Broker Port | 80或443(使用HTTPS)
 KeepAlive | 30秒-1200秒，建议设置为300秒。 **当出现连接出错时，需要仔细检查该参数。**
 TLS(CA Certificate file) |[CA根证书 下载地址](http://uiot.cn-sh2.ufileos.com/DigiCertRootCA.cer) 如使用IE、Edge、Chrome等浏览器不需要下载
@@ -75,7 +75,7 @@ client.on('reconnect', (error) => {
 
 即 协议//域名:端口
 协议：使用SSL为wss，反之ws；
-域名：mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，参考[已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)）
+域名：mqtt-cn-sh2.iot.ucloud.cn （不同区域连接域名不同，参考[已开通区域及域名列表](uiot-core/product_introduction/available_region_url)）
 端口：wss为443，ws为80
 
 

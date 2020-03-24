@@ -98,13 +98,13 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
 
 2. 获取产品序列号、设备序列号、设备密钥，修改代码中对应的宏定义。
 
-1) 参考[设备详情](/iot/uiot-core/console_guide/product_device/create_devcies#设备详情)获取设备三要素；
+1) 参考[设备详情](uiot-core/console_guide/product_device/create_devcies#设备详情)获取设备三要素；
 
 ![](/images/csdk快速入门获取三要素.png)
 
 
 
-2) 通过三要素通过[静态注册](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication)接入到UIoT Core
+2) 通过三要素通过[静态注册](uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication)接入到UIoT Core
 
 修改`./samples/mqtt/mqtt_sample.c`中对应的宏。
 
@@ -166,7 +166,7 @@ HAL层是对不同操作系统的抽象，HAL层适配了不同操作系统关�
 
 4. 修改需要订阅的Topic及收到消息的回调函数
 
-1) 参考[Topic主题管理](/iot/uiot-core/console_guide/product_device/topic)，创建自定义Topic。
+1) 参考[Topic主题管理](uiot-core/console_guide/product_device/topic)，创建自定义Topic。
 
 默认创建产品时，系统会生成两个分别具有订阅和发布权限的Topic。
 
@@ -249,7 +249,7 @@ static int _publish_msg(void *client)
 
 5. 配置规则引擎，做M2M转发
 
-参考[数据流转到其他Topic](/iot/uiot-core/console_guide/ruleengine/forward_data_to_topic)，将上行消息转发到下行Topic，并启用规则。
+参考[数据流转到其他Topic](uiot-core/console_guide/ruleengine/forward_data_to_topic)，将上行消息转发到下行Topic，并启用规则。
 
 ![C-SDK转发Topic](/images/C-SDK转发Topic.png)
 

@@ -20,11 +20,11 @@
    
    消息筛选的的规则查询语句为：`SELECT【字段】FROM【Topic】WHERE【条件】`  
    
-   - Topic：分为系统Topic和自定义Topic。系统Topic是设备影子、物模型、设备状态等系统预留的Topic；自定义Topic是用户自己定义的Topic，以`/`分割，可包含字母、数字、`-`、`_`、`@`、`:`、`+`、`#`，支持五层，长度限制64，`+`和`#`为[通配符](/iot/uiot-core/console_guide/ruleengine/sql_statements#Topic通配符)，`#`只能放在结尾。具体可以根据需求选择产品，选择相应的Topic。
-   - 字段：字段支持内置函数、JSON表达式、星号`*`，参考[SQL表达式特性](/iot/uiot-core/console_guide/ruleengine/sql_statements)；
-   - 条件：支持比较运算符、逻辑运算符、括号运算符、算数运算符、函数调用、JSON表达式、CASE语句、IN、LIKE操作；具体参考[SQL表达式特性](/iot/uiot-core/console_guide/ruleengine/sql_statements);
+   - Topic：分为系统Topic和自定义Topic。系统Topic是设备影子、物模型、设备状态等系统预留的Topic；自定义Topic是用户自己定义的Topic，以`/`分割，可包含字母、数字、`-`、`_`、`@`、`:`、`+`、`#`，支持五层，长度限制64，`+`和`#`为[通配符](uiot-core/console_guide/ruleengine/sql_statements#Topic通配符)，`#`只能放在结尾。具体可以根据需求选择产品，选择相应的Topic。
+   - 字段：字段支持内置函数、JSON表达式、星号`*`，参考[SQL表达式特性](uiot-core/console_guide/ruleengine/sql_statements)；
+   - 条件：支持比较运算符、逻辑运算符、括号运算符、算数运算符、函数调用、JSON表达式、CASE语句、IN、LIKE操作；具体参考[SQL表达式特性](uiot-core/console_guide/ruleengine/sql_statements);
    
-3. 添加动作：将在[数据流转到http/kafka/mysql/TSDB/AI](/iot/uiot-core/console_guide/ruleengine/forward_data_to_mysql)中逐一介绍；
+3. 添加动作：将在[数据流转到http/kafka/mysql/TSDB/AI](uiot-core/console_guide/ruleengine/forward_data_to_mysql)中逐一介绍；
 
 ![消息筛选](/images/消息筛选.png)
 ![添加动作](/images/添加动作.png)

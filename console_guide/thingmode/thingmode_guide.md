@@ -4,8 +4,8 @@
 ## 物模型定义流程
 1. [注册](https://passport.ucloud.cn/#register)UCloud云服务，如已注册请直接第2步；
 2. 登录进入UCloud[物联网平台](https://console.ucloud.cn/uiot)；
-3. 进行[物模型功能定义](/iot/uiot-core/console_guide/thingmode/thingmode_guide#物模型功能定义)；
-4. 参考[设备端开发-物模型](/iot/uiot-core/device_develop_guide/thingmode/what_is_thingmode)，基于物模型进行开发；
+3. 进行[物模型功能定义](uiot-core/console_guide/thingmode/thingmode_guide#物模型功能定义)；
+4. 参考[设备端开发-物模型](uiot-core/device_develop_guide/thingmode/what_is_thingmode)，基于物模型进行开发；
 5. 开发完成，设备端、应用服务基于物模型实现业务逻辑。
 
 
@@ -17,11 +17,11 @@
 ### 操作步骤
 1. [注册](https://passport.ucloud.cn/#register)UCloud云服务，如已注册请直接第2步；
 2. 登录进入UCloud[物联网平台](https://console.ucloud.cn/uiot)；
-3. 选择相应的产品，进入[产品详情](/iot/uiot-core/console_guide/product_device/create_products#产品详情)；
+3. 选择相应的产品，进入[产品详情](uiot-core/console_guide/product_device/create_products#产品详情)；
 4. 选择<功能定义>标签；
 5. 关闭<产品发布状态>按钮；
    - 产品发布状态：产品发布状态为打开表示当前产品已发布，不能再对物模型或Topic等做修改；
-6. 点击<添加功能>，进行[属性](/iot/uiot-core/console_guide/thingmode/thingmode_guide#定义属性)，[命令](/iot/uiot-core/console_guide/thingmode/thingmode_guide#定义命令)，[事件](/iot/uiot-core/console_guide/thingmode/thingmode_guide#定义事件)定义。
+6. 点击<添加功能>，进行[属性](uiot-core/console_guide/thingmode/thingmode_guide#定义属性)，[命令](uiot-core/console_guide/thingmode/thingmode_guide#定义命令)，[事件](uiot-core/console_guide/thingmode/thingmode_guide#定义事件)定义。
 
 ![添加物模型](/images/添加物模型.png)
 
@@ -63,7 +63,7 @@
 
 ### 定义命令
 
-命令是指对设备进行下发控制并完成某个动作，命令控制可以理解为面向对象编程中的方法，有输入参数和输出参数，命令调用可分为同步和异步调用，具体可以参考[云端开发指南-SendUIoTCoreDeviceCommand](/iot/uiot-core/api_guide/tingmodemgmtapi)。
+命令是指对设备进行下发控制并完成某个动作，命令控制可以理解为面向对象编程中的方法，有输入参数和输出参数，命令调用可分为同步和异步调用，具体可以参考[云端开发指南-SendUIoTCoreDeviceCommand](uiot-core/api_guide/tingmodemgmtapi)。
 
 
 

@@ -33,7 +33,7 @@ body: {"ProductSN":"ZG1EvTEa7NN","DeviceSN":"NlwaSPXsCpTQuh8FxBGH","FileName":"f
 |---|---|
 |Method|请求方法。只支持 POST 方法。|
 |URL|`/api/v1/url`，URL 地址|
-|Host|`file-cn-sh2.iot.ucloud.cn`，端口必须为443。（不同区域连接域名不同，参考[已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)）|
+|Host|`file-cn-sh2.iot.ucloud.cn`，端口必须为443。（不同区域连接域名不同，参考[已开通区域及域名列表](uiot-core/product_introduction/available_region_url)）|
 |Content-Type|body 数据的编码格式。目前只支持 application/json|
 |Authorization|使用设备密码签名。签名计算格式为 `HMAC-SHA256(DeviceSecret, body)`|
 |body|设备认证信息。JSON 数据格式。具体信息，请参见下表 body 参数。|

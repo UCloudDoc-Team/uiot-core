@@ -1,11 +1,11 @@
 # 数据流转到MySQL
 数据流转到MySQL需要：
-- 完成[数据流转管理](/iot/uiot-core/console_guide/ruleengine/data_forwarding)中操作步骤的前两步，已经配置好消息筛选SQL；
+- 完成[数据流转管理](uiot-core/console_guide/ruleengine/data_forwarding)中操作步骤的前两步，已经配置好消息筛选SQL；
 - 在UCloud购买了[MySQL实例](https://console.ucloud.cn/udb/sql)，并已经配置好账号、密码、数据库、集合；
 
 
 ## 操作步骤
-1. 在[数据流转管理](/iot/uiot-core/console_guide/ruleengine/data_forwarding)页面中，点击<添加动作>;
+1. 在[数据流转管理](uiot-core/console_guide/ruleengine/data_forwarding)页面中，点击<添加动作>;
 2. 在弹出的对话框中，选择动作"存储到MYSQL中"；
    - 选择动作：选择需要流转到的目的地，这里选择“存储到MYSQL中”；
    - 项目名称：选择项目ID，系统会列出该项目下的所有MySQL实例；

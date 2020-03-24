@@ -1,6 +1,6 @@
 # 关于API接入
 
-UCloud物联网通信云平台使用独立的API调用网关，以满足客户的业务需求。物联网云平台的API调用和UCloud官方API调用的流程完全一致，本节将会通过一个示例介绍API的接入流程，也可参考UCloud官方[API 文档综览](https://docs.ucloud.cn/api/summary/overview)。需要JAVA/GO/PHP/Python等语言的参考，可以参考UCloud SDK框架[UCloud SDK项目](https://github.com/ucloud?utf8=%E2%9C%93&q=SDK&type=&language=)。
+UCloud物联网通信云平台使用独立的API调用网关，以满足客户的业务需求。物联网云平台的API调用和UCloud官方API调用的流程完全一致，本节将会通过一个示例介绍API的接入流程，也可参考UCloud官方[API 文档综览](https://docs.ucloud.cn/api/summary/README)。需要JAVA/GO/PHP/Python等语言的参考，可以参考UCloud SDK框架[UCloud SDK项目](https://github.com/ucloud?utf8=%E2%9C%93&q=SDK&type=&language=)。
 
 
 
@@ -19,8 +19,8 @@ UCloud物联网通信云平台使用独立的API调用网关，以满足客户�
 
 名称| 内容
 ---|---
-接口名| [GetUIoTCoreDeviceShadow](/iot/uiot-core/api_guide/deviceshadowmgmtapi#GetUIoTCoreDeviceShadow) - 获取设备影子。
-接口参数|**Region**：上海二区，地域ID为    [cn-sh2](https://docs.ucloud.cn/api/summary/regionlist) ，其他地域参考[已开通区域及域名列表](iot/uiot-core/product_introduction/available_region_url)。<br>**ProductSN**：产品序列号为    `8pi2i730vxsala2a`，通过控制台查看。<br>**DeviceSN**：设备序列号为`ark1d4ug1evfb1jy`，通过控制台查看。
+接口名| [GetUIoTCoreDeviceShadow](uiot-core/api_guide/deviceshadowmgmtapi#GetUIoTCoreDeviceShadow) - 获取设备影子。
+接口参数|**Region**：上海二区，地域ID为    [cn-sh2](https://docs.ucloud.cn/api/summary/regionlist) ，其他地域参考[已开通区域及域名列表](uiot-core/product_introduction/available_region_url)。<br>**ProductSN**：产品序列号为    `8pi2i730vxsala2a`，通过控制台查看。<br>**DeviceSN**：设备序列号为`ark1d4ug1evfb1jy`，通过控制台查看。
 
 3. 获取公共参数，即每次请求都需要的参数
 
@@ -79,7 +79,7 @@ ProjectId|项目ID为 `org-z44lmf12e`，项目ID为 **org-z44lmf12e**，通过�
    ```
 5. 请求接口获取响应
    
-   通过HTTPS GET和POST都可以请求接口得到同样的响应结果，请求的BaseURL参考[已开通可用区及域名列表](iot/uiot-core/product_introduction/available_region_url)，例如上海二为`https://api-cn-sh2.iot.ucloud.cn`。
+   通过HTTPS GET和POST都可以请求接口得到同样的响应结果，请求的BaseURL参考[已开通可用区及域名列表](uiot-core/product_introduction/available_region_url)，例如上海二为`https://api-cn-sh2.iot.ucloud.cn`。
 
    1）**通过GET方式**  
    ① 当参数中存在特殊字符时需要进行编码，编码的规则为：  
@@ -179,4 +179,4 @@ ProjectId|项目ID为 `org-z44lmf12e`，项目ID为 **org-z44lmf12e**，通过�
     "RetCode": 171
   }
   ```
-- 其他疑问，可以参考[API 文档综览](https://docs.ucloud.cn/api/summary/overview)
+- 其他疑问，可以参考[API 文档综览](https://docs.ucloud.cn/api/summary/README)

@@ -2,7 +2,7 @@
 
 动态注册也叫做一型一密，一型一密是指同一个产品下的设备激活时使用产品公共的凭证（`产品序列号`，`产品密码`）进行连接，然后再获取`设备密码`。
 
-获取到`设备密码`后，设备将`设备密码`保存到不易失存储中，然后使用取得的`设备密码`按照[静态注册](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication)的流程完成动态激活认证。 
+获取到`设备密码`后，设备将`设备密码`保存到不易失存储中，然后使用取得的`设备密码`按照[静态注册](uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication)的流程完成动态激活认证。 
 
 
 注：设备通过动态注册获取到设备密码登录成功一次后，将不能再进行动态注册，否则将出现权限受限。    
@@ -11,9 +11,9 @@
 
 ## 操作步骤：
 
-1. 参考云平台操作指南，[创建产品](/iot/uiot-core/console_guide/product_device/create_products)，打开<动态注册>开关；
+1. 参考云平台操作指南，[创建产品](uiot-core/console_guide/product_device/create_products)，打开<动态注册>开关；
 
-2. 参考[产品详情页](/iot/uiot-core/console_guide/product_device/create_products#产品详情)，打开或关闭<预认证>开关；
+2. 参考[产品详情页](uiot-core/console_guide/product_device/create_products#产品详情)，打开或关闭<预认证>开关；
 
       #### 预认证  
 	  
@@ -25,11 +25,11 @@
 
 3. 准备工作：
 
-   1). 开发设备端固件，比如使用[C-SDK动态注册](/iot/uiot-core/device_develop_guide/c_sdk_example/mqttinterface#动态认证)开发相应的固件；
+   1). 开发设备端固件，比如使用[C-SDK动态注册](uiot-core/device_develop_guide/c_sdk_example/mqttinterface#动态认证)开发相应的固件；
    
    2). 确认产品详情页的<动态注册>开关已经打开；
    
-   3). 如果预认证打开（关闭则忽略该条）：参考[创建单个或多个设备-手动输入](/iot/uiot-core/console_guide/product_device/create_devcies#创建单个或多个设备)，在控制台批量添加即将要激活的设备序列号，以便于设备激活时进行预认证，设备进行预认证时，只有被添加过的设备才能通过云平台校验，完成预认证；
+   3). 如果预认证打开（关闭则忽略该条）：参考[创建单个或多个设备-手动输入](uiot-core/console_guide/product_device/create_devcies#创建单个或多个设备)，在控制台批量添加即将要激活的设备序列号，以便于设备激活时进行预认证，设备进行预认证时，只有被添加过的设备才能通过云平台校验，完成预认证；
 
    
 4. 将步骤2开发的固件直接发给产线烧录；
@@ -56,7 +56,7 @@
    }
    ```
 
-7. 设备通过收到的`设备密码`，以[静态注册](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication)的方式完成激活认证。
+7. 设备通过收到的`设备密码`，以[静态注册](uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-device_authentication)的方式完成激活认证。
 
 
 
@@ -114,6 +114,6 @@ ClientID | `${ProductSN}.${DeviceSN}`<br>举例：`70ly1tvowt696r15.112233445566
 UserName | `${ProductSN}\|${DeviceSN}\|${authmode}`<br>举例：`70ly1tvowt696r15\|112233445566\|1`<br>`authmode: 1`表示静态注册；2表示动态注册`
 Password | `${DeviceSecret}`<br>举例：`zlc3d21u5k8fq0d2`
 
-8. 参考[下一节设备连接](/iot/uiot-core/device_develop_guide/deviceconnect/mqttconnect)将设备接入到物联网平台，完成认证；
+8. 参考[下一节设备连接](uiot-core/device_develop_guide/deviceconnect/mqttconnect)将设备接入到物联网平台，完成认证；
 
 

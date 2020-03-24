@@ -5,7 +5,7 @@
 
 ## 文件上传
 
-详情参考[设备端文件上传](/iot/uiot-core/device_develop_guide/uploadfile)，上传文件。
+详情参考[设备端文件上传](uiot-core/device_develop_guide/uploadfile)，上传文件。
 
 ## 文件管理
 

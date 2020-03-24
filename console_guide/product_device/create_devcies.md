@@ -20,21 +20,21 @@
 
    - 手动输入
 
-     1. 手动输入设备序列号，添加多个可以通过<回车/换行符>隔开，单次最多可以批量添加1000个设备，该功能可以结合[预认证](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication#预认证)功能使用；
+     1. 手动输入设备序列号，添加多个可以通过<回车/换行符>隔开，单次最多可以批量添加1000个设备，该功能可以结合[预认证](uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication#预认证)功能使用；
      2. 手动输入设备序列号长度为4-64个字符，可包含英文字母、数字和连接号`-`、下划线`_`、`@`、英文冒号`:`；
      3. 点击<确定>，系统会生成指定`设备序列号`的设备，以及`设备密码`；
 
-8. `设备序列号`和`设备密码`是[设备注册](/iot/uiot-core/device_develop_guide/authenticate_devices/what_is_authenticate_devices)到平台的重要凭证，需要妥善保存；
+8. `设备序列号`和`设备密码`是[设备注册](uiot-core/device_develop_guide/authenticate_devices/what_is_authenticate_devices)到平台的重要凭证，需要妥善保存；
 9. 设备创建成功后，可以在设备列表页
 
    - <设备总数>、<激活设备>、<在线设备数量>可以查看设备统计信息；
    - 点击<获取未激活设备密码>，可以以csv的格式导出所有未激活的设备的`设备序列号`和`设备密码`。
    - 批量<启用>、<禁止>、<删除>设备；
    - 通过<设备序列号>或<设备描述>检索设备；
-   - 点击<设备序列号>或<详情>，进入[设备详情](/iot/uiot-core/console_guide/product_device/create_devcies\#设备详情)页；
-   - 点击<禁用>则[禁用设备](/iot/uiot-core/console_guide/product_device/create_devcies#设备禁用)；
-   - 点击<设备调试>，进入[设备调试](/iot/uiot-core/console_guide/monitoring_maintenance/online_debug)页；
-   - 点击<删除>，进入[设备删除](/iot/uiot-core/console_guide/product_device/create_devcies#设备删除)页；
+   - 点击<设备序列号>或<详情>，进入[设备详情](uiot-core/console_guide/product_device/create_devcies\#设备详情)页；
+   - 点击<禁用>则[禁用设备](uiot-core/console_guide/product_device/create_devcies#设备禁用)；
+   - 点击<设备调试>，进入[设备调试](uiot-core/console_guide/monitoring_maintenance/online_debug)页；
+   - 点击<删除>，进入[设备删除](uiot-core/console_guide/product_device/create_devcies#设备删除)页；
 
 ![随机生成](/images/随机生成.png)
 
@@ -50,9 +50,9 @@
 
 动态注册设备需要产品开启动态注册开关。
 
-为了防止产品密码泄露后非授权设备登录到平台，用户可以打开<预认证>开关，动态注册设备需要先通过**手动输入**预登记设备序列号，设备出厂后首次接入到平台时需要进行匹配，成功后方可接入平台。具体可以参考[预认证](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication#预认证)
+为了防止产品密码泄露后非授权设备登录到平台，用户可以打开<预认证>开关，动态注册设备需要先通过**手动输入**预登记设备序列号，设备出厂后首次接入到平台时需要进行匹配，成功后方可接入平台。具体可以参考[预认证](uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication#预认证)
 
-动态注册设备的具体流程可以参考[设备端开发指南-动态注册](/iot/uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication)。
+动态注册设备的具体流程可以参考[设备端开发指南-动态注册](uiot-core/device_develop_guide/authenticate_devices/unique-certificate-per-product_authentication)。
 
 ![动态注册](/images/动态注册.png)
 
@@ -84,17 +84,17 @@
 
 - 物模型属性、命令、事件
 
-   - 设备属性：记录设备上报的属性值以及期望设置的属性值，详细参考[功能定义](/iot/uiot-core/console_guide/thingmode/thingmode_guide#定义属性)；
-   - 命令记录：记录云端向设备端下发的命令的记录，详细参考[功能定义](/iot/uiot-core/console_guide/thingmode/thingmode_guide#定义命令)；
-   - 事件记录：记录设备端上报事件的记录，详细参考[功能定义](/iot/uiot-core/console_guide/thingmode/thingmode_guide#定义事件)；
+   - 设备属性：记录设备上报的属性值以及期望设置的属性值，详细参考[功能定义](uiot-core/console_guide/thingmode/thingmode_guide#定义属性)；
+   - 命令记录：记录云端向设备端下发的命令的记录，详细参考[功能定义](uiot-core/console_guide/thingmode/thingmode_guide#定义命令)；
+   - 事件记录：记录设备端上报事件的记录，详细参考[功能定义](uiot-core/console_guide/thingmode/thingmode_guide#定义事件)；
    
 - 设备影子
 
-    - 影子文档是一个Json文件，设备可以更新设备影子，操作台也可以通过编辑设备的期望值下发设置给设备，详细参考[设备影子](/iot/uiot-core/console_guide/device_shadow/operation_guide)；
+    - 影子文档是一个Json文件，设备可以更新设备影子，操作台也可以通过编辑设备的期望值下发设置给设备，详细参考[设备影子](uiot-core/console_guide/device_shadow/operation_guide)；
 	
 - 文件管理
 
-   - 文件管理是设备端通过上传文件功能上传的文件列表，可以对文件进行管理，详细参考[上传文件](/iot/uiot-core/device_develop_guide/uploadfile)；
+   - 文件管理是设备端通过上传文件功能上传的文件列表，可以对文件进行管理，详细参考[上传文件](uiot-core/device_develop_guide/uploadfile)；
 
 ![设备详情](/images/设备详情.png)
 

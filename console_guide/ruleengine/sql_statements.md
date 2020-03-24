@@ -16,14 +16,14 @@ SELECT temperature as t, deviceSN() as deviceSN FROM /70ly1tvowt696r15/+/upload 
 ## SELECT
 JSON数据类型支持以下类型：
 
-- 内置函数，支持函数参考[函数列表JSON](/iot/uiot-core/console_guide/ruleengine/sql_statements#函数列表)，比如`deviceSN()`；
+- 内置函数，支持函数参考[函数列表JSON](uiot-core/console_guide/ruleengine/sql_statements#函数列表)，比如`deviceSN()`；
 - JSON属性表达式，比如`light.state`；
 - 星号`*`，表示所有内容；
 - 支持使用`as`对筛选的字段定义别名，比如`temperature as t`；
 
 binary数据类型支持以下类型：
 
-- 部分内置函数，支持函数参考[函数列表binary](/iot/uiot-core/console_guide/ruleengine/sql_statements#函数列表)，比如`deviceSN()`；
+- 部分内置函数，支持函数参考[函数列表binary](uiot-core/console_guide/ruleengine/sql_statements#函数列表)，比如`deviceSN()`；
 - 星号`*`，表示所有内容；
 
 
@@ -45,7 +45,7 @@ SELECT deviceSN(),* FROM /70ly1tvowt696r15/+/upload
 
 
 ## FROM
-From值需要筛选的Topic，支持通配符，参考[Topic管理](/iot/uiot-core/console_guide/product_device/topic)。
+From值需要筛选的Topic，支持通配符，参考[Topic管理](uiot-core/console_guide/product_device/topic)。
 
 binary数据类型仅支持自定义Topic，不支持系统Topic。
 
@@ -61,13 +61,13 @@ binary数据类型仅支持自定义Topic，不支持系统Topic。
 ## WHERE
 JSON数据类型支持以下类型：
 
-- 内置函数，支持函数参考[函数列表-JSON](/iot/uiot-core/console_guide/ruleengine/sql_statements#函数列表)，比如`deviceSN()`；
+- 内置函数，支持函数参考[函数列表-JSON](uiot-core/console_guide/ruleengine/sql_statements#函数列表)，比如`deviceSN()`；
 - JSON属性表达式的条件语句，比如`light.state = 0`；
 - 留空，所有数据；
 
 binary数据类型支持以下类型：
 
-- 部分内置函数，支持函数参考[函数列表-binary](/iot/uiot-core/console_guide/ruleengine/sql_statements#函数列表)，比如`deviceSN()`；
+- 部分内置函数，支持函数参考[函数列表-binary](uiot-core/console_guide/ruleengine/sql_statements#函数列表)，比如`deviceSN()`；
 - 内置函数的条件表达式；
 
 ### WHERE 条件语法
@@ -92,7 +92,7 @@ Where表示条件，支持以下语法：
   - \*
   - /
   - %
-- [函数调用](/iot/uiot-core/console_guide/ruleengine/sql_statements#函数列表)
+- [函数调用](uiot-core/console_guide/ruleengine/sql_statements#函数列表)
 - JSON属性表达式
 - CASE 语句
 - IN

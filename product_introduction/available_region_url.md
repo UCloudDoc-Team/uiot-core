@@ -24,11 +24,11 @@ UCloud目前拥有25大地域（Region），具体参见 [地域和可用区列�
 
 |功能|域名|端口(明文/加密)|TLS证书|
 |----|----|----|----|
-|[MQTT连接](/iot/uiot-core/device_develop_guide/deviceconnect/mqttconnect)|mqtt-$\{RegionId\}.iot.ucloud.cn |`1883`/`8883(使用TLS)`|[下载CA证书(自签名)](http://uiot.cn-sh2.ufileos.com/ca-cert.pem)|
-|[WebSocket连接](/iot/uiot-core/device_develop_guide/deviceconnect/websocketconnect)|mqtt-$\{RegionId\}.iot.ucloud.cn|`80`/`443(使用TLS)`|[下载CA根证书(国际授信)](http://uiot.cn-sh2.ufileos.com/DigiCertRootCA.cer)|
-|[HTTP连接](/iot/uiot-core/device_develop_guide/deviceconnect/httpconnect)|http-$\{RegionId\}.iot.ucloud.cn|仅支持`443(使用TLS)`|[下载CA根证书(国际授信)](http://uiot.cn-sh2.ufileos.com/DigiCertRootCA.cer)|
-|[云端API调用](/iot/uiot-core/api_guide/api_guidehelp)|api-$\{RegionId\}.iot.ucloud.cn|仅支持`443(使用TLS)`|[下载CA根证书(国际授信)](http://uiot.cn-sh2.ufileos.com/DigiCertRootCA.cer)|
-|[上传文件](/iot/uiot-core/device_develop_guide/uploadfile)|file-$\{RegionId\}.iot.ucloud.cn|仅支持`443(使用TLS)`|[下载CA根证书(国际授信)](http://uiot.cn-sh2.ufileos.com/DigiCertRootCA.cer)|
+|[MQTT连接](uiot-core/device_develop_guide/deviceconnect/mqttconnect)|mqtt-$\{RegionId\}.iot.ucloud.cn |`1883`/`8883(使用TLS)`|[下载CA证书(自签名)](http://uiot.cn-sh2.ufileos.com/ca-cert.pem)|
+|[WebSocket连接](uiot-core/device_develop_guide/deviceconnect/websocketconnect)|mqtt-$\{RegionId\}.iot.ucloud.cn|`80`/`443(使用TLS)`|[下载CA根证书(国际授信)](http://uiot.cn-sh2.ufileos.com/DigiCertRootCA.cer)|
+|[HTTP连接](uiot-core/device_develop_guide/deviceconnect/httpconnect)|http-$\{RegionId\}.iot.ucloud.cn|仅支持`443(使用TLS)`|[下载CA根证书(国际授信)](http://uiot.cn-sh2.ufileos.com/DigiCertRootCA.cer)|
+|[云端API调用](uiot-core/api_guide/api_guidehelp)|api-$\{RegionId\}.iot.ucloud.cn|仅支持`443(使用TLS)`|[下载CA根证书(国际授信)](http://uiot.cn-sh2.ufileos.com/DigiCertRootCA.cer)|
+|[上传文件](uiot-core/device_develop_guide/uploadfile)|file-$\{RegionId\}.iot.ucloud.cn|仅支持`443(使用TLS)`|[下载CA根证书(国际授信)](http://uiot.cn-sh2.ufileos.com/DigiCertRootCA.cer)|
 
 提供的TLS证书分为两种：
 
