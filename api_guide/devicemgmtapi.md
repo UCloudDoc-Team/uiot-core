@@ -464,6 +464,8 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=ResetUIoTCoreDevice
 | ExactDeviceSN  | string | 设备SN，用于精确查询，如果提供了此字段，则DeviceSN无效            |       No |
 | Status.n       | string | 设备激活状态，用于结果筛选出对应状态的设备；<br>状态枚举包括：`disabled`, `inactivated`, `offline`,`online`；<br>可以传递多值，形如：`Status.0=disabled`,`Status.1=offline`|       No |
 | UpdateStatus.n | string | 设备升级状态，用于筛选对应升级状态的设备；<br>升级状态枚举包括：`unreported`,`init_version`,`to_be_updated`,<br>`updating,success`,`fail`；<br>可以传递多值，形如：`UpdateStatus.0=unreported`,`UpdateStatus.1=init_version` |       No |
+|FirmwareVersion.n|string|当前固件版本，用于筛选对应版本的设备|No|
+|DestVersion.n|string|目标版本，用于筛选对应版本的设备|No|
 
 ### 响应参数
 | Parameter name         | Type             | Description    | Required |
@@ -479,19 +481,25 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=ResetUIoTCoreDevice
 
 | Parameter name    | Type   | Description          | Required |
 | ----------------- | ------ | -------------------- | -------: |
-| DeviceSN          | string | 设备序列号           |  **Yes** |
-| Password          | string | 设备密码             |  **Yes** |
-| Status            | string | 设备状态             |  **Yes** |
-| CreateTime        | int    | 创建时间             |  **Yes** |
-| UpdateStatus      | string | 设备升级状态         |  **Yes** |
-| ActiveTime        | int    | 设备激活时间         |       No |
-| LatestOnlineTime  | int    | 最近一次上线时间     |       No |
-| LatestOfflineTime | int    | 最近一次下线时间     |       No |
-| Description       | string | 设备描述             |       No |
-| FirmwareVersion   | string | 设备当前固件版本     |       No |
-| DestVersion       | string | 目标固件版本         |       No |
-| ErrMsg            | string | 错误信息             |       No |
-| LatestUpdateTime  | string | 最近一次固件更新时间 |       No |
+|DeviceSN|string|设备序列号|**Yes**|
+|Password|string|设备密码|**Yes**|
+|Status|string|设备状态|**Yes**|
+|CreateTime|int|创建时间|**Yes**|
+|UpdateStatus|string|设备升级状态|**Yes**|
+|IPAddr|string|设备ip地址|No|
+|ActiveTime|int|设备激活时间|No|
+|LatestOnlineTime|int|最近一次上线时间|No|
+|LatestOfflineTime|int|最近一次下线时间|No|
+|Description|string|设备描述|No|
+|FirmwareVersion|string|设备当前固件版本|No|
+|DestVersion|string|目标固件版本|No|
+|ErrMsg|string|错误信息|No|
+|LatestUpdateTime|string|最近一次固件更新时间|No|
+|ProductSN|string|所属产品序列号|No|
+|DeviceType|string|设备类型|No|
+|SubDeviceNum|int|子设备数量|No|
+|RemoteSSHOpen|bool|远程SSH开关是否打开|No|
+|RemoteSSHPort|int|远程SSH端口|No|
 
 ### 请求示例
 ```
