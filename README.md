@@ -96,5 +96,5 @@ UCloud 物联网通信云平台（UIoT Core）为设备上云和产业互联网�
     * [使用MQTT.fx接入物联网通信云平台](/uiot-core/best_practices/connect_to_iotcore_using_mqtt.fx)
     * [使用mqtt.js接入物联网通信云平台](/uiot-core/best_practices/connect_to_iotcore_with_mqtt.js)
 * [常见问题](/uiot-core/faq)
-* [版本更新说明](/uiot-core/release_notes)
+* [版本更新说明](/uiot-core/release_notes) 
 
