@@ -44,12 +44,15 @@
       - enum：枚举型
       - string：字符串
       - date：时间型，格式为int 类型的 UTC 时间戳，单位：毫秒
+      - array：数组，支持int、float32、float64、string、struct元素
+      - struct：结构体，支持int、float32、float64、bool、enum、string元素
    - 取值范围（必填）：当数据类型为int、float32、float64时，需要填写取值范围，表示数据允许的范围。
    - 步长（必填）：当数据类型为int、float32、float64时，需要填写取值范围，表征属性变化的步进长度。
    - 布尔类型（必填）：当数据类型为bool类型时，填写0和1分别代表的内容。
    - 枚举项（必填）：当数据类型为enum时，分别填写枚举值和对应的描述。
    - 数据长度（必填）：当数据类型为string时，表示字符串的长度。
    - 单位：该属性的单位，比如摄氏度。单位最长为16位字符， 无特殊字符限制。
+   - 元素数量（必填）：当数据类型为array时，标示数组中元素数量。范围为1-128个
    - 读写类型（必填）：
      - 只读：该属性仅支持数据上报，不支持下行修改。
      - 读写：该属性既可以上报获取，也可以下行修改设置。
@@ -98,6 +101,8 @@
     - enum：枚举型
     - string：字符串
     - date：时间型，格式为int 类型的 UTC 时间戳，单位：毫秒
+    - array：数组，支持int、float32、float64、string、struct元素
+    - struct：结构体，支持int、float32、float64、bool、enum、string元素
 4. 取值范围（必填）：当数据类型为int、float32、float64时，需要填写取值范围，表示数据允许的范围。
 5. 步长（必填）：当数据类型为int、float32、float64时，需要填写取值范围，表征属性变化的步进长度。
 6. 布尔类型（必填）：当数据类型为bool类型时，填写0和1分别代表的内容。
@@ -136,6 +141,8 @@
     - enum：枚举型
     - string：字符串
     - date：时间型，格式为int 类型的 UTC 时间戳，单位：毫秒
+    - array：数组，支持int、float32、float64、string、struct元素
+    - struct：结构体，支持int、float32、float64、bool、enum、string元素
 4. 取值范围（必填）：当数据类型为int、float32、float64时，需要填写取值范围，表示数据允许的范围。
 5. 步长（必填）：当数据类型为int、float32、float64时，需要填写取值范围，表征属性变化的步进长度。
 6. 布尔类型（必填）：当数据类型为bool类型时，填写0和1分别代表的内容。
