@@ -1,5 +1,4 @@
 <div class="sidebar_title icon__uiot">物联网通信云平台 UIoT Core</div>
-
 * [概览](/uiot-core/README)
 * [产品简介](/uiot-core/product_introduction/)
     * [什么是物联网通信云平台](/uiot-core/product_introduction/what_is_iotcore)
@@ -22,7 +21,7 @@
         * [SQL表达式特性](/uiot-core/console_guide/ruleengine/sql_statements)
         * [数据流转到MySQL](/uiot-core/console_guide/ruleengine/forward_data_to_mysql)
         * [数据流转到MongoDB](/uiot-core/console_guide/ruleengine/forward_data_to_mongodb)
-        * [数据流转到分布式消息系统kafka](/uiot-core/console_guide/ruleengine/forward_data_to_kafka)
+        * [数据流转到分布式消息系统Kafka](/uiot-core/console_guide/ruleengine/forward_data_to_kafka)
 		* [数据流转到TSDB](/uiot-core/console_guide/ruleengine/forward_data_to_tsdb)
         * [数据流转到其他Topic](/uiot-core/console_guide/ruleengine/forward_data_to_topic)
         * [数据流转到HTTP服务](/uiot-core/console_guide/ruleengine/forward_data_to_http)
