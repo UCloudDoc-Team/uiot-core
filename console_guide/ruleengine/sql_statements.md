@@ -55,7 +55,7 @@ binary数据类型仅支持自定义Topic，不支持系统Topic。
 
 |通配符 |	描述
 |---|---
-|# |	**这个通配符必须出现在Topic的最后一个层级，代表本级及下级所有类目。**<br>例如， Topic `/70ly1tvowt696r15/pcur1q7jm2lb57rk/upload/#`中，`/upload`层级后使用通配符`#`，代表`/download`层级后的所有层级。该Topic可以代表`/70ly1tvowt696r15/pcur1q7jm2lb57rk/upload/data`和`/70ly1tvowt696r15/pcur1q7jm2lb57rk/upload//error`。
+|# |	**这个通配符必须出现在Topic的最后一个层级，代表本级及下级所有类目。**<br>例如， Topic `/70ly1tvowt696r15/pcur1q7jm2lb57rk/upload/#`中，`/upload`层级后使用通配符`#`，代表`/download`层级后的所有层级。该Topic可以代表`/70ly1tvowt696r15/pcur1q7jm2lb57rk/upload/data`和`/70ly1tvowt696r15/pcur1q7jm2lb57rk/upload/error`。
 |+ |	**代表本级所有符合的。**<br>例如，Topic `/70ly1tvowt696r15/+/upload`中，代表产品下所有设备，可以代表`/70ly1tvowt696r15/deviceA/upload`和`/70ly1tvowt696r15/deviceB/upload`。
 
 ## WHERE

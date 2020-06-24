@@ -3,7 +3,7 @@
 
 数据流转JSON和binary数据类型的区别：  
 
-- JSON：JSON格式对于文档数据会先进行数据解析，提前JSON中的字段，再进行数据的流转。如果是非JSON格式的数据将会被规则引擎直接丢弃；
+- JSON：JSON格式对于文档数据会先进行数据解析，提取JSON中的字段，再进行数据的流转。如果是非JSON格式的数据将会被规则引擎直接丢弃；
 - binary：binary格式仅支持自定义Topic类，只做数据透传，不能流转到结构化存储的目的地中（只能流转到Kafka、M2M、HTTP、AI服务）；规则中的字段支持星号"*"，或者是部分内置函数；
 
 ## 操作步骤
@@ -17,7 +17,7 @@
      - 执行动作：添加动作，将消息筛选出来的数据流转到其他产品，比如UHost、MySQL、MongoDB、KafkaMQ、TSDB、M2M、AI-Inference等；
    
 2. 消息筛选：  
-   
+  
    消息筛选的的规则查询语句为：`SELECT【字段】FROM【Topic】WHERE【条件】`  
    
    - Topic：分为系统Topic和自定义Topic。系统Topic是设备影子、物模型、设备状态等系统预留的Topic；自定义Topic是用户自己定义的Topic，以`/`分割，可包含字母、数字、`-`、`_`、`@`、`:`、`+`、`#`，支持五层，长度限制64，`+`和`#`为[通配符](uiot-core/console_guide/ruleengine/sql_statements#Topic通配符)，`#`只能放在结尾。具体可以根据需求选择产品，选择相应的Topic。
