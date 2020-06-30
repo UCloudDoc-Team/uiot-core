@@ -343,7 +343,9 @@ int IOT_Shadow_Delete(void *handle, OnRequestCallback request_callback, uint32_t
 int IOT_Shadow_Delete_All(void *handle, OnRequestCallback request_callback, uint32_t timeout_sec, void *user_context) ;
 ```
 
-|参数列表 | 参数 | 数据类型 | 参数类型 | 说明 |
+### 参数列表
+
+| 参数 | 数据类型 | 参数类型 | 说明 |
 | --- | --- | --- | --- |
 | handle | void * | 输入 | 影子文档句柄 |
 | request_callback | OnRequestCallback | 输入 | 请求的回调函数 |
