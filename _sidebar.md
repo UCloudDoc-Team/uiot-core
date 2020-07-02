@@ -34,7 +34,10 @@
         * [什么是物模型](/uiot-core/console_guide/thingmode/what_is_thingmode)
         * [物模型定义流程](/uiot-core/console_guide/thingmode/thingmode_guide)
         * [功能定义示例](/uiot-core/console_guide/thingmode/operation_example)
-    * [数据解析](/uiot-core/console_guide/binary_parse)
+
+    * 数据解析
+        * [数据解析介绍](/uiot-core/console_guide/binary_parse_intro)
+        * [数据解析使用示例](/uiot-core/console_guide/binary_parse_example)
     * 固件与升级
         * [概述](/uiot-core/console_guide/ota/what_is_ota)
         * [固件管理](/uiot-core/console_guide/ota/firmware_management)
