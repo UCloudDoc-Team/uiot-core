@@ -1,25 +1,4 @@
-# 数据解析
-
-## 数据解析介绍
-
-UCloud IoT Core 标准数据格式为json。在实际项目中，存在一些硬件性能较弱的设备不适合直接使用json格式进行数据传输。UIoT Core支持此类设备直接将原数据透传到平台并提供数据解析功能针对数据进行处理。您可在控制台编辑解析脚本将原数据解析成json并使用。
-
-## 功能原理
-
-
-## 功能说明
-
-- 以产品纬度进行数据解析，相同产品下的所有设备使用的Topic共用一套解析脚本。
-
-- UIoT Core控制台提供解析脚本编辑，支持JavaScript。
-
-- 使用时需在解析数据的Topic后增加标识符?parse=true 以被UIoT Core平台识别进行解析。
-
-  例： /${ProductSN}/${DeviceSN}/upload?parse=true
-
-- 仅支持自定义Topic的数据解析，对系统Topic无效
-
-- 仅支持具备发布权限的Topic进行数据解析
+# 数据解析使用示例
 
 
 
@@ -38,37 +17,57 @@ UCloud IoT Core 标准数据格式为json。在实际项目中，存在一些硬
 
 ### 流程示例如下：
 
-**选择需要进行数据解析的产品**
+**进入指定产品的数据解析功能界面录入解析脚本**
 
 ![删除文件](../images/数据解析-1.png)
 
 
 
-**进入数据解析功能界面**
+**模拟执行并提交脚本**
 
 ![删除文件](../images/数据解析-2.png)
 
 
 
-**编辑数据解析脚本**
+### 脚本示例：
 
-![删除文件](../images/数据解析-3.png)
+```
+/*
+  示例数据：
+  自定义Topic：
+     /update，上报数据。
+  输入参数：
+     topic: /$productsn/$devicesn/upload
+     bytes: 0x0121
+  输出参数：
+  {
+     "temperature": 33,
+     "switch": true,
+     "topic": "/$productsn/$devicesn/upload"
+   }
+ */
+function rawDataToJSON(topic, bytes) {
+    var uint8Array = new Uint8Array(bytes.length);
+    for (var i = 0; i < bytes.length; i++) {
+        uint8Array[i] = bytes[i] & 0xff;
+    }
+    var dataView = new DataView(uint8Array.buffer, 0);
+    var jsonObj = {};
 
+    if(topic.includes('/error')) {
+        jsonObj['topic'] = topic;
+        jsonObj['retcode'] = dataView.getInt8(0)
+    } else if (topic.includes('/upload')) {
+        jsonObj['topic'] = topic;
+        jsonObj['temperature'] = dataView.getInt8(1);
+        jsonObj['switch'] = uint8Array[0] == 1 ? true: false;
+    }
 
+    return jsonObj;
+}
+```
 
-**模拟执行**
+1、使用时设备需要通过Topic：/$productsn/$devicesn/upload?parse=true上报数据，否则UIoT Core平台不会进行解析。
 
-![删除文件](../images/数据解析-4.png)
-
-
-
-**提交脚本**
-
-![删除文件](../images/数据解析-5.png)
-
-
-
-**查看已提交代码**
-
-![删除文件](../images/数据解析-6.png)
+2、解析后的数据可通过规则引擎流转到其他Topic 或存入数据库。
 
