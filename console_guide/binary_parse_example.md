@@ -69,5 +69,5 @@ function rawDataToJSON(topic, bytes) {
 
 1、使用时设备需要通过Topic：/$productsn/$devicesn/upload?parse=true上报数据，否则UIoT Core平台不会进行解析。
 
-2、解析后的数据可通过规则引擎流转到其他Topic 或存入数据库。
+2、解析后的数据可通过规则引擎流转到其他Topic 或存入数据库等其他应用（MYSQL、MongoDB、Kafka、TSDB、PgSQL、HTTP服务、ULB）。
 
