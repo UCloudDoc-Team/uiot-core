@@ -65,8 +65,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
     {
         "Method": "report_progress",
         "Payload":{
-            "State":"downloading",
-            "Percent": 50
+            "State":"downloading"
         }
     }
     ```
@@ -80,8 +79,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
     {
         "Method": "report_progress",
         "Payload":{
-            "State":"burning",
-            "Percent": 50
+            "State":"burning"
         }
     }
     ```
@@ -108,7 +106,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
     {
         "Method": "report_fail",
         "Payload":{
-            "ErrCode": -1,
+            "ErrCode": -1
         }
     }
     ```
