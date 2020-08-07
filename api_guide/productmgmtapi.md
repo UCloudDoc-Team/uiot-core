@@ -71,7 +71,6 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=CreateUIoTCoreProduct
 | DeviceShadow          | string | 是否开启设备影子(on/off)       | No       |
 | Password              | string | 产品密钥                       | No       |
 | IsPublish             | bool   | 产品是否发布                   | No       |
-| FirmwareNumber        | int    | 产品下的固件数量               | No       |
 | ActivatedDeviceNumber | int    | 产品下已激活的设备数量         | No       |
 | OnlineDeviceNumber    | int    | 产品下在线设备数               | No       |
 | NodeType              | string | 节点类型，“device"或 "gateway" | No       |
@@ -102,7 +101,6 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreProductInfo
     "DeviceShadow": "on",
     "Password": "8jhc0phf73e887hl",
     "IsPublish": false,
-    "FirmwareNumber": 6,
     "ActivatedDeviceNumber": 7,
     "OnlineDeviceNumber":10
 }
@@ -218,7 +216,6 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=DeleteUIoTCoreProduct
 |IsPublish|bool|产品是否发布|**Yes**|
 |Description|string|产品描述|**Yes**|
 |DeviceNumber|int|产品下的设备数量|**Yes**|
-|FirmwareNumber|int|产品下的固件数量|**Yes**|
 |ActivatedDeviceNumber|int|产品下已激活的设备数量|**Yes**|
 |OnlineDeviceNumber|int|产品下在线设备数|**Yes**|
 |NodeType|string|产品类型。“device”或“gateway"|No|
@@ -249,7 +246,6 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreProductList
             "DeviceShadow": "on",
             "Password": "8jhc0phf73e887hl",
             "IsPublish": false,
-            "FirmwareNumber": 6,
             "ActivatedDeviceNumber": 7,
             "OnlineDeviceNumber":10,
             "NodeType":"device",

@@ -463,9 +463,6 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=ResetUIoTCoreDevice
 | Limit          | int    | 返回最大数据长度，默认为20，最大为100                        |       No |
 | ExactDeviceSN  | string | 设备SN，用于精确查询，如果提供了此字段，则DeviceSN无效            |       No |
 | Status.n       | string | 设备激活状态，用于结果筛选出对应状态的设备；<br>状态枚举包括：`disabled`, `inactivated`, `offline`,`online`；<br>可以传递多值，形如：`Status.0=disabled`,`Status.1=offline`|       No |
-| UpdateStatus.n | string | 设备升级状态，用于筛选对应升级状态的设备；<br>升级状态枚举包括：`unreported`,`init_version`,`to_be_updated`,<br>`updating,success`,`fail`；<br>可以传递多值，形如：`UpdateStatus.0=unreported`,`UpdateStatus.1=init_version` |       No |
-|FirmwareVersion.n|string|当前固件版本，用于筛选对应版本的设备|No|
-|DestVersion.n|string|目标版本，用于筛选对应版本的设备|No|
 
 ### 响应参数
 | Parameter name         | Type             | Description    | Required |
@@ -485,16 +482,11 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=ResetUIoTCoreDevice
 |Password|string|设备密码|**Yes**|
 |Status|string|设备状态|**Yes**|
 |CreateTime|int|创建时间|**Yes**|
-|UpdateStatus|string|设备升级状态|**Yes**|
 |IPAddr|string|设备ip地址|No|
 |ActiveTime|int|设备激活时间|No|
 |LatestOnlineTime|int|最近一次上线时间|No|
 |LatestOfflineTime|int|最近一次下线时间|No|
 |Description|string|设备描述|No|
-|FirmwareVersion|string|设备当前固件版本|No|
-|DestVersion|string|目标固件版本|No|
-|ErrMsg|string|错误信息|No|
-|LatestUpdateTime|string|最近一次固件更新时间|No|
 |ProductSN|string|所属产品序列号|No|
 |DeviceType|string|设备类型|No|
 |SubDeviceNum|int|子设备数量|No|
@@ -532,6 +524,108 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreDeviceList
     "OnlindeDeviceCount": 3
 }
 ```
+
+
+
+## GetUIoTCoreDeviceInfo
+
+获取设备信息
+
+### 请求参数
+
+| Parameter name | Type   | Description                                                  | Required |
+| -------------- | ------ | ------------------------------------------------------------ | -------: |
+| Region         | string | 地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist) |  **Yes** |
+| ProductSN      | string | 产品序列号                                                   |  **Yes** |
+| DeviceSN       | string | 设备SN，如提供则按照当前字段模糊查询                         |  **Yes** |
+
+
+### 响应参数
+
+| Parameter name         | Type             | Description    | Required |
+| ---------------------- | ---------------- | -------------- | -------: |
+| RetCode                | int              | 操作返回码     |  **Yes** |
+| Action                 | string           | 操作名称       |  **Yes** |
+| DeviceInfoSet          | Object           | 设备信息集     |  **Yes** |
+| FirmwareInfoSet        | Object           | 固件信息集     |  **Yes** |
+
+### DeviceInfoSet 设备信息列表
+
+| Parameter name    | Type   | Description         | Required |
+| ----------------- | ------ | ------------------- | -------: |
+| DeviceSN          | string | 设备序列号          |  **Yes** |
+| Password          | string | 设备密码            |  **Yes** |
+| Status            | string | 设备状态            |  **Yes** |
+| CreateTime        | int    | 创建时间            |  **Yes** |
+| IPAddr            | string | 设备ip地址          |       No |
+| ActiveTime        | int    | 设备激活时间        |       No |
+| LatestOnlineTime  | int    | 最近一次上线时间    |       No |
+| LatestOfflineTime | int    | 最近一次下线时间    |       No |
+| Description       | string | 设备描述            |       No |
+| ProductSN         | string | 所属产品序列号      |       No |
+| DeviceType        | string | 设备类型            |       No |
+| SubDeviceNum      | int    | 子设备数量          |       No |
+| RemoteSSHOpen     | bool   | 远程SSH开关是否打开 |       No |
+| RemoteSSHPort     | int    | 远程SSH端口         |       No |
+
+### FirmwareInfoSet 固件信息列表
+
+| Parameter name    | Type   | Description         | Required |
+| ----------------- | ------ | ------------------- | -------: |
+| FirmwareVersion   | string | 设备当前固件版本       |  No|
+| DestVersion       | string | 目标固件版            |  No |
+| ErrMsg            | string | 错误信息            |  No |
+| LatestUpdateTime  | int    | 最近一次固件更新时间  |  No |
+| UpdateStatus      | string | 设备升级状态          |       No |
+| Module            | string | 固件模块           |       No |
+
+### 请求示例
+
+```
+https://api-cn-sh2.iot.ucloud.cn/?Action=GetUIoTCoreDeviceList
+&ProductSN=7ab051kbfhhjakc0
+&DeviceSN=jkpoo1
+&Region=cn-sh2
+&公共请求参数
+```
+
+### 响应示例
+
+```
+{
+    "DeviceInfoSet":[
+        {
+            "Status":"offline",
+            "LatestOfflineTime":"1596087469",
+            "ActiveTime":"1596087309",
+            "SubDeviceNum":"0",
+            "Description":"",
+            "RemoteSSHOpen":false,
+            "IPAddr":"106.75.220.2",
+            "DeviceSN":"3j9a7qn3o0l6q145",
+            "ProductSN":"24srersw9fhbu4sn",
+            "DeviceType":"std_dev",
+            "RemoteSSHPort":0,
+            "Password":"9u2o54x8ihw1o87u",
+            "CreateTime":"1596085408",
+            "LatestOnlineTime":"1596087309"
+        }
+    ],
+    "FirmwareInfoSet":[
+        {
+            "LatestUpdateTime":"1596087408",
+            "Module":"default",
+            "DestVersion":"v1.0.1",
+            "FirmwareVersion":"1.0",
+            "UpdateStatus":"updating",
+            "ErrMsg":""
+        }
+    ],
+    "RetCode":0
+}
+```
+
+
 
 
 
