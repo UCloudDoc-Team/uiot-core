@@ -20,6 +20,7 @@
 |API名称 | 描述|
 |---|---|
 |[CreateUIoTCoreDevice](uiot-core/api_guide/devicemgmtapi#CreateUIoTCoreDevice) | 创建物联网设备|
+|[GetUIoTCoreDeviceInfo](uiot-core/api_guide/devicemgmtapi#GetUIoTCoreDeviceInfo) | 获取设备信息|
 |[ModifyUIoTCoreDevice](uiot-core/api_guide/devicemgmtapi#ModifyUIoTCoreDevice) | 修改物联网设备|
 |[DeleteUIoTCoreDevice](uiot-core/api_guide/devicemgmtapi#DeleteUIoTCoreDevice) | 删除设备|
 |[EnableUIoTCoreDevice](uiot-core/api_guide/devicemgmtapi#EnableUIoTCoreDevice) | 启用设备|
