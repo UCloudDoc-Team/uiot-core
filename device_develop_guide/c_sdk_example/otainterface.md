@@ -39,14 +39,14 @@ if (NULL == h_ota) {
     return FAILURE;
 }
 
-//3. 上报初始版本，未上报版本的设备无法升级
-if (IOT_OTA_ReportVersion(h_ota, "1.0.0") < 0) {
+//3. 上报初始版本，上报时需上报固件模块、版本号；未上报版本的设备无法升级
+if (IOT_OTA_ReportVersion(h_ota,"default","1.0.0") < 0) {
     LOG_ERROR("report OTA version failed");
     return FAILURE;
 }
 
 //4. （可选）主动请求设备 OTA 信息，用于防止设备离线期间错过 OTA 升级消息等特殊情况
-if (IOT_OTA_RequestFirmware(h_ota, "1.0.0") < 0) {
+if (IOT_OTA_RequestFirmware(h_ota,"default","1.0.0") < 0) {
     LOG_ERROR("Request firmware failed");
     return FAILURE;
 }
@@ -177,7 +177,7 @@ int IOT_OTA_Destroy(void *handle);
 向 OTA 服务器报告固件版本信息
 
 ```
-int IOT_OTA_ReportVersion(void *handle, const char *version);
+int IOT_OTA_ReportVersion(void *handle, const char *module, const char *version);
 ```
 
 #### 参数列表
@@ -335,7 +335,7 @@ int IOT_OTA_GetLastError(void *handle);
 请求固件更新消息。设备离线时，不能接收服务端推送的升级消息，需要通过 MQTT 协议接入物联网平台的设备再次上线后，主动请求固件更新消息
 
 ```
-int IOT_OTA_RequestFirmware(void *handle, const char *version);
+int IOT_OTA_RequestFirmware(void *handle, const char *module, const char *version);
 ```
 
 #### 参数列表

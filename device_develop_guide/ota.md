@@ -29,8 +29,9 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
     {
         "Method": "report_version",
         "Payload":{
-            "Version": "1.0",
-            "Module" : "default"
+            "Module" : "default",
+            "Version": "1.0"
+            
         }
     }
     ```
@@ -42,18 +43,20 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
 2. 用户在控制台[新增固件](uiot-core/console_guide/ota/firmware_management\#新增固件)；
 
 3. 用户通过控制台发起[固件升级请求](uiot-core/console_guide/ota/firmware_update)；
+
 4. 云端下发固件升级消息给设备端
     设备端会通过订阅的`/$system/${productSN}/${deviceSN}/ota/downstream`收到固件升级的消息，内容如下：
-    ```
+    
+	```
 	{
 		"Method": "update_firmware",
 		"Payload": {
-			"Version": "1.0.0",
-	    "Module" : "default"
+	    "Module" : "default",
+	    "Version": "1.0"
 			"URL": "http://uiot-ota1.cn-sh2.ufileos.com/iwfrdgwhmwscqbmv_2.0.0_ver.bin?UCloudPublicKey=dhX3367CNkw1sSL2qVjybhBBjkQapw%2BDH3tqkhwvN%2F0B6EckE%2BCZ%2FFI%3D&Signature=8QUp6d73BZAo%2FLDr3H0xJlpE4Ug%3D&Expires=1573281691",
 			"MD5": "17ffea1119f36d1b366353f4edef1780",
 			"Size": 4233
-		}
+    	}
     }
     ```
     参数解释：
@@ -70,7 +73,7 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
         "Method": "report_progress",
         "Payload":{
             "Module" : "default",
-            "State":"downloading"
+            "Version": "1.0"
         }
     }
     ```
@@ -130,6 +133,28 @@ OTA（Over-the-Air Technology）即空中下载技术。在设备端开发中可
       - -3：下载超时；
       - -4: MD5不匹配；
       - -5：固件烧录失败
+    
+9. 云端下发取消升级消息给设备端
+
+    设备端向`/$system/${productSN}/${deviceSN}/ota/upstream`发布一条消息进行版本上报，消息格式如下：
+
+    ```
+    {
+        "Method":"cancel_update",
+        "Payload":{
+            "Module":"default",
+            "Version":"wifi_v1.0.8"
+        }
+    }
+    ```
+
+    参数解释:
+
+    - Method：消息类型为cancel_update
+    - Module : 固件模块名称
+    - Version：上报取消升级的目标版本号
+
+
 
 **离线处理：**  
 设备离线时，不能接收服务端推送的升级消息。通过当设备再次上线后，主动请求固件更新消息。OTA服务端收到设备上线消息，验证该设备是否需要升级。如果需要升级，再次推送升级消息给设备， 否则，不推送消息。  
