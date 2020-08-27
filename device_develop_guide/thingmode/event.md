@@ -20,7 +20,6 @@
    - Identifier：事件的标识符；
    - Output：事件输出参数键值对的集合；
    - Time：上报时间戳；
-   - Method：上报的方法；
    
 2. 云平台响应  
    上报成功后，云平台响应，并向Topic `/$system/${productSN}/${DeviceSN}/tmodel/event/post_reply` 下发一条消息，消息格式为：
