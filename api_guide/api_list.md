@@ -59,7 +59,7 @@
 
 |API名称 | 描述|
 |---|---|
-|[GetUIoTCoreDeviceProperty](uiot-core/api_guide/tingmodemgmtapi#GetUIoTCoreDeviceProperty) | 获取设备属性|
+|[GetUIoTCoreDeviceProperty](uiot-core/api_guide/tingmodemgmtapi#GetUIoTCoreDeviceProperty) | 获取设备属性列表 |
 |[GetUIoTCoreDeviceCommandList](uiot-core/api_guide/tingmodemgmtapi#GetUIoTCoreDeviceCommandList) | 获取设备命令列表|
 |[GetUIoTCoreDeviceEventList](uiot-core/api_guide/tingmodemgmtapi#GetUIoTCoreDeviceEventList) | 获取设备事件列表|
 |[SetUIoTCoreDeviceProperty](uiot-core/api_guide/tingmodemgmtapi#SetUIoTCoreDeviceProperty) | 设置设备属性|
