@@ -8,7 +8,6 @@
     * [名词解释](/uiot-core/product_introduction/terms)
     * [使用限制](/uiot-core/product_introduction/limitation)
     * [已开通区域及域名列表](/uiot-core/product_introduction/available_region_url)
-    * [计费说明](/uiot-core/product_introduction/billing)
 * [产品定价](/uiot-core/pricing)
 * [快速入门](/uiot-core/quick_start/)
     * [快速入门示例](/uiot-core/quick_start/scenario_description)
