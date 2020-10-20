@@ -9,8 +9,9 @@ UCloud物联网通信云平台使用独立的API调用网关，以满足客户�
 本节通过一个具体的示例（获取设备影子）介绍如何实现API调用。用户可将其中的参数换成自己的实际参数进行测试。API仅支持HTTPS调用。
 
 1. 概述   
-   
+
    接口的调用使用HTTPS GET或POST调用都可以得到相同的结果。调用的参数包括接口的参数+公共参数+参数签名三部分。
+   - 域名：api-$\{RegionId\}.iot.ucloud.cn
    - 接口参数：某个具体接口需要的参数；
    - 公共参数：每个接口都需要用到的，包括调用接口名、项目名、公钥等
    - 签名：通过私钥签名，方便网关鉴权。
@@ -35,6 +36,7 @@ ProjectId|项目ID为 `org-z44lmf12e`，项目ID为 **org-z44lmf12e**，通过�
    用户签名需要接口参数和公共参数以及用户私钥参与一起完成。 
 
    1） 接口参数+公共参数
+   
    ```
    // 接口参数
    Region:cn-sh2
@@ -53,14 +55,14 @@ ProjectId|项目ID为 `org-z44lmf12e`，项目ID为 **org-z44lmf12e**，通过�
    ProjectId:org-z44lmf12e
    PublicKey:CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O
    Region:cn-sh2
-   ```   
+   ```
    3）将上述参数的**键值**依次相连构造字符串，并在尾部接上用户私钥
    
    - 用户私钥通过 个人中心->API密钥获取为：`ztqlj0vtg6Por5d/etqpadpTZwscLRh5cIsFAHbwuvnMY4mAWI+GT5C2yzj/KiZf`
    - 拼接获得字符串为（键值依次相连+用户私钥）：
    ```
    ActionGetUIoTCoreDeviceShadowDeviceSNark1d4ug1evfb1jyProductSN8pi2i730vxsala2aProjectIdorg-z44lmf12ePublicKeyCJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/ORegioncn-sh2ztqlj0vtg6Por5d/etqpadpTZwscLRh5cIsFAHbwuvnMY4mAWI+GT5C2yzj/KiZf
-   ``` 
+   ```
    4）计算SHA1签名
    
    将第3）步字符串进行SHA1签名，获取签名串为
@@ -78,7 +80,7 @@ ProjectId|项目ID为 `org-z44lmf12e`，项目ID为 **org-z44lmf12e**，通过�
    Signature:f1e6b4e35df41b42232e059f6020c7fd51b2889e
    ```
 5. 请求接口获取响应
-   
+  
    通过HTTPS GET和POST都可以请求接口得到同样的响应结果，请求的BaseURL参考[已开通可用区及域名列表](uiot-core/product_introduction/available_region_url)，例如上海二为`https://api-cn-sh2.iot.ucloud.cn`。
 
    1）**通过GET方式**  
@@ -88,7 +90,7 @@ ProjectId|项目ID为 `org-z44lmf12e`，项目ID为 **org-z44lmf12e**，通过�
       - 其它字符编码成 `%XY` 的格式，其中`XY`是字符对应ASCII码的16进制表示。比如：英文的双引号`”`对应的编码为`%22`；
       - 对于扩展的UTF-8字符，编码成 `%XY%ZA…` 的格式；
       - 英文空格` `要编码成`%20`，而不是加号`+`。
-    
+   
     根据上述的规则将
     ```
     PublicKey:CJf+LfjjXPk70z/fsBlK9sHC+kBTTj7gr2g/C/R7YSi3EFTKCmh7Bp5W1UH64D/O

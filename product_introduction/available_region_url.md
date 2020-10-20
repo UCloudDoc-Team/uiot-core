@@ -15,6 +15,7 @@ UCloud目前拥有25大地域（Region），具体参见 [地域和可用区列�
 |地域名称|地域短ID|下属可用区|
 |----|----|----|
 |上海二|cn-sh2|上海二可用区A、上海二可用区B、上海二可用区C|
+|广州|cn-gd|广州|
 
 
 ## 域名列表
@@ -30,7 +31,10 @@ UCloud目前拥有25大地域（Region），具体参见 [地域和可用区列�
 |[云端API调用](uiot-core/api_guide/api_guidehelp)|api-$\{RegionId\}.iot.ucloud.cn|仅支持`443(使用TLS)`|[下载CA根证书(国际授信)](http://uiot.cn-sh2.ufileos.com/DigiCertRootCA.cer)|
 |[上传文件](uiot-core/device_develop_guide/uploadfile)|file-$\{RegionId\}.iot.ucloud.cn|仅支持`443(使用TLS)`|[下载CA根证书(国际授信)](http://uiot.cn-sh2.ufileos.com/DigiCertRootCA.cer)|
 
+
+
 提供的TLS证书分为两种：
 
  - 自签名证书，设备通过MQTT Over TLS连接时使用，有效期20年
  - 国际授信CA证书，一般不需要另外导入证书，浏览器可以直接支持
+
