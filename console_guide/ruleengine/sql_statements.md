@@ -17,9 +17,9 @@ SELECT temperature as t, deviceSN() as deviceSN FROM /70ly1tvowt696r15/+/upload 
 JSON数据类型支持以下类型：
 
 - 内置函数，支持函数参考[函数列表JSON](uiot-core/console_guide/ruleengine/sql_statements#函数列表)，比如`deviceSN()`；
-- JSON属性表达式，比如`light.state`；
+- JSON PATH属性表达式，比如`light.state`（payload为{..., "light":{“state”:"on", "color":"red"}, ...}）
 - 星号`*`，表示所有内容；
-- 支持使用`as`对筛选的字段定义别名，比如`temperature as t`；
+- 支持使用`as`对筛选的字段定义别名，比如`temperature as t`或`light.state as st`；
 
 binary数据类型支持以下类型：
 
