@@ -46,10 +46,10 @@
      "topic": "/$productsn/$devicesn/upload"
    }
  */
-function rawDataToJSON(topic, bytes) {
-    var uint8Array = new Uint8Array(bytes.length);
-    for (var i = 0; i < bytes.length; i++) {
-        uint8Array[i] = bytes[i] & 0xff;
+function rawDataToJSON(topic, rawData) {
+    var uint8Array = new Uint8Array(rawData.length);
+    for (var i = 0; i < rawData.length; i++) {
+        uint8Array[i] = rawData[i] & 0xff;
     }
     var dataView = new DataView(uint8Array.buffer, 0);
     var jsonObj = {};
