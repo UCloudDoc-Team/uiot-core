@@ -38,7 +38,7 @@
      /update，上报数据。
   输入参数：
      topic: /$productsn/$devicesn/upload
-     bytes: 0x0121
+     rawData: 0x0121
   输出参数：
   {
      "temperature": 33,
