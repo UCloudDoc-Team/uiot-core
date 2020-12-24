@@ -28,7 +28,7 @@ UCloud 物联网通信云平台（UIoT Core）为设备上云和产业互联网�
         * [数据流转到MySQL](/uiot-core/console_guide/ruleengine/forward_data_to_mysql)
         * [数据流转到MongoDB](/uiot-core/console_guide/ruleengine/forward_data_to_mongodb)
         * [数据流转到分布式消息系统kafka](/uiot-core/console_guide/ruleengine/forward_data_to_kafka)
-		* [数据流转到TSDB](/uiot-core/console_guide/ruleengine/forward_data_to_tsdb)
+	* [数据流转到TSDB](/uiot-core/console_guide/ruleengine/forward_data_to_tsdb)
         * [数据流转到其他Topic](/uiot-core/console_guide/ruleengine/forward_data_to_topic)
         * [数据流转到HTTP服务](/uiot-core/console_guide/ruleengine/forward_data_to_http)
     * 设备影子
@@ -61,7 +61,7 @@ UCloud 物联网通信云平台（UIoT Core）为设备上云和产业互联网�
         * [基于MQTT-TCP协议建立连接](/uiot-core/device_develop_guide/deviceconnect/mqttconnect)
         * [基于MQTT-WebSocket协议建立连接](/uiot-core/device_develop_guide/deviceconnect/websocketconnect)
         * [基于HTTP协议建立连接](/uiot-core/device_develop_guide/deviceconnect/httpconnect)
-		* [获取设备在线状态](/uiot-core/device_develop_guide/deviceconnect/status)
+        * [获取设备在线状态](/uiot-core/device_develop_guide/deviceconnect/status)
     * [设备影子](/uiot-core/device_develop_guide/device_shadow)
     * 设备物模型开发
         * [物模型定义](/uiot-core/device_develop_guide/thingmode/what_is_thingmode)
