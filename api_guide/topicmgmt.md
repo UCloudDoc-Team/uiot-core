@@ -12,7 +12,7 @@
 |Region|string|地域。 参见 [地域和可用区列表](https://docs.ucloud.cn/api/summary/regionlist)|**Yes**|
 |ProductSN|string|产品序列号|**Yes**|
 |Topic|string|产品Topic名称|**Yes**|
-|Permission|string|Topic权限，默认为sub，合法值为: sub,pub,pubsub|No|
+|Permission|string|Topic权限，默认为sub，合法值为: sub,pub,pubsub|**Yes**|
 |Description|string|Topic描述|No|
 
 
