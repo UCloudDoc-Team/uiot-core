@@ -1,0 +1,46 @@
+
+## 移植平台介绍
+使用乐鑫官方的esp-idf开发环境，将uiot-core sdk修改成其中的一个组件，使用户能够在乐鑫的官方开发环境中使用sdk提供的接口连接uiot-core平台。 <br>
+ESP8266与ESP32同样使用esp-idf环境，但是环境配置和代码不一样需要分别单独配置。
+
+## esp-idf开发环境设置
+
+### 配置官方开发环境
+首先配置好esp-idf开发环境，参考链接： https://docs.espressif.com/projects/esp-idf/zh_CN/latest/get-started/#get-started-set-up-tools <br>
+配置完成的界面 <br>
+![](/images/esp32_命令界面.png)
+
+### 使用ESP32_SDK
+1.下载ESP32_SDK: https://git.ucloudadmin.com/usdk/esp32_sdk <br>
+2.替换$IDF_PATH路径下的官方代码，或者将$IDF_PATH修改成ESP32_SDK的路径 <br>
+3.按照官方教程编译下载代码测试。 <br>
+
+## 编译及下载sample（以ESP8266_RTOS_SDK/examples/protocols/ucloud_mqtt/mqtt为例）
+
+### 修改sample中的产品三要素
+
+### 配置编译选项
+
+使用以下命令打开编译选项配置界面 <br>
+```bash
+idf.py menuconfig
+```
+修改wifi配置 <br>
+Example Configuration->
+
+修改UCLOUD_MQTT配置 <br>
+Component config->UCLOUD MQTT
+
+### 编译sample
+```bash
+idf.py build
+```
+
+### 下载sample到开发板
+串口和波特率按实际填写  <br>
+```bash
+idf.py -p COM7 -b 115200 flash
+```
+
+### 在串口上观察sample执行输出
+使用串口工具如IPOP等查看串口输出
