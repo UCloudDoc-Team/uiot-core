@@ -220,7 +220,7 @@ https://api-cn-sh2.iot.ucloud.cn/?Action=UpdateUIoTCoreDeviceShadow
 &Desired=eyJrZXlfMSI6InZhbHVlXzEifQ==
 &ProductSN=PFmsLErG
 &DeviceSN=FDRHHEQN
-&Version=5
+&ShadowVersion=5
 &公共请求参数
 ```
 ### 响应示例
