@@ -15,7 +15,7 @@
 注意：
 
 1. UCloud有[项目](https://docs.ucloud.cn/uproject/README)的概念，不同项目间的资源彼此隔离，所以规则引擎只能流转到同一项目下的其他产品，比如UHost；
-2. 不同Region的产品不支持相互流转，比如IoT-Core开通Region在上海二区，则规则引擎不能流转到北京Region的UHost。
+2. 不同Region的产品不支持相互流转，比如IoT-Core开通Region在华东（上海2）区，则规则引擎不能流转到北京Region的UHost。
 
 
 
